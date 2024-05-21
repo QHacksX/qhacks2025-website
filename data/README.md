@@ -1,0 +1,1 @@
+JSON files for sponsor data, team data, etc.

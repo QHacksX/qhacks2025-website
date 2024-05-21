@@ -1,0 +1,1 @@
+This is where we will store headers, footers, donuts, and other static assets.
