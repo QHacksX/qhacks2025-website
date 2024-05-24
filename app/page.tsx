@@ -1,7 +1,10 @@
-
+import Form from "@/components/shared/form";
 
 export default function Home() {
   return (
-    <main></main>
-  );
+    <main>
+      <Form></Form>
+
+    </main>
+  ); 
 }
