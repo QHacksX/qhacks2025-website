@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import './signup.css'
 import signUp from "/home/robbie/landing-page/src/firebase/auth/signup";
 import { useRouter } from 'next/navigation';
 
@@ -8,10 +9,10 @@ function Page() {
     const [password, setPassword] = React.useState('')
     const router = useRouter()
 
-    const handleForm = async (event) => {
+    const handleForm = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
 
-        const { result, error } = await signUp(email, password);
+        const { result, error } = await signUp({email, password});
 
         if (error) {
             return console.log(error)
@@ -19,7 +20,7 @@ function Page() {
 
         // else successful
         console.log(result)
-        return router.push("/admin")
+        // return router.push("/admin")
     }
     return (<div className="wrapper">
         <div className="form-wrapper">
@@ -33,7 +34,7 @@ function Page() {
                     <p>Password</p>
                     <input onChange={(e) => setPassword(e.target.value)} required type="password" name="password" id="password" placeholder="password" />
                 </label>
-                <button type="submit">Sign up</button>
+                <button className='submit-button' type="submit">Sign up</button>
             </form>
         </div>
     </div>);

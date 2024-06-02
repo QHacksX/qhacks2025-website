@@ -9,9 +9,10 @@ function Page() {
     const [password, setPassword] = React.useState('')
     const router = useRouter()
 
-    const handleForm = async (event) => {
+    const handleForm = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        const { result, error } = await signIn(email, password);
+
+        const { result, error } = await signIn({email, password});
 
         if (error) {
             return console.log(error)
@@ -27,11 +28,11 @@ function Page() {
             <form onSubmit={handleForm} className="form">
                 <label htmlFor="email">
                     <p>Email</p>
-                    <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="example@mail.com" />
+                    <input className='input-text' onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="example@mail.com" />
                 </label>
                 <label htmlFor="password">
                     <p>Password</p>
-                    <input onChange={(e) => setPassword(e.target.value)} required type="password" name="password" id="password" placeholder="password" />
+                    <input className='input-text' onChange={(e) => setPassword(e.target.value)} required type="password" name="password" id="password" placeholder="password" />
                 </label>
                 <button className="submit-button" type="submit">Sign in</button>
             </form>
