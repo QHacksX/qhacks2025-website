@@ -20,7 +20,7 @@ function Page() {
 
         // else successful
         console.log(result)
-        return router.push("/admin")
+        return router.push("/")
     }
     return (<div className="wrapper">
         <div className="form-wrapper">
