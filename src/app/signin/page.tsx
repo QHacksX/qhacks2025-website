@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import './signin.css'
-import signIn from "@/firebase/auth/signin";
+import signIn from "../../firebase/auth/signin";
 import { useRouter } from 'next/navigation'
 
 function Page() {

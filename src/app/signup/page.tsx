@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import './signup.css'
-import signUp from "@/firebase/auth/signup";
+import signUp from "../../firebase/auth/signup";
 import { useRouter } from 'next/navigation';
 
 function Page() {
