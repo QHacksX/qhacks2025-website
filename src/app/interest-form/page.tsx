@@ -77,7 +77,6 @@ function Page(props: any) {
   }
 
   return (
-    <div className="h-sreen autoflow-y-auto p-4 pb-36 bg-slate-100">
     <div className="flex">
       <div className="flex-1" >
         <main className="p-4 pb-8 bg-slate-100 place-content-center flex justify-center">
@@ -148,7 +147,6 @@ function Page(props: any) {
           </div>
         </main>
       </div>
-    </div>
     </div>
   );
 

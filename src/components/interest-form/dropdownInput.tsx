@@ -1,5 +1,7 @@
 import { Dropdown } from 'primereact/dropdown';
 import { ShirtSize } from '@/src/firebase/userData';
+import { countryList } from "@/src/data/dropdown-options/countryList";
+import { schoolList } from "@/src/data/dropdown-options/schoolList";
 import { use, useState } from 'react';
 
 export default function DropdownInput(props: any) {
@@ -16,9 +18,7 @@ export default function DropdownInput(props: any) {
         { age: 25 }
       ]
 
-      const schools = [
-        { school: "Queen's University"},
-      ]
+      const schools = schoolList
 
       const levelsOfStudy = [
         { level: "Less than Secondary / High School" },
@@ -34,10 +34,7 @@ export default function DropdownInput(props: any) {
         { level: "Prefer not to answer" },
       ] 
 
-      const countries = [
-        { country: "Canada"},
-        { country: "United States" }
-      ]
+      const countries = countryList
 
       const dietaryRestrictions = [
         { restriction: "Vegetarian" },
