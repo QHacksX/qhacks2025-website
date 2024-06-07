@@ -5,6 +5,7 @@ import { doc, setDoc, collection, addDoc } from "firebase/firestore";
 const auth = getAuth(firebase_app);
 
 export enum ShirtSize {
+  na = "not chosen",
   xSmall = "xs",
   small = "s",
   medium = "m",

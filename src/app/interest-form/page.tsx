@@ -5,8 +5,7 @@ import EmailInput from "@/src/components/interest-form/emailInput";
 import FormHeader from "@/src/components/interest-form/header";
 import PhoneInput from "@/src/components/interest-form/phoneInput";
 import WordInput from "@/src/components/interest-form/wordInput";
-import { DropdownTypes } from "@/src/data/dropdown-options/options";
-import { InterestFormData, updateUserData } from "@/src/firebase/userData";
+import { InterestFormData, ShirtSize, updateUserData } from "@/src/firebase/userData";
 import { useEffect, useState } from "react";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
@@ -16,21 +15,29 @@ function Page(props: any) {
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState(-1);
+  const [age, setAge] = useState({ age: -1 });
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
-  const [school, setSchool] = useState("");
-  const [levelOfStudy, setLevelOfStudy] = useState("");
-  const [country, setCountry] = useState("");
-  const [dietaryRestriction, setDietaryRestriction] = useState("");
-  const [isUnderrepresented, setIsUnderrepresented] = useState();
+  const [school, setSchool] = useState({ school: "" });
+  const [levelOfStudy, setLevelOfStudy] = useState({ level: "" });
+  const [country, setCountry] = useState({ country: "" });
+  const [dietaryRestriction, setDietaryRestriction] = useState({ restriction: "" });
+  const [isUnderrepresented, setIsUnderrepresented] = useState({ category: "" });
   const [gender, setGender] = useState("");
   const [pronoun, setPronoun] = useState("");
   const [ethnicity, setEthnicity] = useState("");
   const [sexuality, setSexuality] = useState("");
-  const [highestEdu, setHighestEdu] = useState("");
-  const [shirtSize, setShirtSize] = useState();
+  const [higestEdu, setHighestEdu] = useState({ level: "" });
+  const [shirtSize, setShirtSize] = useState({ shirtSize: ShirtSize.na });
   const [fieldOfStudy, setFieldOfStudy] = useState("");
+
+  // If "Other" in the original dropdown, allows user to input custom value
+  const [origInputGender, setOrigInputGender] = useState({ gender: ""})
+  const [origInputPronoun, setOrigInputPronoun] = useState({ pronoun: "" })
+  const [origInputEthnicity, setOrigInputEthnicity] = useState({ ethnicity: "" })
+  const [origInputSexuality, setOrigInputSexuality] = useState({ sexuality: "" })
+  const [origInputFieldOfStudy, setOrigInputFieldOfStudy] = useState({ major: "" })
+
 
   useEffect(() => {
     console.log("item value:" + JSON.stringify(props?.item));
@@ -54,24 +61,52 @@ function Page(props: any) {
 
   // TODO: Validation of data is required
   const save = () => {
+    let formattedIsUnderrepresented;
+
+    if (isUnderrepresented.category === "Yes") {
+      formattedIsUnderrepresented = true;
+    } else if (isUnderrepresented.category === "No") {
+      formattedIsUnderrepresented = false;
+    }
+
+    if (origInputGender.gender !== "Prefer to self-describe") {
+      setGender(origInputGender.gender)
+    }
+
+    if (origInputPronoun.pronoun !== "Prefer to self-describe") {
+      setPronoun(origInputPronoun.pronoun)
+    }
+
+    if (origInputEthnicity.ethnicity !== "Prefer to self-describe") {
+      setEthnicity(origInputEthnicity.ethnicity)
+    }
+
+    if (origInputSexuality.sexuality !== "Prefer to self-describe") {
+      setSexuality(origInputSexuality.sexuality)
+    }
+
+    if (origInputFieldOfStudy.major !== "Other (please specify)") {
+      setFieldOfStudy(origInputFieldOfStudy.major)
+    }
+
     const inputtedData: InterestFormData = {
       firstName: firstName,
       lastName: lastName,
-      age: age,
+      age: age.age,
       phoneNumber: phoneNumber,
       email: email,
-      school: school,
-      levelOfStudy: levelOfStudy,
-      country: country,
-      dietaryRestrictions: dietaryRestriction,
-      underrepresented: isUnderrepresented,
+      school: school.school,
+      levelOfStudy: levelOfStudy.level,
+      country: country.country,
+      dietaryRestrictions: dietaryRestriction.restriction,
+      underrepresented: formattedIsUnderrepresented,
       gender: gender,
       pronouns: pronoun,
       ethnicity: ethnicity,
       sexualIdentity: sexuality,
-      highestEducationCompleted: highestEdu,
-      shirtSize: shirtSize,
-      studyMajor: fieldOfStudy,
+      highestEducationCompleted: higestEdu.level,
+      shirtSize: shirtSize.shirtSize,
+      studyMajor: fieldOfStudy
     };
     updateUserData({ userData: inputtedData });
   };
@@ -97,11 +132,7 @@ function Page(props: any) {
                     setName={setLastName}
                     placeholder='Last Name'
                   />
-                  <DropdownInput
-                    type={DropdownTypes.age}
-                    value={age}
-                    setValue={setAge}
-                  />
+                  <DropdownInput type='age' age={age} setAge={setAge} />
                 </>
               ) : step === 2 ? (
                 <>
@@ -123,80 +154,80 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Mandatory Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type={DropdownTypes.school}
-                    value={school}
-                    setValue={setSchool}
+                    type='school'
+                    school={school}
+                    setSchool={setSchool}
                   />
                   <DropdownInput
-                    type={DropdownTypes.levelOfStudy}
-                    value={levelOfStudy}
-                    setValue={setLevelOfStudy}
+                    type='levelOfStudy'
+                    levelOfStudy={levelOfStudy}
+                    setLevelOfStudy={setLevelOfStudy}
                   />
                   <DropdownInput
-                    type={DropdownTypes.country}
-                    value={country}
-                    setValue={setCountry}
+                    type='country'
+                    country={country}
+                    setCountry={setCountry}
                   />
                 </>
               ) : step === 4 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type={DropdownTypes.dietaryRestriction}
-                    value={dietaryRestriction}
-                    setValue={setDietaryRestriction}
+                    type='dietary'
+                    dietaryRestriction={dietaryRestriction}
+                    setDietaryRestriction={setDietaryRestriction}
                   />
                   <DropdownInput
-                    type={DropdownTypes.isUnderrepresented}
-                    value={isUnderrepresented}
-                    setValue={setIsUnderrepresented}
+                    type='underrepresented'
+                    isUnderrepresented={isUnderrepresented}
+                    setIsUnderrepresented={setIsUnderrepresented}
                   />
                 </>
               ) : step === 5 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type={DropdownTypes.gender}
-                    value={gender}
-                    setValue={setGender}
+                    type='gender'
+                    gender={gender}
+                    setGender={setGender}
                   />
                   <DropdownInput
-                    type={DropdownTypes.pronouns}
-                    value={pronoun}
-                    setValue={setPronoun}
+                    type='pronouns'
+                    pronoun={pronoun}
+                    setPronoun={setPronoun}
                   />
                 </>
               ) : step === 6 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type={DropdownTypes.ethnicity}
-                    value={ethnicity}
-                    setValue={setEthnicity}
+                    type='ethnicity'
+                    ethnicity={ethnicity}
+                    setEthnicity={setEthnicity}
                   />
                   <DropdownInput
-                    type={DropdownTypes.sexuality}
-                    value={sexuality}
-                    setValue={setSexuality}
+                    type='sexuality'
+                    sexuality={sexuality}
+                    setSexuality={setSexuality}
                   />
                 </>
               ) : step === 7 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type={DropdownTypes.highestEdu}
-                    value={highestEdu}
-                    setValue={setHighestEdu}
+                    type='higestEducation'
+                    higestEdu={highestEdu}
+                    setHighestEdu={setHighestEdu}
                   />
                   <DropdownInput
-                    type={DropdownTypes.fieldOfStudy}
-                    value={fieldOfStudy}
-                    setValue={setFieldOfStudy}
+                    type='fieldOfStudy'
+                    fieldOfStudy={fieldOfStudy}
+                    setFieldOfStudy={setFieldOfStudy}
                   />
                   <DropdownInput
-                    type={DropdownTypes.shirtSize}
-                    value={shirtSize}
-                    setValue={setShirtSize}
+                    type='shirtSize'
+                    shirtSize={shirtSize}
+                    setShirtSize={setShirtSize}
                   />
                 </>
               ) : null}
