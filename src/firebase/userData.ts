@@ -1,5 +1,6 @@
-import firebase_app from "./config";
-import { getAuth } from "../../firebase/auth";
+import { db, firebase_app } from "./config";
+import { getAuth } from "firebase/auth";
+import { doc, setDoc, collection, addDoc } from "firebase/firestore";
 
 const auth = getAuth(firebase_app);
 
@@ -40,11 +41,24 @@ export async function getUserData({}: {}) {
   }
 }
 
-export async function updateUserData({}: {}) {
+export async function updateUserData({
+  userData,
+}: {
+  userData: InterestFormData;
+}) {
   const userId = auth.currentUser?.uid;
   if (!userId) {
+    console.log("no id");
     // TODO: Return {error, data}. If error, display error message on FE on sign up.
     // Eg. {error: "User not found", data: undefined}
     return;
+  }
+
+  try {
+    console.log(await setDoc(doc(db, "users", userId), userData));
+    console.log("success");
+  } catch (e) {
+    console.log("error");
+    console.log(e);
   }
 }

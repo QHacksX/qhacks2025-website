@@ -126,43 +126,43 @@ export default function DropdownInput(props: any) {
       ]
 
     if (props.type === "age") {
-        return <Dropdown value={props.age} onChange={(e) => props.setAge(e.value)} options={ages} optionLabel="age" 
+        return <Dropdown value={props.age} onChange={(e) => props.setAge(e.value.age)} options={ages} optionLabel="age" 
         placeholder="Select your age" className="w-full md:w-14rem" />
     } else if (props.type === "school") {
-        return <Dropdown value={props.school} onChange={(e) => props.setSchool(e.value)} options={schools} optionLabel="school" 
+        return <Dropdown value={props.school} onChange={(e) => props.setSchool(e.value.school)} options={schools} optionLabel="school" 
         placeholder="Select your school" className="w-full md:w-14rem" />
     } else if (props.type === "levelOfStudy") {
-        return <Dropdown value={props.levelOfStudy} onChange={(e) => props.setLevelOfStudy(e.value)} options={levelsOfStudy} optionLabel="level" 
+        return <Dropdown value={props.levelOfStudy} onChange={(e) => props.setLevelOfStudy(e.value.level)} options={levelsOfStudy} optionLabel="level" 
         placeholder="Select your current level of study" className="w-full md:w-14rem" />
     } else if (props.type === "country") {
-        return <Dropdown value={props.country} onChange={(e) => props.setCountry(e.value)} options={countries} optionLabel="country" 
+        return <Dropdown value={props.country} onChange={(e) => props.setCountry(e.value.country)} options={countries} optionLabel="country" 
         placeholder="Select your country of residence" className="w-full md:w-14rem" />
     } else if (props.type === "dietary") {
-        return <Dropdown value={props.dietaryRestriction} onChange={(e) => props.setDietaryRestriction(e.value)} options={dietaryRestrictions} optionLabel="restriction" 
+        return <Dropdown value={props.dietaryRestriction} onChange={(e) => props.setDietaryRestriction(e.value.restriction)} options={dietaryRestrictions} optionLabel="restriction" 
         placeholder="Select a dietary restriction, if applicable" className="w-full md:w-14rem" />
     } else if (props.type === "underrepresented") {
-        return <Dropdown value={props.underrepresent} onChange={(e) => props.setUnderrepresent(e.value)} options={underrepresented} optionLabel="category" 
+        return <Dropdown value={props.isUnderrepresented} onChange={(e) => props.setIsUnderrepresented(e.value.category)} options={underrepresented} optionLabel="category" 
         placeholder="Select if you are or aren't represented" className="w-full md:w-14rem" />
     } else if (props.type === "gender") {
-        return <Dropdown value={props.gender} onChange={(e) => props.setGender(e.value)} options={genders} optionLabel="gender" 
+        return <Dropdown value={props.gender} onChange={(e) => props.setGender(e.value.gender)} options={genders} optionLabel="gender" 
         placeholder="Select your gender" className="w-full md:w-14rem" />
     } else if (props.type === "pronouns") {
-        return <Dropdown value={props.pronoun} onChange={(e) => props.setPronoun(e.value)} options={pronouns} optionLabel="pronoun" 
+        return <Dropdown value={props.pronoun} onChange={(e) => props.setPronoun(e.value.pronoun)} options={pronouns} optionLabel="pronoun" 
         placeholder="Select your pronouns" className="w-full md:w-14rem" />
     } else if (props.type === "ethnicity") {
-        return <Dropdown value={props.ethnicity} onChange={(e) => props.setEthnicity(e.value)} options={ethnicities} optionLabel="ethnicity" 
+        return <Dropdown value={props.ethnicity} onChange={(e) => props.setEthnicity(e.value.ethnicity)} options={ethnicities} optionLabel="ethnicity" 
         placeholder="Select your ethnicity" className="w-full md:w-14rem" />
     } else if (props.type === "sexuality") {
-        return <Dropdown value={props.sexuality} onChange={(e) => props.setSexuality(e.value)} options={sexualities} optionLabel="sexuality" 
+        return <Dropdown value={props.sexuality} onChange={(e) => props.setSexuality(e.value.sexuality)} options={sexualities} optionLabel="sexuality" 
         placeholder="Select your sexuality" className="w-full md:w-14rem" />
     } else if (props.type === "highestEducation") {
-        return <Dropdown value={props.higestEdu} onChange={(e) => props.setHighestEdu(e.value)} options={levelsOfStudy} optionLabel="level" 
+        return <Dropdown value={props.highestEdu} onChange={(e) => props.setHighestEdu(e.value)} options={levelsOfStudy} optionLabel="level" 
         placeholder="Select your highest level of education completed thus far" className="w-full md:w-14rem" />
     } else if (props.type === "shirtSize") {
-        return <Dropdown value={props.shirtSize} onChange={(e) => props.setShirtSize(e.value)} options={shirtSizes} optionLabel="size" 
+        return <Dropdown value={props.shirtSize} onChange={(e) => props.setShirtSize(e.value.size)} options={shirtSizes} optionLabel="size" 
         placeholder="Select your shirt size" className="w-full md:w-14rem" />
     } else if (props.type === "fieldOfStudy") {
-        return <Dropdown value={props.fieldOfStudy} onChange={(e) => props.setFieldOfStudy(e.value)} options={fieldsOfStudy} optionLabel="major" 
+        return <Dropdown value={props.fieldOfStudy} onChange={(e) => props.setFieldOfStudy(e.value.major)} options={fieldsOfStudy} optionLabel="major" 
         placeholder="Select your field of study" className="w-full md:w-14rem" />
     }
 }
