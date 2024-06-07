@@ -136,13 +136,13 @@ export default function DropdownInput(props: any) {
         return <Dropdown value={props.levelOfStudy} onChange={(e) => props.setLevelOfStudy(e.value)} options={levelsOfStudy} optionLabel="level" 
         placeholder="Select your current level of study" className="w-full md:w-14rem" />
     } else if (props.type === "country") {
-        return <Dropdown value={props.country} onChange={(e) => props.setCountry(e.target)} options={countries} optionLabel="country" optionValue="code"
+        return <Dropdown value={props.country} onChange={(e) => props.setCountry(e.value)} options={countries} optionLabel="country" optionValue="code"
         filter={true} placeholder="Select your country of residence" className="w-full md:w-14rem" />
     } else if (props.type === "dietary") {
         return <Dropdown value={props.dietaryRestriction} onChange={(e) => props.setDietaryRestriction(e.value)} options={dietaryRestrictions} optionLabel="restriction" 
         placeholder="Select a dietary restriction, if applicable" className="w-full md:w-14rem" />
     } else if (props.type === "underrepresented") {
-        return <Dropdown value={props.underrepresent} onChange={(e) => props.setUnderrepresent(e.value)} options={underrepresented} optionLabel="category" 
+        return <Dropdown value={props.isUnderrepresented} onChange={(e) => props.setIsUnderrepresented(e.value)} options={underrepresented} optionLabel="category" 
         placeholder="Select if you are or aren't represented" className="w-full md:w-14rem" />
     } else if (props.type === "gender") {
         return <Dropdown value={props.gender} onChange={(e) => props.setGender(e.value)} options={genders} optionLabel="gender" 
@@ -157,7 +157,7 @@ export default function DropdownInput(props: any) {
         return <Dropdown value={props.sexuality} onChange={(e) => props.setSexuality(e.value)} options={sexualities} optionLabel="sexuality" 
         placeholder="Select your sexuality" className="w-full md:w-14rem" />
     } else if (props.type === "highestEducation") {
-        return <Dropdown value={props.higestEdu} onChange={(e) => props.setHighestEdu(e.value)} options={levelsOfStudy} optionLabel="level" 
+        return <Dropdown value={props.highestEdu} onChange={(e) => props.setHighestEdu(e.value)} options={levelsOfStudy} optionLabel="level" 
         placeholder="Select your highest level of education completed thus far" className="w-full md:w-14rem" />
     } else if (props.type === "shirtSize") {
         return <Dropdown value={props.shirtSize} onChange={(e) => props.setShirtSize(e.value)} options={shirtSizes} optionLabel="size" 
