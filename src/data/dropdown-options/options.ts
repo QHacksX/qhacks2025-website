@@ -86,8 +86,8 @@ const pronouns = [
   { pronoun: "They/Them" },
   { pronoun: "She/They" },
   { pronoun: "He/They" },
-  { pronoun: "Prefer Not to Answer" },
-  { pronoun: "Other" },
+  { pronoun: "Prefer to self-describe" },
+  { pronoun: "Prefer Not to Answer" }
 ];
 
 const ethnicities = [
@@ -107,7 +107,7 @@ const ethnicities = [
   { ethnicity: "White" },
   { ethnicity: "Other Asian (Thai, Cambodian, etc)" },
   { ethnicity: "Other Pacific Islander" },
-  { ethnicity: "Other (Please Specify)" },
+  { ethnicity: "Prefer to self-describe" },
   { ethnicity: "Prefer Not to Answer" },
 ];
 
@@ -115,7 +115,7 @@ const sexualities = [
   { sexuality: "Heterosexual or straight" },
   { sexuality: "Gay or lesbian" },
   { sexuality: "Bisexual" },
-  { sexuality: "Different identity ________" },
+  { sexuality: "Prefer to self-describe" },
   { sexuality: "Prefer Not to Answer" },
 ];
 

@@ -137,14 +137,14 @@ function Page(props: any) {
                   <FormHeader title='Mandatory Inputs' subheader='Subheader' />
                   <WordInput
                     title='First Name'
-                    name={firstName}
-                    setName={setFirstName}
+                    input={firstName}
+                    setInput={setFirstName}
                     placeholder='First Name'
                   />
                   <WordInput
                     title='Last Name'
-                    name={lastName}
-                    setName={setLastName}
+                    input={lastName}
+                    setInput={setLastName}
                     placeholder='Last Name'
                   />
                   <DropdownInput
@@ -207,28 +207,60 @@ function Page(props: any) {
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
                     type={DropdownTypes.gender}
-                    value={gender}
-                    setValue={setGender}
+                    value={origInputGender}
+                    setValue={setOrigInputGender}
                   />
+                  {origInputGender.gender === "Prefer to self-describe" ? (
+                    <WordInput
+                      title="Self-Describe Your Gender"
+                      input={gender}
+                      setInput={setGender}
+                      placeholder="Self-Describe Your Gender"
+                    />
+                  ) : null}
                   <DropdownInput
                     type={DropdownTypes.pronouns}
-                    value={pronoun}
-                    setValue={setPronoun}
+                    value={origInputPronoun}
+                    setValue={setOrigInputPronoun}
                   />
+                  {origInputPronoun.pronoun === "Prefer to self-describe" ? (
+                    <WordInput
+                      title="Self-Describe Your Pronoun(s)"
+                      input={pronoun}
+                      setInput={setPronoun}
+                      placeholder="Self-Describe Your Pronoun(s)"
+                    />
+                  ) : null}
                 </>
               ) : step === 6 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
                     type={DropdownTypes.ethnicity}
-                    value={ethnicity}
-                    setValue={setEthnicity}
+                    value={origInputEthnicity}
+                    setValue={setOrigInputEthnicity}
                   />
+                  {origInputEthnicity.ethnicity === "Prefer to self-describe" ? (
+                    <WordInput
+                      title="Self-Describe Your Ethnicity"
+                      input={ethnicity}
+                      setInput={setEthnicity}
+                      placeholder="Self-Describe Your Ethnicity"
+                    />
+                  ) : null}
                   <DropdownInput
                     type={DropdownTypes.sexuality}
-                    value={sexuality}
-                    setValue={setSexuality}
+                    value={origInputSexuality}
+                    setValue={setOrigInputSexuality}
                   />
+                  {origInputSexuality.sexuality === "Prefer to self-describe" ? (
+                    <WordInput
+                      title="Self-Describe Your Sexual Identity"
+                      input={sexuality}
+                      setInput={setSexuality}
+                      placeholder="Self-Describe Your Sexual Identity"
+                    />
+                  ) : null}
                 </>
               ) : step === 7 ? (
                 <>
@@ -240,9 +272,17 @@ function Page(props: any) {
                   />
                   <DropdownInput
                     type={DropdownTypes.fieldOfStudy}
-                    value={fieldOfStudy}
-                    setValue={setFieldOfStudy}
+                    value={origInputFieldOfStudy}
+                    setValue={setOrigInputFieldOfStudy}
                   />
+                  {origInputFieldOfStudy.major === "Other (please specify)" ? (
+                    <WordInput
+                      title="Self-Describe Your Major"
+                      input={fieldOfStudy}
+                      setInput={setFieldOfStudy}
+                      placeholder="Self-Describe Your Major"
+                    />
+                  ) : null}
                   <DropdownInput
                     type={DropdownTypes.shirtSize}
                     value={shirtSize}
