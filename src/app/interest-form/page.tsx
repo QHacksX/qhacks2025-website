@@ -12,6 +12,7 @@ import {
   updateUserData,
 } from "@/src/firebase/userData";
 import { useEffect, useState } from "react";
+import "../../css/style.css";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
@@ -127,10 +128,10 @@ function Page(props: any) {
   };
 
   return (
-    <div className='flex'>
-      <div className='flex-1'>
-        <main className='p-4 pb-8 bg-slate-100 place-content-center flex justify-center'>
-          <div className='p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 grow'>
+    <div className='flex h-screen shadow'>
+      <div className='flex-1 h-full justify-center align-middle content-center'>
+        <main className='p-4 pb-8  place-content-center flex justify-center w-full'>
+          <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
             <div className='grid gap-6 mb-8'>
               {step === 1 ? (
                 <>
@@ -148,6 +149,7 @@ function Page(props: any) {
                     placeholder='Last Name'
                   />
                   <DropdownInput
+                    title={"Age"}
                     type={DropdownTypes.age}
                     value={age}
                     setValue={setAge}
@@ -173,16 +175,19 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Mandatory Inputs' subheader='Subheader' />
                   <DropdownInput
+                    title={"School"}
                     type={DropdownTypes.school}
                     value={school}
                     setValue={setSchool}
                   />
                   <DropdownInput
+                    title={"Level Of Study"}
                     type={DropdownTypes.levelOfStudy}
                     value={levelOfStudy}
                     setValue={setLevelOfStudy}
                   />
                   <DropdownInput
+                    title={"Country"}
                     type={DropdownTypes.country}
                     value={country}
                     setValue={setCountry}
@@ -192,11 +197,13 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
+                    title={"Dietary Restrictions"}
                     type={DropdownTypes.dietaryRestriction}
                     value={dietaryRestriction}
                     setValue={setDietaryRestriction}
                   />
                   <DropdownInput
+                    title={"Underrepresented"}
                     type={DropdownTypes.isUnderrepresented}
                     value={isUnderrepresented}
                     setValue={setIsUnderrepresented}
@@ -206,29 +213,31 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
+                    title={"Gender"}
                     type={DropdownTypes.gender}
                     value={origInputGender}
                     setValue={setOrigInputGender}
                   />
                   {origInputGender.gender === "Prefer to self-describe" ? (
                     <WordInput
-                      title="Self-Describe Your Gender"
+                      title='Self-Describe Your Gender'
                       input={gender}
                       setInput={setGender}
-                      placeholder="Self-Describe Your Gender"
+                      placeholder='Self-Describe Your Gender'
                     />
                   ) : null}
                   <DropdownInput
+                    title={"Pronouns"}
                     type={DropdownTypes.pronouns}
                     value={origInputPronoun}
                     setValue={setOrigInputPronoun}
                   />
                   {origInputPronoun.pronoun === "Prefer to self-describe" ? (
                     <WordInput
-                      title="Self-Describe Your Pronoun(s)"
+                      title='Self-Describe Your Pronoun(s)'
                       input={pronoun}
                       setInput={setPronoun}
-                      placeholder="Self-Describe Your Pronoun(s)"
+                      placeholder='Self-Describe Your Pronoun(s)'
                     />
                   ) : null}
                 </>
@@ -236,29 +245,33 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
+                    title={"Ethnicity"}
                     type={DropdownTypes.ethnicity}
                     value={origInputEthnicity}
                     setValue={setOrigInputEthnicity}
                   />
-                  {origInputEthnicity.ethnicity === "Prefer to self-describe" ? (
+                  {origInputEthnicity.ethnicity ===
+                  "Prefer to self-describe" ? (
                     <WordInput
-                      title="Self-Describe Your Ethnicity"
+                      title='Self-Describe Your Ethnicity'
                       input={ethnicity}
                       setInput={setEthnicity}
-                      placeholder="Self-Describe Your Ethnicity"
+                      placeholder='Self-Describe Your Ethnicity'
                     />
                   ) : null}
                   <DropdownInput
+                    title={"Sexuality"}
                     type={DropdownTypes.sexuality}
                     value={origInputSexuality}
                     setValue={setOrigInputSexuality}
                   />
-                  {origInputSexuality.sexuality === "Prefer to self-describe" ? (
+                  {origInputSexuality.sexuality ===
+                  "Prefer to self-describe" ? (
                     <WordInput
-                      title="Self-Describe Your Sexual Identity"
+                      title='Self-Describe Your Sexual Identity'
                       input={sexuality}
                       setInput={setSexuality}
-                      placeholder="Self-Describe Your Sexual Identity"
+                      placeholder='Self-Describe Your Sexual Identity'
                     />
                   ) : null}
                 </>
@@ -266,24 +279,27 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
+                    title={"Highest Level Of Education"}
                     type={DropdownTypes.highestEdu}
                     value={highestEdu}
                     setValue={setHighestEdu}
                   />
                   <DropdownInput
+                    title={"Field Of Study"}
                     type={DropdownTypes.fieldOfStudy}
                     value={origInputFieldOfStudy}
                     setValue={setOrigInputFieldOfStudy}
                   />
                   {origInputFieldOfStudy.major === "Other (please specify)" ? (
                     <WordInput
-                      title="Self-Describe Your Major"
+                      title='Self-Describe Your Major'
                       input={fieldOfStudy}
                       setInput={setFieldOfStudy}
-                      placeholder="Self-Describe Your Major"
+                      placeholder='Self-Describe Your Major'
                     />
                   ) : null}
                   <DropdownInput
+                    title={"Shirt Size"}
                     type={DropdownTypes.shirtSize}
                     value={shirtSize}
                     setValue={setShirtSize}
@@ -318,6 +334,10 @@ function Page(props: any) {
                 </button>
               ) : null}
             </div>
+            <progress
+              value={step / 7}
+              className='mt-20 h-1 w-full border-none rounded-lg [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-[#ffffff54] [&::-webkit-progress-value]:bg-white'
+            />
           </div>
         </main>
       </div>

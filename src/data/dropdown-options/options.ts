@@ -28,144 +28,144 @@ export type DropdownConfig = {
 };
 
 const ages = [
-  { age: 16 },
-  { age: 17 },
-  { age: 18 },
-  { age: 19 },
-  { age: 20 },
-  { age: 21 },
-  { age: 22 },
-  { age: 23 },
-  { age: 24 },
-  { age: 25 },
+  { value: 16 },
+  { value: 17 },
+  { value: 18 },
+  { value: 19 },
+  { value: 20 },
+  { value: 21 },
+  { value: 22 },
+  { value: 23 },
+  { value: 24 },
+  { value: 25 },
 ];
 
 const schools = schoolList;
 
 const levelsOfStudy = [
-  { level: "Less than Secondary / High School" },
-  { level: "Secondary / High School" },
+  { value: "Less than Secondary / High School" },
+  { value: "Secondary / High School" },
   {
-    level: "Undergraduate University (2 year - community college or similar)",
+    value: "Undergraduate University (2 year - community college or similar)",
   },
-  { level: "Undergraduate University (3+ year)" },
-  { level: "Graduate University (Masters, Professional, Doctoral, etc)" },
-  { level: "Code School / Bootcamp" },
-  { level: "Other Vocational / Trade Program or Apprenticeship" },
-  { level: "Post Doctorate" },
-  { level: "Other" },
-  { level: "I'm not currently a student" },
-  { level: "Prefer not to answer" },
+  { value: "Undergraduate University (3+ year)" },
+  { value: "Graduate University (Masters, Professional, Doctoral, etc)" },
+  { value: "Code School / Bootcamp" },
+  { value: "Other Vocational / Trade Program or Apprenticeship" },
+  { value: "Post Doctorate" },
+  { value: "Other" },
+  { value: "I'm not currently a student" },
+  { value: "Prefer not to answer" },
 ];
 
 const countries = countryList;
 
 const dietaryRestrictions = [
-  { restriction: "Vegetarian" },
-  { restriction: "Vegan" },
-  { restriction: "Celiac Disease" },
-  { restriction: "Allergies" },
-  { restriction: "Kosher" },
-  { restriction: "Halal" },
+  { value: "Vegetarian" },
+  { value: "Vegan" },
+  { value: "Celiac Disease" },
+  { value: "Allergies" },
+  { value: "Kosher" },
+  { value: "Halal" },
 ];
 
 const underrepresented = [
-  { category: "Yes" },
-  { category: "No" },
-  { category: "Unsure" },
+  { value: "Yes" },
+  { value: "No" },
+  { value: "Unsure" },
 ];
 
 const genders = [
-  { gender: "Man" },
-  { gender: "Woman" },
-  { gender: "Non-Binary" },
-  { gender: "Prefer to self-describe" },
-  { gender: "Prefer Not to Answer" },
+  { value: "Man" },
+  { value: "Woman" },
+  { value: "Non-Binary" },
+  { value: "Prefer to self-describe" },
+  { value: "Prefer Not to Answer" },
 ];
 
 const pronouns = [
-  { pronoun: "She/Her" },
-  { pronoun: "He/Him" },
-  { pronoun: "They/Them" },
-  { pronoun: "She/They" },
-  { pronoun: "He/They" },
-  { pronoun: "Prefer to self-describe" },
-  { pronoun: "Prefer Not to Answer" }
+  { value: "She/Her" },
+  { value: "He/Him" },
+  { value: "They/Them" },
+  { value: "She/They" },
+  { value: "He/They" },
+  { value: "Prefer to self-describe" },
+  { value: "Prefer Not to Answer" }
 ];
 
 const ethnicities = [
-  { ethnicity: "Asian Indian" },
-  { ethnicity: "Black or African" },
-  { ethnicity: "Chinese" },
-  { ethnicity: "Filipino" },
-  { ethnicity: "Guamanian or Chamorro" },
-  { ethnicity: "Hispanic / Latino / Spanish Origin" },
-  { ethnicity: "Japanese" },
-  { ethnicity: "Korean" },
-  { ethnicity: "Middle Eastern" },
-  { ethnicity: "Native American or Alaskan Native" },
-  { ethnicity: "Native Hawaiian" },
-  { ethnicity: "Samoan" },
-  { ethnicity: "Vietnamese" },
-  { ethnicity: "White" },
-  { ethnicity: "Other Asian (Thai, Cambodian, etc)" },
-  { ethnicity: "Other Pacific Islander" },
-  { ethnicity: "Prefer to self-describe" },
-  { ethnicity: "Prefer Not to Answer" },
+  { value: "Asian Indian" },
+  { value: "Black or African" },
+  { value: "Chinese" },
+  { value: "Filipino" },
+  { value: "Guamanian or Chamorro" },
+  { value: "Hispanic / Latino / Spanish Origin" },
+  { value: "Japanese" },
+  { value: "Korean" },
+  { value: "Middle Eastern" },
+  { value: "Native American or Alaskan Native" },
+  { value: "Native Hawaiian" },
+  { value: "Samoan" },
+  { value: "Vietnamese" },
+  { value: "White" },
+  { value: "Other Asian (Thai, Cambodian, etc)" },
+  { value: "Other Pacific Islander" },
+  { value: "Prefer to self-describe" },
+  { value: "Prefer Not to Answer" },
 ];
 
 const sexualities = [
-  { sexuality: "Heterosexual or straight" },
-  { sexuality: "Gay or lesbian" },
-  { sexuality: "Bisexual" },
-  { sexuality: "Prefer to self-describe" },
-  { sexuality: "Prefer Not to Answer" },
+  { value: "Heterosexual or straight" },
+  { value: "Gay or lesbian" },
+  { value: "Bisexual" },
+  { value: "Prefer to self-describe" },
+  { value: "Prefer Not to Answer" },
 ];
 
 const shirtSizes = [
-  { size: ShirtSize.xSmall },
-  { size: ShirtSize.small },
-  { size: ShirtSize.medium },
-  { size: ShirtSize.large },
-  { size: ShirtSize.xLarge },
-  { size: ShirtSize.xxLarge },
+  { value: ShirtSize.xSmall },
+  { value: ShirtSize.small },
+  { value: ShirtSize.medium },
+  { value: ShirtSize.large },
+  { value: ShirtSize.xLarge },
+  { value: ShirtSize.xxLarge },
 ];
 
 const fieldsOfStudy = [
   {
-    major: "Computer science, computer engineering, or software engineering",
+    value: "Computer science, computer engineering, or software engineering",
   },
   {
-    major:
+    value:
       "Another engineering discipline (such as civil, electrical, mechanical, etc.)",
   },
   {
-    major:
+    value:
       "Information systems, information technology, or system administration",
   },
-  { major: "A natural science (such as biology, chemistry, physics, etc.)" },
-  { major: "Mathematics or statistics" },
-  { major: "Web development or web design" },
+  { value: "A natural science (such as biology, chemistry, physics, etc.)" },
+  { value: "Mathematics or statistics" },
+  { value: "Web development or web design" },
   {
-    major: "Business discipline (such as accounting, finance, marketing, etc.)",
+    value: "Business discipline (such as accounting, finance, marketing, etc.)",
   },
   {
-    major:
+    value:
       "Humanities discipline (such as literature, history, philosophy, etc.)",
   },
   {
-    major:
+    value:
       "Social science (such as anthropology, psychology, political science, etc.)",
   },
   {
-    major:
+    value:
       "Fine arts or performing arts (such as graphic design, music, studio art, etc.)",
   },
-  { major: "Health science (such as nursing, pharmacy, radiology, etc.)" },
-  { major: "Other (please specify)" },
-  { major: "Undecided / No Declared Major" },
-  { major: "My school does not offer majors / primary areas of study" },
-  { major: "Prefer not to answer" },
+  { value: "Health science (such as nursing, pharmacy, radiology, etc.)" },
+  { value: "Other (please specify)" },
+  { value: "Undecided / No Declared Major" },
+  { value: "My school does not offer majors / primary areas of study" },
+  { value: "Prefer not to answer" },
 ];
 
 /**
@@ -176,104 +176,104 @@ export const dropdownOptions = new Map<DropdownTypes, DropdownConfig>([
     DropdownTypes.age,
     {
       options: ages,
-      label: "age",
-      placeholder: "Select your age",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.school,
     {
       options: schools,
-      label: "school",
-      placeholder: "Select your school",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.levelOfStudy,
     {
       options: levelsOfStudy,
-      label: "level",
-      placeholder: "Select your current level of study",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.country,
     {
       options: countries,
-      label: "country",
-      placeholder: "Select your country of residence",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.dietaryRestriction,
     {
       options: dietaryRestrictions,
-      label: "restriction",
-      placeholder: "Select a dietary restriction, if applicable",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.isUnderrepresented,
     {
       options: underrepresented,
-      label: "category",
-      placeholder: "Select if you are or aren't represented",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.gender,
     {
       options: genders,
-      label: "gender",
-      placeholder: "Select your gender",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.pronouns,
     {
       options: pronouns,
-      label: "pronoun",
-      placeholder: "Select your pronouns",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.ethnicity,
     {
       options: ethnicities,
-      label: "ethnicity",
-      placeholder: "Select your ethnicity",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.sexuality,
     {
       options: sexualities,
-      label: "sexuality",
-      placeholder: "Select your sexuality",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.highestEdu,
     {
       options: levelsOfStudy,
-      label: "level",
-      placeholder: "Select your highest level of education completed thus far",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.shirtSize,
     {
       options: shirtSizes,
-      label: "size",
-      placeholder: "Select your shirt size",
+      label: "value",
+      placeholder: "---",
     },
   ],
   [
     DropdownTypes.fieldOfStudy,
     {
       options: fieldsOfStudy,
-      label: "major",
-      placeholder: "Select your field of study",
+      label: "value",
+      placeholder: "---",
     },
   ],
 ]);

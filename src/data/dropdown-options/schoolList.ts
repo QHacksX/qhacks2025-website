@@ -2,6675 +2,6675 @@
 
 export const schoolList = [
     {
-      "school": "21st Century Cyber Charter School"
+      "value": "21st Century Cyber Charter School"
     },
     {
-      "school": "Aalto University"
+      "value": "Aalto University"
     },
     {
-      "school": "Aarhus University"
+      "value": "Aarhus University"
     },
     {
-      "school": "Abbey Park High School"
+      "value": "Abbey Park High School"
     },
     {
-      "school": "Abbey Park Middle School"
+      "value": "Abbey Park Middle School"
     },
     {
-      "school": "Abertay University"
+      "value": "Abertay University"
     },
     {
-      "school": "ABES Engineering College"
+      "value": "ABES Engineering College"
     },
     {
-      "school": "Abington Senior High School"
+      "value": "Abington Senior High School"
     },
     {
-      "school": "Abraham Lincoln High School"
+      "value": "Abraham Lincoln High School"
     },
     {
-      "school": "Abraham Lincoln High School - Philadelphia"
+      "value": "Abraham Lincoln High School - Philadelphia"
     },
     {
-      "school": "Academy at Palumbo"
+      "value": "Academy at Palumbo"
     },
     {
-      "school": "Academy of Technology"
+      "value": "Academy of Technology"
     },
     {
-      "school": "Acardia High School, Arizona"
+      "value": "Acardia High School, Arizona"
     },
     {
-      "school": "Achariya College of Engineering Technology"
+      "value": "Achariya College of Engineering Technology"
     },
     {
-      "school": "Acharya Institute of Technology"
+      "value": "Acharya Institute of Technology"
     },
     {
-      "school": "Acharya Institute of Technology (AIT)"
+      "value": "Acharya Institute of Technology (AIT)"
     },
     {
-      "school": "Acharya Narendra Dev College, University Of Delhi"
+      "value": "Acharya Narendra Dev College, University Of Delhi"
     },
     {
-      "school": "Achievement House Charter School - Online"
+      "value": "Achievement House Charter School - Online"
     },
     {
-      "school": "Acropolis Institute of Technology & Research"
+      "value": "Acropolis Institute of Technology & Research"
     },
     {
-      "school": "ACT Academy Cyber Charter School"
+      "value": "ACT Academy Cyber Charter School"
     },
     {
-      "school": "Acton-Boxborough Regional High School"
+      "value": "Acton-Boxborough Regional High School"
     },
     {
-      "school": "Adelphi University"
+      "value": "Adelphi University"
     },
     {
-      "school": "Aditya Institute of Technology and Management (AITAM College, Tekkali)"
+      "value": "Aditya Institute of Technology and Management (AITAM College, Tekkali)"
     },
     {
-      "school": "Adlai E. Stevenson High School"
+      "value": "Adlai E. Stevenson High School"
     },
     {
-      "school": "Advanced Math and Science Academy Charter School"
+      "value": "Advanced Math and Science Academy Charter School"
     },
     {
-      "school": "AGH University of Science and Technology"
+      "value": "AGH University of Science and Technology"
     },
     {
-      "school": "Agnes Scott College"
+      "value": "Agnes Scott College"
     },
     {
-      "school": "Agora Cyber Charter School"
+      "value": "Agora Cyber Charter School"
     },
     {
-      "school": "Alagappa Chettiar Government College of Engineering and Technology"
+      "value": "Alagappa Chettiar Government College of Engineering and Technology"
     },
     {
-      "school": "Alagappa College of Technology, Anna University"
+      "value": "Alagappa College of Technology, Anna University"
     },
     {
-      "school": "Alameda High School"
+      "value": "Alameda High School"
     },
     {
-      "school": "Albany Medical College"
+      "value": "Albany Medical College"
     },
     {
-      "school": "Albany State University (GA)"
+      "value": "Albany State University (GA)"
     },
     {
-      "school": "Albertian Institute of Science and Technology (AISAT)"
+      "value": "Albertian Institute of Science and Technology (AISAT)"
     },
     {
-      "school": "Albright College"
+      "value": "Albright College"
     },
     {
-      "school": "Alfa College"
+      "value": "Alfa College"
     },
     {
-      "school": "Aligarh Muslim University"
+      "value": "Aligarh Muslim University"
     },
     {
-      "school": "Allen High School"
+      "value": "Allen High School"
     },
     {
-      "school": "Alwar Institute of Engineering and Technology (AIET)"
+      "value": "Alwar Institute of Engineering and Technology (AIET)"
     },
     {
-      "school": "Ambala College of Engineering and Applied Research"
+      "value": "Ambala College of Engineering and Applied Research"
     },
     {
-      "school": "Ambedkar Institute of Advanced Communication Technologies and Research (AIACTR)"
+      "value": "Ambedkar Institute of Advanced Communication Technologies and Research (AIACTR)"
     },
     {
-      "school": "AMC Engineering College"
+      "value": "AMC Engineering College"
     },
     {
-      "school": "American Heritage School"
+      "value": "American Heritage School"
     },
     {
-      "school": "American High School"
+      "value": "American High School"
     },
     {
-      "school": "American River College, California"
+      "value": "American River College, California"
     },
     {
-      "school": "American University in Dubai"
+      "value": "American University in Dubai"
     },
     {
-      "school": "American University, Washington, D.C."
+      "value": "American University, Washington, D.C."
     },
     {
-      "school": "Amherst College"
+      "value": "Amherst College"
     },
     {
-      "school": "Amity School of Engineering and Technology"
+      "value": "Amity School of Engineering and Technology"
     },
     {
-      "school": "Amity University"
+      "value": "Amity University"
     },
     {
-      "school": "Amrita School of Engineering"
+      "value": "Amrita School of Engineering"
     },
     {
-      "school": "Amritsar College of Engineering & Technology"
+      "value": "Amritsar College of Engineering & Technology"
     },
     {
-      "school": "Anand Institute of Higher Technology"
+      "value": "Anand Institute of Higher Technology"
     },
     {
-      "school": "Ancaster High School"
+      "value": "Ancaster High School"
     },
     {
-      "school": "Anchor Bay High School"
+      "value": "Anchor Bay High School"
     },
     {
-      "school": "Andhra University College of Engineering"
+      "value": "Andhra University College of Engineering"
     },
     {
-      "school": "Andover Central High School"
+      "value": "Andover Central High School"
     },
     {
-      "school": "Angadi Institute of Technology & Management (AITM)"
+      "value": "Angadi Institute of Technology & Management (AITM)"
     },
     {
-      "school": "Anil Neerukonda Institute of Technology and Sciences"
+      "value": "Anil Neerukonda Institute of Technology and Sciences"
     },
     {
-      "school": "Anjalai Ammal Mahalingam Engineering College"
+      "value": "Anjalai Ammal Mahalingam Engineering College"
     },
     {
-      "school": "Anna University"
+      "value": "Anna University"
     },
     {
-      "school": "Ansal Technical Campus, Dr. A.P.J Abdul Kalam Technical University"
+      "value": "Ansal Technical Campus, Dr. A.P.J Abdul Kalam Technical University"
     },
     {
-      "school": "Anurag University, Ghatkesar"
+      "value": "Anurag University, Ghatkesar"
     },
     {
-      "school": "Apeejay Stya University"
+      "value": "Apeejay Stya University"
     },
     {
-      "school": "APPA Institute of Engineering and Technology"
+      "value": "APPA Institute of Engineering and Technology"
     },
     {
-      "school": "Appalachian State University"
+      "value": "Appalachian State University"
     },
     {
-      "school": "APS College of Engineering"
+      "value": "APS College of Engineering"
     },
     {
-      "school": "Aravali Institute of Technical Studies"
+      "value": "Aravali Institute of Technical Studies"
     },
     {
-      "school": "Arcadia High School, California"
+      "value": "Arcadia High School, California"
     },
     {
-      "school": "Arcadia University"
+      "value": "Arcadia University"
     },
     {
-      "school": "Arizona State University"
+      "value": "Arizona State University"
     },
     {
-      "school": "Army Institute Of Technology, Pune"
+      "value": "Army Institute Of Technology, Pune"
     },
     {
-      "school": "Art Institute of Philadelphia"
+      "value": "Art Institute of Philadelphia"
     },
     {
-      "school": "Arya College of Engineering & I.T."
+      "value": "Arya College of Engineering & I.T."
     },
     {
-      "school": "Asansol Engineering College"
+      "value": "Asansol Engineering College"
     },
     {
-      "school": "Ashoka Institute of Technology and Management"
+      "value": "Ashoka Institute of Technology and Management"
     },
     {
-      "school": "Asia Pacific Institute of Information Technology, Panipat"
+      "value": "Asia Pacific Institute of Information Technology, Panipat"
     },
     {
-      "school": "Asia Pacific University of Information & Technology, Kuala Lumpur"
+      "value": "Asia Pacific University of Information & Technology, Kuala Lumpur"
     },
     {
-      "school": "Asian School of Business Management (ASBM University)"
+      "value": "Asian School of Business Management (ASBM University)"
     },
     {
-      "school": "ASPIRA Bilingual Cyber Charter School"
+      "value": "ASPIRA Bilingual Cyber Charter School"
     },
     {
-      "school": "Assam Downtown University"
+      "value": "Assam Downtown University"
     },
     {
-      "school": "Assam Engineering College"
+      "value": "Assam Engineering College"
     },
     {
-      "school": "Assam University, Silchar"
+      "value": "Assam University, Silchar"
     },
     {
-      "school": "Aston University"
+      "value": "Aston University"
     },
     {
-      "school": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management, Gwalior (ABV-IIITM Gwalior)"
+      "value": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management, Gwalior (ABV-IIITM Gwalior)"
     },
     {
-      "school": "Atlanta Metropolitan State College"
+      "value": "Atlanta Metropolitan State College"
     },
     {
-      "school": "Atlantic Cape Community College"
+      "value": "Atlantic Cape Community College"
     },
     {
-      "school": "Atma Ram Sanatan Dharma College"
+      "value": "Atma Ram Sanatan Dharma College"
     },
     {
-      "school": "ATME College of Engineering"
+      "value": "ATME College of Engineering"
     },
     {
-      "school": "Atria Institute of Technology"
+      "value": "Atria Institute of Technology"
     },
     {
-      "school": "Auburn University"
+      "value": "Auburn University"
     },
     {
-      "school": "Audisankara College of Engineering and Technology"
+      "value": "Audisankara College of Engineering and Technology"
     },
     {
-      "school": "Aurora Group of Institutions"
+      "value": "Aurora Group of Institutions"
     },
     {
-      "school": "Austin Community College District"
+      "value": "Austin Community College District"
     },
     {
-      "school": "Aviation Career & Technical Education High School"
+      "value": "Aviation Career & Technical Education High School"
     },
     {
-      "school": "Avon High School"
+      "value": "Avon High School"
     },
     {
-      "school": "B. P. Poddar Institute of Management and Technology"
+      "value": "B. P. Poddar Institute of Management and Technology"
     },
     {
-      "school": "B. V. Bhoomaraddi College of Engineering and Technology (KLE Tech)"
+      "value": "B. V. Bhoomaraddi College of Engineering and Technology (KLE Tech)"
     },
     {
-      "school": "B.M.S College Of Engineering"
+      "value": "B.M.S College Of Engineering"
     },
     {
-      "school": "B.N.M Institute of Technology"
+      "value": "B.N.M Institute of Technology"
     },
     {
-      "school": "Babaria Institute of Technology"
+      "value": "Babaria Institute of Technology"
     },
     {
-      "school": "Babson College"
+      "value": "Babson College"
     },
     {
-      "school": "Babu Banarasi Das National Institute of Technology and Management"
+      "value": "Babu Banarasi Das National Institute of Technology and Management"
     },
     {
-      "school": "Babu Banarasi Das Northern India Institute of Technology"
+      "value": "Babu Banarasi Das Northern India Institute of Technology"
     },
     {
-      "school": "Babu Banarsi Das Institute of Technology"
+      "value": "Babu Banarsi Das Institute of Technology"
     },
     {
-      "school": "Badruka Educational Society"
+      "value": "Badruka Educational Society"
     },
     {
-      "school": "Bahria University Lahore Campus"
+      "value": "Bahria University Lahore Campus"
     },
     {
-      "school": "Ball State University"
+      "value": "Ball State University"
     },
     {
-      "school": "Baltimore Polytechnic Institute"
+      "value": "Baltimore Polytechnic Institute"
     },
     {
-      "school": "Bangalore Institute of Technology"
+      "value": "Bangalore Institute of Technology"
     },
     {
-      "school": "Bangalore University"
+      "value": "Bangalore University"
     },
     {
-      "school": "Bannari Amman Institute of Technology"
+      "value": "Bannari Amman Institute of Technology"
     },
     {
-      "school": "Bapuji Institute Of Engineering & Technology (BIET)"
+      "value": "Bapuji Institute Of Engineering & Technology (BIET)"
     },
     {
-      "school": "Bard College"
+      "value": "Bard College"
     },
     {
-      "school": "Barnard College"
+      "value": "Barnard College"
     },
     {
-      "school": "Barton College"
+      "value": "Barton College"
     },
     {
-      "school": "Baruch College, CUNY"
+      "value": "Baruch College, CUNY"
     },
     {
-      "school": "Basaveshwar Engineering College"
+      "value": "Basaveshwar Engineering College"
     },
     {
-      "school": "Baton Rouge Community College"
+      "value": "Baton Rouge Community College"
     },
     {
-      "school": "Battlefield High School"
+      "value": "Battlefield High School"
     },
     {
-      "school": "Bauman Moscow State Technical University"
+      "value": "Bauman Moscow State Technical University"
     },
     {
-      "school": "Bayside High School"
+      "value": "Bayside High School"
     },
     {
-      "school": "Bayview Secondary School"
+      "value": "Bayview Secondary School"
     },
     {
-      "school": "Beihang University"
+      "value": "Beihang University"
     },
     {
-      "school": "Bellevue College, Washington"
+      "value": "Bellevue College, Washington"
     },
     {
-      "school": "Benedictine College"
+      "value": "Benedictine College"
     },
     {
-      "school": "Benha University"
+      "value": "Benha University"
     },
     {
-      "school": "Benjamin Franklin High School - Baltimore"
+      "value": "Benjamin Franklin High School - Baltimore"
     },
     {
-      "school": "Benjamin Franklin High School - Philadelphia"
+      "value": "Benjamin Franklin High School - Philadelphia"
     },
     {
-      "school": "Bennett College"
+      "value": "Bennett College"
     },
     {
-      "school": "Bennett University (Times of India Group)"
+      "value": "Bennett University (Times of India Group)"
     },
     {
-      "school": "Bentley University"
+      "value": "Bentley University"
     },
     {
-      "school": "Berea College"
+      "value": "Berea College"
     },
     {
-      "school": "Bergen Catholic High School"
+      "value": "Bergen Catholic High School"
     },
     {
-      "school": "Bergen Community College"
+      "value": "Bergen Community College"
     },
     {
-      "school": "Bergen County Academies"
+      "value": "Bergen County Academies"
     },
     {
-      "school": "Bergen County Technical High School - Teterboro"
+      "value": "Bergen County Technical High School - Teterboro"
     },
     {
-      "school": "Berkshire Community College"
+      "value": "Berkshire Community College"
     },
     {
-      "school": "Bhagalpur College of Engineering"
+      "value": "Bhagalpur College of Engineering"
     },
     {
-      "school": "Bhagwan Parshuram Institute of Technology"
+      "value": "Bhagwan Parshuram Institute of Technology"
     },
     {
-      "school": "Bharat Institute of Engineering and Technology (BIET)"
+      "value": "Bharat Institute of Engineering and Technology (BIET)"
     },
     {
-      "school": "Bharathiar University"
+      "value": "Bharathiar University"
     },
     {
-      "school": "Bharati Vidyapeeth's College of Engineering"
+      "value": "Bharati Vidyapeeth's College of Engineering"
     },
     {
-      "school": "Bilkent University"
+      "value": "Bilkent University"
     },
     {
-      "school": "Bineswar Brahma Engineering College (BBEC)"
+      "value": "Bineswar Brahma Engineering College (BBEC)"
     },
     {
-      "school": "Binghamton University"
+      "value": "Binghamton University"
     },
     {
-      "school": "Birkbeck, University of London"
+      "value": "Birkbeck, University of London"
     },
     {
-      "school": "Birla Institute of Technology and Science, Pilani"
+      "value": "Birla Institute of Technology and Science, Pilani"
     },
     {
-      "school": "Birla Institute Of Technology,  Mesra"
+      "value": "Birla Institute Of Technology,  Mesra"
     },
     {
-      "school": "Birla Institute of Technology, Patna"
+      "value": "Birla Institute of Technology, Patna"
     },
     {
-      "school": "Birla Vishvakarma Mahavidyalaya Engineering College"
+      "value": "Birla Vishvakarma Mahavidyalaya Engineering College"
     },
     {
-      "school": "Birmingham City University"
+      "value": "Birmingham City University"
     },
     {
-      "school": "Birsa Institute of Technology (BIT), SINDRI"
+      "value": "Birsa Institute of Technology (BIT), SINDRI"
     },
     {
-      "school": "BITS Pilani, Hyderabad Campus"
+      "value": "BITS Pilani, Hyderabad Campus"
     },
     {
-      "school": "BITS Pilani, K K Birla Goa Campus"
+      "value": "BITS Pilani, K K Birla Goa Campus"
     },
     {
-      "school": "BLDEA’s V.P. Dr P. G. Halakatti College of Engineering & Technology"
+      "value": "BLDEA’s V.P. Dr P. G. Halakatti College of Engineering & Technology"
     },
     {
-      "school": "Blinn College"
+      "value": "Blinn College"
     },
     {
-      "school": "Bloomfield Hills High School"
+      "value": "Bloomfield Hills High School"
     },
     {
-      "school": "Bloomsburg University of Pennsylvania"
+      "value": "Bloomsburg University of Pennsylvania"
     },
     {
-      "school": "Blue Mountain Academy"
+      "value": "Blue Mountain Academy"
     },
     {
-      "school": "BlueCrest University College"
+      "value": "BlueCrest University College"
     },
     {
-      "school": "Bluevale Collegiate Institute"
+      "value": "Bluevale Collegiate Institute"
     },
     {
-      "school": "BMIET, Sonipat"
+      "value": "BMIET, Sonipat"
     },
     {
-      "school": "BMIIT, Uka Tarsadia University, Bardoli, Surat"
+      "value": "BMIIT, Uka Tarsadia University, Bardoli, Surat"
     },
     {
-      "school": "BML Munjal University (BMU)"
+      "value": "BML Munjal University (BMU)"
     },
     {
-      "school": "BMS Institute of Technology and Management"
+      "value": "BMS Institute of Technology and Management"
     },
     {
-      "school": "Boca Raton Community High School"
+      "value": "Boca Raton Community High School"
     },
     {
-      "school": "Boise State University"
+      "value": "Boise State University"
     },
     {
-      "school": "Bordentown Regional High School"
+      "value": "Bordentown Regional High School"
     },
     {
-      "school": "Borough of Manhattan Community College, CUNY"
+      "value": "Borough of Manhattan Community College, CUNY"
     },
     {
-      "school": "Boston College"
+      "value": "Boston College"
     },
     {
-      "school": "Boston Latin School"
+      "value": "Boston Latin School"
     },
     {
-      "school": "Boston University"
+      "value": "Boston University"
     },
     {
-      "school": "Boston University Metropolitan College"
+      "value": "Boston University Metropolitan College"
     },
     {
-      "school": "Bourne Grammar School"
+      "value": "Bourne Grammar School"
     },
     {
-      "school": "Bournemouth University"
+      "value": "Bournemouth University"
     },
     {
-      "school": "Bowdoin College"
+      "value": "Bowdoin College"
     },
     {
-      "school": "Bowie State University"
+      "value": "Bowie State University"
     },
     {
-      "school": "Boys Latin of Philadelphia Charter School"
+      "value": "Boys Latin of Philadelphia Charter School"
     },
     {
-      "school": "Brampton Centennial Secondary School"
+      "value": "Brampton Centennial Secondary School"
     },
     {
-      "school": "Brandeis University"
+      "value": "Brandeis University"
     },
     {
-      "school": "Brentsville High School"
+      "value": "Brentsville High School"
     },
     {
-      "school": "Briar Cliff University"
+      "value": "Briar Cliff University"
     },
     {
-      "school": "Briarcliff High School"
+      "value": "Briarcliff High School"
     },
     {
-      "school": "Bridgewater State University"
+      "value": "Bridgewater State University"
     },
     {
-      "school": "Brigham Young University"
+      "value": "Brigham Young University"
     },
     {
-      "school": "British Columbia Institute of Technology"
+      "value": "British Columbia Institute of Technology"
     },
     {
-      "school": "Brno University of Technology"
+      "value": "Brno University of Technology"
     },
     {
-      "school": "Brock University"
+      "value": "Brock University"
     },
     {
-      "school": "Bronx Community College, CUNY"
+      "value": "Bronx Community College, CUNY"
     },
     {
-      "school": "Brookdale Community College"
+      "value": "Brookdale Community College"
     },
     {
-      "school": "Brooklyn College, CUNY"
+      "value": "Brooklyn College, CUNY"
     },
     {
-      "school": "Brooklyn Technical High School"
+      "value": "Brooklyn Technical High School"
     },
     {
-      "school": "Brookwood High School"
+      "value": "Brookwood High School"
     },
     {
-      "school": "Brown University"
+      "value": "Brown University"
     },
     {
-      "school": "Brunel University London"
+      "value": "Brunel University London"
     },
     {
-      "school": "Bryn Athyn College"
+      "value": "Bryn Athyn College"
     },
     {
-      "school": "Bryn Mawr College"
+      "value": "Bryn Mawr College"
     },
     {
-      "school": "Bucknell University"
+      "value": "Bucknell University"
     },
     {
-      "school": "Bucks County Community College"
+      "value": "Bucks County Community College"
     },
     {
-      "school": "Bundelkhand Institute Of Engineering & Technology (BIET Jhansi)"
+      "value": "Bundelkhand Institute Of Engineering & Technology (BIET Jhansi)"
     },
     {
-      "school": "Burlington Township High School"
+      "value": "Burlington Township High School"
     },
     {
-      "school": "Business Academy Aarhus"
+      "value": "Business Academy Aarhus"
     },
     {
-      "school": "BVRIT Hyderabad College of Engineering for Women"
+      "value": "BVRIT Hyderabad College of Engineering for Women"
     },
     {
-      "school": "C. Abdul Hakeem College of Engineering & Technology"
+      "value": "C. Abdul Hakeem College of Engineering & Technology"
     },
     {
-      "school": "C. D. Hylton High School"
+      "value": "C. D. Hylton High School"
     },
     {
-      "school": "C. K. Pithawala College of Engineering and Technology"
+      "value": "C. K. Pithawala College of Engineering and Technology"
     },
     {
-      "school": "C.V. Raman College of Engineering"
+      "value": "C.V. Raman College of Engineering"
     },
     {
-      "school": "Cabrini University"
+      "value": "Cabrini University"
     },
     {
-      "school": "Cadbury Sixth Form College"
+      "value": "Cadbury Sixth Form College"
     },
     {
-      "school": "Cairn University"
+      "value": "Cairn University"
     },
     {
-      "school": "Caldwell University"
+      "value": "Caldwell University"
     },
     {
-      "school": "California High School"
+      "value": "California High School"
     },
     {
-      "school": "California Institute of Technology"
+      "value": "California Institute of Technology"
     },
     {
-      "school": "California Polytechnic State University, San Luis Obispo"
+      "value": "California Polytechnic State University, San Luis Obispo"
     },
     {
-      "school": "California State Polytechnic University, Pomona"
+      "value": "California State Polytechnic University, Pomona"
     },
     {
-      "school": "California State University, Bakersfield"
+      "value": "California State University, Bakersfield"
     },
     {
-      "school": "California State University, Channel Islands"
+      "value": "California State University, Channel Islands"
     },
     {
-      "school": "California State University, Chico"
+      "value": "California State University, Chico"
     },
     {
-      "school": "California State University, Dominguez Hills"
+      "value": "California State University, Dominguez Hills"
     },
     {
-      "school": "California State University, East Bay"
+      "value": "California State University, East Bay"
     },
     {
-      "school": "California State University, Fresno"
+      "value": "California State University, Fresno"
     },
     {
-      "school": "California State University, Fullerton"
+      "value": "California State University, Fullerton"
     },
     {
-      "school": "California State University, Humboldt"
+      "value": "California State University, Humboldt"
     },
     {
-      "school": "California State University, Long Beach"
+      "value": "California State University, Long Beach"
     },
     {
-      "school": "California State University, Los Angeles"
+      "value": "California State University, Los Angeles"
     },
     {
-      "school": "California State University, Maritime"
+      "value": "California State University, Maritime"
     },
     {
-      "school": "California State University, Monterey Bay"
+      "value": "California State University, Monterey Bay"
     },
     {
-      "school": "California State University, Northridge"
+      "value": "California State University, Northridge"
     },
     {
-      "school": "California State University, Sacramento"
+      "value": "California State University, Sacramento"
     },
     {
-      "school": "California State University, San Bernardino"
+      "value": "California State University, San Bernardino"
     },
     {
-      "school": "California State University, San Diego"
+      "value": "California State University, San Diego"
     },
     {
-      "school": "California State University, San Francisco"
+      "value": "California State University, San Francisco"
     },
     {
-      "school": "California State University, San Jose"
+      "value": "California State University, San Jose"
     },
     {
-      "school": "California State University, San Luis Obispo"
+      "value": "California State University, San Luis Obispo"
     },
     {
-      "school": "California State University, San Marcos"
+      "value": "California State University, San Marcos"
     },
     {
-      "school": "California State University, Sonoma"
+      "value": "California State University, Sonoma"
     },
     {
-      "school": "California State University, Stanislaus"
+      "value": "California State University, Stanislaus"
     },
     {
-      "school": "California University of Pennsylvania"
+      "value": "California University of Pennsylvania"
     },
     {
-      "school": "Calvin College"
+      "value": "Calvin College"
     },
     {
-      "school": "Camden County College"
+      "value": "Camden County College"
     },
     {
-      "school": "Cameron Heights Collegiate Institute"
+      "value": "Cameron Heights Collegiate Institute"
     },
     {
-      "school": "Canada (Cañada) College"
+      "value": "Canada (Cañada) College"
     },
     {
-      "school": "Canara Engineering College (CEC)"
+      "value": "Canara Engineering College (CEC)"
     },
     {
-      "school": "Canyon Crest Academy"
+      "value": "Canyon Crest Academy"
     },
     {
-      "school": "CAPA - Philadelphia High School for Creative and Performing Arts"
+      "value": "CAPA - Philadelphia High School for Creative and Performing Arts"
     },
     {
-      "school": "Cardiff Metropolitan University"
+      "value": "Cardiff Metropolitan University"
     },
     {
-      "school": "Carleton College"
+      "value": "Carleton College"
     },
     {
-      "school": "Carleton University"
+      "value": "Carleton University"
     },
     {
-      "school": "Carnegie Mellon University"
+      "value": "Carnegie Mellon University"
     },
     {
-      "school": "Carteret High School"
+      "value": "Carteret High School"
     },
     {
-      "school": "Carthage College"
+      "value": "Carthage College"
     },
     {
-      "school": "Cascadia College"
+      "value": "Cascadia College"
     },
     {
-      "school": "Case Western Reserve University"
+      "value": "Case Western Reserve University"
     },
     {
-      "school": "Cathedral High School, Los Angeles"
+      "value": "Cathedral High School, Los Angeles"
     },
     {
-      "school": "Catholic University of America"
+      "value": "Catholic University of America"
     },
     {
-      "school": "Cedar Creek High School"
+      "value": "Cedar Creek High School"
     },
     {
-      "school": "Cedar Ridge High School"
+      "value": "Cedar Ridge High School"
     },
     {
-      "school": "Cedarville University"
+      "value": "Cedarville University"
     },
     {
-      "school": "Cégep André-Laurendeau"
+      "value": "Cégep André-Laurendeau"
     },
     {
-      "school": "Cégep de Saint-Laurent"
+      "value": "Cégep de Saint-Laurent"
     },
     {
-      "school": "Cégep du Vieux Montréal"
+      "value": "Cégep du Vieux Montréal"
     },
     {
-      "school": "Cégep Marie-Victorin"
+      "value": "Cégep Marie-Victorin"
     },
     {
-      "school": "Centennial Collegiate Vocational Institute"
+      "value": "Centennial Collegiate Vocational Institute"
     },
     {
-      "school": "Centennial High School"
+      "value": "Centennial High School"
     },
     {
-      "school": "Central Connecticut State University"
+      "value": "Central Connecticut State University"
     },
     {
-      "school": "Central High School - Philadelphia"
+      "value": "Central High School - Philadelphia"
     },
     {
-      "school": "Central Institute of Plastics Engineering & Technology (CIPET)"
+      "value": "Central Institute of Plastics Engineering & Technology (CIPET)"
     },
     {
-      "school": "Central PA Digital Learning Foundation Charter School"
+      "value": "Central PA Digital Learning Foundation Charter School"
     },
     {
-      "school": "Central Peel Secondary School"
+      "value": "Central Peel Secondary School"
     },
     {
-      "school": "Central Texas College"
+      "value": "Central Texas College"
     },
     {
-      "school": "Centro de Enseñanza Técnica y Superior (CETYS), Campus Ensenada"
+      "value": "Centro de Enseñanza Técnica y Superior (CETYS), Campus Ensenada"
     },
     {
-      "school": "Centro de Enseñanza Técnica y Superior (CETYS), Campus Mexicali"
+      "value": "Centro de Enseñanza Técnica y Superior (CETYS), Campus Mexicali"
     },
     {
-      "school": "Cerritos College"
+      "value": "Cerritos College"
     },
     {
-      "school": "Chaitanya Bharathi Institute of Technology"
+      "value": "Chaitanya Bharathi Institute of Technology"
     },
     {
-      "school": "Chalmers University of Technology"
+      "value": "Chalmers University of Technology"
     },
     {
-      "school": "Champlain College"
+      "value": "Champlain College"
     },
     {
-      "school": "Chandigarh College Of Engineering & Technology (CCET)"
+      "value": "Chandigarh College Of Engineering & Technology (CCET)"
     },
     {
-      "school": "Chandigarh University"
+      "value": "Chandigarh University"
     },
     {
-      "school": "Channabasaveshwara Institute of Technology"
+      "value": "Channabasaveshwara Institute of Technology"
     },
     {
-      "school": "Chaparral Star Academy"
+      "value": "Chaparral Star Academy"
     },
     {
-      "school": "Chapel Hill High School"
+      "value": "Chapel Hill High School"
     },
     {
-      "school": "Charotar University Of Science And Technology (CHAURSAT)"
+      "value": "Charotar University Of Science And Technology (CHAURSAT)"
     },
     {
-      "school": "Charter High School for Architecture and Design - Philadelphia"
+      "value": "Charter High School for Architecture and Design - Philadelphia"
     },
     {
-      "school": "Chattahoochee Technical College"
+      "value": "Chattahoochee Technical College"
     },
     {
-      "school": "Cherokee High School"
+      "value": "Cherokee High School"
     },
     {
-      "school": "Cherry Hill High School East"
+      "value": "Cherry Hill High School East"
     },
     {
-      "school": "Cherry Hill High School West"
+      "value": "Cherry Hill High School West"
     },
     {
-      "school": "Chestnut Hill College"
+      "value": "Chestnut Hill College"
     },
     {
-      "school": "Cheyney University"
+      "value": "Cheyney University"
     },
     {
-      "school": "Chinguacousy Secondary School"
+      "value": "Chinguacousy Secondary School"
     },
     {
-      "school": "Chitkara Institute of Engineering & Technology (CIET)"
+      "value": "Chitkara Institute of Engineering & Technology (CIET)"
     },
     {
-      "school": "Chitkara University"
+      "value": "Chitkara University"
     },
     {
-      "school": "Christ College of Engineering and Technology"
+      "value": "Christ College of Engineering and Technology"
     },
     {
-      "school": "Christ Knowledge City"
+      "value": "Christ Knowledge City"
     },
     {
-      "school": "Christ University"
+      "value": "Christ University"
     },
     {
-      "school": "Christ University Faculty of Engineering"
+      "value": "Christ University Faculty of Engineering"
     },
     {
-      "school": "Cincinnati State Technical and Community College"
+      "value": "Cincinnati State Technical and Community College"
     },
     {
-      "school": "Citrus College"
+      "value": "Citrus College"
     },
     {
-      "school": "City College of San Francisco"
+      "value": "City College of San Francisco"
     },
     {
-      "school": "City Engineering College"
+      "value": "City Engineering College"
     },
     {
-      "school": "City Neighbors High School"
+      "value": "City Neighbors High School"
     },
     {
-      "school": "City University London"
+      "value": "City University London"
     },
     {
-      "school": "Claremont McKenna College"
+      "value": "Claremont McKenna College"
     },
     {
-      "school": "Clarion University of Pennsylvania"
+      "value": "Clarion University of Pennsylvania"
     },
     {
-      "school": "Clark Atlanta University"
+      "value": "Clark Atlanta University"
     },
     {
-      "school": "Clark University"
+      "value": "Clark University"
     },
     {
-      "school": "Clarksburg High School"
+      "value": "Clarksburg High School"
     },
     {
-      "school": "Clarkson University"
+      "value": "Clarkson University"
     },
     {
-      "school": "Clayton State University"
+      "value": "Clayton State University"
     },
     {
-      "school": "Clemson University"
+      "value": "Clemson University"
     },
     {
-      "school": "Cleveland State University"
+      "value": "Cleveland State University"
     },
     {
-      "school": "Clifton Public Highschool"
+      "value": "Clifton Public Highschool"
     },
     {
-      "school": "Cluster Innovation Centre, University of Delhi"
+      "value": "Cluster Innovation Centre, University of Delhi"
     },
     {
-      "school": "CMR College of Engineering and Technology,  Hyderabad"
+      "value": "CMR College of Engineering and Technology,  Hyderabad"
     },
     {
-      "school": "CMR Engineering College"
+      "value": "CMR Engineering College"
     },
     {
-      "school": "CMR Institute of Technology (CMRIT)"
+      "value": "CMR Institute of Technology (CMRIT)"
     },
     {
-      "school": "CMR Technical Campus"
+      "value": "CMR Technical Campus"
     },
     {
-      "school": "Cochin College of Engineering and Technology"
+      "value": "Cochin College of Engineering and Technology"
     },
     {
-      "school": "Cochin University College of Engineering Kuttanad"
+      "value": "Cochin University College of Engineering Kuttanad"
     },
     {
-      "school": "Cochin University of Science and Technology"
+      "value": "Cochin University of Science and Technology"
     },
     {
-      "school": "Cochin University of Science And Technology"
+      "value": "Cochin University of Science And Technology"
     },
     {
-      "school": "CODE University of Applied Sciences Berlin"
+      "value": "CODE University of Applied Sciences Berlin"
     },
     {
-      "school": "Coe College"
+      "value": "Coe College"
     },
     {
-      "school": "Coimbatore Institute of Engineering and Technology (CIET)"
+      "value": "Coimbatore Institute of Engineering and Technology (CIET)"
     },
     {
-      "school": "Coimbatore Institute of Technology (CIT)"
+      "value": "Coimbatore Institute of Technology (CIT)"
     },
     {
-      "school": "Colegio Simón Bolívar"
+      "value": "Colegio Simón Bolívar"
     },
     {
-      "school": "Colgate University"
+      "value": "Colgate University"
     },
     {
-      "school": "Collège Ahuntsic"
+      "value": "Collège Ahuntsic"
     },
     {
-      "school": "Collège André-Grasset"
+      "value": "Collège André-Grasset"
     },
     {
-      "school": "Collège de Bois-de-Boulogne"
+      "value": "Collège de Bois-de-Boulogne"
     },
     {
-      "school": "Collège de Maisonneuve"
+      "value": "Collège de Maisonneuve"
     },
     {
-      "school": "Collège de Montréal"
+      "value": "Collège de Montréal"
     },
     {
-      "school": "Collège de Rosemont"
+      "value": "Collège de Rosemont"
     },
     {
-      "school": "Collège Français"
+      "value": "Collège Français"
     },
     {
-      "school": "Collège Jean-de-Brébeuf"
+      "value": "Collège Jean-de-Brébeuf"
     },
     {
-      "school": "Collège Jean-Eudes"
+      "value": "Collège Jean-Eudes"
     },
     {
-      "school": "Collège Lionel-Groulx"
+      "value": "Collège Lionel-Groulx"
     },
     {
-      "school": "College of Agricultural Engineering and Post Harvest Technology (CAEPHT)"
+      "value": "College of Agricultural Engineering and Post Harvest Technology (CAEPHT)"
     },
     {
-      "school": "College of Agriculture, Central Agricultural University"
+      "value": "College of Agriculture, Central Agricultural University"
     },
     {
-      "school": "College of Charleston"
+      "value": "College of Charleston"
     },
     {
-      "school": "College of DuPage"
+      "value": "College of DuPage"
     },
     {
-      "school": "College of Engineering & Management Punnapra"
+      "value": "College of Engineering & Management Punnapra"
     },
     {
-      "school": "College of Engineering and Management, Kolaghat"
+      "value": "College of Engineering and Management, Kolaghat"
     },
     {
-      "school": "College of Engineering Chengannur"
+      "value": "College of Engineering Chengannur"
     },
     {
-      "school": "College of Engineering, Pune"
+      "value": "College of Engineering, Pune"
     },
     {
-      "school": "College of Staten Island, CUNY"
+      "value": "College of Staten Island, CUNY"
     },
     {
-      "school": "College of Technology & Engineering, Udaipur"
+      "value": "College of Technology & Engineering, Udaipur"
     },
     {
-      "school": "College of Westchester"
+      "value": "College of Westchester"
     },
     {
-      "school": "Collège Regina Assumpta"
+      "value": "Collège Regina Assumpta"
     },
     {
-      "school": "Colleyville Heritage High School"
+      "value": "Colleyville Heritage High School"
     },
     {
-      "school": "Collins Hill High School"
+      "value": "Collins Hill High School"
     },
     {
-      "school": "Colorado School of Mines"
+      "value": "Colorado School of Mines"
     },
     {
-      "school": "Colts Neck High School"
+      "value": "Colts Neck High School"
     },
     {
-      "school": "Columbia Secondary School"
+      "value": "Columbia Secondary School"
     },
     {
-      "school": "Columbia University"
+      "value": "Columbia University"
     },
     {
-      "school": "Columbus College of Art and Design"
+      "value": "Columbus College of Art and Design"
     },
     {
-      "school": "Columbus State Community College"
+      "value": "Columbus State Community College"
     },
     {
-      "school": "Comenius University"
+      "value": "Comenius University"
     },
     {
-      "school": "Commonwealth Charter Academy Charter School"
+      "value": "Commonwealth Charter Academy Charter School"
     },
     {
-      "school": "Community Academy of Philadelphia Charter School"
+      "value": "Community Academy of Philadelphia Charter School"
     },
     {
-      "school": "Community College of Allegheny County"
+      "value": "Community College of Allegheny County"
     },
     {
-      "school": "Community College of Baltimore County"
+      "value": "Community College of Baltimore County"
     },
     {
-      "school": "Community College of Philadelphia"
+      "value": "Community College of Philadelphia"
     },
     {
-      "school": "Community College of Rhode Island"
+      "value": "Community College of Rhode Island"
     },
     {
-      "school": "COMSATS Institute of Information Technology"
+      "value": "COMSATS Institute of Information Technology"
     },
     {
-      "school": "Concord Academy"
+      "value": "Concord Academy"
     },
     {
-      "school": "Concordia University"
+      "value": "Concordia University"
     },
     {
-      "school": "Concordia University Ann Arbor"
+      "value": "Concordia University Ann Arbor"
     },
     {
-      "school": "Concordia University Chicago"
+      "value": "Concordia University Chicago"
     },
     {
-      "school": "Concordia University Irvine"
+      "value": "Concordia University Irvine"
     },
     {
-      "school": "Concordia University Nebraska"
+      "value": "Concordia University Nebraska"
     },
     {
-      "school": "Concordia University St. Paul"
+      "value": "Concordia University St. Paul"
     },
     {
-      "school": "Concordia University Texas"
+      "value": "Concordia University Texas"
     },
     {
-      "school": "Concordia University Wisconsin"
+      "value": "Concordia University Wisconsin"
     },
     {
-      "school": "Conestoga College"
+      "value": "Conestoga College"
     },
     {
-      "school": "Conestoga High School"
+      "value": "Conestoga High School"
     },
     {
-      "school": "Connecticut College"
+      "value": "Connecticut College"
     },
     {
-      "school": "Conroe ISD Academy of Science and Technology, Texas"
+      "value": "Conroe ISD Academy of Science and Technology, Texas"
     },
     {
-      "school": "Constitution High School - Philadelphia"
+      "value": "Constitution High School - Philadelphia"
     },
     {
-      "school": "Cooch Behar Government Engineering College"
+      "value": "Cooch Behar Government Engineering College"
     },
     {
-      "school": "Cooper Union"
+      "value": "Cooper Union"
     },
     {
-      "school": "Coral Glades High School"
+      "value": "Coral Glades High School"
     },
     {
-      "school": "Cornell College"
+      "value": "Cornell College"
     },
     {
-      "school": "Cornell University"
+      "value": "Cornell University"
     },
     {
-      "school": "Council Rock High School North"
+      "value": "Council Rock High School North"
     },
     {
-      "school": "Council Rock High School South"
+      "value": "Council Rock High School South"
     },
     {
-      "school": "County College of Morris"
+      "value": "County College of Morris"
     },
     {
-      "school": "Covenant University"
+      "value": "Covenant University"
     },
     {
-      "school": "Coventry University"
+      "value": "Coventry University"
     },
     {
-      "school": "Cranbrook Schools"
+      "value": "Cranbrook Schools"
     },
     {
-      "school": "Cranfield University"
+      "value": "Cranfield University"
     },
     {
-      "school": "Creekview High School"
+      "value": "Creekview High School"
     },
     {
-      "school": "Cumberland County College"
+      "value": "Cumberland County College"
     },
     {
-      "school": "Cummins College of Engineering for Women,  Pune"
+      "value": "Cummins College of Engineering for Women,  Pune"
     },
     {
-      "school": "Cupertino High School"
+      "value": "Cupertino High School"
     },
     {
-      "school": "D.J. College of Engineering & Technology"
+      "value": "D.J. College of Engineering & Technology"
     },
     {
-      "school": "D.K.T.E Society's Textile and Engineering Institute"
+      "value": "D.K.T.E Society's Textile and Engineering Institute"
     },
     {
-      "school": "Dalhousie University"
+      "value": "Dalhousie University"
     },
     {
-      "school": "Dalmia Institute of Scientific & Industrial Research"
+      "value": "Dalmia Institute of Scientific & Industrial Research"
     },
     {
-      "school": "Dartmouth College"
+      "value": "Dartmouth College"
     },
     {
-      "school": "Davidson College"
+      "value": "Davidson College"
     },
     {
-      "school": "Dawson College"
+      "value": "Dawson College"
     },
     {
-      "school": "Dayalbagh Educational Institute"
+      "value": "Dayalbagh Educational Institute"
     },
     {
-      "school": "Dayananda Sagar University"
+      "value": "Dayananda Sagar University"
     },
     {
-      "school": "DCS,  Ganpat University"
+      "value": "DCS,  Ganpat University"
     },
     {
-      "school": "De Anza College"
+      "value": "De Anza College"
     },
     {
-      "school": "Deenbandhu Chhotu Ram University of Science and Technology, Murthal"
+      "value": "Deenbandhu Chhotu Ram University of Science and Technology, Murthal"
     },
     {
-      "school": "Deerfield High School"
+      "value": "Deerfield High School"
     },
     {
-      "school": "Del Norte High School"
+      "value": "Del Norte High School"
     },
     {
-      "school": "Delaware County Community College - Downingtown"
+      "value": "Delaware County Community College - Downingtown"
     },
     {
-      "school": "Delaware County Community College - Exton"
+      "value": "Delaware County Community College - Exton"
     },
     {
-      "school": "Delaware County Community College - Main Campus (Marple)"
+      "value": "Delaware County Community College - Main Campus (Marple)"
     },
     {
-      "school": "Delaware County Community College - Phoenixville"
+      "value": "Delaware County Community College - Phoenixville"
     },
     {
-      "school": "Delaware County Community College - Sharon Hill"
+      "value": "Delaware County Community College - Sharon Hill"
     },
     {
-      "school": "Delaware County Community College - Upper Darby"
+      "value": "Delaware County Community College - Upper Darby"
     },
     {
-      "school": "Delaware County Community College - West Grove"
+      "value": "Delaware County Community College - West Grove"
     },
     {
-      "school": "Delaware State University"
+      "value": "Delaware State University"
     },
     {
-      "school": "Delaware Technical Community College"
+      "value": "Delaware Technical Community College"
     },
     {
-      "school": "Delaware Valley Academy of Medical and Dental Assistants"
+      "value": "Delaware Valley Academy of Medical and Dental Assistants"
     },
     {
-      "school": "Delaware Valley University"
+      "value": "Delaware Valley University"
     },
     {
-      "school": "Delft University of Technology"
+      "value": "Delft University of Technology"
     },
     {
-      "school": "Delhi Technological University"
+      "value": "Delhi Technological University"
     },
     {
-      "school": "Denison University"
+      "value": "Denison University"
     },
     {
-      "school": "Department of Human Resource Management and OB, Central University of Jammu"
+      "value": "Department of Human Resource Management and OB, Central University of Jammu"
     },
     {
-      "school": "DePaul University"
+      "value": "DePaul University"
     },
     {
-      "school": "DePauw University"
+      "value": "DePauw University"
     },
     {
-      "school": "Des Moines Area Community College"
+      "value": "Des Moines Area Community College"
     },
     {
-      "school": "DeSales University"
+      "value": "DeSales University"
     },
     {
-      "school": "Devry University - Philadelphia Center City"
+      "value": "Devry University - Philadelphia Center City"
     },
     {
-      "school": "Dharmsinh Desai University"
+      "value": "Dharmsinh Desai University"
     },
     {
-      "school": "Dhirubhai Ambani Institute of Information and Communication Technology (DA-IICT)"
+      "value": "Dhirubhai Ambani Institute of Information and Communication Technology (DA-IICT)"
     },
     {
-      "school": "Diablo Valley College"
+      "value": "Diablo Valley College"
     },
     {
-      "school": "Dickinson College"
+      "value": "Dickinson College"
     },
     {
-      "school": "Digital Harbor High School"
+      "value": "Digital Harbor High School"
     },
     {
-      "school": "DIT University"
+      "value": "DIT University"
     },
     {
-      "school": "Don Bosco College of Engineering"
+      "value": "Don Bosco College of Engineering"
     },
     {
-      "school": "Don Bosco College of Engineering and Technology"
+      "value": "Don Bosco College of Engineering and Technology"
     },
     {
-      "school": "Don Bosco Institute of Technology"
+      "value": "Don Bosco Institute of Technology"
     },
     {
-      "school": "Doon College of Engineering & Technology"
+      "value": "Doon College of Engineering & Technology"
     },
     {
-      "school": "Dougherty Valley High School"
+      "value": "Dougherty Valley High School"
     },
     {
-      "school": "Dr B. R. Ambedkar Institute of Technology,  Port Blair"
+      "value": "Dr B. R. Ambedkar Institute of Technology,  Port Blair"
     },
     {
-      "school": "Dr. A.P.J. Abdul Kalam Technical University, Lucknow"
+      "value": "Dr. A.P.J. Abdul Kalam Technical University, Lucknow"
     },
     {
-      "school": "Dr. Akhilesh Das Gupta Institute of Technology & Management"
+      "value": "Dr. Akhilesh Das Gupta Institute of Technology & Management"
     },
     {
-      "school": "Dr. B. R. Ambedkar National Institute of Technology Jalandhar"
+      "value": "Dr. B. R. Ambedkar National Institute of Technology Jalandhar"
     },
     {
-      "school": "Dr. B.C. Roy Engineering College, Durgapur"
+      "value": "Dr. B.C. Roy Engineering College, Durgapur"
     },
     {
-      "school": "Dr. Babasaheb Ambedkar Marathwada University"
+      "value": "Dr. Babasaheb Ambedkar Marathwada University"
     },
     {
-      "school": "Dr. Harisingh Gour University, Sagar University"
+      "value": "Dr. Harisingh Gour University, Sagar University"
     },
     {
-      "school": "Dr. K.N. Modi Engineering College"
+      "value": "Dr. K.N. Modi Engineering College"
     },
     {
-      "school": "Dr. MGR Educational Research Institute University"
+      "value": "Dr. MGR Educational Research Institute University"
     },
     {
-      "school": "Dr. SJS Paul Memorial College of Engineering and Technology (CIT)"
+      "value": "Dr. SJS Paul Memorial College of Engineering and Technology (CIT)"
     },
     {
-      "school": "Dr. T. Thimmaiah Institute of Technology"
+      "value": "Dr. T. Thimmaiah Institute of Technology"
     },
     {
-      "school": "Drake University"
+      "value": "Drake University"
     },
     {
-      "school": "Drew University"
+      "value": "Drew University"
     },
     {
-      "school": "Drexel University"
+      "value": "Drexel University"
     },
     {
-      "school": "Dublin High School"
+      "value": "Dublin High School"
     },
     {
-      "school": "Dublin Jerome High School"
+      "value": "Dublin Jerome High School"
     },
     {
-      "school": "Duke University"
+      "value": "Duke University"
     },
     {
-      "school": "Dulaney High School"
+      "value": "Dulaney High School"
     },
     {
-      "school": "Duquesne University"
+      "value": "Duquesne University"
     },
     {
-      "school": "Durant High School"
+      "value": "Durant High School"
     },
     {
-      "school": "Durham College"
+      "value": "Durham College"
     },
     {
-      "school": "Durham University"
+      "value": "Durham University"
     },
     {
-      "school": "Dwarkadas J. Sanghvi College of Engineering"
+      "value": "Dwarkadas J. Sanghvi College of Engineering"
     },
     {
-      "school": "Dwight-Englewood School"
+      "value": "Dwight-Englewood School"
     },
     {
-      "school": "Earl of March Secondary School"
+      "value": "Earl of March Secondary School"
     },
     {
-      "school": "Earlham College"
+      "value": "Earlham College"
     },
     {
-      "school": "East Brunswick High School"
+      "value": "East Brunswick High School"
     },
     {
-      "school": "East Central University"
+      "value": "East Central University"
     },
     {
-      "school": "East Chapel Hill High Schoo"
+      "value": "East Chapel Hill High Schoo"
     },
     {
-      "school": "East Los Angeles College"
+      "value": "East Los Angeles College"
     },
     {
-      "school": "East Point College of Engineering and Technology"
+      "value": "East Point College of Engineering and Technology"
     },
     {
-      "school": "East Stroudsburg High School"
+      "value": "East Stroudsburg High School"
     },
     {
-      "school": "East West Institute of Technology"
+      "value": "East West Institute of Technology"
     },
     {
-      "school": "EASTERN Center for Arts and Technology"
+      "value": "EASTERN Center for Arts and Technology"
     },
     {
-      "school": "Eastern High School - Louisville"
+      "value": "Eastern High School - Louisville"
     },
     {
-      "school": "Eastern Michigan University"
+      "value": "Eastern Michigan University"
     },
     {
-      "school": "Eastern Regional High School"
+      "value": "Eastern Regional High School"
     },
     {
-      "school": "Eastern University - St. Davids"
+      "value": "Eastern University - St. Davids"
     },
     {
-      "school": "Eastern University Academy Charter School"
+      "value": "Eastern University Academy Charter School"
     },
     {
-      "school": "Eastern Washington University"
+      "value": "Eastern Washington University"
     },
     {
-      "school": "Eckerd College"
+      "value": "Eckerd College"
     },
     {
-      "school": "ecole centrale marseille"
+      "value": "ecole centrale marseille"
     },
     {
-      "school": "École Centrale Paris"
+      "value": "École Centrale Paris"
     },
     {
-      "school": "École de technologie supérieure"
+      "value": "École de technologie supérieure"
     },
     {
-      "school": "École nationale supérieure d’électronique, informatique, télécommunications, mathématique et mécanique de Bordeaux (ENSEIRB-MATMECA)"
+      "value": "École nationale supérieure d’électronique, informatique, télécommunications, mathématique et mécanique de Bordeaux (ENSEIRB-MATMECA)"
     },
     {
-      "school": "École Polytechnique de Montréal"
+      "value": "École Polytechnique de Montréal"
     },
     {
-      "school": "Edina High School"
+      "value": "Edina High School"
     },
     {
-      "school": "Edinburgh Napier University"
+      "value": "Edinburgh Napier University"
     },
     {
-      "school": "Edison Academy"
+      "value": "Edison Academy"
     },
     {
-      "school": "Edison High School"
+      "value": "Edison High School"
     },
     {
-      "school": "Edward R. Murrow High School"
+      "value": "Edward R. Murrow High School"
     },
     {
-      "school": "Egg Harbor Township High School"
+      "value": "Egg Harbor Township High School"
     },
     {
-      "school": "Eidgenössische Technische Hochschule (ETH) Zürich"
+      "value": "Eidgenössische Technische Hochschule (ETH) Zürich"
     },
     {
-      "school": "Ekta Incubation Center, West Bengal"
+      "value": "Ekta Incubation Center, West Bengal"
     },
     {
-      "school": "El Camino College"
+      "value": "El Camino College"
     },
     {
-      "school": "El Centro College"
+      "value": "El Centro College"
     },
     {
-      "school": "El Centro de Estudiantes"
+      "value": "El Centro de Estudiantes"
     },
     {
-      "school": "Elgin Academy"
+      "value": "Elgin Academy"
     },
     {
-      "school": "Elizabeth High School"
+      "value": "Elizabeth High School"
     },
     {
-      "school": "Elon University"
+      "value": "Elon University"
     },
     {
-      "school": "Embry-Riddle Aeronautical University"
+      "value": "Embry-Riddle Aeronautical University"
     },
     {
-      "school": "Emory University"
+      "value": "Emory University"
     },
     {
-      "school": "Entrepreneurship Development Center, MIT, Pune"
+      "value": "Entrepreneurship Development Center, MIT, Pune"
     },
     {
-      "school": "Entreprpeneurship Development Cell, University of Kerala"
+      "value": "Entreprpeneurship Development Cell, University of Kerala"
     },
     {
-      "school": "EPFL | École polytechnique fédérale de Lausanne"
+      "value": "EPFL | École polytechnique fédérale de Lausanne"
     },
     {
-      "school": "Episcopal Academy"
+      "value": "Episcopal Academy"
     },
     {
-      "school": "EPITECH Bordeaux"
+      "value": "EPITECH Bordeaux"
     },
     {
-      "school": "Er.Perumal Manimekalai College of Engineering"
+      "value": "Er.Perumal Manimekalai College of Engineering"
     },
     {
-      "school": "Erasmus Hogeschool Brussel"
+      "value": "Erasmus Hogeschool Brussel"
     },
     {
-      "school": "Erie Community College"
+      "value": "Erie Community College"
     },
     {
-      "school": "Ernest Manning High School"
+      "value": "Ernest Manning High School"
     },
     {
-      "school": "Esperanza Academy Charter School"
+      "value": "Esperanza Academy Charter School"
     },
     {
-      "school": "Esperanza Cyber Charter School"
+      "value": "Esperanza Cyber Charter School"
     },
     {
-      "school": "Evergreen Valley College"
+      "value": "Evergreen Valley College"
     },
     {
-      "school": "Evergreen Valley High School"
+      "value": "Evergreen Valley High School"
     },
     {
-      "school": "Fachhochschule Dortmund"
+      "value": "Fachhochschule Dortmund"
     },
     {
-      "school": "Faculty Of Engineering & Technology, Gurukula Kangri Vishwavidyalaya"
+      "value": "Faculty Of Engineering & Technology, Gurukula Kangri Vishwavidyalaya"
     },
     {
-      "school": "Faculty of science / Ibn Tofail University"
+      "value": "Faculty of science / Ibn Tofail University"
     },
     {
-      "school": "Fahaheel Al-Watanieh Indian Private School"
+      "value": "Fahaheel Al-Watanieh Indian Private School"
     },
     {
-      "school": "Fairfield University"
+      "value": "Fairfield University"
     },
     {
-      "school": "Fairleigh Dickinson University"
+      "value": "Fairleigh Dickinson University"
     },
     {
-      "school": "Fairview High School"
+      "value": "Fairview High School"
     },
     {
-      "school": "Farmingdale State College"
+      "value": "Farmingdale State College"
     },
     {
-      "school": "FernUniversität in Hagen"
+      "value": "FernUniversität in Hagen"
     },
     {
-      "school": "Finolex Academy of Management and Technology"
+      "value": "Finolex Academy of Management and Technology"
     },
     {
-      "school": "First Philadelphia Preparatory Charter School"
+      "value": "First Philadelphia Preparatory Charter School"
     },
     {
-      "school": "Fitchburg State University"
+      "value": "Fitchburg State University"
     },
     {
-      "school": "Florida Agricultural & Mechanical (A&M) University"
+      "value": "Florida Agricultural & Mechanical (A&M) University"
     },
     {
-      "school": "Florida Atlantic University"
+      "value": "Florida Atlantic University"
     },
     {
-      "school": "Florida Gulf Coast University"
+      "value": "Florida Gulf Coast University"
     },
     {
-      "school": "Florida Institute Of Technology"
+      "value": "Florida Institute Of Technology"
     },
     {
-      "school": "Florida International University"
+      "value": "Florida International University"
     },
     {
-      "school": "Florida Polytechnic University"
+      "value": "Florida Polytechnic University"
     },
     {
-      "school": "Florida State University"
+      "value": "Florida State University"
     },
     {
-      "school": "Fontys Hogeschool"
+      "value": "Fontys Hogeschool"
     },
     {
-      "school": "Foothill College"
+      "value": "Foothill College"
     },
     {
-      "school": "Fordham University"
+      "value": "Fordham University"
     },
     {
-      "school": "Forest Heights Collegiate Institute"
+      "value": "Forest Heights Collegiate Institute"
     },
     {
-      "school": "Forest Park High School - Baltimore"
+      "value": "Forest Park High School - Baltimore"
     },
     {
-      "school": "Forest Park High School - Forest Park, GA"
+      "value": "Forest Park High School - Forest Park, GA"
     },
     {
-      "school": "Forest Park High School - Woodbridge"
+      "value": "Forest Park High School - Woodbridge"
     },
     {
-      "school": "Fort Scott Community College"
+      "value": "Fort Scott Community College"
     },
     {
-      "school": "Foundation Collegiate Academy"
+      "value": "Foundation Collegiate Academy"
     },
     {
-      "school": "Foundation for Innovation and Technology Transfer, IIT Delhi"
+      "value": "Foundation for Innovation and Technology Transfer, IIT Delhi"
     },
     {
-      "school": "Fr. Conceicao Rodrigues College of Engineering"
+      "value": "Fr. Conceicao Rodrigues College of Engineering"
     },
     {
-      "school": "Francis Holland School"
+      "value": "Francis Holland School"
     },
     {
-      "school": "Francis Lewis High School"
+      "value": "Francis Lewis High School"
     },
     {
-      "school": "Frankford High School - Philadelphia"
+      "value": "Frankford High School - Philadelphia"
     },
     {
-      "school": "Franklin High School"
+      "value": "Franklin High School"
     },
     {
-      "school": "Franklin Learning Center - Philadelphia"
+      "value": "Franklin Learning Center - Philadelphia"
     },
     {
-      "school": "Franklin Towne Charter High School"
+      "value": "Franklin Towne Charter High School"
     },
     {
-      "school": "Franklin W. Olin College of Engineering"
+      "value": "Franklin W. Olin College of Engineering"
     },
     {
-      "school": "Frederick Community College"
+      "value": "Frederick Community College"
     },
     {
-      "school": "Freedom High School - Bethlehem"
+      "value": "Freedom High School - Bethlehem"
     },
     {
-      "school": "Freedom High School - Woodbridge"
+      "value": "Freedom High School - Woodbridge"
     },
     {
-      "school": "Freehold High School"
+      "value": "Freehold High School"
     },
     {
-      "school": "Freire Charter High School"
+      "value": "Freire Charter High School"
     },
     {
-      "school": "Fremont High School"
+      "value": "Fremont High School"
     },
     {
-      "school": "Full Sail University"
+      "value": "Full Sail University"
     },
     {
-      "school": "Fullerton College"
+      "value": "Fullerton College"
     },
     {
-      "school": "G. H. Patel College of Engineering & Technology"
+      "value": "G. H. Patel College of Engineering & Technology"
     },
     {
-      "school": "G. Narayanamma Institute of Technology Science (For Women)"
+      "value": "G. Narayanamma Institute of Technology Science (For Women)"
     },
     {
-      "school": "G.H. Raisoni College of Engineering"
+      "value": "G.H. Raisoni College of Engineering"
     },
     {
-      "school": "Galgotias College of Engineering & Technology"
+      "value": "Galgotias College of Engineering & Technology"
     },
     {
-      "school": "Gandhi Institute of Technical Advancement (GITA)"
+      "value": "Gandhi Institute of Technical Advancement (GITA)"
     },
     {
-      "school": "Gandhi Institute of Technology and Management, Bengaluru"
+      "value": "Gandhi Institute of Technology and Management, Bengaluru"
     },
     {
-      "school": "Gandhi Institute of Technology and Management, Hyderabad"
+      "value": "Gandhi Institute of Technology and Management, Hyderabad"
     },
     {
-      "school": "Gandhi Institute of Technology and Management, Visakhapatnam"
+      "value": "Gandhi Institute of Technology and Management, Visakhapatnam"
     },
     {
-      "school": "Gandhi Institution of Management Studies"
+      "value": "Gandhi Institution of Management Studies"
     },
     {
-      "school": "Ganga International School"
+      "value": "Ganga International School"
     },
     {
-      "school": "Ganpat University"
+      "value": "Ganpat University"
     },
     {
-      "school": "Gar-Field Senior High School"
+      "value": "Gar-Field Senior High School"
     },
     {
-      "school": "Garnet Valley High School"
+      "value": "Garnet Valley High School"
     },
     {
-      "school": "Gautam Buddha University"
+      "value": "Gautam Buddha University"
     },
     {
-      "school": "Gaya College Of Engineering"
+      "value": "Gaya College Of Engineering"
     },
     {
-      "school": "Gayatri Vidya Parishad College of Engineering"
+      "value": "Gayatri Vidya Parishad College of Engineering"
     },
     {
-      "school": "GEC, Gandhinagar"
+      "value": "GEC, Gandhinagar"
     },
     {
-      "school": "GEC, Patan"
+      "value": "GEC, Patan"
     },
     {
-      "school": "Geetanjali Institute of Technical Studies (GITS)"
+      "value": "Geetanjali Institute of Technical Studies (GITS)"
     },
     {
-      "school": "Geethanjali College of Engineering and Technology"
+      "value": "Geethanjali College of Engineering and Technology"
     },
     {
-      "school": "George C. Marshall High School"
+      "value": "George C. Marshall High School"
     },
     {
-      "school": "George Heriot's School"
+      "value": "George Heriot's School"
     },
     {
-      "school": "George Mason University"
+      "value": "George Mason University"
     },
     {
-      "school": "George Washington High School - Philadelphia"
+      "value": "George Washington High School - Philadelphia"
     },
     {
-      "school": "Georgetown University"
+      "value": "Georgetown University"
     },
     {
-      "school": "Georgia Institute of Technology"
+      "value": "Georgia Institute of Technology"
     },
     {
-      "school": "Georgia State University"
+      "value": "Georgia State University"
     },
     {
-      "school": "Germantown Friends School"
+      "value": "Germantown Friends School"
     },
     {
-      "school": "Geroge Washington Carver High School - Philadelphia"
+      "value": "Geroge Washington Carver High School - Philadelphia"
     },
     {
-      "school": "Ghent University"
+      "value": "Ghent University"
     },
     {
-      "school": "Ghousia College of Engineering"
+      "value": "Ghousia College of Engineering"
     },
     {
-      "school": "GIDC Degree Engineering College"
+      "value": "GIDC Degree Engineering College"
     },
     {
-      "school": "Girijananda Chowdhury Institute of Management and Technology (GIMT)"
+      "value": "Girijananda Chowdhury Institute of Management and Technology (GIMT)"
     },
     {
-      "school": "GITAM Centre for Integrated Rural Development"
+      "value": "GITAM Centre for Integrated Rural Development"
     },
     {
-      "school": "Gitam School of Technology"
+      "value": "Gitam School of Technology"
     },
     {
-      "school": "GL Bajaj Institute of Technology and Management"
+      "value": "GL Bajaj Institute of Technology and Management"
     },
     {
-      "school": "Glassboro High School"
+      "value": "Glassboro High School"
     },
     {
-      "school": "Glenaeon Rudolf Steiner School"
+      "value": "Glenaeon Rudolf Steiner School"
     },
     {
-      "school": "Glenbrook North High School"
+      "value": "Glenbrook North High School"
     },
     {
-      "school": "Glenbrook South High School"
+      "value": "Glenbrook South High School"
     },
     {
-      "school": "Glendale Community College"
+      "value": "Glendale Community College"
     },
     {
-      "school": "Glenforest Secondary School"
+      "value": "Glenforest Secondary School"
     },
     {
-      "school": "Global Academy of Technology"
+      "value": "Global Academy of Technology"
     },
     {
-      "school": "GMR Institute of Technology"
+      "value": "GMR Institute of Technology"
     },
     {
-      "school": "Goa College of Engineering"
+      "value": "Goa College of Engineering"
     },
     {
-      "school": "GOA IT INNOVATION CENTRE"
+      "value": "GOA IT INNOVATION CENTRE"
     },
     {
-      "school": "Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)"
+      "value": "Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)"
     },
     {
-      "school": "Goldsmiths, University of London"
+      "value": "Goldsmiths, University of London"
     },
     {
-      "school": "Gopalan College of Engineering and Management"
+      "value": "Gopalan College of Engineering and Management"
     },
     {
-      "school": "Gordon Graydon Memorial Secondary School"
+      "value": "Gordon Graydon Memorial Secondary School"
     },
     {
-      "school": "Gottfried Wilhelm Leibniz Universität Hannover"
+      "value": "Gottfried Wilhelm Leibniz Universität Hannover"
     },
     {
-      "school": "Government College of Engineering & Technology, Jammu"
+      "value": "Government College of Engineering & Technology, Jammu"
     },
     {
-      "school": "Government College Of Engineering, Amravati"
+      "value": "Government College Of Engineering, Amravati"
     },
     {
-      "school": "Government College Of Engineering, Aurangabad"
+      "value": "Government College Of Engineering, Aurangabad"
     },
     {
-      "school": "Government College of Engineering, Bargur"
+      "value": "Government College of Engineering, Bargur"
     },
     {
-      "school": "Government College of Engineering, Kalahandi"
+      "value": "Government College of Engineering, Kalahandi"
     },
     {
-      "school": "Government College of Engineering, Kannur"
+      "value": "Government College of Engineering, Kannur"
     },
     {
-      "school": "Government College Of Engineering, Karad"
+      "value": "Government College Of Engineering, Karad"
     },
     {
-      "school": "Government College of Engineering, Salem"
+      "value": "Government College of Engineering, Salem"
     },
     {
-      "school": "Government College of Technology, Coimbatore"
+      "value": "Government College of Technology, Coimbatore"
     },
     {
-      "school": "Government Engineering College Palakkad, Sreekrishnapuram"
+      "value": "Government Engineering College Palakkad, Sreekrishnapuram"
     },
     {
-      "school": "Government Engineering College, Ajmer"
+      "value": "Government Engineering College, Ajmer"
     },
     {
-      "school": "Government Engineering College, Banswara"
+      "value": "Government Engineering College, Banswara"
     },
     {
-      "school": "Government Engineering College, Hassan"
+      "value": "Government Engineering College, Hassan"
     },
     {
-      "school": "Government Engineering College, Kozhikode"
+      "value": "Government Engineering College, Kozhikode"
     },
     {
-      "school": "Government Engineering College, Thrissur"
+      "value": "Government Engineering College, Thrissur"
     },
     {
-      "school": "Government Model Engineering College, Thrikkakara"
+      "value": "Government Model Engineering College, Thrikkakara"
     },
     {
-      "school": "Government Polytechnic Gandhinagar"
+      "value": "Government Polytechnic Gandhinagar"
     },
     {
-      "school": "Government Sri Krishnarajendra Silver Jubilee Technological Institute"
+      "value": "Government Sri Krishnarajendra Silver Jubilee Technological Institute"
     },
     {
-      "school": "Governor's School for Science & Technology"
+      "value": "Governor's School for Science & Technology"
     },
     {
-      "school": "Govind Ballabh Pant Institute of Engineering & Technology"
+      "value": "Govind Ballabh Pant Institute of Engineering & Technology"
     },
     {
-      "school": "Grady High School"
+      "value": "Grady High School"
     },
     {
-      "school": "Grand Rapids Community College"
+      "value": "Grand Rapids Community College"
     },
     {
-      "school": "Grand Valley State University"
+      "value": "Grand Valley State University"
     },
     {
-      "school": "Graphic Era University"
+      "value": "Graphic Era University"
     },
     {
-      "school": "Great Neck South High School"
+      "value": "Great Neck South High School"
     },
     {
-      "school": "Greater Lowell Technical High School"
+      "value": "Greater Lowell Technical High School"
     },
     {
-      "school": "Green River College"
+      "value": "Green River College"
     },
     {
-      "school": "Greenwood College School"
+      "value": "Greenwood College School"
     },
     {
-      "school": "Grinnell College"
+      "value": "Grinnell College"
     },
     {
-      "school": "GSSS Institute of Engineering & Technology for Women"
+      "value": "GSSS Institute of Engineering & Technology for Women"
     },
     {
-      "school": "Guelph Collegiate Vocational Institute"
+      "value": "Guelph Collegiate Vocational Institute"
     },
     {
-      "school": "Gujarat Energy Research and Management Institute (GERMI)"
+      "value": "Gujarat Energy Research and Management Institute (GERMI)"
     },
     {
-      "school": "Gujarat Technological University"
+      "value": "Gujarat Technological University"
     },
     {
-      "school": "Gujarat University"
+      "value": "Gujarat University"
     },
     {
-      "school": "Guru Ghasidas Vishwavidyalaya, Bilaspur"
+      "value": "Guru Ghasidas Vishwavidyalaya, Bilaspur"
     },
     {
-      "school": "Guru Gobind Singh Indraprastha University"
+      "value": "Guru Gobind Singh Indraprastha University"
     },
     {
-      "school": "Guru Jambheshwar University of Science and Technology (GJUS&T), HISAR"
+      "value": "Guru Jambheshwar University of Science and Technology (GJUS&T), HISAR"
     },
     {
-      "school": "Guru Jambheshwar University of Science and Technology, Hisar"
+      "value": "Guru Jambheshwar University of Science and Technology, Hisar"
     },
     {
-      "school": "Guru Nanak Dev Engineering College"
+      "value": "Guru Nanak Dev Engineering College"
     },
     {
-      "school": "Guru Nanak Institutions"
+      "value": "Guru Nanak Institutions"
     },
     {
-      "school": "Guru Tegh Bahadur Institute of Technology (GTBIT)"
+      "value": "Guru Tegh Bahadur Institute of Technology (GTBIT)"
     },
     {
-      "school": "Gurukula Kangri University"
+      "value": "Gurukula Kangri University"
     },
     {
-      "school": "Guttman Community College, CUNY"
+      "value": "Guttman Community College, CUNY"
     },
     {
-      "school": "Gwalior Engineering College"
+      "value": "Gwalior Engineering College"
     },
     {
-      "school": "Gwinnett Technical College"
+      "value": "Gwinnett Technical College"
     },
     {
-      "school": "Gwynedd Mercy University"
+      "value": "Gwynedd Mercy University"
     },
     {
-      "school": "GZS Campus College of Engineering & Technology"
+      "value": "GZS Campus College of Engineering & Technology"
     },
     {
-      "school": "H.N. Werkman College"
+      "value": "H.N. Werkman College"
     },
     {
-      "school": "Haaga-Helia University of Applied Sciences"
+      "value": "Haaga-Helia University of Applied Sciences"
     },
     {
-      "school": "Haldia Institute of Technology"
+      "value": "Haldia Institute of Technology"
     },
     {
-      "school": "Hamilton College"
+      "value": "Hamilton College"
     },
     {
-      "school": "Hamline University"
+      "value": "Hamline University"
     },
     {
-      "school": "Hampshire College"
+      "value": "Hampshire College"
     },
     {
-      "school": "Hampton University"
+      "value": "Hampton University"
     },
     {
-      "school": "HAN University of Applied Sciences"
+      "value": "HAN University of Applied Sciences"
     },
     {
-      "school": "Hanze University of Applied Sciences"
+      "value": "Hanze University of Applied Sciences"
     },
     {
-      "school": "Harcourt Butler Technical University, Kanpur"
+      "value": "Harcourt Butler Technical University, Kanpur"
     },
     {
-      "school": "Harcum College"
+      "value": "Harcum College"
     },
     {
-      "school": "Harper College"
+      "value": "Harper College"
     },
     {
-      "school": "Harrisburg Area Community College"
+      "value": "Harrisburg Area Community College"
     },
     {
-      "school": "Harrisburg University - Harrisburg Campus"
+      "value": "Harrisburg University - Harrisburg Campus"
     },
     {
-      "school": "Harrisburg University - Philadelphia Campus"
+      "value": "Harrisburg University - Philadelphia Campus"
     },
     {
-      "school": "Harrison Career Institute"
+      "value": "Harrison Career Institute"
     },
     {
-      "school": "Harvard Medical School"
+      "value": "Harvard Medical School"
     },
     {
-      "school": "Harvard University"
+      "value": "Harvard University"
     },
     {
-      "school": "Harvey Mudd University"
+      "value": "Harvey Mudd University"
     },
     {
-      "school": "Haryana Engineering College"
+      "value": "Haryana Engineering College"
     },
     {
-      "school": "Hasso-Plattner-Institut Academy"
+      "value": "Hasso-Plattner-Institut Academy"
     },
     {
-      "school": "Haverford College"
+      "value": "Haverford College"
     },
     {
-      "school": "Hazleton Area High School"
+      "value": "Hazleton Area High School"
     },
     {
-      "school": "Head-Royce School"
+      "value": "Head-Royce School"
     },
     {
-      "school": "Health Careers High School"
+      "value": "Health Careers High School"
     },
     {
-      "school": "Heartland Community College"
+      "value": "Heartland Community College"
     },
     {
-      "school": "Helwan University"
+      "value": "Helwan University"
     },
     {
-      "school": "Henry M. Gunn High School"
+      "value": "Henry M. Gunn High School"
     },
     {
-      "school": "Herguan University"
+      "value": "Herguan University"
     },
     {
-      "school": "Heritage Institute of Technology"
+      "value": "Heritage Institute of Technology"
     },
     {
-      "school": "Het Baarnsch Lyceum"
+      "value": "Het Baarnsch Lyceum"
     },
     {
-      "school": "Hi-Tech Institute of Engineering & Technology"
+      "value": "Hi-Tech Institute of Engineering & Technology"
     },
     {
-      "school": "Hi-Tech Institute of Technology"
+      "value": "Hi-Tech Institute of Technology"
     },
     {
-      "school": "High Technology High School"
+      "value": "High Technology High School"
     },
     {
-      "school": "Highland Park High School"
+      "value": "Highland Park High School"
     },
     {
-      "school": "Hightstown High School"
+      "value": "Hightstown High School"
     },
     {
-      "school": "Hillsborough Community College"
+      "value": "Hillsborough Community College"
     },
     {
-      "school": "Hillsborough High School"
+      "value": "Hillsborough High School"
     },
     {
-      "school": "Hindustan College of Science & Technology"
+      "value": "Hindustan College of Science & Technology"
     },
     {
-      "school": "Hindustan Institute of Technology & Science"
+      "value": "Hindustan Institute of Technology & Science"
     },
     {
-      "school": "Hinsdale Central High School"
+      "value": "Hinsdale Central High School"
     },
     {
-      "school": "Hiram College"
+      "value": "Hiram College"
     },
     {
-      "school": "Hirasugar Institute of Technology, Nidasoshi"
+      "value": "Hirasugar Institute of Technology, Nidasoshi"
     },
     {
-      "school": "HKBK College of Engineering"
+      "value": "HKBK College of Engineering"
     },
     {
-      "school": "HMR Institute of Technology & Management, GGSIPU"
+      "value": "HMR Institute of Technology & Management, GGSIPU"
     },
     {
-      "school": "HMS Institute of Technology"
+      "value": "HMS Institute of Technology"
     },
     {
-      "school": "Hofstra University"
+      "value": "Hofstra University"
     },
     {
-      "school": "Hogeschool Thomas More"
+      "value": "Hogeschool Thomas More"
     },
     {
-      "school": "Hogeschool van Amsterdam"
+      "value": "Hogeschool van Amsterdam"
     },
     {
-      "school": "Holton-Arms School"
+      "value": "Holton-Arms School"
     },
     {
-      "school": "Holy Family University"
+      "value": "Holy Family University"
     },
     {
-      "school": "Homestead High School"
+      "value": "Homestead High School"
     },
     {
-      "school": "Hong Kong University of Science and Technology"
+      "value": "Hong Kong University of Science and Technology"
     },
     {
-      "school": "Hood College"
+      "value": "Hood College"
     },
     {
-      "school": "Horace Furness High School"
+      "value": "Horace Furness High School"
     },
     {
-      "school": "Horace Mann School"
+      "value": "Horace Mann School"
     },
     {
-      "school": "Hostos Community College, CUNY"
+      "value": "Hostos Community College, CUNY"
     },
     {
-      "school": "Houghton High School"
+      "value": "Houghton High School"
     },
     {
-      "school": "Houston Community College"
+      "value": "Houston Community College"
     },
     {
-      "school": "Howard University"
+      "value": "Howard University"
     },
     {
-      "school": "Hudson County Community College"
+      "value": "Hudson County Community College"
     },
     {
-      "school": "Hudson Valley Community College"
+      "value": "Hudson Valley Community College"
     },
     {
-      "school": "Hunter College High School"
+      "value": "Hunter College High School"
     },
     {
-      "school": "Hunter College, CUNY"
+      "value": "Hunter College, CUNY"
     },
     {
-      "school": "Huron Heights Secondary School"
+      "value": "Huron Heights Secondary School"
     },
     {
-      "school": "Hussian School of Art"
+      "value": "Hussian School of Art"
     },
     {
-      "school": "I.K. Gujral Punjab Technical University Jalandhar (IKGPTU)"
+      "value": "I.K. Gujral Punjab Technical University Jalandhar (IKGPTU)"
     },
     {
-      "school": "I.T.S Engineering College"
+      "value": "I.T.S Engineering College"
     },
     {
-      "school": "IAN Mentoring and Incubation Services"
+      "value": "IAN Mentoring and Incubation Services"
     },
     {
-      "school": "IIMT College of Engineering, Greater Noida"
+      "value": "IIMT College of Engineering, Greater Noida"
     },
     {
-      "school": "IIMT College Of Medical Sciences, Meerut"
+      "value": "IIMT College Of Medical Sciences, Meerut"
     },
     {
-      "school": "IIMT College of Pharmacy, Greater Noida"
+      "value": "IIMT College of Pharmacy, Greater Noida"
     },
     {
-      "school": "IIMT Engineering College, Meerut"
+      "value": "IIMT Engineering College, Meerut"
     },
     {
-      "school": "IKP Knowledge Park Erstwhile ICICI Knowledge Park"
+      "value": "IKP Knowledge Park Erstwhile ICICI Knowledge Park"
     },
     {
-      "school": "Iliria College"
+      "value": "Iliria College"
     },
     {
-      "school": "Illinois Institute of Technology"
+      "value": "Illinois Institute of Technology"
     },
     {
-      "school": "Illinois State University"
+      "value": "Illinois State University"
     },
     {
-      "school": "Imhotep Institute Charter High School"
+      "value": "Imhotep Institute Charter High School"
     },
     {
-      "school": "Immaculata University"
+      "value": "Immaculata University"
     },
     {
-      "school": "Impact College of Engineering and Applied Science"
+      "value": "Impact College of Engineering and Applied Science"
     },
     {
-      "school": "Imperial College London"
+      "value": "Imperial College London"
     },
     {
-      "school": "IMS Engineering College"
+      "value": "IMS Engineering College"
     },
     {
-      "school": "Inderprastha Engineering College (IPEC)"
+      "value": "Inderprastha Engineering College (IPEC)"
     },
     {
-      "school": "Indian Hills Community College"
+      "value": "Indian Hills Community College"
     },
     {
-      "school": "Indian Institute of Engineering Science and Technology (IIEST), Shibpur"
+      "value": "Indian Institute of Engineering Science and Technology (IIEST), Shibpur"
     },
     {
-      "school": "Indian Institute of Information Technology Design & Manufacturing, Jabalpur"
+      "value": "Indian Institute of Information Technology Design & Manufacturing, Jabalpur"
     },
     {
-      "school": "Indian Institute of Information Technology, Allahabad"
+      "value": "Indian Institute of Information Technology, Allahabad"
     },
     {
-      "school": "Indian Institute of Information Technology, Kalyani"
+      "value": "Indian Institute of Information Technology, Kalyani"
     },
     {
-      "school": "Indian Institute of Information Technology, Kottayam"
+      "value": "Indian Institute of Information Technology, Kottayam"
     },
     {
-      "school": "Indian Institute of Information Technology, Pune"
+      "value": "Indian Institute of Information Technology, Pune"
     },
     {
-      "school": "Indian Institute of Information Technology, Sri City"
+      "value": "Indian Institute of Information Technology, Sri City"
     },
     {
-      "school": "Indian Institute of Information Technology, Una"
+      "value": "Indian Institute of Information Technology, Una"
     },
     {
-      "school": "Indian Institute of Information Technology, Vadodara"
+      "value": "Indian Institute of Information Technology, Vadodara"
     },
     {
-      "school": "Indian Institute of Space Science and Technology (IIST)"
+      "value": "Indian Institute of Space Science and Technology (IIST)"
     },
     {
-      "school": "Indian Institute of Technology (ISM), Dhanbad"
+      "value": "Indian Institute of Technology (ISM), Dhanbad"
     },
     {
-      "school": "Indian Institute of Technology, BHU"
+      "value": "Indian Institute of Technology, BHU"
     },
     {
-      "school": "Indian Institute of Technology, Bhubaneswar"
+      "value": "Indian Institute of Technology, Bhubaneswar"
     },
     {
-      "school": "Indian Institute of Technology, Bombay"
+      "value": "Indian Institute of Technology, Bombay"
     },
     {
-      "school": "Indian Institute of Technology, Gandhinagar"
+      "value": "Indian Institute of Technology, Gandhinagar"
     },
     {
-      "school": "Indian Institute of Technology, Guwahati"
+      "value": "Indian Institute of Technology, Guwahati"
     },
     {
-      "school": "Indian Institute of Technology, Gwalior"
+      "value": "Indian Institute of Technology, Gwalior"
     },
     {
-      "school": "Indian Institute of Technology, Hyderabad"
+      "value": "Indian Institute of Technology, Hyderabad"
     },
     {
-      "school": "Indian Institute of Technology, Jabalpur"
+      "value": "Indian Institute of Technology, Jabalpur"
     },
     {
-      "school": "Indian Institute of Technology, Jodhpur"
+      "value": "Indian Institute of Technology, Jodhpur"
     },
     {
-      "school": "Indian Institute of Technology, Kanpur"
+      "value": "Indian Institute of Technology, Kanpur"
     },
     {
-      "school": "Indian Institute of Technology, Kharagpur"
+      "value": "Indian Institute of Technology, Kharagpur"
     },
     {
-      "school": "Indian Institute of Technology, Kota"
+      "value": "Indian Institute of Technology, Kota"
     },
     {
-      "school": "Indian Institute of Technology, Madras"
+      "value": "Indian Institute of Technology, Madras"
     },
     {
-      "school": "Indian Institute of Technology, Patna"
+      "value": "Indian Institute of Technology, Patna"
     },
     {
-      "school": "Indian Institute of Technology, Roorkee"
+      "value": "Indian Institute of Technology, Roorkee"
     },
     {
-      "school": "Indian Institute of Technology, Ropar"
+      "value": "Indian Institute of Technology, Ropar"
     },
     {
-      "school": "Indiana State University"
+      "value": "Indiana State University"
     },
     {
-      "school": "Indiana University"
+      "value": "Indiana University"
     },
     {
-      "school": "Indiana University of Pennsylvania"
+      "value": "Indiana University of Pennsylvania"
     },
     {
-      "school": "Indiana University-Purdue University Fort Wayne"
+      "value": "Indiana University-Purdue University Fort Wayne"
     },
     {
-      "school": "Indiana University–Purdue University Indianapolis"
+      "value": "Indiana University–Purdue University Indianapolis"
     },
     {
-      "school": "Indira Gandhi Delhi Technical University for Women"
+      "value": "Indira Gandhi Delhi Technical University for Women"
     },
     {
-      "school": "Indira Gandhi Engineering College, Sagar"
+      "value": "Indira Gandhi Engineering College, Sagar"
     },
     {
-      "school": "Indira Gandhi Institute of Technology, Sarang"
+      "value": "Indira Gandhi Institute of Technology, Sarang"
     },
     {
-      "school": "Indira Gandhi National Open University"
+      "value": "Indira Gandhi National Open University"
     },
     {
-      "school": "Indraprastha Institute of Information Technology"
+      "value": "Indraprastha Institute of Information Technology"
     },
     {
-      "school": "Indus University, Ahmedabad"
+      "value": "Indus University, Ahmedabad"
     },
     {
-      "school": "Insight PA Cyber Charter School"
+      "value": "Insight PA Cyber Charter School"
     },
     {
-      "school": "Institut polytechnique de Bordeaux (INP)"
+      "value": "Institut polytechnique de Bordeaux (INP)"
     },
     {
-      "school": "Institute for Auto Parts and Hand Tools Technology"
+      "value": "Institute for Auto Parts and Hand Tools Technology"
     },
     {
-      "school": "Institute of Aeronautical Engineering (IARE), Hyderabad"
+      "value": "Institute of Aeronautical Engineering (IARE), Hyderabad"
     },
     {
-      "school": "Institute of Engineering & Management (IEM)"
+      "value": "Institute of Engineering & Management (IEM)"
     },
     {
-      "school": "Institute of Engineering and Rural Technology Allahabad"
+      "value": "Institute of Engineering and Rural Technology Allahabad"
     },
     {
-      "school": "Institute of Engineering and Technology, DAVV"
+      "value": "Institute of Engineering and Technology, DAVV"
     },
     {
-      "school": "Institute of Infrastructure Technology Research and Management, Ahmedabad"
+      "value": "Institute of Infrastructure Technology Research and Management, Ahmedabad"
     },
     {
-      "school": "Institute of Technical Education and Research (ITER), Bhubaneswar"
+      "value": "Institute of Technical Education and Research (ITER), Bhubaneswar"
     },
     {
-      "school": "Institute of Technology, Banaras Hindu University"
+      "value": "Institute of Technology, Banaras Hindu University"
     },
     {
-      "school": "Institute Of Technology, Nirma University"
+      "value": "Institute Of Technology, Nirma University"
     },
     {
-      "school": "Instituto Politécnico Nacional"
+      "value": "Instituto Politécnico Nacional"
     },
     {
-      "school": "Instituto Tecnológico Autónomo de México (ITAM)"
+      "value": "Instituto Tecnológico Autónomo de México (ITAM)"
     },
     {
-      "school": "Instituto Tecnólogico de La Laguna (ITL)"
+      "value": "Instituto Tecnólogico de La Laguna (ITL)"
     },
     {
-      "school": "Instituto Tecnológico Superior de Cintalapa"
+      "value": "Instituto Tecnológico Superior de Cintalapa"
     },
     {
-      "school": "Instituto Tecnológico Superior de El Mante"
+      "value": "Instituto Tecnológico Superior de El Mante"
     },
     {
-      "school": "Instituto Tecnológico Superior de los Ríos"
+      "value": "Instituto Tecnológico Superior de los Ríos"
     },
     {
-      "school": "Instituto Tecnologico Superior de San Martin Texmelucan"
+      "value": "Instituto Tecnologico Superior de San Martin Texmelucan"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM)"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM)"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Aguascalientes"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Aguascalientes"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Chiapas"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Chiapas"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Chihuahua"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Chihuahua"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Ciudad de Mexico"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Ciudad de Mexico"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Ciudad Juárez"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Ciudad Juárez"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Cuernavaca"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Cuernavaca"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Cumbres"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Cumbres"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Eugenio Garza Lagüera"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Eugenio Garza Lagüera"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Eugenio Garza Sada"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Eugenio Garza Sada"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Guadalajara"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Guadalajara"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Hidalgo"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Hidalgo"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Irapuato"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Irapuato"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Laguna"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Laguna"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus León"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus León"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Morelia"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Morelia"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Obregón"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Obregón"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Puebla"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Puebla"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Querétaro"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Querétaro"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Saltillo"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Saltillo"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus San Luis Potosí"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus San Luis Potosí"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Santa Catarina"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Santa Catarina"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Santa Fe"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Santa Fe"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Sinaloa"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Sinaloa"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Sonora"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Sonora"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Tampico"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Tampico"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Toluca"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Toluca"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Valle Alto"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Valle Alto"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Veracruz"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Veracruz"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Zacatecas"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Zacatecas"
     },
     {
-      "school": "Instituto Tecnológico y de Estudios Superiores de Occidente (ITESO)"
+      "value": "Instituto Tecnológico y de Estudios Superiores de Occidente (ITESO)"
     },
     {
-      "school": "Instytut Pamięci Narodowej"
+      "value": "Instytut Pamięci Narodowej"
     },
     {
-      "school": "International Institute of Information Technology,  Hyderabad"
+      "value": "International Institute of Information Technology,  Hyderabad"
     },
     {
-      "school": "International Institute of Information Technology, Bangalore"
+      "value": "International Institute of Information Technology, Bangalore"
     },
     {
-      "school": "International Institute Of Information Technology, Naya Raipur"
+      "value": "International Institute Of Information Technology, Naya Raipur"
     },
     {
-      "school": "International Leadership Charter High School"
+      "value": "International Leadership Charter High School"
     },
     {
-      "school": "International School of Choueifat"
+      "value": "International School of Choueifat"
     },
     {
-      "school": "Iowa Central Community College"
+      "value": "Iowa Central Community College"
     },
     {
-      "school": "Iowa State University"
+      "value": "Iowa State University"
     },
     {
-      "school": "Iowa Western Community College"
+      "value": "Iowa Western Community College"
     },
     {
-      "school": "Islamic University of Science and Technology, Pulwama"
+      "value": "Islamic University of Science and Technology, Pulwama"
     },
     {
-      "school": "Istanbul University"
+      "value": "Istanbul University"
     },
     {
-      "school": "IT University of Copenhagen"
+      "value": "IT University of Copenhagen"
     },
     {
-      "school": "Ithaca College"
+      "value": "Ithaca College"
     },
     {
-      "school": "ITM University, Gwalior"
+      "value": "ITM University, Gwalior"
     },
     {
-      "school": "ITM University, Vadodara"
+      "value": "ITM University, Vadodara"
     },
     {
-      "school": "ITMO University"
+      "value": "ITMO University"
     },
     {
-      "school": "J.C. Bose University of Science and Technology, YMCA"
+      "value": "J.C. Bose University of Science and Technology, YMCA"
     },
     {
-      "school": "J.N.N College of Engineering"
+      "value": "J.N.N College of Engineering"
     },
     {
-      "school": "Jabalpur Engineering College"
+      "value": "Jabalpur Engineering College"
     },
     {
-      "school": "Jackson Memorial High School"
+      "value": "Jackson Memorial High School"
     },
     {
-      "school": "Jackson State University"
+      "value": "Jackson State University"
     },
     {
-      "school": "Jacobs University Bremen"
+      "value": "Jacobs University Bremen"
     },
     {
-      "school": "Jadavpur University"
+      "value": "Jadavpur University"
     },
     {
-      "school": "Jagiellonian University"
+      "value": "Jagiellonian University"
     },
     {
-      "school": "Jai Narain Vyas University"
+      "value": "Jai Narain Vyas University"
     },
     {
-      "school": "Jaipur Engineering College & Research Centre (JECRC)"
+      "value": "Jaipur Engineering College & Research Centre (JECRC)"
     },
     {
-      "school": "Jaipur National University"
+      "value": "Jaipur National University"
     },
     {
-      "school": "Jalpaiguri Government Engineering College"
+      "value": "Jalpaiguri Government Engineering College"
     },
     {
-      "school": "James Gillespie's High School"
+      "value": "James Gillespie's High School"
     },
     {
-      "school": "James Madison High School"
+      "value": "James Madison High School"
     },
     {
-      "school": "James Madison University"
+      "value": "James Madison University"
     },
     {
-      "school": "Jamia Hamdard"
+      "value": "Jamia Hamdard"
     },
     {
-      "school": "Jamia Millia Islamia - JMI,  Jamia Nagar"
+      "value": "Jamia Millia Islamia - JMI,  Jamia Nagar"
     },
     {
-      "school": "Jawaharlal Nehru Government Engineering College (JNGEC)"
+      "value": "Jawaharlal Nehru Government Engineering College (JNGEC)"
     },
     {
-      "school": "Jawaharlal Nehru Technological University"
+      "value": "Jawaharlal Nehru Technological University"
     },
     {
-      "school": "Jaypee Institute of Technology,  Noida"
+      "value": "Jaypee Institute of Technology,  Noida"
     },
     {
-      "school": "Jaypee University of Engineering and Technology"
+      "value": "Jaypee University of Engineering and Technology"
     },
     {
-      "school": "Jerusalem College of Engineering"
+      "value": "Jerusalem College of Engineering"
     },
     {
-      "school": "JK Institute of Applied Physics and Technology"
+      "value": "JK Institute of Applied Physics and Technology"
     },
     {
-      "school": "JK Lakshmipat University (JKLU)"
+      "value": "JK Lakshmipat University (JKLU)"
     },
     {
-      "school": "Jnanavikas Institute of Technology"
+      "value": "Jnanavikas Institute of Technology"
     },
     {
-      "school": "JNTUA College of Engineering,  Pulivendula"
+      "value": "JNTUA College of Engineering,  Pulivendula"
     },
     {
-      "school": "JNTUH College of Engineering, HYDERABAD"
+      "value": "JNTUH College of Engineering, HYDERABAD"
     },
     {
-      "school": "JNTUK University College of Engineering, Vizianagaram"
+      "value": "JNTUK University College of Engineering, Vizianagaram"
     },
     {
-      "school": "Jodhpur Institute of Engineering and Technology (JIET)"
+      "value": "Jodhpur Institute of Engineering and Technology (JIET)"
     },
     {
-      "school": "John A. Ferguson Senior High School"
+      "value": "John A. Ferguson Senior High School"
     },
     {
-      "school": "John Abbott College"
+      "value": "John Abbott College"
     },
     {
-      "school": "John Bartram High School"
+      "value": "John Bartram High School"
     },
     {
-      "school": "John F. Kennedy Memorial High School"
+      "value": "John F. Kennedy Memorial High School"
     },
     {
-      "school": "John Jay College of Criminal Justice, CUNY"
+      "value": "John Jay College of Criminal Justice, CUNY"
     },
     {
-      "school": "John Leggott College"
+      "value": "John Leggott College"
     },
     {
-      "school": "John P. Stevens High School"
+      "value": "John P. Stevens High School"
     },
     {
-      "school": "Johns Hopkins University"
+      "value": "Johns Hopkins University"
     },
     {
-      "school": "Johnson & Wales University"
+      "value": "Johnson & Wales University"
     },
     {
-      "school": "Johnson C. Smith University"
+      "value": "Johnson C. Smith University"
     },
     {
-      "school": "Jorhat Engineering College"
+      "value": "Jorhat Engineering College"
     },
     {
-      "school": "Jorhat Institute of Science and Technology"
+      "value": "Jorhat Institute of Science and Technology"
     },
     {
-      "school": "JSS Academy of Technical Education"
+      "value": "JSS Academy of Technical Education"
     },
     {
-      "school": "Jules E. Mastbaum Technical High School"
+      "value": "Jules E. Mastbaum Technical High School"
     },
     {
-      "school": "Julia R. Masterman School"
+      "value": "Julia R. Masterman School"
     },
     {
-      "school": "Jyothy Institute of Technology"
+      "value": "Jyothy Institute of Technology"
     },
     {
-      "school": "K S School of Engineering and Management"
+      "value": "K S School of Engineering and Management"
     },
     {
-      "school": "K. J. Somaiya College of Engineering"
+      "value": "K. J. Somaiya College of Engineering"
     },
     {
-      "school": "K. S Institute of Technology (KSIT), Bengaluru"
+      "value": "K. S Institute of Technology (KSIT), Bengaluru"
     },
     {
-      "school": "K.L. College of Engineering"
+      "value": "K.L. College of Engineering"
     },
     {
-      "school": "K.L.S Gogte Institute of Technology"
+      "value": "K.L.S Gogte Institute of Technology"
     },
     {
-      "school": "K.M.E.A Engineering College"
+      "value": "K.M.E.A Engineering College"
     },
     {
-      "school": "K.S Rangasamy College Of Technology"
+      "value": "K.S Rangasamy College Of Technology"
     },
     {
-      "school": "K.S. School of Business Management"
+      "value": "K.S. School of Business Management"
     },
     {
-      "school": "Kamla Nehru Institute of Technology"
+      "value": "Kamla Nehru Institute of Technology"
     },
     {
-      "school": "Kansai University"
+      "value": "Kansai University"
     },
     {
-      "school": "Kansas State University"
+      "value": "Kansas State University"
     },
     {
-      "school": "Kantipur Engineering College"
+      "value": "Kantipur Engineering College"
     },
     {
-      "school": "Karlsruhe Institute of Technology"
+      "value": "Karlsruhe Institute of Technology"
     },
     {
-      "school": "Karmaveer Bhaurao Patil College of Engineering"
+      "value": "Karmaveer Bhaurao Patil College of Engineering"
     },
     {
-      "school": "Karpagam College of Engineering (KCE)"
+      "value": "Karpagam College of Engineering (KCE)"
     },
     {
-      "school": "Karunya Institute of Technology and Sciences"
+      "value": "Karunya Institute of Technology and Sciences"
     },
     {
-      "school": "Kashi Institute of Technology"
+      "value": "Kashi Institute of Technology"
     },
     {
-      "school": "Kathmandu BernHardt College"
+      "value": "Kathmandu BernHardt College"
     },
     {
-      "school": "Kaunas University of Technology"
+      "value": "Kaunas University of Technology"
     },
     {
-      "school": "KCG College of Engineering"
+      "value": "KCG College of Engineering"
     },
     {
-      "school": "Kean University"
+      "value": "Kean University"
     },
     {
-      "school": "Keele University"
+      "value": "Keele University"
     },
     {
-      "school": "Kendriya Vidyalaya, AFS, Begumpet"
+      "value": "Kendriya Vidyalaya, AFS, Begumpet"
     },
     {
-      "school": "Kennesaw State University"
+      "value": "Kennesaw State University"
     },
     {
-      "school": "Kennett High School"
+      "value": "Kennett High School"
     },
     {
-      "school": "Kensington High School Complex"
+      "value": "Kensington High School Complex"
     },
     {
-      "school": "Kent State University"
+      "value": "Kent State University"
     },
     {
-      "school": "Kent State University at Stark"
+      "value": "Kent State University at Stark"
     },
     {
-      "school": "Keshav Memorial Institute of Technology,  Hyderabad"
+      "value": "Keshav Memorial Institute of Technology,  Hyderabad"
     },
     {
-      "school": "Khan Lab School"
+      "value": "Khan Lab School"
     },
     {
-      "school": "King Edward VI Five Ways School"
+      "value": "King Edward VI Five Ways School"
     },
     {
-      "school": "King's College London"
+      "value": "King's College London"
     },
     {
-      "school": "Kingsborough Community College, CUNY"
+      "value": "Kingsborough Community College, CUNY"
     },
     {
-      "school": "Kingsway Regional High School"
+      "value": "Kingsway Regional High School"
     },
     {
-      "school": "KIPP DuBois Charter School"
+      "value": "KIPP DuBois Charter School"
     },
     {
-      "school": "Kitchener-Waterloo Collegiate & Vocational School"
+      "value": "Kitchener-Waterloo Collegiate & Vocational School"
     },
     {
-      "school": "KJ's Educational Institutes,  Pune"
+      "value": "KJ's Educational Institutes,  Pune"
     },
     {
-      "school": "KLE Dr. M.S. Sheshgiri College of Engineering and Technology"
+      "value": "KLE Dr. M.S. Sheshgiri College of Engineering and Technology"
     },
     {
-      "school": "KLN College of Engineering"
+      "value": "KLN College of Engineering"
     },
     {
-      "school": "KLS Gogte Institute of Technology"
+      "value": "KLS Gogte Institute of Technology"
     },
     {
-      "school": "Knox College"
+      "value": "Knox College"
     },
     {
-      "school": "KNSIT"
+      "value": "KNSIT"
     },
     {
-      "school": "Konark Institute of Science and Technology"
+      "value": "Konark Institute of Science and Technology"
     },
     {
-      "school": "Kongu Engineering College"
+      "value": "Kongu Engineering College"
     },
     {
-      "school": "Koustuv Group Of Institutions (KISD & COEB)"
+      "value": "Koustuv Group Of Institutions (KISD & COEB)"
     },
     {
-      "school": "Kraków University of Economics"
+      "value": "Kraków University of Economics"
     },
     {
-      "school": "Krishi Vigyan Kendra, Durgapur"
+      "value": "Krishi Vigyan Kendra, Durgapur"
     },
     {
-      "school": "Krishna Engineering College"
+      "value": "Krishna Engineering College"
     },
     {
-      "school": "Kristu Jayanti College"
+      "value": "Kristu Jayanti College"
     },
     {
-      "school": "Kshatriya College of Engineering"
+      "value": "Kshatriya College of Engineering"
     },
     {
-      "school": "KTH Royal Institute of Technology"
+      "value": "KTH Royal Institute of Technology"
     },
     {
-      "school": "Kumaraguru College Of Technology"
+      "value": "Kumaraguru College Of Technology"
     },
     {
-      "school": "Kutztown University of Pennsylvania"
+      "value": "Kutztown University of Pennsylvania"
     },
     {
-      "school": "L D College Of Engineering Library"
+      "value": "L D College Of Engineering Library"
     },
     {
-      "school": "L. D. College of Engineering"
+      "value": "L. D. College of Engineering"
     },
     {
-      "school": "La Roche College"
+      "value": "La Roche College"
     },
     {
-      "school": "La Salle University - Philadelphia"
+      "value": "La Salle University - Philadelphia"
     },
     {
-      "school": "La Sierra University"
+      "value": "La Sierra University"
     },
     {
-      "school": "Lady Doak College"
+      "value": "Lady Doak College"
     },
     {
-      "school": "Lafayette College"
+      "value": "Lafayette College"
     },
     {
-      "school": "LaGuardia Community College, CUNY"
+      "value": "LaGuardia Community College, CUNY"
     },
     {
-      "school": "Lake Braddock Secondary School"
+      "value": "Lake Braddock Secondary School"
     },
     {
-      "school": "Lakeside High School"
+      "value": "Lakeside High School"
     },
     {
-      "school": "Lakshmi Narayan College of Technology (LNCT)"
+      "value": "Lakshmi Narayan College of Technology (LNCT)"
     },
     {
-      "school": "Lampeter-Strasburg High School"
+      "value": "Lampeter-Strasburg High School"
     },
     {
-      "school": "Lancaster University"
+      "value": "Lancaster University"
     },
     {
-      "school": "Lankenau High School"
+      "value": "Lankenau High School"
     },
     {
-      "school": "Laval University"
+      "value": "Laval University"
     },
     {
-      "school": "Lawrence Technological University"
+      "value": "Lawrence Technological University"
     },
     {
-      "school": "Lawrence University"
+      "value": "Lawrence University"
     },
     {
-      "school": "LBS Institute of Technology for Women (LBSITW)"
+      "value": "LBS Institute of Technology for Women (LBSITW)"
     },
     {
-      "school": "Lehigh University"
+      "value": "Lehigh University"
     },
     {
-      "school": "Lehman College, CUNY"
+      "value": "Lehman College, CUNY"
     },
     {
-      "school": "Leiden University"
+      "value": "Leiden University"
     },
     {
-      "school": "Lewis & Clark College"
+      "value": "Lewis & Clark College"
     },
     {
-      "school": "Lewis University"
+      "value": "Lewis University"
     },
     {
-      "school": "Lexington High School"
+      "value": "Lexington High School"
     },
     {
-      "school": "LICET"
+      "value": "LICET"
     },
     {
-      "school": "Lick Wilmerding High School"
+      "value": "Lick Wilmerding High School"
     },
     {
-      "school": "LIM College"
+      "value": "LIM College"
     },
     {
-      "school": "Lincoln Christian University"
+      "value": "Lincoln Christian University"
     },
     {
-      "school": "Lincoln Technical Institute - Center City Philadelphia"
+      "value": "Lincoln Technical Institute - Center City Philadelphia"
     },
     {
-      "school": "Lincoln Technical Institute - Northeast Philadelphia"
+      "value": "Lincoln Technical Institute - Northeast Philadelphia"
     },
     {
-      "school": "Lincoln University"
+      "value": "Lincoln University"
     },
     {
-      "school": "Lindenwood University"
+      "value": "Lindenwood University"
     },
     {
-      "school": "Linn-Mar High School"
+      "value": "Linn-Mar High School"
     },
     {
-      "school": "Lisgar Collegiate Institute"
+      "value": "Lisgar Collegiate Institute"
     },
     {
-      "school": "Little Flowers Public Sr Secondary School"
+      "value": "Little Flowers Public Sr Secondary School"
     },
     {
-      "school": "Livingston High School"
+      "value": "Livingston High School"
     },
     {
-      "school": "Loch Raven High School"
+      "value": "Loch Raven High School"
     },
     {
-      "school": "Lodz University of Technology"
+      "value": "Lodz University of Technology"
     },
     {
-      "school": "Loknayak Jai Prakash Institute of Technology,  Chhapra"
+      "value": "Loknayak Jai Prakash Institute of Technology,  Chhapra"
     },
     {
-      "school": "London Metropolitan University"
+      "value": "London Metropolitan University"
     },
     {
-      "school": "London School of Economics and Political Science"
+      "value": "London School of Economics and Political Science"
     },
     {
-      "school": "Lone Star College System"
+      "value": "Lone Star College System"
     },
     {
-      "school": "Lord Krishna College of Engineering"
+      "value": "Lord Krishna College of Engineering"
     },
     {
-      "school": "Lords Institute of Engineering & Technology"
+      "value": "Lords Institute of Engineering & Technology"
     },
     {
-      "school": "Los Altos High School"
+      "value": "Los Altos High School"
     },
     {
-      "school": "Loughborough University"
+      "value": "Loughborough University"
     },
     {
-      "school": "Louisiana State University"
+      "value": "Louisiana State University"
     },
     {
-      "school": "Lovely Professional University"
+      "value": "Lovely Professional University"
     },
     {
-      "school": "Lowell High School"
+      "value": "Lowell High School"
     },
     {
-      "school": "Loyola Marymount University"
+      "value": "Loyola Marymount University"
     },
     {
-      "school": "Luleå University of Technology, LTU"
+      "value": "Luleå University of Technology, LTU"
     },
     {
-      "school": "Luther College"
+      "value": "Luther College"
     },
     {
-      "school": "Lyallpur Khalsa College of Engineering, Jalandhar"
+      "value": "Lyallpur Khalsa College of Engineering, Jalandhar"
     },
     {
-      "school": "Lynbrook High School"
+      "value": "Lynbrook High School"
     },
     {
-      "school": "M.J.P. Rohilkhand University"
+      "value": "M.J.P. Rohilkhand University"
     },
     {
-      "school": "M.S. Ramaiah School of Advance Studies"
+      "value": "M.S. Ramaiah School of Advance Studies"
     },
     {
-      "school": "M.V.Jayaraman College of Engineering"
+      "value": "M.V.Jayaraman College of Engineering"
     },
     {
-      "school": "Macalester College"
+      "value": "Macalester College"
     },
     {
-      "school": "MacArthur High School"
+      "value": "MacArthur High School"
     },
     {
-      "school": "Macaulay Honors College, CUNY"
+      "value": "Macaulay Honors College, CUNY"
     },
     {
-      "school": "MacEwan University"
+      "value": "MacEwan University"
     },
     {
-      "school": "Macomb Community College"
+      "value": "Macomb Community College"
     },
     {
-      "school": "Madan Mohan Malaviya University of Technology, Gorakhpur"
+      "value": "Madan Mohan Malaviya University of Technology, Gorakhpur"
     },
     {
-      "school": "Madhav Institute of Technology & Science (MITS)"
+      "value": "Madhav Institute of Technology & Science (MITS)"
     },
     {
-      "school": "Madison College"
+      "value": "Madison College"
     },
     {
-      "school": "Madison West High School"
+      "value": "Madison West High School"
     },
     {
-      "school": "Madras Institute Of Technology"
+      "value": "Madras Institute Of Technology"
     },
     {
-      "school": "Maggie L. Walker Governor's School"
+      "value": "Maggie L. Walker Governor's School"
     },
     {
-      "school": "Mahakal Institute Of Technology"
+      "value": "Mahakal Institute Of Technology"
     },
     {
-      "school": "Maharaj Vijayaram Gajapathi Raj College of Engineering (MVGRCE)"
+      "value": "Maharaj Vijayaram Gajapathi Raj College of Engineering (MVGRCE)"
     },
     {
-      "school": "Maharaja Agrasen Institute of Technology"
+      "value": "Maharaja Agrasen Institute of Technology"
     },
     {
-      "school": "Maharaja Surajmal Institute of Technology"
+      "value": "Maharaja Surajmal Institute of Technology"
     },
     {
-      "school": "Maharashtra Institute of Technology, Pune"
+      "value": "Maharashtra Institute of Technology, Pune"
     },
     {
-      "school": "Mahatma Gandhi Institute for Rural Industrialization (MGIRI)"
+      "value": "Mahatma Gandhi Institute for Rural Industrialization (MGIRI)"
     },
     {
-      "school": "Mahatma Gandhi Institute of Technology (MGIT)"
+      "value": "Mahatma Gandhi Institute of Technology (MGIT)"
     },
     {
-      "school": "Mahendra Engineering College"
+      "value": "Mahendra Engineering College"
     },
     {
-      "school": "Mailam Engineering College"
+      "value": "Mailam Engineering College"
     },
     {
-      "school": "Maine South High School"
+      "value": "Maine South High School"
     },
     {
-      "school": "Maitreyi College, University of Delhi"
+      "value": "Maitreyi College, University of Delhi"
     },
     {
-      "school": "Majhighariani Institute Of technology & Science (MITS)"
+      "value": "Majhighariani Institute Of technology & Science (MITS)"
     },
     {
-      "school": "Malaviya National Institute of Technology Jaipur"
+      "value": "Malaviya National Institute of Technology Jaipur"
     },
     {
-      "school": "Malineni Lakshmaiah Women's Engineering College"
+      "value": "Malineni Lakshmaiah Women's Engineering College"
     },
     {
-      "school": "Malla Reddy College of Engineering Technology"
+      "value": "Malla Reddy College of Engineering Technology"
     },
     {
-      "school": "Malla Reddy Engineering College (MREC)"
+      "value": "Malla Reddy Engineering College (MREC)"
     },
     {
-      "school": "Malla Reddy Institute Of Engineering And Technology (MRIET)"
+      "value": "Malla Reddy Institute Of Engineering And Technology (MRIET)"
     },
     {
-      "school": "Malnad College of Engineering"
+      "value": "Malnad College of Engineering"
     },
     {
-      "school": "Malvern Preparatory School"
+      "value": "Malvern Preparatory School"
     },
     {
-      "school": "Malvern Preparatory School"
+      "value": "Malvern Preparatory School"
     },
     {
-      "school": "Manakula Vinayagar Institute of Techology"
+      "value": "Manakula Vinayagar Institute of Techology"
     },
     {
-      "school": "Manalapan High School"
+      "value": "Manalapan High School"
     },
     {
-      "school": "Manav Rachna International"
+      "value": "Manav Rachna International"
     },
     {
-      "school": "Manchester Metropolitan University"
+      "value": "Manchester Metropolitan University"
     },
     {
-      "school": "Manhattan College"
+      "value": "Manhattan College"
     },
     {
-      "school": "Manhattan High School"
+      "value": "Manhattan High School"
     },
     {
-      "school": "Manipal Institute of Technology"
+      "value": "Manipal Institute of Technology"
     },
     {
-      "school": "Manipal University"
+      "value": "Manipal University"
     },
     {
-      "school": "Manipal University, Jaipur"
+      "value": "Manipal University, Jaipur"
     },
     {
-      "school": "Manor College"
+      "value": "Manor College"
     },
     {
-      "school": "Mar Athanasius College of Engineering"
+      "value": "Mar Athanasius College of Engineering"
     },
     {
-      "school": "Marc Garneau Collegiate Institute"
+      "value": "Marc Garneau Collegiate Institute"
     },
     {
-      "school": "Marcellus High School"
+      "value": "Marcellus High School"
     },
     {
-      "school": "Mariana Bracetti Academy Charter School"
+      "value": "Mariana Bracetti Academy Charter School"
     },
     {
-      "school": "Marianopolis College"
+      "value": "Marianopolis College"
     },
     {
-      "school": "Marist College"
+      "value": "Marist College"
     },
     {
-      "school": "Maritime Academy Charter School (MACHS)"
+      "value": "Maritime Academy Charter School (MACHS)"
     },
     {
-      "school": "Markham District High School"
+      "value": "Markham District High School"
     },
     {
-      "school": "Markville Secondary School"
+      "value": "Markville Secondary School"
     },
     {
-      "school": "Marlboro High School"
+      "value": "Marlboro High School"
     },
     {
-      "school": "Marquette University"
+      "value": "Marquette University"
     },
     {
-      "school": "Marshall High School"
+      "value": "Marshall High School"
     },
     {
-      "school": "Martin Luther King High School"
+      "value": "Martin Luther King High School"
     },
     {
-      "school": "Marymount University"
+      "value": "Marymount University"
     },
     {
-      "school": "Masaryk University"
+      "value": "Masaryk University"
     },
     {
-      "school": "Massachusetts Institute of Technology"
+      "value": "Massachusetts Institute of Technology"
     },
     {
-      "school": "Mastery Charter School - Hardy Williams Academy"
+      "value": "Mastery Charter School - Hardy Williams Academy"
     },
     {
-      "school": "Mastery Charter School - Thomas Campus"
+      "value": "Mastery Charter School - Thomas Campus"
     },
     {
-      "school": "Mastery Charter School at Lenfest Campus"
+      "value": "Mastery Charter School at Lenfest Campus"
     },
     {
-      "school": "Mastery Charter School at Pickett Campus"
+      "value": "Mastery Charter School at Pickett Campus"
     },
     {
-      "school": "Mastery Charter School at Shoemaker Campus"
+      "value": "Mastery Charter School at Shoemaker Campus"
     },
     {
-      "school": "Mata Gujri College"
+      "value": "Mata Gujri College"
     },
     {
-      "school": "Mater Academy High School"
+      "value": "Mater Academy High School"
     },
     {
-      "school": "Math, Civics and Sciences Charter School - Philadelphia"
+      "value": "Math, Civics and Sciences Charter School - Philadelphia"
     },
     {
-      "school": "Mathematics, Science, and Technology Community Charter School (MaST)"
+      "value": "Mathematics, Science, and Technology Community Charter School (MaST)"
     },
     {
-      "school": "Matrusri Engineering College,  Hyderabad"
+      "value": "Matrusri Engineering College,  Hyderabad"
     },
     {
-      "school": "Maulana Abul Kalam Azad University of Technology"
+      "value": "Maulana Abul Kalam Azad University of Technology"
     },
     {
-      "school": "Maulana Azad National Institute of Technology"
+      "value": "Maulana Azad National Institute of Technology"
     },
     {
-      "school": "Maulana Azad National Institute of Technology Bhopal"
+      "value": "Maulana Azad National Institute of Technology Bhopal"
     },
     {
-      "school": "Maumee Valley Country Day School"
+      "value": "Maumee Valley Country Day School"
     },
     {
-      "school": "MBM Engineering College, Jodhpur"
+      "value": "MBM Engineering College, Jodhpur"
     },
     {
-      "school": "McGill University"
+      "value": "McGill University"
     },
     {
-      "school": "McMaster University"
+      "value": "McMaster University"
     },
     {
-      "school": "Medgar Evers College, CUNY"
+      "value": "Medgar Evers College, CUNY"
     },
     {
-      "school": "Medical University of Silesia"
+      "value": "Medical University of Silesia"
     },
     {
-      "school": "Meerut Institute of Engineering and Technology (MIET)"
+      "value": "Meerut Institute of Engineering and Technology (MIET)"
     },
     {
-      "school": "Menlo School"
+      "value": "Menlo School"
     },
     {
-      "school": "Mepco Schlenk Engineering College"
+      "value": "Mepco Schlenk Engineering College"
     },
     {
-      "school": "Merced College"
+      "value": "Merced College"
     },
     {
-      "school": "Mercer County Community College"
+      "value": "Mercer County Community College"
     },
     {
-      "school": "Mercer University"
+      "value": "Mercer University"
     },
     {
-      "school": "Meredith College"
+      "value": "Meredith College"
     },
     {
-      "school": "Messiah College"
+      "value": "Messiah College"
     },
     {
-      "school": "Metas Adventist School"
+      "value": "Metas Adventist School"
     },
     {
-      "school": "Metropolia University of Applied Sciences"
+      "value": "Metropolia University of Applied Sciences"
     },
     {
-      "school": "Metropolitan State University"
+      "value": "Metropolitan State University"
     },
     {
-      "school": "Metuchen High School"
+      "value": "Metuchen High School"
     },
     {
-      "school": "Mewar University Chittorgarh"
+      "value": "Mewar University Chittorgarh"
     },
     {
-      "school": "Miami Dade College"
+      "value": "Miami Dade College"
     },
     {
-      "school": "Miami Lakes Educational Center"
+      "value": "Miami Lakes Educational Center"
     },
     {
-      "school": "Miami University"
+      "value": "Miami University"
     },
     {
-      "school": "Michigan State University"
+      "value": "Michigan State University"
     },
     {
-      "school": "Michigan Technological University"
+      "value": "Michigan Technological University"
     },
     {
-      "school": "Microsoft School of the Future High School"
+      "value": "Microsoft School of the Future High School"
     },
     {
-      "school": "Middle Tennessee State University"
+      "value": "Middle Tennessee State University"
     },
     {
-      "school": "Middlebury College"
+      "value": "Middlebury College"
     },
     {
-      "school": "Middlesex County Academy"
+      "value": "Middlesex County Academy"
     },
     {
-      "school": "Middlesex County Academy For Allied Health And Biomedical Sciences"
+      "value": "Middlesex County Academy For Allied Health And Biomedical Sciences"
     },
     {
-      "school": "Middlesex County Academy for Science, Mathematics & Engineering Technologies"
+      "value": "Middlesex County Academy for Science, Mathematics & Engineering Technologies"
     },
     {
-      "school": "Middlesex County College"
+      "value": "Middlesex County College"
     },
     {
-      "school": "Middlesex University"
+      "value": "Middlesex University"
     },
     {
-      "school": "Middleton High School"
+      "value": "Middleton High School"
     },
     {
-      "school": "Middletown High School South"
+      "value": "Middletown High School South"
     },
     {
-      "school": "Midwood"
+      "value": "Midwood"
     },
     {
-      "school": "Miles College"
+      "value": "Miles College"
     },
     {
-      "school": "Millburn High School"
+      "value": "Millburn High School"
     },
     {
-      "school": "Millburn Middle School"
+      "value": "Millburn Middle School"
     },
     {
-      "school": "Millville Senior High School"
+      "value": "Millville Senior High School"
     },
     {
-      "school": "Milwaukee School of Engineering"
+      "value": "Milwaukee School of Engineering"
     },
     {
-      "school": "Minerva University"
+      "value": "Minerva University"
     },
     {
-      "school": "Minnesota State University, Mankato"
+      "value": "Minnesota State University, Mankato"
     },
     {
-      "school": "Misrimal Navajee Munoth Jain Engineering College"
+      "value": "Misrimal Navajee Munoth Jain Engineering College"
     },
     {
-      "school": "Mission College Boulevard"
+      "value": "Mission College Boulevard"
     },
     {
-      "school": "Mission San Jose High School"
+      "value": "Mission San Jose High School"
     },
     {
-      "school": "Mississippi State University"
+      "value": "Mississippi State University"
     },
     {
-      "school": "Mississippi University for Women"
+      "value": "Mississippi University for Women"
     },
     {
-      "school": "Missouri State University"
+      "value": "Missouri State University"
     },
     {
-      "school": "Missouri University of Science and Technology"
+      "value": "Missouri University of Science and Technology"
     },
     {
-      "school": "Model Institute of Engineering and Technology (MIET)"
+      "value": "Model Institute of Engineering and Technology (MIET)"
     },
     {
-      "school": "Modern Engineering and Management Studies"
+      "value": "Modern Engineering and Management Studies"
     },
     {
-      "school": "Mody University"
+      "value": "Mody University"
     },
     {
-      "school": "Mohammed V University"
+      "value": "Mohammed V University"
     },
     {
-      "school": "Molloy College"
+      "value": "Molloy College"
     },
     {
-      "school": "Monmouth College"
+      "value": "Monmouth College"
     },
     {
-      "school": "Monmouth University"
+      "value": "Monmouth University"
     },
     {
-      "school": "Monroe Community College"
+      "value": "Monroe Community College"
     },
     {
-      "school": "Monroe Township High School"
+      "value": "Monroe Township High School"
     },
     {
-      "school": "Monta Vista High School"
+      "value": "Monta Vista High School"
     },
     {
-      "school": "Montana State University"
+      "value": "Montana State University"
     },
     {
-      "school": "Montclair High School"
+      "value": "Montclair High School"
     },
     {
-      "school": "Montclair State University"
+      "value": "Montclair State University"
     },
     {
-      "school": "Montgomery Blair High School"
+      "value": "Montgomery Blair High School"
     },
     {
-      "school": "Montgomery College"
+      "value": "Montgomery College"
     },
     {
-      "school": "Montgomery County Community College - Central Campus (Blue Bell)"
+      "value": "Montgomery County Community College - Central Campus (Blue Bell)"
     },
     {
-      "school": "Montgomery County Community College - West Campus (Pottstown)"
+      "value": "Montgomery County Community College - West Campus (Pottstown)"
     },
     {
-      "school": "Montgomery High School"
+      "value": "Montgomery High School"
     },
     {
-      "school": "Montville Township High School"
+      "value": "Montville Township High School"
     },
     {
-      "school": "Moore College of Art and Design"
+      "value": "Moore College of Art and Design"
     },
     {
-      "school": "Moore Middle School"
+      "value": "Moore Middle School"
     },
     {
-      "school": "Moorestown High School"
+      "value": "Moorestown High School"
     },
     {
-      "school": "Moraine Valley Community College"
+      "value": "Moraine Valley Community College"
     },
     {
-      "school": "Morehouse College"
+      "value": "Morehouse College"
     },
     {
-      "school": "Morgan State University"
+      "value": "Morgan State University"
     },
     {
-      "school": "Morris County School of Technology"
+      "value": "Morris County School of Technology"
     },
     {
-      "school": "Morris Hills High School"
+      "value": "Morris Hills High School"
     },
     {
-      "school": "Morton College"
+      "value": "Morton College"
     },
     {
-      "school": "Moscow Institute of Physics and Technology"
+      "value": "Moscow Institute of Physics and Technology"
     },
     {
-      "school": "Moscrop Secondary School"
+      "value": "Moscrop Secondary School"
     },
     {
-      "school": "Motilal Nehru National Institute of Technology Allahabad"
+      "value": "Motilal Nehru National Institute of Technology Allahabad"
     },
     {
-      "school": "Motivation High School (formerly John Bartram High School)"
+      "value": "Motivation High School (formerly John Bartram High School)"
     },
     {
-      "school": "Mount Holyoke College"
+      "value": "Mount Holyoke College"
     },
     {
-      "school": "Mountain Lakes High School"
+      "value": "Mountain Lakes High School"
     },
     {
-      "school": "Mountain View High School"
+      "value": "Mountain View High School"
     },
     {
-      "school": "MSME TDC PPDC Agra"
+      "value": "MSME TDC PPDC Agra"
     },
     {
-      "school": "Mt. San Antonio College"
+      "value": "Mt. San Antonio College"
     },
     {
-      "school": "Muhlenberg college"
+      "value": "Muhlenberg college"
     },
     {
-      "school": "Multi-Cultural Academy Charter School"
+      "value": "Multi-Cultural Academy Charter School"
     },
     {
-      "school": "Murrell Dobbins Technical High School"
+      "value": "Murrell Dobbins Technical High School"
     },
     {
-      "school": "Muthoot Institute of Technology & Science"
+      "value": "Muthoot Institute of Technology & Science"
     },
     {
-      "school": "Muzaffarpur Institute of Technology"
+      "value": "Muzaffarpur Institute of Technology"
     },
     {
-      "school": "MVJ College of Engineering"
+      "value": "MVJ College of Engineering"
     },
     {
-      "school": "Nagaland University, Dimapur Campus"
+      "value": "Nagaland University, Dimapur Campus"
     },
     {
-      "school": "Nalla Malla Reddy Engineering College, Ghatkesar"
+      "value": "Nalla Malla Reddy Engineering College, Ghatkesar"
     },
     {
-      "school": "Nanyang Technological University"
+      "value": "Nanyang Technological University"
     },
     {
-      "school": "Narsee Monjee College of Commerce and Economics"
+      "value": "Narsee Monjee College of Commerce and Economics"
     },
     {
-      "school": "Narsihma Reddy Engineering College"
+      "value": "Narsihma Reddy Engineering College"
     },
     {
-      "school": "Nashua High School South"
+      "value": "Nashua High School South"
     },
     {
-      "school": "National Engineering College"
+      "value": "National Engineering College"
     },
     {
-      "school": "National Institute of Engineering, Mysore"
+      "value": "National Institute of Engineering, Mysore"
     },
     {
-      "school": "National Institute of Science and Technology, Odisha"
+      "value": "National Institute of Science and Technology, Odisha"
     },
     {
-      "school": "National Institute of Technology, Agartala"
+      "value": "National Institute of Technology, Agartala"
     },
     {
-      "school": "National Institute of Technology, Calicut"
+      "value": "National Institute of Technology, Calicut"
     },
     {
-      "school": "National Institute of Technology, Delhi"
+      "value": "National Institute of Technology, Delhi"
     },
     {
-      "school": "National Institute of Technology, Durgapur"
+      "value": "National Institute of Technology, Durgapur"
     },
     {
-      "school": "National Institute of Technology, Goa"
+      "value": "National Institute of Technology, Goa"
     },
     {
-      "school": "National Institute of Technology, Hamirpur"
+      "value": "National Institute of Technology, Hamirpur"
     },
     {
-      "school": "National Institute of Technology, Jamshedpur"
+      "value": "National Institute of Technology, Jamshedpur"
     },
     {
-      "school": "National Institute of Technology, Karnataka"
+      "value": "National Institute of Technology, Karnataka"
     },
     {
-      "school": "National Institute of Technology, Kurukshetra"
+      "value": "National Institute of Technology, Kurukshetra"
     },
     {
-      "school": "National Institute of Technology, Patna"
+      "value": "National Institute of Technology, Patna"
     },
     {
-      "school": "National Institute of Technology, Raipur"
+      "value": "National Institute of Technology, Raipur"
     },
     {
-      "school": "National Institute of Technology, Rourkela"
+      "value": "National Institute of Technology, Rourkela"
     },
     {
-      "school": "National Institute of Technology, Silchar"
+      "value": "National Institute of Technology, Silchar"
     },
     {
-      "school": "National Institute of Technology, Srinagar"
+      "value": "National Institute of Technology, Srinagar"
     },
     {
-      "school": "National Institute of Technology, Surat"
+      "value": "National Institute of Technology, Surat"
     },
     {
-      "school": "National Institute of Technology, Tiruchirappalli"
+      "value": "National Institute of Technology, Tiruchirappalli"
     },
     {
-      "school": "National Institute of Technology, Trichy"
+      "value": "National Institute of Technology, Trichy"
     },
     {
-      "school": "National Institute of Technology, Uttarakhand"
+      "value": "National Institute of Technology, Uttarakhand"
     },
     {
-      "school": "National Institute of Technology, Warangal"
+      "value": "National Institute of Technology, Warangal"
     },
     {
-      "school": "National Institute of Technology, Warangal"
+      "value": "National Institute of Technology, Warangal"
     },
     {
-      "school": "National Research University Higher School Of Economics"
+      "value": "National Research University Higher School Of Economics"
     },
     {
-      "school": "National University of Singapore"
+      "value": "National University of Singapore"
     },
     {
-      "school": "Neotia Institute Of Technology Management and Science (NITMAS)"
+      "value": "Neotia Institute Of Technology Management and Science (NITMAS)"
     },
     {
-      "school": "Netaji Subhas Institute of Technology"
+      "value": "Netaji Subhas Institute of Technology"
     },
     {
-      "school": "Netaji Subhash Engineering College"
+      "value": "Netaji Subhash Engineering College"
     },
     {
-      "school": "Neumann University"
+      "value": "Neumann University"
     },
     {
-      "school": "New Albany High School"
+      "value": "New Albany High School"
     },
     {
-      "school": "New Foundations Charter School - Philadelphia"
+      "value": "New Foundations Charter School - Philadelphia"
     },
     {
-      "school": "New Horizon College of Engineering"
+      "value": "New Horizon College of Engineering"
     },
     {
-      "school": "New Jersey City University"
+      "value": "New Jersey City University"
     },
     {
-      "school": "New Jersey Institute of Technology"
+      "value": "New Jersey Institute of Technology"
     },
     {
-      "school": "New Providence High School"
+      "value": "New Providence High School"
     },
     {
-      "school": "New River Community College"
+      "value": "New River Community College"
     },
     {
-      "school": "New York City College of Technology, CUNY"
+      "value": "New York City College of Technology, CUNY"
     },
     {
-      "school": "New York Institute of Technology"
+      "value": "New York Institute of Technology"
     },
     {
-      "school": "New York University"
+      "value": "New York University"
     },
     {
-      "school": "New York University Abu Dhabi"
+      "value": "New York University Abu Dhabi"
     },
     {
-      "school": "Newark Charter High School"
+      "value": "Newark Charter High School"
     },
     {
-      "school": "Newark Charter Junior/Senior High School"
+      "value": "Newark Charter Junior/Senior High School"
     },
     {
-      "school": "Newcastle University"
+      "value": "Newcastle University"
     },
     {
-      "school": "Newton South High School"
+      "value": "Newton South High School"
     },
     {
-      "school": "Niagara College"
+      "value": "Niagara College"
     },
     {
-      "school": "NIFT-TEA College of Knitwear Fashion"
+      "value": "NIFT-TEA College of Knitwear Fashion"
     },
     {
-      "school": "NIIT University"
+      "value": "NIIT University"
     },
     {
-      "school": "Nipissing University"
+      "value": "Nipissing University"
     },
     {
-      "school": "Nirma University"
+      "value": "Nirma University"
     },
     {
-      "school": "NITK Science & Technology Entrepreneurs' Park (NITK-STEP)"
+      "value": "NITK Science & Technology Entrepreneurs' Park (NITK-STEP)"
     },
     {
-      "school": "Nitte Meenakshi Institute of Technology"
+      "value": "Nitte Meenakshi Institute of Technology"
     },
     {
-      "school": "Nizam College of Engineering Technology"
+      "value": "Nizam College of Engineering Technology"
     },
     {
-      "school": "NMAM Institute of Technology"
+      "value": "NMAM Institute of Technology"
     },
     {
-      "school": "Noakhali Science and Technology University"
+      "value": "Noakhali Science and Technology University"
     },
     {
-      "school": "Noida Institute of Engineering and Technology"
+      "value": "Noida Institute of Engineering and Technology"
     },
     {
-      "school": "Noor-ul-Iman"
+      "value": "Noor-ul-Iman"
     },
     {
-      "school": "Norco College"
+      "value": "Norco College"
     },
     {
-      "school": "Norfolk State University"
+      "value": "Norfolk State University"
     },
     {
-      "school": "North American University"
+      "value": "North American University"
     },
     {
-      "school": "North Andover High School"
+      "value": "North Andover High School"
     },
     {
-      "school": "North Brunswick Township High School"
+      "value": "North Brunswick Township High School"
     },
     {
-      "school": "North Carolina Agricultural and Technical (A&T) State University"
+      "value": "North Carolina Agricultural and Technical (A&T) State University"
     },
     {
-      "school": "North Carolina Central University"
+      "value": "North Carolina Central University"
     },
     {
-      "school": "North Carolina School of Science and Mathematics"
+      "value": "North Carolina School of Science and Mathematics"
     },
     {
-      "school": "North Carolina State University"
+      "value": "North Carolina State University"
     },
     {
-      "school": "North Dakota State University"
+      "value": "North Dakota State University"
     },
     {
-      "school": "North Hunterdon High School"
+      "value": "North Hunterdon High School"
     },
     {
-      "school": "North Park Secondary School"
+      "value": "North Park Secondary School"
     },
     {
-      "school": "North Penn High School"
+      "value": "North Penn High School"
     },
     {
-      "school": "North Shore Community College"
+      "value": "North Shore Community College"
     },
     {
-      "school": "Northeast High School - Philadelphia"
+      "value": "Northeast High School - Philadelphia"
     },
     {
-      "school": "Northeastern University"
+      "value": "Northeastern University"
     },
     {
-      "school": "Northern Alberta Institute of Technology (NAIT)"
+      "value": "Northern Alberta Institute of Technology (NAIT)"
     },
     {
-      "school": "Northern Arizona University"
+      "value": "Northern Arizona University"
     },
     {
-      "school": "Northern Illinois University"
+      "value": "Northern Illinois University"
     },
     {
-      "school": "Northern Kentucky University"
+      "value": "Northern Kentucky University"
     },
     {
-      "school": "Northern Michigan University"
+      "value": "Northern Michigan University"
     },
     {
-      "school": "Northern Secondary School"
+      "value": "Northern Secondary School"
     },
     {
-      "school": "Northern Virginia Community College"
+      "value": "Northern Virginia Community College"
     },
     {
-      "school": "Northumbria University"
+      "value": "Northumbria University"
     },
     {
-      "school": "Northview High School"
+      "value": "Northview High School"
     },
     {
-      "school": "Northwest Missouri State University"
+      "value": "Northwest Missouri State University"
     },
     {
-      "school": "Northwest Parkway High School"
+      "value": "Northwest Parkway High School"
     },
     {
-      "school": "Northwest Vista College"
+      "value": "Northwest Vista College"
     },
     {
-      "school": "Northwestern Oklahoma State University"
+      "value": "Northwestern Oklahoma State University"
     },
     {
-      "school": "Northwestern University"
+      "value": "Northwestern University"
     },
     {
-      "school": "Northwood Academy/Arts School"
+      "value": "Northwood Academy/Arts School"
     },
     {
-      "school": "Nottingham Trent University"
+      "value": "Nottingham Trent University"
     },
     {
-      "school": "Novi High School"
+      "value": "Novi High School"
     },
     {
-      "school": "NRI Institute of information Science and Technology (NIIST)"
+      "value": "NRI Institute of information Science and Technology (NIIST)"
     },
     {
-      "school": "NSS College of Engineering"
+      "value": "NSS College of Engineering"
     },
     {
-      "school": "Oakland Community College"
+      "value": "Oakland Community College"
     },
     {
-      "school": "Oakland University"
+      "value": "Oakland University"
     },
     {
-      "school": "Obafemi Awolowo University Ile-Ife"
+      "value": "Obafemi Awolowo University Ile-Ife"
     },
     {
-      "school": "Oberlin College"
+      "value": "Oberlin College"
     },
     {
-      "school": "Ocean City High School"
+      "value": "Ocean City High School"
     },
     {
-      "school": "Ocean County College"
+      "value": "Ocean County College"
     },
     {
-      "school": "Oglethorpe University"
+      "value": "Oglethorpe University"
     },
     {
-      "school": "Ohio Christian University"
+      "value": "Ohio Christian University"
     },
     {
-      "school": "Ohio University"
+      "value": "Ohio University"
     },
     {
-      "school": "Okemos High School"
+      "value": "Okemos High School"
     },
     {
-      "school": "Oklahoma State University"
+      "value": "Oklahoma State University"
     },
     {
-      "school": "Old Dominion University"
+      "value": "Old Dominion University"
     },
     {
-      "school": "Old Westbury, SUNY"
+      "value": "Old Westbury, SUNY"
     },
     {
-      "school": "Olney High School"
+      "value": "Olney High School"
     },
     {
-      "school": "Onalaska High School"
+      "value": "Onalaska High School"
     },
     {
-      "school": "Onondaga Community College"
+      "value": "Onondaga Community College"
     },
     {
-      "school": "Ontario Tech University"
+      "value": "Ontario Tech University"
     },
     {
-      "school": "Opolska University of Technology"
+      "value": "Opolska University of Technology"
     },
     {
-      "school": "Oratary Prep School At Summit"
+      "value": "Oratary Prep School At Summit"
     },
     {
-      "school": "Oregon State University"
+      "value": "Oregon State University"
     },
     {
-      "school": "Oriental Group of Institutes"
+      "value": "Oriental Group of Institutes"
     },
     {
-      "school": "Orissa Engineering College"
+      "value": "Orissa Engineering College"
     },
     {
-      "school": "Orleans Technical Institute"
+      "value": "Orleans Technical Institute"
     },
     {
-      "school": "Osbourn Park High School"
+      "value": "Osbourn Park High School"
     },
     {
-      "school": "Ostbayerische Technische Hochschule Regensburg"
+      "value": "Ostbayerische Technische Hochschule Regensburg"
     },
     {
-      "school": "Otterbein University"
+      "value": "Otterbein University"
     },
     {
-      "school": "Overbrook High School - Philadelphia"
+      "value": "Overbrook High School - Philadelphia"
     },
     {
-      "school": "Oxford Academy High School"
+      "value": "Oxford Academy High School"
     },
     {
-      "school": "Oxford Brookes University"
+      "value": "Oxford Brookes University"
     },
     {
-      "school": "P.D.A. College of Engineering"
+      "value": "P.D.A. College of Engineering"
     },
     {
-      "school": "Pace University"
+      "value": "Pace University"
     },
     {
-      "school": "Pacific University,  Udaipur"
+      "value": "Pacific University,  Udaipur"
     },
     {
-      "school": "Palo Alto High School"
+      "value": "Palo Alto High School"
     },
     {
-      "school": "Palomar College"
+      "value": "Palomar College"
     },
     {
-      "school": "Pandit Deendayal Petroleum University"
+      "value": "Pandit Deendayal Petroleum University"
     },
     {
-      "school": "Panjab University,  SSG Regional Centre"
+      "value": "Panjab University,  SSG Regional Centre"
     },
     {
-      "school": "Parala Maharaja Engineering College,  Berhampur"
+      "value": "Parala Maharaja Engineering College,  Berhampur"
     },
     {
-      "school": "Paramount International School"
+      "value": "Paramount International School"
     },
     {
-      "school": "Park College of Engineering and Technology"
+      "value": "Park College of Engineering and Technology"
     },
     {
-      "school": "Parkview High School"
+      "value": "Parkview High School"
     },
     {
-      "school": "Parkway Center City High School"
+      "value": "Parkway Center City High School"
     },
     {
-      "school": "Parkway West High School"
+      "value": "Parkway West High School"
     },
     {
-      "school": "Parsippany High School"
+      "value": "Parsippany High School"
     },
     {
-      "school": "Parsons School of Design"
+      "value": "Parsons School of Design"
     },
     {
-      "school": "Parul Institute of Engineering & Technology"
+      "value": "Parul Institute of Engineering & Technology"
     },
     {
-      "school": "Pasadena City College"
+      "value": "Pasadena City College"
     },
     {
-      "school": "Pascal English School, Cyprus"
+      "value": "Pascal English School, Cyprus"
     },
     {
-      "school": "Pathways School Noida"
+      "value": "Pathways School Noida"
     },
     {
-      "school": "Patriot High School - Nokesville"
+      "value": "Patriot High School - Nokesville"
     },
     {
-      "school": "Patriot High School - Riverside"
+      "value": "Patriot High School - Riverside"
     },
     {
-      "school": "Paul Robeson High School (formerly John Bartram High School)"
+      "value": "Paul Robeson High School (formerly John Bartram High School)"
     },
     {
-      "school": "PDM College of Engineering"
+      "value": "PDM College of Engineering"
     },
     {
-      "school": "Peirce College"
+      "value": "Peirce College"
     },
     {
-      "school": "Penn State Erie, The Behrend College"
+      "value": "Penn State Erie, The Behrend College"
     },
     {
-      "school": "Penncrest High School"
+      "value": "Penncrest High School"
     },
     {
-      "school": "Pennington School"
+      "value": "Pennington School"
     },
     {
-      "school": "Pennsylvania Academy of the Fine Arts"
+      "value": "Pennsylvania Academy of the Fine Arts"
     },
     {
-      "school": "Pennsylvania Cyber Charter School"
+      "value": "Pennsylvania Cyber Charter School"
     },
     {
-      "school": "Pennsylvania Distance Learning Charter School - Online"
+      "value": "Pennsylvania Distance Learning Charter School - Online"
     },
     {
-      "school": "Pennsylvania Institute of Technology - Center City Philadelphia"
+      "value": "Pennsylvania Institute of Technology - Center City Philadelphia"
     },
     {
-      "school": "Pennsylvania Institute of Technology - Media"
+      "value": "Pennsylvania Institute of Technology - Media"
     },
     {
-      "school": "Pennsylvania Leadership Charter School - Online"
+      "value": "Pennsylvania Leadership Charter School - Online"
     },
     {
-      "school": "Pennsylvania Virtual Charter School"
+      "value": "Pennsylvania Virtual Charter School"
     },
     {
-      "school": "Periyar Maniammai Institute of Science & Technology (PMU)"
+      "value": "Periyar Maniammai Institute of Science & Technology (PMU)"
     },
     {
-      "school": "Perth Amboy High School"
+      "value": "Perth Amboy High School"
     },
     {
-      "school": "Perth Amboy Vocational Technical School"
+      "value": "Perth Amboy Vocational Technical School"
     },
     {
-      "school": "PES College of Engineering, Mandya"
+      "value": "PES College of Engineering, Mandya"
     },
     {
-      "school": "PES University"
+      "value": "PES University"
     },
     {
-      "school": "PESIT, Bangalore South Campus"
+      "value": "PESIT, Bangalore South Campus"
     },
     {
-      "school": "PGP College of Engineering Technology"
+      "value": "PGP College of Engineering Technology"
     },
     {
-      "school": "Philadelphia Academy Charter School"
+      "value": "Philadelphia Academy Charter School"
     },
     {
-      "school": "Philadelphia Electrical and Technology Charter School"
+      "value": "Philadelphia Electrical and Technology Charter School"
     },
     {
-      "school": "Philadelphia High School for Girls"
+      "value": "Philadelphia High School for Girls"
     },
     {
-      "school": "Philadelphia Performing Arts Charter School (String Theory High School) - Vine Street Campus"
+      "value": "Philadelphia Performing Arts Charter School (String Theory High School) - Vine Street Campus"
     },
     {
-      "school": "Piedmont High School"
+      "value": "Piedmont High School"
     },
     {
-      "school": "Pierre Elliott Trudeau High School"
+      "value": "Pierre Elliott Trudeau High School"
     },
     {
-      "school": "Pima Community College"
+      "value": "Pima Community College"
     },
     {
-      "school": "Pingree School"
+      "value": "Pingree School"
     },
     {
-      "school": "Piscataway Township High School"
+      "value": "Piscataway Township High School"
     },
     {
-      "school": "Pittsburgh Technical College - Philadelphia"
+      "value": "Pittsburgh Technical College - Philadelphia"
     },
     {
-      "school": "Pittsburgh Technical Institute"
+      "value": "Pittsburgh Technical Institute"
     },
     {
-      "school": "Plaksha University"
+      "value": "Plaksha University"
     },
     {
-      "school": "Plano East Senior High School"
+      "value": "Plano East Senior High School"
     },
     {
-      "school": "Plovdiv Medical University"
+      "value": "Plovdiv Medical University"
     },
     {
-      "school": "Point Pleasant Beach High School"
+      "value": "Point Pleasant Beach High School"
     },
     {
-      "school": "Pokhara University"
+      "value": "Pokhara University"
     },
     {
-      "school": "Politecnico di Milano"
+      "value": "Politecnico di Milano"
     },
     {
-      "school": "Polsko-Japońska Akademia Technik Komputerowych"
+      "value": "Polsko-Japońska Akademia Technik Komputerowych"
     },
     {
-      "school": "Pomona College"
+      "value": "Pomona College"
     },
     {
-      "school": "Pondicherry Engineering College"
+      "value": "Pondicherry Engineering College"
     },
     {
-      "school": "Poolesville High School"
+      "value": "Poolesville High School"
     },
     {
-      "school": "Poornima College of Engineering"
+      "value": "Poornima College of Engineering"
     },
     {
-      "school": "Poornima Group of Institutions"
+      "value": "Poornima Group of Institutions"
     },
     {
-      "school": "Poornima Institute Of Engineering And Technology"
+      "value": "Poornima Institute Of Engineering And Technology"
     },
     {
-      "school": "Pope John Paul II High School"
+      "value": "Pope John Paul II High School"
     },
     {
-      "school": "Port Credit Secondary School"
+      "value": "Port Credit Secondary School"
     },
     {
-      "school": "Porter-Gaud School"
+      "value": "Porter-Gaud School"
     },
     {
-      "school": "Portland State University"
+      "value": "Portland State University"
     },
     {
-      "school": "Potomac Senior High School"
+      "value": "Potomac Senior High School"
     },
     {
-      "school": "Potsdam, SUNY"
+      "value": "Potsdam, SUNY"
     },
     {
-      "school": "Poznań University of Technology"
+      "value": "Poznań University of Technology"
     },
     {
-      "school": "Pranveer Singh Institute of Technology"
+      "value": "Pranveer Singh Institute of Technology"
     },
     {
-      "school": "Prathyusha Engineering College"
+      "value": "Prathyusha Engineering College"
     },
     {
-      "school": "Presidency School, Surat."
+      "value": "Presidency School, Surat."
     },
     {
-      "school": "Preston High School"
+      "value": "Preston High School"
     },
     {
-      "school": "Preston University"
+      "value": "Preston University"
     },
     {
-      "school": "Princeton Day School"
+      "value": "Princeton Day School"
     },
     {
-      "school": "Princeton High School"
+      "value": "Princeton High School"
     },
     {
-      "school": "Princeton International School Of Mathematics And Science"
+      "value": "Princeton International School Of Mathematics And Science"
     },
     {
-      "school": "Princeton University"
+      "value": "Princeton University"
     },
     {
-      "school": "Priyadarshini College Of Engineering (PEC),  Nagpur"
+      "value": "Priyadarshini College Of Engineering (PEC),  Nagpur"
     },
     {
-      "school": "Proudhadevaraya Institute Of Technology"
+      "value": "Proudhadevaraya Institute Of Technology"
     },
     {
-      "school": "PSG College of Technology,  Coimbatore"
+      "value": "PSG College of Technology,  Coimbatore"
     },
     {
-      "school": "PSG-Science & Technology Entrepreneurial Park (PSG-STEP)"
+      "value": "PSG-Science & Technology Entrepreneurial Park (PSG-STEP)"
     },
     {
-      "school": "Pune Institute of Computer Technology"
+      "value": "Pune Institute of Computer Technology"
     },
     {
-      "school": "Punjab Engineering College (PEC)"
+      "value": "Punjab Engineering College (PEC)"
     },
     {
-      "school": "Punjab Institute of Management & Technology"
+      "value": "Punjab Institute of Management & Technology"
     },
     {
-      "school": "Punjab Institute Of Medical Sciences (PIMS)"
+      "value": "Punjab Institute Of Medical Sciences (PIMS)"
     },
     {
-      "school": "Punjab Institute of Technology, Rajpura"
+      "value": "Punjab Institute of Technology, Rajpura"
     },
     {
-      "school": "Punjab University, Patiala"
+      "value": "Punjab University, Patiala"
     },
     {
-      "school": "Purdue University"
+      "value": "Purdue University"
     },
     {
-      "school": "Queen Mary University of London"
+      "value": "Queen Mary University of London"
     },
     {
-      "school": "Queen's University"
+      "value": "Queen's University"
     },
     {
-      "school": "Queens College, CUNY"
+      "value": "Queens College, CUNY"
     },
     {
-      "school": "Queensborough Community College, CUNY"
+      "value": "Queensborough Community College, CUNY"
     },
     {
-      "school": "R N S Institute of Technology (RNSIT)"
+      "value": "R N S Institute of Technology (RNSIT)"
     },
     {
-      "school": "R. R. Institute of Technology"
+      "value": "R. R. Institute of Technology"
     },
     {
-      "school": "R.L.Jalappa Institute of technology"
+      "value": "R.L.Jalappa Institute of technology"
     },
     {
-      "school": "R.V. College Of Engineering"
+      "value": "R.V. College Of Engineering"
     },
     {
-      "school": "R.V. College of Engineering (RVCE)"
+      "value": "R.V. College of Engineering (RVCE)"
     },
     {
-      "school": "R.V.R. & J.C. College of Engineering"
+      "value": "R.V.R. & J.C. College of Engineering"
     },
     {
-      "school": "Radharaman Institute of Research Technology (RIRT), Radharaman Group"
+      "value": "Radharaman Institute of Research Technology (RIRT), Radharaman Group"
     },
     {
-      "school": "Radharaman Institute of Technology & Science (RITS), Bhopal"
+      "value": "Radharaman Institute of Technology & Science (RITS), Bhopal"
     },
     {
-      "school": "Radnor High School"
+      "value": "Radnor High School"
     },
     {
-      "school": "Raj Kumar Goel Engineering College"
+      "value": "Raj Kumar Goel Engineering College"
     },
     {
-      "school": "Rajagiri School of Engineering and Technology"
+      "value": "Rajagiri School of Engineering and Technology"
     },
     {
-      "school": "Rajarajeswari College of Engineering (RRCE)"
+      "value": "Rajarajeswari College of Engineering (RRCE)"
     },
     {
-      "school": "Rajasthan Institute Of Engineering and Technology"
+      "value": "Rajasthan Institute Of Engineering and Technology"
     },
     {
-      "school": "Rajdhani College of Engineering & Management"
+      "value": "Rajdhani College of Engineering & Management"
     },
     {
-      "school": "Rajendra Mane College of Engineering and Technology (RMCET)"
+      "value": "Rajendra Mane College of Engineering and Technology (RMCET)"
     },
     {
-      "school": "Rajiv Gandhi College of Engineering and Technology"
+      "value": "Rajiv Gandhi College of Engineering and Technology"
     },
     {
-      "school": "Rajiv Gandhi Institute of Technology (RIT), Kottayam"
+      "value": "Rajiv Gandhi Institute of Technology (RIT), Kottayam"
     },
     {
-      "school": "Rajiv Gandhi University of Knowledge Technologies (RGUKT), Basar"
+      "value": "Rajiv Gandhi University of Knowledge Technologies (RGUKT), Basar"
     },
     {
-      "school": "Rajkiya Engineering College, Ambedkar Nagar"
+      "value": "Rajkiya Engineering College, Ambedkar Nagar"
     },
     {
-      "school": "Raksha Shakti University"
+      "value": "Raksha Shakti University"
     },
     {
-      "school": "RAM-EESH INSTITUTE OF ENGINEERING TECHNOLOGY"
+      "value": "RAM-EESH INSTITUTE OF ENGINEERING TECHNOLOGY"
     },
     {
-      "school": "Ramaiah Institute of Technology"
+      "value": "Ramaiah Institute of Technology"
     },
     {
-      "school": "Ramapo College of New Jersey"
+      "value": "Ramapo College of New Jersey"
     },
     {
-      "school": "Ramapo High School"
+      "value": "Ramapo High School"
     },
     {
-      "school": "Ramrao Adik Institute of Technology (RAIT), DY Patil University"
+      "value": "Ramrao Adik Institute of Technology (RAIT), DY Patil University"
     },
     {
-      "school": "Randolph-Macon College"
+      "value": "Randolph-Macon College"
     },
     {
-      "school": "Rani Laxmi Bai Public School"
+      "value": "Rani Laxmi Bai Public School"
     },
     {
-      "school": "Raritan High School"
+      "value": "Raritan High School"
     },
     {
-      "school": "Raritan Valley Community College"
+      "value": "Raritan Valley Community College"
     },
     {
-      "school": "Rasmussen University"
+      "value": "Rasmussen University"
     },
     {
-      "school": "Ravenscroft School"
+      "value": "Ravenscroft School"
     },
     {
-      "school": "Ravenwood High School"
+      "value": "Ravenwood High School"
     },
     {
-      "school": "Reach Cyber Charter School"
+      "value": "Reach Cyber Charter School"
     },
     {
-      "school": "Red Bank Regional High School"
+      "value": "Red Bank Regional High School"
     },
     {
-      "school": "Reed College"
+      "value": "Reed College"
     },
     {
-      "school": "Regional College For Education Research and Technology, Jaipur"
+      "value": "Regional College For Education Research and Technology, Jaipur"
     },
     {
-      "school": "Regis High School"
+      "value": "Regis High School"
     },
     {
-      "school": "Rensselaer Polytechnic Institute"
+      "value": "Rensselaer Polytechnic Institute"
     },
     {
-      "school": "REVA University"
+      "value": "REVA University"
     },
     {
-      "school": "Rheinisch-Westfälische Technische Hochschule Aachen (RWTH)"
+      "value": "Rheinisch-Westfälische Technische Hochschule Aachen (RWTH)"
     },
     {
-      "school": "Rhode Island College"
+      "value": "Rhode Island College"
     },
     {
-      "school": "Rhode Island School of Design"
+      "value": "Rhode Island School of Design"
     },
     {
-      "school": "Rhodes College"
+      "value": "Rhodes College"
     },
     {
-      "school": "Rice University"
+      "value": "Rice University"
     },
     {
-      "school": "Richard Montgomery High School"
+      "value": "Richard Montgomery High School"
     },
     {
-      "school": "Richard Stockton University"
+      "value": "Richard Stockton University"
     },
     {
-      "school": "Richardson High School"
+      "value": "Richardson High School"
     },
     {
-      "school": "Richland College"
+      "value": "Richland College"
     },
     {
-      "school": "Richmond Hill High School"
+      "value": "Richmond Hill High School"
     },
     {
-      "school": "Rider University"
+      "value": "Rider University"
     },
     {
-      "school": "Ridge High School"
+      "value": "Ridge High School"
     },
     {
-      "school": "Ridgewood High School"
+      "value": "Ridgewood High School"
     },
     {
-      "school": "Riga Technical University"
+      "value": "Riga Technical University"
     },
     {
-      "school": "RIMT Institute of Engineering and Technology"
+      "value": "RIMT Institute of Engineering and Technology"
     },
     {
-      "school": "River Dell High School"
+      "value": "River Dell High School"
     },
     {
-      "school": "RMK College of Engineering"
+      "value": "RMK College of Engineering"
     },
     {
-      "school": "RNS Institute of Technology"
+      "value": "RNS Institute of Technology"
     },
     {
-      "school": "Robbinsville High School"
+      "value": "Robbinsville High School"
     },
     {
-      "school": "Robert Gordon University"
+      "value": "Robert Gordon University"
     },
     {
-      "school": "Rochester Institute of Technology"
+      "value": "Rochester Institute of Technology"
     },
     {
-      "school": "Rock Ridge High School"
+      "value": "Rock Ridge High School"
     },
     {
-      "school": "Roger Williams University"
+      "value": "Roger Williams University"
     },
     {
-      "school": "Rollins College"
+      "value": "Rollins College"
     },
     {
-      "school": "Roosevelt High School"
+      "value": "Roosevelt High School"
     },
     {
-      "school": "Rosa Parks Middle School"
+      "value": "Rosa Parks Middle School"
     },
     {
-      "school": "Rose-Hulman Institute of Technology"
+      "value": "Rose-Hulman Institute of Technology"
     },
     {
-      "school": "Rosemont College"
+      "value": "Rosemont College"
     },
     {
-      "school": "Rowan College at Burlington County - Mount Holly"
+      "value": "Rowan College at Burlington County - Mount Holly"
     },
     {
-      "school": "Rowan College at Burlington County - Pemberton"
+      "value": "Rowan College at Burlington County - Pemberton"
     },
     {
-      "school": "Rowan College at Burlington County - Willingboro"
+      "value": "Rowan College at Burlington County - Willingboro"
     },
     {
-      "school": "Rowan College at Gloucester County - Mount Laurel"
+      "value": "Rowan College at Gloucester County - Mount Laurel"
     },
     {
-      "school": "Rowan University"
+      "value": "Rowan University"
     },
     {
-      "school": "Roxborough High School"
+      "value": "Roxborough High School"
     },
     {
-      "school": "Roxbury High School"
+      "value": "Roxbury High School"
     },
     {
-      "school": "Royal Holloway, University of London"
+      "value": "Royal Holloway, University of London"
     },
     {
-      "school": "RPIIT Technical Campus"
+      "value": "RPIIT Technical Campus"
     },
     {
-      "school": "Rudbecksgymnasiet"
+      "value": "Rudbecksgymnasiet"
     },
     {
-      "school": "Rungta College of Engineering and Technology, Bhilai"
+      "value": "Rungta College of Engineering and Technology, Bhilai"
     },
     {
-      "school": "Rustamji Institute of Technology"
+      "value": "Rustamji Institute of Technology"
     },
     {
-      "school": "Rutgers Preparatory School"
+      "value": "Rutgers Preparatory School"
     },
     {
-      "school": "Rutgers University - Newark"
+      "value": "Rutgers University - Newark"
     },
     {
-      "school": "Rutgers University – Camden"
+      "value": "Rutgers University – Camden"
     },
     {
-      "school": "Rutgers, The State University of New Jersey"
+      "value": "Rutgers, The State University of New Jersey"
     },
     {
-      "school": "Ryde School"
+      "value": "Ryde School"
     },
     {
-      "school": "Rye High School"
+      "value": "Rye High School"
     },
     {
-      "school": "Ryerson University"
+      "value": "Ryerson University"
     },
     {
-      "school": "S A Engineering College"
+      "value": "S A Engineering College"
     },
     {
-      "school": "S G Balekundri Institute of Technology"
+      "value": "S G Balekundri Institute of Technology"
     },
     {
-      "school": "Sachdeva Institute of Technology"
+      "value": "Sachdeva Institute of Technology"
     },
     {
-      "school": "Sagar Institute of Science & Technology (SISTec)"
+      "value": "Sagar Institute of Science & Technology (SISTec)"
     },
     {
-      "school": "Saginaw Valley State University"
+      "value": "Saginaw Valley State University"
     },
     {
-      "school": "Sahrdaya College of Engineering and Technology"
+      "value": "Sahrdaya College of Engineering and Technology"
     },
     {
-      "school": "Sai Vidya Institute of Technology"
+      "value": "Sai Vidya Institute of Technology"
     },
     {
-      "school": "Saint Joseph High School"
+      "value": "Saint Joseph High School"
     },
     {
-      "school": "Saint Joseph's College of Maine"
+      "value": "Saint Joseph's College of Maine"
     },
     {
-      "school": "Saint Joseph's Preparatory School - Philadelphia"
+      "value": "Saint Joseph's Preparatory School - Philadelphia"
     },
     {
-      "school": "Saint Joseph's University - Philadelphia"
+      "value": "Saint Joseph's University - Philadelphia"
     },
     {
-      "school": "Saint Paul College"
+      "value": "Saint Paul College"
     },
     {
-      "school": "Saint Peter's Preparatory School"
+      "value": "Saint Peter's Preparatory School"
     },
     {
-      "school": "Saint Peter's University"
+      "value": "Saint Peter's University"
     },
     {
-      "school": "SAL Engineering and Technical Institute"
+      "value": "SAL Engineering and Technical Institute"
     },
     {
-      "school": "Salem Community College"
+      "value": "Salem Community College"
     },
     {
-      "school": "Salem State University"
+      "value": "Salem State University"
     },
     {
-      "school": "Sambalpur University Institute of Information Technology (SUIIT)"
+      "value": "Sambalpur University Institute of Information Technology (SUIIT)"
     },
     {
-      "school": "Sambhram Institute of Technology"
+      "value": "Sambhram Institute of Technology"
     },
     {
-      "school": "Samrat Ashok Technological Institute (S.A.I.T)"
+      "value": "Samrat Ashok Technological Institute (S.A.I.T)"
     },
     {
-      "school": "Samuel Fels High School - Philadelphia"
+      "value": "Samuel Fels High School - Philadelphia"
     },
     {
-      "school": "San Diego State University"
+      "value": "San Diego State University"
     },
     {
-      "school": "San Francisco State University"
+      "value": "San Francisco State University"
     },
     {
-      "school": "San Jose State University"
+      "value": "San Jose State University"
     },
     {
-      "school": "San Marcos High School"
+      "value": "San Marcos High School"
     },
     {
-      "school": "San Marin High School"
+      "value": "San Marin High School"
     },
     {
-      "school": "San Mateo High School"
+      "value": "San Mateo High School"
     },
     {
-      "school": "Sankofa Freedom Academy Charter School"
+      "value": "Sankofa Freedom Academy Charter School"
     },
     {
-      "school": "Sant Longowal Institute of Engineering and Technology"
+      "value": "Sant Longowal Institute of Engineering and Technology"
     },
     {
-      "school": "Santa Barbara City College"
+      "value": "Santa Barbara City College"
     },
     {
-      "school": "Santa Clara University"
+      "value": "Santa Clara University"
     },
     {
-      "school": "Santa Margarita Catholic High School"
+      "value": "Santa Margarita Catholic High School"
     },
     {
-      "school": "Santa Rosa Junior College"
+      "value": "Santa Rosa Junior College"
     },
     {
-      "school": "Sapthagiri College of Engineering "
+      "value": "Sapthagiri College of Engineering "
     },
     {
-      "school": "Saratoga High School"
+      "value": "Saratoga High School"
     },
     {
-      "school": "Sardar Patel Institute Of Technology"
+      "value": "Sardar Patel Institute Of Technology"
     },
     {
-      "school": "Sardar Patel University"
+      "value": "Sardar Patel University"
     },
     {
-      "school": "Sardar Vallabhbhai National Institute of Technology, Surat"
+      "value": "Sardar Vallabhbhai National Institute of Technology, Surat"
     },
     {
-      "school": "Sardar Vallabhbhai Patel Institute of Technology, Vasad"
+      "value": "Sardar Vallabhbhai Patel Institute of Technology, Vasad"
     },
     {
-      "school": "Sarvajanik College of Engineering & Technology"
+      "value": "Sarvajanik College of Engineering & Technology"
     },
     {
-      "school": "SASTRA University"
+      "value": "SASTRA University"
     },
     {
-      "school": "Saurashtra University Rajkot"
+      "value": "Saurashtra University Rajkot"
     },
     {
-      "school": "Savannah State University"
+      "value": "Savannah State University"
     },
     {
-      "school": "Savitribai Phule Pune University"
+      "value": "Savitribai Phule Pune University"
     },
     {
-      "school": "School of Engineering and Technology, Mizoram University"
+      "value": "School of Engineering and Technology, Mizoram University"
     },
     {
-      "school": "School of Engineering, Cochin University of Science and Technology"
+      "value": "School of Engineering, Cochin University of Science and Technology"
     },
     {
-      "school": "School of Professional Studies, CUNY"
+      "value": "School of Professional Studies, CUNY"
     },
     {
-      "school": "School of Visual Arts, New York"
+      "value": "School of Visual Arts, New York"
     },
     {
-      "school": "Science and Technology Entrepreneurs Park (STEP), Harcourt"
+      "value": "Science and Technology Entrepreneurs Park (STEP), Harcourt"
     },
     {
-      "school": "Science and TechnologyEntrepreneurs Park, Indian Institute of Technology"
+      "value": "Science and TechnologyEntrepreneurs Park, Indian Institute of Technology"
     },
     {
-      "school": "Science Leadership Academy"
+      "value": "Science Leadership Academy"
     },
     {
-      "school": "Scranton High School"
+      "value": "Scranton High School"
     },
     {
-      "school": "Seneca College"
+      "value": "Seneca College"
     },
     {
-      "school": "Seton Hall University"
+      "value": "Seton Hall University"
     },
     {
-      "school": "Seven Lakes High School"
+      "value": "Seven Lakes High School"
     },
     {
-      "school": "Seventh Day Adventist High School"
+      "value": "Seventh Day Adventist High School"
     },
     {
-      "school": "Shaker High School"
+      "value": "Shaker High School"
     },
     {
-      "school": "Shankersinh Vaghela Bapu Institute of Technology"
+      "value": "Shankersinh Vaghela Bapu Institute of Technology"
     },
     {
-      "school": "Sharda University"
+      "value": "Sharda University"
     },
     {
-      "school": "Sheffield Hallam University"
+      "value": "Sheffield Hallam University"
     },
     {
-      "school": "Shelton High School"
+      "value": "Shelton High School"
     },
     {
-      "school": "Sheridan College"
+      "value": "Sheridan College"
     },
     {
-      "school": "Sherwood Convent School"
+      "value": "Sherwood Convent School"
     },
     {
-      "school": "Sherwood High School"
+      "value": "Sherwood High School"
     },
     {
-      "school": "Shiv Nadar University"
+      "value": "Shiv Nadar University"
     },
     {
-      "school": "Shri Dharmasthala Manjunatheshwara College of Engineering and Technology (SDM)"
+      "value": "Shri Dharmasthala Manjunatheshwara College of Engineering and Technology (SDM)"
     },
     {
-      "school": "Shri Govindram Seksaria Institute of Technology and Science"
+      "value": "Shri Govindram Seksaria Institute of Technology and Science"
     },
     {
-      "school": "Shri Guru Gobind Singhji Institute of Engineering and Technology (SGGS)"
+      "value": "Shri Guru Gobind Singhji Institute of Engineering and Technology (SGGS)"
     },
     {
-      "school": "Shri Guru Ram Rai Public School"
+      "value": "Shri Guru Ram Rai Public School"
     },
     {
-      "school": "Shri Mata Vaishno Devi University(SMVDU)"
+      "value": "Shri Mata Vaishno Devi University(SMVDU)"
     },
     {
-      "school": "Shri Ramswaroop College Of Engineering and Management"
+      "value": "Shri Ramswaroop College Of Engineering and Management"
     },
     {
-      "school": "Shri Ramswaroop Memorial Group of Professional Colleges (SRMGPC)"
+      "value": "Shri Ramswaroop Memorial Group of Professional Colleges (SRMGPC)"
     },
     {
-      "school": "Shri Sant Gajanan Maharaj College of Engineering, Shegaon (SSGMCE)"
+      "value": "Shri Sant Gajanan Maharaj College of Engineering, Shegaon (SSGMCE)"
     },
     {
-      "school": "Shri Shankaracharya Technical Campus"
+      "value": "Shri Shankaracharya Technical Campus"
     },
     {
-      "school": "Shri Vaishnav Institute of Technology and Science"
+      "value": "Shri Vaishnav Institute of Technology and Science"
     },
     {
-      "school": "Shri Venkateshwara College of Engineering"
+      "value": "Shri Venkateshwara College of Engineering"
     },
     {
-      "school": "Shridevi Institute of Engineering & Technology"
+      "value": "Shridevi Institute of Engineering & Technology"
     },
     {
-      "school": "Shriram Institute for Industrial Research"
+      "value": "Shriram Institute for Industrial Research"
     },
     {
-      "school": "Siddaganga Institute Of Technology, Tumakuru"
+      "value": "Siddaganga Institute Of Technology, Tumakuru"
     },
     {
-      "school": "Siena College"
+      "value": "Siena College"
     },
     {
-      "school": "Sikkim Manipal Institute of Technology"
+      "value": "Sikkim Manipal Institute of Technology"
     },
     {
-      "school": "Silesian University of Technology"
+      "value": "Silesian University of Technology"
     },
     {
-      "school": "Silicon Institute of Technology"
+      "value": "Silicon Institute of Technology"
     },
     {
-      "school": "Siliguri Institute of Technology"
+      "value": "Siliguri Institute of Technology"
     },
     {
-      "school": "Silver Oak College of Engineering & Technology"
+      "value": "Silver Oak College of Engineering & Technology"
     },
     {
-      "school": "Simmons College"
+      "value": "Simmons College"
     },
     {
-      "school": "Simón Bolívar University"
+      "value": "Simón Bolívar University"
     },
     {
-      "school": "Simon Fraser University"
+      "value": "Simon Fraser University"
     },
     {
-      "school": "Simon Gratz High School"
+      "value": "Simon Gratz High School"
     },
     {
-      "school": "Simpson College"
+      "value": "Simpson College"
     },
     {
-      "school": "Simsbury High School"
+      "value": "Simsbury High School"
     },
     {
-      "school": "Sinclair Community College"
+      "value": "Sinclair Community College"
     },
     {
-      "school": "Singapore University of Technology and Design"
+      "value": "Singapore University of Technology and Design"
     },
     {
-      "school": "Sinhgad Institute of Technology"
+      "value": "Sinhgad Institute of Technology"
     },
     {
-      "school": "Sir John A. Macdonald Secondary School"
+      "value": "Sir John A. Macdonald Secondary School"
     },
     {
-      "school": "Sir M Visvesvaraya Institute of Technology (Sir MVIT)"
+      "value": "Sir M Visvesvaraya Institute of Technology (Sir MVIT)"
     },
     {
-      "school": "Sir Padampat Singhania University"
+      "value": "Sir Padampat Singhania University"
     },
     {
-      "school": "Sitarambhai Naranji Patel Institute of Technology & Research Centre"
+      "value": "Sitarambhai Naranji Patel Institute of Technology & Research Centre"
     },
     {
-      "school": "SJB Institute of Technology"
+      "value": "SJB Institute of Technology"
     },
     {
-      "school": "Skidmore College"
+      "value": "Skidmore College"
     },
     {
-      "school": "SKR Engineering College"
+      "value": "SKR Engineering College"
     },
     {
-      "school": "Slippery Rock University of Pennsylvania"
+      "value": "Slippery Rock University of Pennsylvania"
     },
     {
-      "school": "Slovak University of Technology in Bratislava (STU)"
+      "value": "Slovak University of Technology in Bratislava (STU)"
     },
     {
-      "school": "Smith College"
+      "value": "Smith College"
     },
     {
-      "school": "SOAS University of London"
+      "value": "SOAS University of London"
     },
     {
-      "school": "Society for Development of Composites"
+      "value": "Society for Development of Composites"
     },
     {
-      "school": "Solebury School"
+      "value": "Solebury School"
     },
     {
-      "school": "Sona College of Technology"
+      "value": "Sona College of Technology"
     },
     {
-      "school": "Souderton Area High School"
+      "value": "Souderton Area High School"
     },
     {
-      "school": "South Brunswick High School"
+      "value": "South Brunswick High School"
     },
     {
-      "school": "South Carolina State University"
+      "value": "South Carolina State University"
     },
     {
-      "school": "South Dakota School of Mines and Technology"
+      "value": "South Dakota School of Mines and Technology"
     },
     {
-      "school": "South Hills School of Business & Technology"
+      "value": "South Hills School of Business & Technology"
     },
     {
-      "school": "South Lakes High School"
+      "value": "South Lakes High School"
     },
     {
-      "school": "South Philadelphia High School"
+      "value": "South Philadelphia High School"
     },
     {
-      "school": "South Texas College"
+      "value": "South Texas College"
     },
     {
-      "school": "Southeastern Louisiana University"
+      "value": "Southeastern Louisiana University"
     },
     {
-      "school": "Southern Connecticut State University"
+      "value": "Southern Connecticut State University"
     },
     {
-      "school": "Southern Illinois University Carbondale"
+      "value": "Southern Illinois University Carbondale"
     },
     {
-      "school": "Southern Illinois University Edwardsville"
+      "value": "Southern Illinois University Edwardsville"
     },
     {
-      "school": "Southern Methodist University"
+      "value": "Southern Methodist University"
     },
     {
-      "school": "Southern Oregon University"
+      "value": "Southern Oregon University"
     },
     {
-      "school": "Southern University and A&M College"
+      "value": "Southern University and A&M College"
     },
     {
-      "school": "Southern Utah University"
+      "value": "Southern Utah University"
     },
     {
-      "school": "Southwestern College"
+      "value": "Southwestern College"
     },
     {
-      "school": "Spelman College"
+      "value": "Spelman College"
     },
     {
-      "school": "Spelman College"
+      "value": "Spelman College"
     },
     {
-      "school": "Spotswood High School"
+      "value": "Spotswood High School"
     },
     {
-      "school": "Spring Arbor University"
+      "value": "Spring Arbor University"
     },
     {
-      "school": "Springside Chestnut Hill Academy"
+      "value": "Springside Chestnut Hill Academy"
     },
     {
-      "school": "Sree Chitra Thirunal College of Engineering"
+      "value": "Sree Chitra Thirunal College of Engineering"
     },
     {
-      "school": "Sreenidhi Institute of Science & Technology"
+      "value": "Sreenidhi Institute of Science & Technology"
     },
     {
-      "school": "Sri Jayachamarajendra College of Engineering"
+      "value": "Sri Jayachamarajendra College of Engineering"
     },
     {
-      "school": "Sri Krishna College of Engineering and Technology (SKCET)"
+      "value": "Sri Krishna College of Engineering and Technology (SKCET)"
     },
     {
-      "school": "Sri Krishna College of Technology, Coimbatore"
+      "value": "Sri Krishna College of Technology, Coimbatore"
     },
     {
-      "school": "Sri Lanka Institute of Information Technology (SLIIT)"
+      "value": "Sri Lanka Institute of Information Technology (SLIIT)"
     },
     {
-      "school": "Sri Manakula Vinayagar Engineering"
+      "value": "Sri Manakula Vinayagar Engineering"
     },
     {
-      "school": "Sri Ramakrishna Engineering College (SREC)"
+      "value": "Sri Ramakrishna Engineering College (SREC)"
     },
     {
-      "school": "Sri Revana Siddeshwara Institute of Technology"
+      "value": "Sri Revana Siddeshwara Institute of Technology"
     },
     {
-      "school": "Sri Siddhartha Institute of Technology"
+      "value": "Sri Siddhartha Institute of Technology"
     },
     {
-      "school": "Sri Sivasubramaniya Nadar College of Engineering"
+      "value": "Sri Sivasubramaniya Nadar College of Engineering"
     },
     {
-      "school": "Sri Venkateshwara College of Engineering"
+      "value": "Sri Venkateshwara College of Engineering"
     },
     {
-      "school": "Sri Vishnu Educational Society"
+      "value": "Sri Vishnu Educational Society"
     },
     {
-      "school": "Srinivas Institute of Technology (SIT)"
+      "value": "Srinivas Institute of Technology (SIT)"
     },
     {
-      "school": "SRM Easwari Engineering College, Chennai"
+      "value": "SRM Easwari Engineering College, Chennai"
     },
     {
-      "school": "SRM University"
+      "value": "SRM University"
     },
     {
-      "school": "SRM University, Sonepat"
+      "value": "SRM University, Sonepat"
     },
     {
-      "school": "SS College of Engineering"
+      "value": "SS College of Engineering"
     },
     {
-      "school": "St Brendan High School"
+      "value": "St Brendan High School"
     },
     {
-      "school": "St Edwards University"
+      "value": "St Edwards University"
     },
     {
-      "school": "St Joseph Engineering College"
+      "value": "St Joseph Engineering College"
     },
     {
-      "school": "St Mary's Catholic High School – Croydon"
+      "value": "St Mary's Catholic High School – Croydon"
     },
     {
-      "school": "St Mary's CE High School – Cheshunt"
+      "value": "St Mary's CE High School – Cheshunt"
     },
     {
-      "school": "St Paul's Catholic College – Sunbury-on-Thames"
+      "value": "St Paul's Catholic College – Sunbury-on-Thames"
     },
     {
-      "school": "St. Charles Borromeo Seminary"
+      "value": "St. Charles Borromeo Seminary"
     },
     {
-      "school": "St. Cloud State University"
+      "value": "St. Cloud State University"
     },
     {
-      "school": "St. David Catholic Secondary School"
+      "value": "St. David Catholic Secondary School"
     },
     {
-      "school": "St. John's University, New York"
+      "value": "St. John's University, New York"
     },
     {
-      "school": "St. Joseph's College of Engineering and Technology, Palai"
+      "value": "St. Joseph's College of Engineering and Technology, Palai"
     },
     {
-      "school": "St. Mark's School, Hong Kong"
+      "value": "St. Mark's School, Hong Kong"
     },
     {
-      "school": "St. Mary's Convent School"
+      "value": "St. Mary's Convent School"
     },
     {
-      "school": "St. Mary's Ryken High School"
+      "value": "St. Mary's Ryken High School"
     },
     {
-      "school": "St. Michael College of Engineering & Technology"
+      "value": "St. Michael College of Engineering & Technology"
     },
     {
-      "school": "St. Peter's Institute of Higher Education and Research"
+      "value": "St. Peter's Institute of Higher Education and Research"
     },
     {
-      "school": "St. Pious X Degree & PG College for women"
+      "value": "St. Pious X Degree & PG College for women"
     },
     {
-      "school": "St. Raymond High School for Boys And Girls"
+      "value": "St. Raymond High School for Boys And Girls"
     },
     {
-      "school": "St. Theresa of Lisieux Catholic High School"
+      "value": "St. Theresa of Lisieux Catholic High School"
     },
     {
-      "school": "St. Xavier's Senior Secondary School, Jaipur"
+      "value": "St. Xavier's Senior Secondary School, Jaipur"
     },
     {
-      "school": "St.Martin's Engineering College"
+      "value": "St.Martin's Engineering College"
     },
     {
-      "school": "Stanford University"
+      "value": "Stanford University"
     },
     {
-      "school": "Stanley College of Engineering and Technology for Women"
+      "value": "Stanley College of Engineering and Technology for Women"
     },
     {
-      "school": "Star Technical Institute"
+      "value": "Star Technical Institute"
     },
     {
-      "school": "Startup Incubation and Innovation Centre, IIT Kanpur"
+      "value": "Startup Incubation and Innovation Centre, IIT Kanpur"
     },
     {
-      "school": "Staten Island Technical High School"
+      "value": "Staten Island Technical High School"
     },
     {
-      "school": "Steinert High School"
+      "value": "Steinert High School"
     },
     {
-      "school": "Stephen F. Austin State University"
+      "value": "Stephen F. Austin State University"
     },
     {
-      "school": "Stetson University"
+      "value": "Stetson University"
     },
     {
-      "school": "Stevens Institute of Technology"
+      "value": "Stevens Institute of Technology"
     },
     {
-      "school": "Stevenson University"
+      "value": "Stevenson University"
     },
     {
-      "school": "Stockholm University"
+      "value": "Stockholm University"
     },
     {
-      "school": "Stockton University"
+      "value": "Stockton University"
     },
     {
-      "school": "Stonehill College"
+      "value": "Stonehill College"
     },
     {
-      "school": "Stonewall Jackson High School - Manassas"
+      "value": "Stonewall Jackson High School - Manassas"
     },
     {
-      "school": "Stonewall Jackson High School - Quicksburg"
+      "value": "Stonewall Jackson High School - Quicksburg"
     },
     {
-      "school": "Stony Brook University, SUNY"
+      "value": "Stony Brook University, SUNY"
     },
     {
-      "school": "Strawberry Mansion High School"
+      "value": "Strawberry Mansion High School"
     },
     {
-      "school": "Strayer University - Bensalem"
+      "value": "Strayer University - Bensalem"
     },
     {
-      "school": "Strayer University - Philadelphia Center City"
+      "value": "Strayer University - Philadelphia Center City"
     },
     {
-      "school": "Stuyvesant High School"
+      "value": "Stuyvesant High School"
     },
     {
-      "school": "Sulphur High School"
+      "value": "Sulphur High School"
     },
     {
-      "school": "SUNY Polytechnic Institute"
+      "value": "SUNY Polytechnic Institute"
     },
     {
-      "school": "SUPINFO International University"
+      "value": "SUPINFO International University"
     },
     {
-      "school": "Susq-Cyber Charter School"
+      "value": "Susq-Cyber Charter School"
     },
     {
-      "school": "Susquehanna University"
+      "value": "Susquehanna University"
     },
     {
-      "school": "Sussex County Community College"
+      "value": "Sussex County Community College"
     },
     {
-      "school": "Suyash Institute of Information Technology"
+      "value": "Suyash Institute of Information Technology"
     },
     {
-      "school": "SVS College of Engineering"
+      "value": "SVS College of Engineering"
     },
     {
-      "school": "Swami Keshvanand Institute of Technology,  Management & Gramothan (SKIT)"
+      "value": "Swami Keshvanand Institute of Technology,  Management & Gramothan (SKIT)"
     },
     {
-      "school": "Swansea University"
+      "value": "Swansea University"
     },
     {
-      "school": "Swarthmore College"
+      "value": "Swarthmore College"
     },
     {
-      "school": "Syed Ammal Engineering College"
+      "value": "Syed Ammal Engineering College"
     },
     {
-      "school": "Symbiosis International University"
+      "value": "Symbiosis International University"
     },
     {
-      "school": "Synergy Institute of Engineering and Technology"
+      "value": "Synergy Institute of Engineering and Technology"
     },
     {
-      "school": "Syracuse University"
+      "value": "Syracuse University"
     },
     {
-      "school": "T K M College of Engineering"
+      "value": "T K M College of Engineering"
     },
     {
-      "school": "Tacoma Community College"
+      "value": "Tacoma Community College"
     },
     {
-      "school": "Tacony Academy Charter School"
+      "value": "Tacony Academy Charter School"
     },
     {
-      "school": "Tadeusz Kościuszko University of Technology"
+      "value": "Tadeusz Kościuszko University of Technology"
     },
     {
-      "school": "Tallinn University"
+      "value": "Tallinn University"
     },
     {
-      "school": "Tallinn University of Technology"
+      "value": "Tallinn University of Technology"
     },
     {
-      "school": "Talmudical Yeshiva of Philadelphia"
+      "value": "Talmudical Yeshiva of Philadelphia"
     },
     {
-      "school": "Tamil Nadu Agricultural University (TNAU)"
+      "value": "Tamil Nadu Agricultural University (TNAU)"
     },
     {
-      "school": "Tamilnadu College of Engineering"
+      "value": "Tamilnadu College of Engineering"
     },
     {
-      "school": "Tampere University of Applied Sciences"
+      "value": "Tampere University of Applied Sciences"
     },
     {
-      "school": "Tampere University of Technology"
+      "value": "Tampere University of Technology"
     },
     {
-      "school": "Tarleton State University"
+      "value": "Tarleton State University"
     },
     {
-      "school": "TECH Freire Charter High School"
+      "value": "TECH Freire Charter High School"
     },
     {
-      "school": "Technische Universität München"
+      "value": "Technische Universität München"
     },
     {
-      "school": "Techno India College of Technology"
+      "value": "Techno India College of Technology"
     },
     {
-      "school": "Techno India University"
+      "value": "Techno India University"
     },
     {
-      "school": "Tecnológico de Estudio Superiores de Ixtapaluca"
+      "value": "Tecnológico de Estudio Superiores de Ixtapaluca"
     },
     {
-      "school": "Tecnológico de Estudios Superiores de Ecatepec"
+      "value": "Tecnológico de Estudios Superiores de Ecatepec"
     },
     {
-      "school": "Tecnológico de Estudios Superiores de Jilotepec"
+      "value": "Tecnológico de Estudios Superiores de Jilotepec"
     },
     {
-      "school": "Teesside University"
+      "value": "Teesside University"
     },
     {
-      "school": "Temple University"
+      "value": "Temple University"
     },
     {
-      "school": "Temple University - Ambler"
+      "value": "Temple University - Ambler"
     },
     {
-      "school": "Temple University - Harrisburg"
+      "value": "Temple University - Harrisburg"
     },
     {
-      "school": "Temple University - Health Sciences Campus"
+      "value": "Temple University - Health Sciences Campus"
     },
     {
-      "school": "Temple University - Rome"
+      "value": "Temple University - Rome"
     },
     {
-      "school": "Temple University - Tokyo"
+      "value": "Temple University - Tokyo"
     },
     {
-      "school": "Tenafly High School"
+      "value": "Tenafly High School"
     },
     {
-      "school": "Tennessee State University"
+      "value": "Tennessee State University"
     },
     {
-      "school": "Texas A&M University"
+      "value": "Texas A&M University"
     },
     {
-      "school": "Texas A&M University – Central Texas"
+      "value": "Texas A&M University – Central Texas"
     },
     {
-      "school": "Texas A&M University – Corpus Christi"
+      "value": "Texas A&M University – Corpus Christi"
     },
     {
-      "school": "Texas A&M University – Kingsville"
+      "value": "Texas A&M University – Kingsville"
     },
     {
-      "school": "Texas Christian University"
+      "value": "Texas Christian University"
     },
     {
-      "school": "Texas Southern University"
+      "value": "Texas Southern University"
     },
     {
-      "school": "Texas Southmost College"
+      "value": "Texas Southmost College"
     },
     {
-      "school": "Texas State University"
+      "value": "Texas State University"
     },
     {
-      "school": "Texas Tech University"
+      "value": "Texas Tech University"
     },
     {
-      "school": "Tezpur University"
+      "value": "Tezpur University"
     },
     {
-      "school": "Thadomal Shahani Engineering College"
+      "value": "Thadomal Shahani Engineering College"
     },
     {
-      "school": "Thakur College of Engineering and Technology"
+      "value": "Thakur College of Engineering and Technology"
     },
     {
-      "school": "Thanthai Periyar Government Institute of Technology"
+      "value": "Thanthai Periyar Government Institute of Technology"
     },
     {
-      "school": "Thapar Institute of Engineering and Technology"
+      "value": "Thapar Institute of Engineering and Technology"
     },
     {
-      "school": "THDC Institute of Hydropower Engineering and Technology, Tehri"
+      "value": "THDC Institute of Hydropower Engineering and Technology, Tehri"
     },
     {
-      "school": "The Arts Academy at Benjamin Rush"
+      "value": "The Arts Academy at Benjamin Rush"
     },
     {
-      "school": "The British University In Egypt"
+      "value": "The British University In Egypt"
     },
     {
-      "school": "The Bronx High School of Science"
+      "value": "The Bronx High School of Science"
     },
     {
-      "school": "The City College of New York, CUNY"
+      "value": "The City College of New York, CUNY"
     },
     {
-      "school": "The College at Brockport, SUNY"
+      "value": "The College at Brockport, SUNY"
     },
     {
-      "school": "The College of New Jersey"
+      "value": "The College of New Jersey"
     },
     {
-      "school": "The College of Saint Rose"
+      "value": "The College of Saint Rose"
     },
     {
-      "school": "The Curtis Institute of Music"
+      "value": "The Curtis Institute of Music"
     },
     {
-      "school": "The Federal University of Technology,  Akure"
+      "value": "The Federal University of Technology,  Akure"
     },
     {
-      "school": "The George Washington University"
+      "value": "The George Washington University"
     },
     {
-      "school": "The Governor's School @ Innovation Park"
+      "value": "The Governor's School @ Innovation Park"
     },
     {
-      "school": "The Harker School"
+      "value": "The Harker School"
     },
     {
-      "school": "The Hill School"
+      "value": "The Hill School"
     },
     {
-      "school": "The Katholieke Universiteit Leuven"
+      "value": "The Katholieke Universiteit Leuven"
     },
     {
-      "school": "The Lawrenceville School"
+      "value": "The Lawrenceville School"
     },
     {
-      "school": "The LNM Institute of Information Technology"
+      "value": "The LNM Institute of Information Technology"
     },
     {
-      "school": "The Maharaja Sayajirao University of Baroda"
+      "value": "The Maharaja Sayajirao University of Baroda"
     },
     {
-      "school": "The Mount Tabor Training College"
+      "value": "The Mount Tabor Training College"
     },
     {
-      "school": "The Ohio State University"
+      "value": "The Ohio State University"
     },
     {
-      "school": "The Open University"
+      "value": "The Open University"
     },
     {
-      "school": "The Oxford College of Engineering"
+      "value": "The Oxford College of Engineering"
     },
     {
-      "school": "The Pennsylvania State University"
+      "value": "The Pennsylvania State University"
     },
     {
-      "school": "The Pennsylvania State University – Abington Campus"
+      "value": "The Pennsylvania State University – Abington Campus"
     },
     {
-      "school": "The Pennsylvania State University – Berks"
+      "value": "The Pennsylvania State University – Berks"
     },
     {
-      "school": "The Pennsylvania State University – Brandywine"
+      "value": "The Pennsylvania State University – Brandywine"
     },
     {
-      "school": "The Pennsylvania State University – Harrisburg"
+      "value": "The Pennsylvania State University – Harrisburg"
     },
     {
-      "school": "The Pennsylvania State University – York Campus"
+      "value": "The Pennsylvania State University – York Campus"
     },
     {
-      "school": "The Roxbury Latin School"
+      "value": "The Roxbury Latin School"
     },
     {
-      "school": "The Savannah College of Art and Design"
+      "value": "The Savannah College of Art and Design"
     },
     {
-      "school": "The SRM University"
+      "value": "The SRM University"
     },
     {
-      "school": "The Technical University of Denmark"
+      "value": "The Technical University of Denmark"
     },
     {
-      "school": "The Technische Universität Berlin"
+      "value": "The Technische Universität Berlin"
     },
     {
-      "school": "The Université de Sherbrooke"
+      "value": "The Université de Sherbrooke"
     },
     {
-      "school": "The University of Aberdeen"
+      "value": "The University of Aberdeen"
     },
     {
-      "school": "The University of Akron"
+      "value": "The University of Akron"
     },
     {
-      "school": "The University of Alabama"
+      "value": "The University of Alabama"
     },
     {
-      "school": "The University of Alabama at Birmingham"
+      "value": "The University of Alabama at Birmingham"
     },
     {
-      "school": "The University of Alberta"
+      "value": "The University of Alberta"
     },
     {
-      "school": "The University of Applied Sciences Upper Austria"
+      "value": "The University of Applied Sciences Upper Austria"
     },
     {
-      "school": "The University of Arizona"
+      "value": "The University of Arizona"
     },
     {
-      "school": "The University of Arkansas"
+      "value": "The University of Arkansas"
     },
     {
-      "school": "The University of Bath"
+      "value": "The University of Bath"
     },
     {
-      "school": "The University of Bedfordshire"
+      "value": "The University of Bedfordshire"
     },
     {
-      "school": "The University of Birmingham"
+      "value": "The University of Birmingham"
     },
     {
-      "school": "The University of Bolton"
+      "value": "The University of Bolton"
     },
     {
-      "school": "The University of Bonn"
+      "value": "The University of Bonn"
     },
     {
-      "school": "The University of Bristol"
+      "value": "The University of Bristol"
     },
     {
-      "school": "The University of British Columbia"
+      "value": "The University of British Columbia"
     },
     {
-      "school": "The University of Calgary"
+      "value": "The University of Calgary"
     },
     {
-      "school": "The University of Calicut"
+      "value": "The University of Calicut"
     },
     {
-      "school": "The University of California, Berkeley"
+      "value": "The University of California, Berkeley"
     },
     {
-      "school": "The University of California, Davis"
+      "value": "The University of California, Davis"
     },
     {
-      "school": "The University of California, Irvine"
+      "value": "The University of California, Irvine"
     },
     {
-      "school": "The University of California, Los Angeles"
+      "value": "The University of California, Los Angeles"
     },
     {
-      "school": "The University of California, Merced"
+      "value": "The University of California, Merced"
     },
     {
-      "school": "The University of California, Riverside"
+      "value": "The University of California, Riverside"
     },
     {
-      "school": "The University of California, San Diego"
+      "value": "The University of California, San Diego"
     },
     {
-      "school": "The University of California, Santa Barbara"
+      "value": "The University of California, Santa Barbara"
     },
     {
-      "school": "The University of California, Santa Cruz"
+      "value": "The University of California, Santa Cruz"
     },
     {
-      "school": "The University of Cambridge"
+      "value": "The University of Cambridge"
     },
     {
-      "school": "The University of Central Florida"
+      "value": "The University of Central Florida"
     },
     {
-      "school": "The University of Chicago"
+      "value": "The University of Chicago"
     },
     {
-      "school": "The University of Colorado Boulder"
+      "value": "The University of Colorado Boulder"
     },
     {
-      "school": "The University of Colorado Colorado Springs"
+      "value": "The University of Colorado Colorado Springs"
     },
     {
-      "school": "The University of Connecticut"
+      "value": "The University of Connecticut"
     },
     {
-      "school": "The University of Dallas"
+      "value": "The University of Dallas"
     },
     {
-      "school": "The University of Delaware"
+      "value": "The University of Delaware"
     },
     {
-      "school": "The University of Denver"
+      "value": "The University of Denver"
     },
     {
-      "school": "The University of Derby"
+      "value": "The University of Derby"
     },
     {
-      "school": "The University of Dundee"
+      "value": "The University of Dundee"
     },
     {
-      "school": "The University of Edinburgh"
+      "value": "The University of Edinburgh"
     },
     {
-      "school": "The University of Essex"
+      "value": "The University of Essex"
     },
     {
-      "school": "The University of Evansville"
+      "value": "The University of Evansville"
     },
     {
-      "school": "The University of Exeter"
+      "value": "The University of Exeter"
     },
     {
-      "school": "The University of Falmouth"
+      "value": "The University of Falmouth"
     },
     {
-      "school": "The University of Florida"
+      "value": "The University of Florida"
     },
     {
-      "school": "The University of Gdańsk"
+      "value": "The University of Gdańsk"
     },
     {
-      "school": "The University of Georgia"
+      "value": "The University of Georgia"
     },
     {
-      "school": "The University of Glasgow"
+      "value": "The University of Glasgow"
     },
     {
-      "school": "The University of Groningen"
+      "value": "The University of Groningen"
     },
     {
-      "school": "The University of Guelph"
+      "value": "The University of Guelph"
     },
     {
-      "school": "The University of Houston"
+      "value": "The University of Houston"
     },
     {
-      "school": "The University of Houston – Clear Lake"
+      "value": "The University of Houston – Clear Lake"
     },
     {
-      "school": "The University of Houston – Downtown"
+      "value": "The University of Houston – Downtown"
     },
     {
-      "school": "The University of Huddersfield"
+      "value": "The University of Huddersfield"
     },
     {
-      "school": "The University of Idaho"
+      "value": "The University of Idaho"
     },
     {
-      "school": "The University of Illinois at Chicago"
+      "value": "The University of Illinois at Chicago"
     },
     {
-      "school": "The University of Illinois at Urbana-Champaign"
+      "value": "The University of Illinois at Urbana-Champaign"
     },
     {
-      "school": "The University of Information Technology and Management in Rzeszow"
+      "value": "The University of Information Technology and Management in Rzeszow"
     },
     {
-      "school": "The University of Iowa"
+      "value": "The University of Iowa"
     },
     {
-      "school": "The University of Kansas"
+      "value": "The University of Kansas"
     },
     {
-      "school": "The University of Kent"
+      "value": "The University of Kent"
     },
     {
-      "school": "The University of Kentucky"
+      "value": "The University of Kentucky"
     },
     {
-      "school": "The University of La Verne"
+      "value": "The University of La Verne"
     },
     {
-      "school": "The University of Leeds"
+      "value": "The University of Leeds"
     },
     {
-      "school": "The University of Leicester"
+      "value": "The University of Leicester"
     },
     {
-      "school": "The University of Lincoln"
+      "value": "The University of Lincoln"
     },
     {
-      "school": "The University of Liverpool"
+      "value": "The University of Liverpool"
     },
     {
-      "school": "The University of Ljubljana"
+      "value": "The University of Ljubljana"
     },
     {
-      "school": "The University of Louisiana at Lafayette"
+      "value": "The University of Louisiana at Lafayette"
     },
     {
-      "school": "The University of Louisiana at Monroe"
+      "value": "The University of Louisiana at Monroe"
     },
     {
-      "school": "The University of Louisville"
+      "value": "The University of Louisville"
     },
     {
-      "school": "The University of Málaga"
+      "value": "The University of Málaga"
     },
     {
-      "school": "The University of Manchester"
+      "value": "The University of Manchester"
     },
     {
-      "school": "The University of Manitoba"
+      "value": "The University of Manitoba"
     },
     {
-      "school": "The University of Maryland, Baltimore County"
+      "value": "The University of Maryland, Baltimore County"
     },
     {
-      "school": "The University of Maryland, College Park"
+      "value": "The University of Maryland, College Park"
     },
     {
-      "school": "The University of Massachusetts Amherst"
+      "value": "The University of Massachusetts Amherst"
     },
     {
-      "school": "The University of Massachusetts Boston"
+      "value": "The University of Massachusetts Boston"
     },
     {
-      "school": "The University of Massachusetts Dartmouth"
+      "value": "The University of Massachusetts Dartmouth"
     },
     {
-      "school": "The University of Massachusetts Lowell"
+      "value": "The University of Massachusetts Lowell"
     },
     {
-      "school": "The University of Miami"
+      "value": "The University of Miami"
     },
     {
-      "school": "The University of Michigan"
+      "value": "The University of Michigan"
     },
     {
-      "school": "The University of Michigan-Dearborn"
+      "value": "The University of Michigan-Dearborn"
     },
     {
-      "school": "The University of Michigan-Flint"
+      "value": "The University of Michigan-Flint"
     },
     {
-      "school": "The University of Minnesota"
+      "value": "The University of Minnesota"
     },
     {
-      "school": "The University of Mississippi"
+      "value": "The University of Mississippi"
     },
     {
-      "school": "The University of Missouri"
+      "value": "The University of Missouri"
     },
     {
-      "school": "The University of Missouri-Kansas City"
+      "value": "The University of Missouri-Kansas City"
     },
     {
-      "school": "The University of Missouri-St. Louis"
+      "value": "The University of Missouri-St. Louis"
     },
     {
-      "school": "The University of Nebraska-Lincoln"
+      "value": "The University of Nebraska-Lincoln"
     },
     {
-      "school": "The University of New Brunswick"
+      "value": "The University of New Brunswick"
     },
     {
-      "school": "The University of New Hampshire"
+      "value": "The University of New Hampshire"
     },
     {
-      "school": "The University of New Haven"
+      "value": "The University of New Haven"
     },
     {
-      "school": "The University of North Carolina at Chapel Hill"
+      "value": "The University of North Carolina at Chapel Hill"
     },
     {
-      "school": "The University of North Carolina at Charlotte"
+      "value": "The University of North Carolina at Charlotte"
     },
     {
-      "school": "The University of North Carolina at Greensboro"
+      "value": "The University of North Carolina at Greensboro"
     },
     {
-      "school": "The University of North Texas"
+      "value": "The University of North Texas"
     },
     {
-      "school": "The University of Northampton"
+      "value": "The University of Northampton"
     },
     {
-      "school": "The University of Notre Dame"
+      "value": "The University of Notre Dame"
     },
     {
-      "school": "The University of Nottingham"
+      "value": "The University of Nottingham"
     },
     {
-      "school": "The University of Oklahoma"
+      "value": "The University of Oklahoma"
     },
     {
-      "school": "The University of Oregon"
+      "value": "The University of Oregon"
     },
     {
-      "school": "The University of Ottawa"
+      "value": "The University of Ottawa"
     },
     {
-      "school": "The University of Oulu"
+      "value": "The University of Oulu"
     },
     {
-      "school": "The University of Oxford"
+      "value": "The University of Oxford"
     },
     {
-      "school": "The University of Pennsylvania"
+      "value": "The University of Pennsylvania"
     },
     {
-      "school": "The University of Petroleum and Energy Studies"
+      "value": "The University of Petroleum and Energy Studies"
     },
     {
-      "school": "The University of Phoenix"
+      "value": "The University of Phoenix"
     },
     {
-      "school": "The University of Pittsburgh"
+      "value": "The University of Pittsburgh"
     },
     {
-      "school": "The University of Portland"
+      "value": "The University of Portland"
     },
     {
-      "school": "The University of Portsmouth"
+      "value": "The University of Portsmouth"
     },
     {
-      "school": "The University of Puerto Rico, Mayagüez Campus"
+      "value": "The University of Puerto Rico, Mayagüez Campus"
     },
     {
-      "school": "The University of Puerto Rico, Río Piedras Campus"
+      "value": "The University of Puerto Rico, Río Piedras Campus"
     },
     {
-      "school": "The University of Richmond"
+      "value": "The University of Richmond"
     },
     {
-      "school": "The University of Rochester"
+      "value": "The University of Rochester"
     },
     {
-      "school": "The University of Salford"
+      "value": "The University of Salford"
     },
     {
-      "school": "The University of San Francisco"
+      "value": "The University of San Francisco"
     },
     {
-      "school": "The University of Sharjah"
+      "value": "The University of Sharjah"
     },
     {
-      "school": "The University of Sheffield"
+      "value": "The University of Sheffield"
     },
     {
-      "school": "The University of Silesia in Katowice"
+      "value": "The University of Silesia in Katowice"
     },
     {
-      "school": "The University of South Carolina"
+      "value": "The University of South Carolina"
     },
     {
-      "school": "The University of South Florida"
+      "value": "The University of South Florida"
     },
     {
-      "school": "The University of Southampton"
+      "value": "The University of Southampton"
     },
     {
-      "school": "The University of Southern California"
+      "value": "The University of Southern California"
     },
     {
-      "school": "The University of Southern Denmark"
+      "value": "The University of Southern Denmark"
     },
     {
-      "school": "The University of St Andrews"
+      "value": "The University of St Andrews"
     },
     {
-      "school": "The University of St. Gallen"
+      "value": "The University of St. Gallen"
     },
     {
-      "school": "The University of St. Thomas"
+      "value": "The University of St. Thomas"
     },
     {
-      "school": "The University of Stirling"
+      "value": "The University of Stirling"
     },
     {
-      "school": "The University of Strathclyde"
+      "value": "The University of Strathclyde"
     },
     {
-      "school": "The University of Stuttgart"
+      "value": "The University of Stuttgart"
     },
     {
-      "school": "The University of Surrey"
+      "value": "The University of Surrey"
     },
     {
-      "school": "The University of Sussex"
+      "value": "The University of Sussex"
     },
     {
-      "school": "The University of Tampa"
+      "value": "The University of Tampa"
     },
     {
-      "school": "The University of Tennessee"
+      "value": "The University of Tennessee"
     },
     {
-      "school": "The University of Texas – Pan American"
+      "value": "The University of Texas – Pan American"
     },
     {
-      "school": "The University of Texas at Arlington"
+      "value": "The University of Texas at Arlington"
     },
     {
-      "school": "The University of Texas at Austin"
+      "value": "The University of Texas at Austin"
     },
     {
-      "school": "The University of Texas at Dallas"
+      "value": "The University of Texas at Dallas"
     },
     {
-      "school": "The University of Texas at El Paso"
+      "value": "The University of Texas at El Paso"
     },
     {
-      "school": "The University of Texas at San Antonio"
+      "value": "The University of Texas at San Antonio"
     },
     {
-      "school": "The University of Texas at Tyler"
+      "value": "The University of Texas at Tyler"
     },
     {
-      "school": "The University of Texas of the Permian Basin"
+      "value": "The University of Texas of the Permian Basin"
     },
     {
-      "school": "The University of Texas Rio Grande Valley"
+      "value": "The University of Texas Rio Grande Valley"
     },
     {
-      "school": "The University of the District of Columbia"
+      "value": "The University of the District of Columbia"
     },
     {
-      "school": "The University of the District of Columbia"
+      "value": "The University of the District of Columbia"
     },
     {
-      "school": "The University of the Pacific"
+      "value": "The University of the Pacific"
     },
     {
-      "school": "The University of the South - Sewanee"
+      "value": "The University of the South - Sewanee"
     },
     {
-      "school": "The University of the West Indies"
+      "value": "The University of the West Indies"
     },
     {
-      "school": "The University of Toledo"
+      "value": "The University of Toledo"
     },
     {
-      "school": "The University of Toronto"
+      "value": "The University of Toronto"
     },
     {
-      "school": "The University of Toronto Mississauga"
+      "value": "The University of Toronto Mississauga"
     },
     {
-      "school": "The University of Toronto Scarborough"
+      "value": "The University of Toronto Scarborough"
     },
     {
-      "school": "The University of Tulsa"
+      "value": "The University of Tulsa"
     },
     {
-      "school": "The University of Utah"
+      "value": "The University of Utah"
     },
     {
-      "school": "The University of Vermont"
+      "value": "The University of Vermont"
     },
     {
-      "school": "The University of Victoria"
+      "value": "The University of Victoria"
     },
     {
-      "school": "The University of Virginia"
+      "value": "The University of Virginia"
     },
     {
-      "school": "The University of Warsaw"
+      "value": "The University of Warsaw"
     },
     {
-      "school": "The University of Warwick"
+      "value": "The University of Warwick"
     },
     {
-      "school": "The University of Washington"
+      "value": "The University of Washington"
     },
     {
-      "school": "The University of Washington Bothell"
+      "value": "The University of Washington Bothell"
     },
     {
-      "school": "The University of Waterloo"
+      "value": "The University of Waterloo"
     },
     {
-      "school": "The University of West Georgia"
+      "value": "The University of West Georgia"
     },
     {
-      "school": "The University of Western Ontario"
+      "value": "The University of Western Ontario"
     },
     {
-      "school": "The University of Westminster"
+      "value": "The University of Westminster"
     },
     {
-      "school": "The University of Windsor"
+      "value": "The University of Windsor"
     },
     {
-      "school": "The University of Wisconsin-Eau Claire"
+      "value": "The University of Wisconsin-Eau Claire"
     },
     {
-      "school": "The University of Wisconsin-Green Bay"
+      "value": "The University of Wisconsin-Green Bay"
     },
     {
-      "school": "The University of Wisconsin-La Crosse"
+      "value": "The University of Wisconsin-La Crosse"
     },
     {
-      "school": "The University of Wisconsin-Madison"
+      "value": "The University of Wisconsin-Madison"
     },
     {
-      "school": "The University of Wisconsin-Milwaukee"
+      "value": "The University of Wisconsin-Milwaukee"
     },
     {
-      "school": "The University of Wisconsin-Oshkosh"
+      "value": "The University of Wisconsin-Oshkosh"
     },
     {
-      "school": "The University of Wisconsin-Parkside"
+      "value": "The University of Wisconsin-Parkside"
     },
     {
-      "school": "The University of Wisconsin-Platteville"
+      "value": "The University of Wisconsin-Platteville"
     },
     {
-      "school": "The University of Wisconsin-River Falls"
+      "value": "The University of Wisconsin-River Falls"
     },
     {
-      "school": "The University of Wisconsin-Stevens Point"
+      "value": "The University of Wisconsin-Stevens Point"
     },
     {
-      "school": "The University of Wisconsin-Stout"
+      "value": "The University of Wisconsin-Stout"
     },
     {
-      "school": "The University of Wisconsin-Superior"
+      "value": "The University of Wisconsin-Superior"
     },
     {
-      "school": "The University of Wisconsin-Whitewater"
+      "value": "The University of Wisconsin-Whitewater"
     },
     {
-      "school": "The University of Wolverhampton"
+      "value": "The University of Wolverhampton"
     },
     {
-      "school": "The University of Wrocław"
+      "value": "The University of Wrocław"
     },
     {
-      "school": "The University of York"
+      "value": "The University of York"
     },
     {
-      "school": "The University of Zagreb"
+      "value": "The University of Zagreb"
     },
     {
-      "school": "The Workshop School - Philadelphia"
+      "value": "The Workshop School - Philadelphia"
     },
     {
-      "school": "Thiagarajar College of Engineering (TCE), Madurai"
+      "value": "Thiagarajar College of Engineering (TCE), Madurai"
     },
     {
-      "school": "Thomas A. Edison High School - Philadelphia"
+      "value": "Thomas A. Edison High School - Philadelphia"
     },
     {
-      "school": "Thomas Edison State College"
+      "value": "Thomas Edison State College"
     },
     {
-      "school": "Thomas Jefferson High School for Science and Technology"
+      "value": "Thomas Jefferson High School for Science and Technology"
     },
     {
-      "school": "Thomas Jefferson University - East Falls (formerly Philadelphia University)"
+      "value": "Thomas Jefferson University - East Falls (formerly Philadelphia University)"
     },
     {
-      "school": "Thomas Jefferson University - Philadelphia Center City"
+      "value": "Thomas Jefferson University - Philadelphia Center City"
     },
     {
-      "school": "Thomas Nelson Community College"
+      "value": "Thomas Nelson Community College"
     },
     {
-      "school": "Thomas S. Wootton High School"
+      "value": "Thomas S. Wootton High School"
     },
     {
-      "school": "Thompson Institute - Philadelphia"
+      "value": "Thompson Institute - Philadelphia"
     },
     {
-      "school": "Tiruchirappalli Regional Engineering College Science Technology"
+      "value": "Tiruchirappalli Regional Engineering College Science Technology"
     },
     {
-      "school": "Tongji University"
+      "value": "Tongji University"
     },
     {
-      "school": "Towson High School"
+      "value": "Towson High School"
     },
     {
-      "school": "Towson University"
+      "value": "Towson University"
     },
     {
-      "school": "Trent University"
+      "value": "Trent University"
     },
     {
-      "school": "Trident Academy of Technology"
+      "value": "Trident Academy of Technology"
     },
     {
-      "school": "Trinity College"
+      "value": "Trinity College"
     },
     {
-      "school": "Trinity International University"
+      "value": "Trinity International University"
     },
     {
-      "school": "Trinity Valley School"
+      "value": "Trinity Valley School"
     },
     {
-      "school": "Troy Athens High School"
+      "value": "Troy Athens High School"
     },
     {
-      "school": "Troy High School"
+      "value": "Troy High School"
     },
     {
-      "school": "Troy University"
+      "value": "Troy University"
     },
     {
-      "school": "Truman State University"
+      "value": "Truman State University"
     },
     {
-      "school": "Tshwane University of Technology"
+      "value": "Tshwane University of Technology"
     },
     {
-      "school": "TU/e Technische Universiteit Eindhoven University of Technology"
+      "value": "TU/e Technische Universiteit Eindhoven University of Technology"
     },
     {
-      "school": "Tufts University"
+      "value": "Tufts University"
     },
     {
-      "school": "Tulane University"
+      "value": "Tulane University"
     },
     {
-      "school": "Tunis El Manar University"
+      "value": "Tunis El Manar University"
     },
     {
-      "school": "Turner Fenton Secondary School"
+      "value": "Turner Fenton Secondary School"
     },
     {
-      "school": "Ulster University"
+      "value": "Ulster University"
     },
     {
-      "school": "UNAM FES Aragón"
+      "value": "UNAM FES Aragón"
     },
     {
-      "school": "Union County College"
+      "value": "Union County College"
     },
     {
-      "school": "Union County Magnet High School"
+      "value": "Union County Magnet High School"
     },
     {
-      "school": "Union County Vocational-Technical Schools"
+      "value": "Union County Vocational-Technical Schools"
     },
     {
-      "school": "Union University"
+      "value": "Union University"
     },
     {
-      "school": "Unionville High School"
+      "value": "Unionville High School"
     },
     {
-      "school": "United College of Engineering and Research"
+      "value": "United College of Engineering and Research"
     },
     {
-      "school": "United Institute of Technology"
+      "value": "United Institute of Technology"
     },
     {
-      "school": "Universidad Autónoma de Baja California (UABC), Tijuana"
+      "value": "Universidad Autónoma de Baja California (UABC), Tijuana"
     },
     {
-      "school": "Universidad Autónoma de Coahuila"
+      "value": "Universidad Autónoma de Coahuila"
     },
     {
-      "school": "Universidad Autónoma de Madrid"
+      "value": "Universidad Autónoma de Madrid"
     },
     {
-      "school": "Universidad Autónoma de Nuevo León"
+      "value": "Universidad Autónoma de Nuevo León"
     },
     {
-      "school": "Universidad Autónoma de San Luis Potosí"
+      "value": "Universidad Autónoma de San Luis Potosí"
     },
     {
-      "school": "Universidad Autónoma de Tlaxcala"
+      "value": "Universidad Autónoma de Tlaxcala"
     },
     {
-      "school": "Universidad Autónoma del Estado de México"
+      "value": "Universidad Autónoma del Estado de México"
     },
     {
-      "school": "Universidad Autónoma del Estado de Morelos"
+      "value": "Universidad Autónoma del Estado de Morelos"
     },
     {
-      "school": "Universidad Autónoma del Perú"
+      "value": "Universidad Autónoma del Perú"
     },
     {
-      "school": "Universidad Autónoma Metropolitana"
+      "value": "Universidad Autónoma Metropolitana"
     },
     {
-      "school": "Universidad Centro de Estudios Cortazar"
+      "value": "Universidad Centro de Estudios Cortazar"
     },
     {
-      "school": "Universidad de Guadalajara"
+      "value": "Universidad de Guadalajara"
     },
     {
-      "school": "Universidad de Guanajuato"
+      "value": "Universidad de Guanajuato"
     },
     {
-      "school": "Universidad de La Laguna"
+      "value": "Universidad de La Laguna"
     },
     {
-      "school": "Universidad de La Salle Bajío"
+      "value": "Universidad de La Salle Bajío"
     },
     {
-      "school": "Universidad de Monterrey"
+      "value": "Universidad de Monterrey"
     },
     {
-      "school": "Universidad del Desarrollo"
+      "value": "Universidad del Desarrollo"
     },
     {
-      "school": "Universidad del Valle de México"
+      "value": "Universidad del Valle de México"
     },
     {
-      "school": "Universidad en Línea, Mexico"
+      "value": "Universidad en Línea, Mexico"
     },
     {
-      "school": "Universidad Iberoamericana"
+      "value": "Universidad Iberoamericana"
     },
     {
-      "school": "Universidad Interamericana de Puerto Rico"
+      "value": "Universidad Interamericana de Puerto Rico"
     },
     {
-      "school": "Universidad Nacional Autónoma de México"
+      "value": "Universidad Nacional Autónoma de México"
     },
     {
-      "school": "Universidad Panamericana"
+      "value": "Universidad Panamericana"
     },
     {
-      "school": "Universidad Politécnica de Guanajuato"
+      "value": "Universidad Politécnica de Guanajuato"
     },
     {
-      "school": "Universidad Politécnica de Querétaro"
+      "value": "Universidad Politécnica de Querétaro"
     },
     {
-      "school": "Universidad TecMilenio"
+      "value": "Universidad TecMilenio"
     },
     {
-      "school": "Universidad Tecnológica de México"
+      "value": "Universidad Tecnológica de México"
     },
     {
-      "school": "Universidad Tecnológica de Puebla"
+      "value": "Universidad Tecnológica de Puebla"
     },
     {
-      "school": "Universidad Tecnológica de Torreón"
+      "value": "Universidad Tecnológica de Torreón"
     },
     {
-      "school": "Universidad Tecnológica Nacional"
+      "value": "Universidad Tecnológica Nacional"
     },
     {
-      "school": "Universidad Veracruzana"
+      "value": "Universidad Veracruzana"
     },
     {
-      "school": "Universitat Autònoma de Barcelona, UAB"
+      "value": "Universitat Autònoma de Barcelona, UAB"
     },
     {
-      "school": "Universitat de Barcelona"
+      "value": "Universitat de Barcelona"
     },
     {
-      "school": "Universitat Oberta de Catalunya, UOC"
+      "value": "Universitat Oberta de Catalunya, UOC"
     },
     {
-      "school": "Universitat Politècnica de Catalunya"
+      "value": "Universitat Politècnica de Catalunya"
     },
     {
-      "school": "Universitat Politècnica de Catalunya, UPC"
+      "value": "Universitat Politècnica de Catalunya, UPC"
     },
     {
-      "school": "Universitat Pompeu Fabra"
+      "value": "Universitat Pompeu Fabra"
     },
     {
-      "school": "Universität Regensburg"
+      "value": "Universität Regensburg"
     },
     {
-      "school": "Universität Zürich"
+      "value": "Universität Zürich"
     },
     {
-      "school": "Universitatea Politehnica Timişoara"
+      "value": "Universitatea Politehnica Timişoara"
     },
     {
-      "school": "Université de Bordeaux"
+      "value": "Université de Bordeaux"
     },
     {
-      "school": "Université de Mons"
+      "value": "Université de Mons"
     },
     {
-      "school": "Université du Québec à Montréal"
+      "value": "Université du Québec à Montréal"
     },
     {
-      "school": "University at Albany, SUNY"
+      "value": "University at Albany, SUNY"
     },
     {
-      "school": "University at Binghamton, SUNY"
+      "value": "University at Binghamton, SUNY"
     },
     {
-      "school": "University at Buffalo, SUNY"
+      "value": "University at Buffalo, SUNY"
     },
     {
-      "school": "University at New Paltz, SUNY"
+      "value": "University at New Paltz, SUNY"
     },
     {
-      "school": "University at Oneonta, SUNY"
+      "value": "University at Oneonta, SUNY"
     },
     {
-      "school": "University at Orange, SUNY"
+      "value": "University at Orange, SUNY"
     },
     {
-      "school": "University at Oswego, SUNY"
+      "value": "University at Oswego, SUNY"
     },
     {
-      "school": "University at Plattsburgh, SUNY"
+      "value": "University at Plattsburgh, SUNY"
     },
     {
-      "school": "University Campus Suffolk"
+      "value": "University Campus Suffolk"
     },
     {
-      "school": "University College London"
+      "value": "University College London"
     },
     {
-      "school": "University College of Engineering and Technology,  Bikaner"
+      "value": "University College of Engineering and Technology,  Bikaner"
     },
     {
-      "school": "University Institute of Engineering and Technology CSJMU, Kanpur"
+      "value": "University Institute of Engineering and Technology CSJMU, Kanpur"
     },
     {
-      "school": "University Institute of Information Technology, Shimla"
+      "value": "University Institute of Information Technology, Shimla"
     },
     {
-      "school": "University Institute of Technology, Burdwan"
+      "value": "University Institute of Technology, Burdwan"
     },
     {
-      "school": "University Institute of Technology, RGPV"
+      "value": "University Institute of Technology, RGPV"
     },
     {
-      "school": "University of Basel"
+      "value": "University of Basel"
     },
     {
-      "school": "University of Białystok"
+      "value": "University of Białystok"
     },
     {
-      "school": "University of Cape Coast, Ghana"
+      "value": "University of Cape Coast, Ghana"
     },
     {
-      "school": "University of Cincinnati"
+      "value": "University of Cincinnati"
     },
     {
-      "school": "University of Cincinnati Clermont College"
+      "value": "University of Cincinnati Clermont College"
     },
     {
-      "school": "University of Duisburg-Essen"
+      "value": "University of Duisburg-Essen"
     },
     {
-      "school": "University of Gothenburg"
+      "value": "University of Gothenburg"
     },
     {
-      "school": "University of Helsinki"
+      "value": "University of Helsinki"
     },
     {
-      "school": "University of Hull"
+      "value": "University of Hull"
     },
     {
-      "school": "University of London"
+      "value": "University of London"
     },
     {
-      "school": "University of Mary Washington"
+      "value": "University of Mary Washington"
     },
     {
-      "school": "University of Maryland University College"
+      "value": "University of Maryland University College"
     },
     {
-      "school": "University of North America"
+      "value": "University of North America"
     },
     {
-      "school": "University of North Florida"
+      "value": "University of North Florida"
     },
     {
-      "school": "University of North Georgia"
+      "value": "University of North Georgia"
     },
     {
-      "school": "University of Petroleum and Energy Studies (UPES), Dehradun"
+      "value": "University of Petroleum and Energy Studies (UPES), Dehradun"
     },
     {
-      "school": "University of Pikeville"
+      "value": "University of Pikeville"
     },
     {
-      "school": "University of Queensland"
+      "value": "University of Queensland"
     },
     {
-      "school": "University of Regina"
+      "value": "University of Regina"
     },
     {
-      "school": "University of Roehampton"
+      "value": "University of Roehampton"
     },
     {
-      "school": "University of Saskatchewan"
+      "value": "University of Saskatchewan"
     },
     {
-      "school": "University of Science and Technology Houari Boumediene"
+      "value": "University of Science and Technology Houari Boumediene"
     },
     {
-      "school": "University of Southampton"
+      "value": "University of Southampton"
     },
     {
-      "school": "University of Southern Indiana"
+      "value": "University of Southern Indiana"
     },
     {
-      "school": "University of Sunderland"
+      "value": "University of Sunderland"
     },
     {
-      "school": "University of Tartu"
+      "value": "University of Tartu"
     },
     {
-      "school": "University of Technology, Jamaica"
+      "value": "University of Technology, Jamaica"
     },
     {
-      "school": "University of the Arts - Philadelphia"
+      "value": "University of the Arts - Philadelphia"
     },
     {
-      "school": "University of the People"
+      "value": "University of the People"
     },
     {
-      "school": "University of the Sciences in Philadelphia"
+      "value": "University of the Sciences in Philadelphia"
     },
     {
-      "school": "University of Trento"
+      "value": "University of Trento"
     },
     {
-      "school": "University of Udaipur"
+      "value": "University of Udaipur"
     },
     {
-      "school": "University of Valley Forge"
+      "value": "University of Valley Forge"
     },
     {
-      "school": "University of Washington Tacoma"
+      "value": "University of Washington Tacoma"
     },
     {
-      "school": "University of West Florida"
+      "value": "University of West Florida"
     },
     {
-      "school": "University School of Information, Communication and Technology"
+      "value": "University School of Information, Communication and Technology"
     },
     {
-      "school": "University Visvesvaraya College of Engineering (UVCE)"
+      "value": "University Visvesvaraya College of Engineering (UVCE)"
     },
     {
-      "school": "Upper Canada College"
+      "value": "Upper Canada College"
     },
     {
-      "school": "Upper Darby High School"
+      "value": "Upper Darby High School"
     },
     {
-      "school": "Upper Iowa University"
+      "value": "Upper Iowa University"
     },
     {
-      "school": "Upper Moreland High School"
+      "value": "Upper Moreland High School"
     },
     {
-      "school": "Urbana High School"
+      "value": "Urbana High School"
     },
     {
-      "school": "Ursinus College"
+      "value": "Ursinus College"
     },
     {
-      "school": "Utah State University"
+      "value": "Utah State University"
     },
     {
-      "school": "Utica College"
+      "value": "Utica College"
     },
     {
-      "school": "Utkal University"
+      "value": "Utkal University"
     },
     {
-      "school": "Uttaranchal Institute of Technology"
+      "value": "Uttaranchal Institute of Technology"
     },
     {
-      "school": "Vadodara Institute of Engineering"
+      "value": "Vadodara Institute of Engineering"
     },
     {
-      "school": "Valencia College"
+      "value": "Valencia College"
     },
     {
-      "school": "Valley Christian High School"
+      "value": "Valley Christian High School"
     },
     {
-      "school": "Valley High School"
+      "value": "Valley High School"
     },
     {
-      "school": "Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engg. Technology (VNRVJIET)"
+      "value": "Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engg. Technology (VNRVJIET)"
     },
     {
-      "school": "Vanderbilt University"
+      "value": "Vanderbilt University"
     },
     {
-      "school": "Vanier College"
+      "value": "Vanier College"
     },
     {
-      "school": "vardhaman college of engineering"
+      "value": "vardhaman college of engineering"
     },
     {
-      "school": "Vasavi College Of Engineering"
+      "value": "Vasavi College Of Engineering"
     },
     {
-      "school": "Vassar College"
+      "value": "Vassar College"
     },
     {
-      "school": "Veer Narmad South Gujarat University"
+      "value": "Veer Narmad South Gujarat University"
     },
     {
-      "school": "Veer Surendra Sai University of Technology"
+      "value": "Veer Surendra Sai University of Technology"
     },
     {
-      "school": "Veer Surendra Sai University of Technology, Burla"
+      "value": "Veer Surendra Sai University of Technology, Burla"
     },
     {
-      "school": "Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College"
+      "value": "Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College"
     },
     {
-      "school": "Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology"
+      "value": "Vel Tech Rangarajan Dr.Sagunthala R&D Institute of Science and Technology"
     },
     {
-      "school": "Velammal College of Engineering and Technology"
+      "value": "Velammal College of Engineering and Technology"
     },
     {
-      "school": "Velammal Institute of Technology"
+      "value": "Velammal Institute of Technology"
     },
     {
-      "school": "Vellore Institute of Technology"
+      "value": "Vellore Institute of Technology"
     },
     {
-      "school": "Vellore Institute of Technology, Chennai"
+      "value": "Vellore Institute of Technology, Chennai"
     },
     {
-      "school": "Vemana Institute Of Technology"
+      "value": "Vemana Institute Of Technology"
     },
     {
-      "school": "Veterans Memorial Early College High School"
+      "value": "Veterans Memorial Early College High School"
     },
     {
-      "school": "VIA University College"
+      "value": "VIA University College"
     },
     {
-      "school": "Victoria Park Collegiate Institute"
+      "value": "Victoria Park Collegiate Institute"
     },
     {
-      "school": "Vidya College of Engineering"
+      "value": "Vidya College of Engineering"
     },
     {
-      "school": "Vidyakunj International School"
+      "value": "Vidyakunj International School"
     },
     {
-      "school": "Vidyavardhaka College of Engineering"
+      "value": "Vidyavardhaka College of Engineering"
     },
     {
-      "school": "Vignan Institute of Technology and Science"
+      "value": "Vignan Institute of Technology and Science"
     },
     {
-      "school": "Vikas College of Engineering & Technology, Vijayawada"
+      "value": "Vikas College of Engineering & Technology, Vijayawada"
     },
     {
-      "school": "Villanova University"
+      "value": "Villanova University"
     },
     {
-      "school": "Villgro Innovations Foundation IITM Research Park"
+      "value": "Villgro Innovations Foundation IITM Research Park"
     },
     {
-      "school": "Vinayaka Mission's Kirupananda Variyar Engineering College"
+      "value": "Vinayaka Mission's Kirupananda Variyar Engineering College"
     },
     {
-      "school": "Vincennes University"
+      "value": "Vincennes University"
     },
     {
-      "school": "Vincent Massey Secondary School"
+      "value": "Vincent Massey Secondary School"
     },
     {
-      "school": "Virginia Commonwealth University"
+      "value": "Virginia Commonwealth University"
     },
     {
-      "school": "Virginia State University"
+      "value": "Virginia State University"
     },
     {
-      "school": "Virginia Tech"
+      "value": "Virginia Tech"
     },
     {
-      "school": "Virginia Union University"
+      "value": "Virginia Union University"
     },
     {
-      "school": "Virginia University of Lynchburg"
+      "value": "Virginia University of Lynchburg"
     },
     {
-      "school": "Virtual High School @ PWCS"
+      "value": "Virtual High School @ PWCS"
     },
     {
-      "school": "Vishwakarma Government Engineering College"
+      "value": "Vishwakarma Government Engineering College"
     },
     {
-      "school": "Vishwakarma Institute of Technology"
+      "value": "Vishwakarma Institute of Technology"
     },
     {
-      "school": "Visvesvaraya National Institute of Technology"
+      "value": "Visvesvaraya National Institute of Technology"
     },
     {
-      "school": "Visvesvaraya Technological University"
+      "value": "Visvesvaraya Technological University"
     },
     {
-      "school": "Vivekanand Education Society's Institute of Technology (VESIT)"
+      "value": "Vivekanand Education Society's Institute of Technology (VESIT)"
     },
     {
-      "school": "Vivekanand Institute of Technology & Sciences"
+      "value": "Vivekanand Institute of Technology & Sciences"
     },
     {
-      "school": "Vivekananda College for BCA"
+      "value": "Vivekananda College for BCA"
     },
     {
-      "school": "Vivekananda Institute of Biotechnology"
+      "value": "Vivekananda Institute of Biotechnology"
     },
     {
-      "school": "Vivekananda Institute of Technology"
+      "value": "Vivekananda Institute of Technology"
     },
     {
-      "school": "Vizag Institute of Technology"
+      "value": "Vizag Institute of Technology"
     },
     {
-      "school": "VNS Group of Institutions"
+      "value": "VNS Group of Institutions"
     },
     {
-      "school": "Vrije Universiteit Amsterdam"
+      "value": "Vrije Universiteit Amsterdam"
     },
     {
-      "school": "Wake Forest University"
+      "value": "Wake Forest University"
     },
     {
-      "school": "Wake Technical Community College"
+      "value": "Wake Technical Community College"
     },
     {
-      "school": "Walchand College of Engineering"
+      "value": "Walchand College of Engineering"
     },
     {
-      "school": "Walnut Hill College"
+      "value": "Walnut Hill College"
     },
     {
-      "school": "Walt Whitman High School"
+      "value": "Walt Whitman High School"
     },
     {
-      "school": "Walter Biddle Saul High School"
+      "value": "Walter Biddle Saul High School"
     },
     {
-      "school": "Ward Melville High School"
+      "value": "Ward Melville High School"
     },
     {
-      "school": "Wardlaw + Hartridge School"
+      "value": "Wardlaw + Hartridge School"
     },
     {
-      "school": "Warren County Technical High School"
+      "value": "Warren County Technical High School"
     },
     {
-      "school": "Warsaw School of Economics"
+      "value": "Warsaw School of Economics"
     },
     {
-      "school": "Warsaw University of Technology"
+      "value": "Warsaw University of Technology"
     },
     {
-      "school": "Wartburg College"
+      "value": "Wartburg College"
     },
     {
-      "school": "Washington and Lee University"
+      "value": "Washington and Lee University"
     },
     {
-      "school": "Washington State University"
+      "value": "Washington State University"
     },
     {
-      "school": "Washington Township High School"
+      "value": "Washington Township High School"
     },
     {
-      "school": "Washington University in St. Louis"
+      "value": "Washington University in St. Louis"
     },
     {
-      "school": "Waterloo Collegiate Institute"
+      "value": "Waterloo Collegiate Institute"
     },
     {
-      "school": "Waunakee High School"
+      "value": "Waunakee High School"
     },
     {
-      "school": "Wayne State University"
+      "value": "Wayne State University"
     },
     {
-      "school": "Webb Bridge Middle School"
+      "value": "Webb Bridge Middle School"
     },
     {
-      "school": "Wellesley College"
+      "value": "Wellesley College"
     },
     {
-      "school": "Wellington C. Mepham Highschool"
+      "value": "Wellington C. Mepham Highschool"
     },
     {
-      "school": "Wells College"
+      "value": "Wells College"
     },
     {
-      "school": "Wentworth Institute of Technology"
+      "value": "Wentworth Institute of Technology"
     },
     {
-      "school": "Wesleyan University"
+      "value": "Wesleyan University"
     },
     {
-      "school": "West Chester University"
+      "value": "West Chester University"
     },
     {
-      "school": "West Essex Regional High School"
+      "value": "West Essex Regional High School"
     },
     {
-      "school": "West Morris Mendham High School"
+      "value": "West Morris Mendham High School"
     },
     {
-      "school": "West Philadelphia High School"
+      "value": "West Philadelphia High School"
     },
     {
-      "school": "West Potomac High School"
+      "value": "West Potomac High School"
     },
     {
-      "school": "West Scranton High School"
+      "value": "West Scranton High School"
     },
     {
-      "school": "West Windsor-Plainsboro High School North"
+      "value": "West Windsor-Plainsboro High School North"
     },
     {
-      "school": "West Windsor-Plainsboro High School South"
+      "value": "West Windsor-Plainsboro High School South"
     },
     {
-      "school": "Westdale Secondary School"
+      "value": "Westdale Secondary School"
     },
     {
-      "school": "Western Carolina University"
+      "value": "Western Carolina University"
     },
     {
-      "school": "Western Connecticut State University"
+      "value": "Western Connecticut State University"
     },
     {
-      "school": "Western Governors University"
+      "value": "Western Governors University"
     },
     {
-      "school": "Western Kentucky University"
+      "value": "Western Kentucky University"
     },
     {
-      "school": "Western Michigan University"
+      "value": "Western Michigan University"
     },
     {
-      "school": "Western New England University"
+      "value": "Western New England University"
     },
     {
-      "school": "Western Technical College"
+      "value": "Western Technical College"
     },
     {
-      "school": "Western University"
+      "value": "Western University"
     },
     {
-      "school": "Western Washington University"
+      "value": "Western Washington University"
     },
     {
-      "school": "Westfield High School"
+      "value": "Westfield High School"
     },
     {
-      "school": "Westminster College"
+      "value": "Westminster College"
     },
     {
-      "school": "Westminster School"
+      "value": "Westminster School"
     },
     {
-      "school": "Westwood High School"
+      "value": "Westwood High School"
     },
     {
-      "school": "Whitefish Bay High School"
+      "value": "Whitefish Bay High School"
     },
     {
-      "school": "Whitworth University"
+      "value": "Whitworth University"
     },
     {
-      "school": "Wichita State University"
+      "value": "Wichita State University"
     },
     {
-      "school": "Widener University"
+      "value": "Widener University"
     },
     {
-      "school": "Wilbert Tucker Woodson High School"
+      "value": "Wilbert Tucker Woodson High School"
     },
     {
-      "school": "Wilfrid Laurier University"
+      "value": "Wilfrid Laurier University"
     },
     {
-      "school": "Wilkes University"
+      "value": "Wilkes University"
     },
     {
-      "school": "William & Mary"
+      "value": "William & Mary"
     },
     {
-      "school": "William L. Sayre High School"
+      "value": "William L. Sayre High School"
     },
     {
-      "school": "William Lyon Mackenzie Collegiate Institute"
+      "value": "William Lyon Mackenzie Collegiate Institute"
     },
     {
-      "school": "William Paterson University"
+      "value": "William Paterson University"
     },
     {
-      "school": "William W. Bodine High School"
+      "value": "William W. Bodine High School"
     },
     {
-      "school": "Williams College"
+      "value": "Williams College"
     },
     {
-      "school": "Williamson Free School of Mechanical Trades"
+      "value": "Williamson Free School of Mechanical Trades"
     },
     {
-      "school": "Wilmington University"
+      "value": "Wilmington University"
     },
     {
-      "school": "Wiltshire College"
+      "value": "Wiltshire College"
     },
     {
-      "school": "Winona State University"
+      "value": "Winona State University"
     },
     {
-      "school": "Winston Churchill High School"
+      "value": "Winston Churchill High School"
     },
     {
-      "school": "Winthrop University"
+      "value": "Winthrop University"
     },
     {
-      "school": "Woodbridge High School - Bridgeville"
+      "value": "Woodbridge High School - Bridgeville"
     },
     {
-      "school": "Woodbridge High School - Irvine"
+      "value": "Woodbridge High School - Irvine"
     },
     {
-      "school": "Woodbridge High School - London"
+      "value": "Woodbridge High School - London"
     },
     {
-      "school": "Woodbridge High School - Woodbridge, NJ"
+      "value": "Woodbridge High School - Woodbridge, NJ"
     },
     {
-      "school": "Woodbridge High School - Woodbridge, ON"
+      "value": "Woodbridge High School - Woodbridge, ON"
     },
     {
-      "school": "Woodbridge High School - Woodbridge, VA"
+      "value": "Woodbridge High School - Woodbridge, VA"
     },
     {
-      "school": "Worcester Polytechnic Institute"
+      "value": "Worcester Polytechnic Institute"
     },
     {
-      "school": "Worcester State University"
+      "value": "Worcester State University"
     },
     {
-      "school": "World Communications Charter School"
+      "value": "World Communications Charter School"
     },
     {
-      "school": "Wright State University"
+      "value": "Wright State University"
     },
     {
-      "school": "Wrocław University of Economics"
+      "value": "Wrocław University of Economics"
     },
     {
-      "school": "Wrocław University of Technology"
+      "value": "Wrocław University of Technology"
     },
     {
-      "school": "Wuhan University"
+      "value": "Wuhan University"
     },
     {
-      "school": "Wyższa Szkoła Biznesu – National-Louis University"
+      "value": "Wyższa Szkoła Biznesu – National-Louis University"
     },
     {
-      "school": "Xavier Institute of Management Entrepreneurship Development (XIME)"
+      "value": "Xavier Institute of Management Entrepreneurship Development (XIME)"
     },
     {
-      "school": "Xavier Research Foundation Loyola Centre for Research and Development St Xavier's College"
+      "value": "Xavier Research Foundation Loyola Centre for Research and Development St Xavier's College"
     },
     {
-      "school": "Xavier University"
+      "value": "Xavier University"
     },
     {
-      "school": "Yale University"
+      "value": "Yale University"
     },
     {
-      "school": "Yale-NUS College"
+      "value": "Yale-NUS College"
     },
     {
-      "school": "Yeshiva University"
+      "value": "Yeshiva University"
     },
     {
-      "school": "York College of Pennsylvania"
+      "value": "York College of Pennsylvania"
     },
     {
-      "school": "York College, CUNY"
+      "value": "York College, CUNY"
     },
     {
-      "school": "York University"
+      "value": "York University"
     },
     {
-      "school": "Youngstown State University"
+      "value": "Youngstown State University"
     },
     {
-      "school": "YouthBuild Philadelphia Charter School"
+      "value": "YouthBuild Philadelphia Charter School"
     },
     {
-      "school": "Zakir Hussain College of Engineering and Technology, AMU"
+      "value": "Zakir Hussain College of Engineering and Technology, AMU"
     },
     {
-      "school": "Zespół Szkół im. Jana Pawła II w Niepołomicach"
+      "value": "Zespół Szkół im. Jana Pawła II w Niepołomicach"
     },
     {
-      "school": "Zespół Szkół Łączności, Monte Cassino 31"
+      "value": "Zespół Szkół Łączności, Monte Cassino 31"
     },
     {
-      "school": "Zespół Szkół nr 1 im. Jana Pawła II w Przysusze"
+      "value": "Zespół Szkół nr 1 im. Jana Pawła II w Przysusze"
     },
     {
-      "school": "Zespół szkół nr 1 im. Stanisława Staszica w Bochni"
+      "value": "Zespół szkół nr 1 im. Stanisława Staszica w Bochni"
     },
     {
-      "school": "Zespół Szkół Nr.2 im. Jana Pawła II w Miechowie"
+      "value": "Zespół Szkół Nr.2 im. Jana Pawła II w Miechowie"
     }
    ]

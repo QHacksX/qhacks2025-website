@@ -1,3 +1,5 @@
+import '../../css/style.css'
+
 export default function FormHeader({
   title,
   subheader,
@@ -6,11 +8,11 @@ export default function FormHeader({
   subheader: string;
 }) {
   return (
-    <div className='border rounded-lg bg-orange-50 p-2'>
-      <div className='flex justify-center font-semibold text-lg text-black pb-2'>
+    <div className=' text-shadow'>
+      <div className='flex justify-center  text-white pb-2 text-4xl font-thin'>
         {title}
       </div>
-      <div className='flex justify-center font-semibold text-md text-gray-500'>
+      <div className='flex justify-center font-thin text-md text-gray-500'>
         {subheader}
       </div>
     </div>

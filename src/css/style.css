@@ -1,0 +1,75 @@
+.shadow{box-shadow: inset 20px 20px 40px #ffff00, inset -20px -20px 40px #ff0000;animation: animate 60s linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		box-shadow: inset 0 0 20px #ffff00
+	}
+    30% {
+		box-shadow: inset 0 0 20px #ffff00
+	}
+	33% {
+		box-shadow: inset 0 0 20px #ff0000
+	}
+    63% {
+		box-shadow: inset 0 0 20px #ff0000
+	}
+	66% {
+		box-shadow: inset 0 0 20px #0000ff
+    }
+    97% {
+		box-shadow: inset 0 0 20px #0000ff
+    }
+    100% {
+		box-shadow: inset 0 0 20px #ffff00
+	}
+}
+
+.text-shadow{text-shadow: #ffff00 1px 0 10px;animation: text-animate 60s linear infinite
+}
+
+@keyframes text-animate {
+	0% {
+		text-shadow: #ffff00 1px 0 30px
+	}
+    30% {
+		text-shadow: #ffff00 1px 0 30px
+	}
+	33% {
+		text-shadow: #ff0000 1px 0 30px
+	}
+    63% {
+		text-shadow: #ff0000 1px 0 30px
+	}
+	66% {
+		text-shadow: #0000ff 1px 0 30px
+    }
+    97% {
+		text-shadow: #0000ff 1px 0 30px
+    }
+    100% {
+		text-shadow: #ffff00 1px 0 30px
+	}
+}
+
+
+
+.p-dropdown-filter	{
+	background-color: gray;
+	color: '#ff0000';
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;	padding: 10px;
+	padding-left: 30px;
+}
+
+
+.p-dropdown-items-wrapper{
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.p-dropdown-label{
+	padding-right: 20px;
+}
+
+
