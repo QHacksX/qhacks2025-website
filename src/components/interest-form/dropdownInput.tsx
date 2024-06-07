@@ -19,7 +19,7 @@ export default function DropdownInput({
   return (
     <Dropdown
       value={value}
-      onChange={(e) => setValue(e.value.age)}
+      onChange={(e) => setValue(e.value)}
       options={dropdownConfig?.options}
       optionLabel={dropdownConfig?.label}
       placeholder={dropdownConfig?.placeholder}
