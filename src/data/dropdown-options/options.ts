@@ -2,6 +2,9 @@ import { ShirtSize } from "@/src/firebase/userData";
 import { countryList } from "./countryList";
 import { schoolList } from "./schoolList";
 
+/**
+ * The dropdown options we support
+ */
 export enum DropdownTypes {
   age,
   school,
@@ -165,6 +168,9 @@ const fieldsOfStudy = [
   { major: "Prefer not to answer" },
 ];
 
+/**
+ * Maps a dropdown type to the config needed to render its Dropdown component
+ */
 export const dropdownOptions = new Map<DropdownTypes, DropdownConfig>([
   [
     DropdownTypes.age,

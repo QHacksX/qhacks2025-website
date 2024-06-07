@@ -1,10 +1,17 @@
 import { Dropdown } from "primereact/dropdown";
-import { Dispatch, SetStateAction, use, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import {
   DropdownTypes,
   dropdownOptions,
 } from "@/src/data/dropdown-options/options";
 
+/**
+ * Dropdown component for a given DropdownType. 
+ * @param type - the type of dropdown 
+ * @param value - the value to display
+ * @setValue - setter for the value
+ * @returns 
+ */
 export default function DropdownInput({
   type,
   value,
@@ -14,6 +21,8 @@ export default function DropdownInput({
   value: any;
   setValue: Dispatch<SetStateAction<any>>;
 }) {
+
+  // We get the config for the dropdown by the type
   const dropdownConfig = dropdownOptions.get(type);
 
   return (
