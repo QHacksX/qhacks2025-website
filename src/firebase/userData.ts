@@ -42,6 +42,11 @@ export async function getUserData({}: {}) {
   }
 }
 
+/**
+ * Updates or inserts a document for the user in the 'users' collection.
+ * @param userData - the data to store in the user's document
+ * @returns
+ */
 export async function updateUserData({
   userData,
 }: {
