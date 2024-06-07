@@ -5,6 +5,7 @@ import EmailInput from "@/src/components/interest-form/emailInput";
 import FormHeader from "@/src/components/interest-form/header";
 import PhoneInput from "@/src/components/interest-form/phoneInput";
 import WordInput from "@/src/components/interest-form/wordInput";
+import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import { InterestFormData, updateUserData } from "@/src/firebase/userData";
 import { useEffect, useState } from "react";
 
@@ -96,7 +97,11 @@ function Page(props: any) {
                     setName={setLastName}
                     placeholder='Last Name'
                   />
-                  <DropdownInput type='age' age={age} setAge={setAge} />
+                  <DropdownInput
+                    type={DropdownTypes.age}
+                    value={age}
+                    setValue={setAge}
+                  />
                 </>
               ) : step === 2 ? (
                 <>
@@ -118,80 +123,80 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Mandatory Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type='school'
-                    school={school}
-                    setSchool={setSchool}
+                    type={DropdownTypes.school}
+                    value={school}
+                    setValue={setSchool}
                   />
                   <DropdownInput
-                    type='levelOfStudy'
-                    levelOfStudy={levelOfStudy}
-                    setLevelOfStudy={setLevelOfStudy}
+                    type={DropdownTypes.levelOfStudy}
+                    value={levelOfStudy}
+                    setValue={setLevelOfStudy}
                   />
                   <DropdownInput
-                    type='country'
-                    country={country}
-                    setCountry={setCountry}
+                    type={DropdownTypes.country}
+                    value={country}
+                    setValue={setCountry}
                   />
                 </>
               ) : step === 4 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type='dietary'
-                    dietaryRestriction={dietaryRestriction}
-                    setDietaryRestriction={setDietaryRestriction}
+                    type={DropdownTypes.dietaryRestriction}
+                    value={dietaryRestriction}
+                    setValue={setDietaryRestriction}
                   />
                   <DropdownInput
-                    type='underrepresented'
-                    isUnderrepresented={isUnderrepresented}
-                    setIsUnderrepresented={setIsUnderrepresented}
+                    type={DropdownTypes.isUnderrepresented}
+                    value={isUnderrepresented}
+                    setValue={setIsUnderrepresented}
                   />
                 </>
               ) : step === 5 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type='gender'
-                    gender={gender}
-                    setGender={setGender}
+                    type={DropdownTypes.gender}
+                    value={gender}
+                    setValue={setGender}
                   />
                   <DropdownInput
-                    type='pronouns'
-                    pronoun={pronoun}
-                    setPronoun={setPronoun}
+                    type={DropdownTypes.pronouns}
+                    value={pronoun}
+                    setValue={setPronoun}
                   />
                 </>
               ) : step === 6 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type='ethnicity'
-                    ethnicity={ethnicity}
-                    setEthnicity={setEthnicity}
+                    type={DropdownTypes.ethnicity}
+                    value={ethnicity}
+                    setValue={setEthnicity}
                   />
                   <DropdownInput
-                    type='sexuality'
-                    sexuality={sexuality}
-                    setSexuality={setSexuality}
+                    type={DropdownTypes.sexuality}
+                    value={sexuality}
+                    setValue={setSexuality}
                   />
                 </>
               ) : step === 7 ? (
                 <>
                   <FormHeader title='Optional Inputs' subheader='Subheader' />
                   <DropdownInput
-                    type='higestEducation'
-                    higestEdu={highestEdu}
-                    setHighestEdu={setHighestEdu}
+                    type={DropdownTypes.highestEdu}
+                    value={highestEdu}
+                    setValue={setHighestEdu}
                   />
                   <DropdownInput
-                    type='fieldOfStudy'
-                    fieldOfStudy={fieldOfStudy}
-                    setFieldOfStudy={setFieldOfStudy}
+                    type={DropdownTypes.fieldOfStudy}
+                    value={fieldOfStudy}
+                    setValue={setFieldOfStudy}
                   />
                   <DropdownInput
-                    type='shirtSize'
-                    shirtSize={shirtSize}
-                    setShirtSize={setShirtSize}
+                    type={DropdownTypes.shirtSize}
+                    value={shirtSize}
+                    setValue={setShirtSize}
                   />
                 </>
               ) : null}
