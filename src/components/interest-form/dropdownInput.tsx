@@ -42,7 +42,8 @@ export default function DropdownInput(props: any) {
         { restriction: "Celiac Disease"},
         { restriction: "Allergies"},
         { restriction: "Kosher"},
-        { restriction: "Halal"}
+        { restriction: "Halal"},
+        { restriction: "None"}
       ]
 
       const underrepresented = [
@@ -65,8 +66,8 @@ export default function DropdownInput(props: any) {
         { pronoun: "They/Them" },
         { pronoun: "She/They" },
         { pronoun: "He/They" },
-        { pronoun: "Prefer Not to Answer" },
-        { pronoun: "Other" }
+        { pronoun: "Prefer to self-describe" },
+        { pronoun: "Prefer Not to Answer" }
       ]
 
       const ethnicities = [
@@ -86,7 +87,7 @@ export default function DropdownInput(props: any) {
         { ethnicity: "White"},
         { ethnicity: "Other Asian (Thai, Cambodian, etc)"},
         { ethnicity: "Other Pacific Islander"},
-        { ethnicity: "Other (Please Specify)"},
+        { ethnicity: "Prefer to self-describe"},
         { ethnicity: "Prefer Not to Answer"}
       ]
 
@@ -94,7 +95,7 @@ export default function DropdownInput(props: any) {
         { sexuality: "Heterosexual or straight"},
         { sexuality: "Gay or lesbian"},
         { sexuality: "Bisexual"},
-        { sexuality: "Different identity ________"},
+        { sexuality: "Prefer to self-describe"},
         { sexuality: "Prefer Not to Answer"}
       ]
 
@@ -130,13 +131,13 @@ export default function DropdownInput(props: any) {
         placeholder="Select your age" className="w-full md:w-14rem" />
     } else if (props.type === "school") {
         return <Dropdown value={props.school} onChange={(e) => props.setSchool(e.value)} options={schools} optionLabel="school" 
-        placeholder="Select your school" className="w-full md:w-14rem" />
+        filter={true} placeholder="Select your school" className="w-full md:w-14rem" />
     } else if (props.type === "levelOfStudy") {
         return <Dropdown value={props.levelOfStudy} onChange={(e) => props.setLevelOfStudy(e.value)} options={levelsOfStudy} optionLabel="level" 
         placeholder="Select your current level of study" className="w-full md:w-14rem" />
     } else if (props.type === "country") {
-        return <Dropdown value={props.country} onChange={(e) => props.setCountry(e.value)} options={countries} optionLabel="country" 
-        placeholder="Select your country of residence" className="w-full md:w-14rem" />
+        return <Dropdown value={props.country} onChange={(e) => props.setCountry(e.target)} options={countries} optionLabel="country" optionValue="code"
+        filter={true} placeholder="Select your country of residence" className="w-full md:w-14rem" />
     } else if (props.type === "dietary") {
         return <Dropdown value={props.dietaryRestriction} onChange={(e) => props.setDietaryRestriction(e.value)} options={dietaryRestrictions} optionLabel="restriction" 
         placeholder="Select a dietary restriction, if applicable" className="w-full md:w-14rem" />

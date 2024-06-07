@@ -5,7 +5,8 @@ import EmailInput from "@/src/components/interest-form/emailInput";
 import FormHeader from "@/src/components/interest-form/header";
 import PhoneInput from "@/src/components/interest-form/phoneInput";
 import WordInput from "@/src/components/interest-form/wordInput";
-import { InterestFormData } from "@/src/firebase/userData";
+import { InterestFormData, ShirtSize } from "@/src/firebase/userData";
+import { originalPathname } from "next/dist/build/templates/app-page";
 import { useEffect, useState } from "react";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
@@ -15,21 +16,29 @@ function Page(props: any) {
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState(-1);
+  const [age, setAge] = useState({ age: -1 });
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
-  const [school, setSchool] = useState("");
-  const [levelOfStudy, setLevelOfStudy] = useState("");
-  const [country, setCountry] = useState("");
-  const [dietaryRestriction, setDietaryRestriction] = useState("");
-  const [isUnderrepresented, setIsUnderrepresented] = useState();
+  const [school, setSchool] = useState({ school: "" });
+  const [levelOfStudy, setLevelOfStudy] = useState({ level: "" });
+  const [country, setCountry] = useState({ country: "" });
+  const [dietaryRestriction, setDietaryRestriction] = useState({ restriction: "" });
+  const [isUnderrepresented, setIsUnderrepresented] = useState({ category: "" });
   const [gender, setGender] = useState("");
   const [pronoun, setPronoun] = useState("");
   const [ethnicity, setEthnicity] = useState("");
   const [sexuality, setSexuality] = useState("");
-  const [higestEdu, setHighestEdu] = useState("");
-  const [shirtSize, setShirtSize] = useState();
+  const [higestEdu, setHighestEdu] = useState({ level: "" });
+  const [shirtSize, setShirtSize] = useState({ shirtSize: ShirtSize.na });
   const [fieldOfStudy, setFieldOfStudy] = useState("");
+
+  // If "Other" in the original dropdown, allows user to input custom value
+  const [origInputGender, setOrigInputGender] = useState({ gender: ""})
+  const [origInputPronoun, setOrigInputPronoun] = useState({ pronoun: "" })
+  const [origInputEthnicity, setOrigInputEthnicity] = useState({ ethnicity: "" })
+  const [origInputSexuality, setOrigInputSexuality] = useState({ sexuality: "" })
+  const [origInputFieldOfStudy, setOrigInputFieldOfStudy] = useState({ major: "" })
+
 
   useEffect(() => {
     console.log('item value:' + JSON.stringify(props?.item))
@@ -38,6 +47,10 @@ function Page(props: any) {
       setData(() => ({ ...props.item.data }))
     }
   }, [props.item])
+
+  useEffect(() => {
+    console.log("Changed Input")
+  }, [origInputGender])
 
   const next = () => {
     if (step < 7) {
@@ -53,23 +66,51 @@ function Page(props: any) {
 
   // TODO: Validation of data is required
   const save = () => {
+    let formattedIsUnderrepresented;
+
+    if (isUnderrepresented.category === "Yes") {
+      formattedIsUnderrepresented = true;
+    } else if (isUnderrepresented.category === "No") {
+      formattedIsUnderrepresented = false;
+    }
+
+    if (origInputGender.gender !== "Prefer to self-describe") {
+      setGender(origInputGender.gender)
+    }
+
+    if (origInputPronoun.pronoun !== "Prefer to self-describe") {
+      setPronoun(origInputPronoun.pronoun)
+    }
+
+    if (origInputEthnicity.ethnicity !== "Prefer to self-describe") {
+      setEthnicity(origInputEthnicity.ethnicity)
+    }
+
+    if (origInputSexuality.sexuality !== "Prefer to self-describe") {
+      setSexuality(origInputSexuality.sexuality)
+    }
+
+    if (origInputFieldOfStudy.major !== "Other (please specify)") {
+      setFieldOfStudy(origInputFieldOfStudy.major)
+    }
+
     const inputtedData: InterestFormData = {
       firstName: firstName,
       lastName: lastName,
-      age: age,
+      age: age.age,
       phoneNumber: phoneNumber,
       email: email,
-      school: school,
-      levelOfStudy: levelOfStudy,
-      country: country,
-      dietaryRestrictions: dietaryRestriction,
-      underrepresented: isUnderrepresented,
+      school: school.school,
+      levelOfStudy: levelOfStudy.level,
+      country: country.country,
+      dietaryRestrictions: dietaryRestriction.restriction,
+      underrepresented: formattedIsUnderrepresented,
       gender: gender,
       pronouns: pronoun,
       ethnicity: ethnicity,
       sexualIdentity: sexuality,
-      highestEducationCompleted: higestEdu,
-      shirtSize: shirtSize,
+      highestEducationCompleted: higestEdu.level,
+      shirtSize: shirtSize.shirtSize,
       studyMajor: fieldOfStudy
     };
 
@@ -85,8 +126,8 @@ function Page(props: any) {
               {step === 1 ?
                 <>
                   <FormHeader title="Mandatory Inputs" subheader="Subheader" />
-                  <WordInput title="First Name" name={firstName} setName={setFirstName} placeholder="First Name" />
-                  <WordInput title="Last Name" name={lastName} setName={setLastName} placeholder="Last Name" />
+                  <WordInput title="First Name" input={firstName} setInput={setFirstName} placeholder="First Name" />
+                  <WordInput title="Last Name" input={lastName} setInput={setLastName} placeholder="Last Name" />
                   <DropdownInput type="age" age={age} setAge={setAge} />
                 </>
                 : step === 2 ?
@@ -111,20 +152,45 @@ function Page(props: any) {
                       : step === 5 ?
                         <>
                           <FormHeader title="Optional Inputs" subheader="Subheader" />
-                          <DropdownInput type="gender" gender={gender} setGender={setGender} />
-                          <DropdownInput type="pronouns" pronoun={pronoun} setPronoun={setPronoun} />
+                          <DropdownInput type="gender" gender={origInputGender} setGender={setOrigInputGender} />
+                          {origInputGender.gender === "Prefer to self-describe" ?
+                            <WordInput title="Self-Described Gender" input={gender} setInput={setGender} />
+                            :
+                            null
+                          }
+                          <DropdownInput type="pronouns" pronoun={origInputPronoun} setPronoun={setOrigInputPronoun} />
+                          {origInputPronoun.pronoun === "Prefer to self-describe" ?
+                            <WordInput title="Self-Described Pronoun(s)" input={pronoun} setInput={setPronoun} />
+                            :
+                            null
+                          }
                         </>
                       : step === 6 ?
                         <>
                           <FormHeader title="Optional Inputs" subheader="Subheader" />
-                          <DropdownInput type="ethnicity" ethnicity={ethnicity} setEthnicity={setEthnicity} />
-                          <DropdownInput type="sexuality" sexuality={sexuality} setSexuality={setSexuality} />
+                          <DropdownInput type="ethnicity" ethnicity={origInputEthnicity} setEthnicity={setOrigInputEthnicity} />
+                          {origInputEthnicity.ethnicity === "Prefer to self-describe" ?
+                            <WordInput title="Self-Described Ethnicity" input={ethnicity} setInput={setEthnicity} />
+                            :
+                            null
+                          }
+                          <DropdownInput type="sexuality" sexuality={origInputSexuality} setSexuality={setOrigInputSexuality} />
+                          {origInputSexuality.sexuality === "Prefer to self-describe" ?
+                            <WordInput title="Self-Described Sexual Identity" input={sexuality} setInput={setSexuality} />
+                            :
+                            null
+                          }
                         </>
                       : step === 7 ?
                         <>
                           <FormHeader title="Optional Inputs" subheader="Subheader" />
                           <DropdownInput type="higestEducation" higestEdu={higestEdu} setHighestEdu={setHighestEdu} />
-                          <DropdownInput type="fieldOfStudy" fieldOfStudy={fieldOfStudy} setFieldOfStudy={setFieldOfStudy} />
+                          <DropdownInput type="fieldOfStudy" fieldOfStudy={origInputFieldOfStudy} setFieldOfStudy={setOrigInputFieldOfStudy} />
+                          {origInputFieldOfStudy.major === "Other (please specify)" ?
+                            <WordInput title="Self-Described Field of Study" input={fieldOfStudy} setInput={setFieldOfStudy} />
+                            :
+                            null
+                          }
                           <DropdownInput type="shirtSize" shirtSize={shirtSize} setShirtSize={setShirtSize} />
                         </>
                       : null

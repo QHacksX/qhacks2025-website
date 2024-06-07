@@ -2,10 +2,6 @@
 
 export const countryList = [
     {
-      "code": "CA",
-      "country": "Canada"
-    },
-    {
       "code": "AF",
       "country": "Afghanistan"
     },
@@ -160,6 +156,10 @@ export const countryList = [
     {
       "code": "CM",
       "country": "Cameroon"
+    },
+    {
+      "code": "CA",
+      "country": "Canada"
     },
     {
       "code": "CV",
