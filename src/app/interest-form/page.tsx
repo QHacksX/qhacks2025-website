@@ -131,7 +131,7 @@ function Page(props: any) {
     <div className='flex h-screen shadow'>
       <div className='flex-1 h-full justify-center align-middle content-center'>
         <main className='p-4 pb-8  place-content-center flex justify-center w-full'>
-          <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
+          <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
             <div className='grid gap-6 mb-8'>
               {step === 1 ? (
                 <>

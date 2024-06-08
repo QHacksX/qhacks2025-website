@@ -1,3 +1,4 @@
+import { FirebaseError } from "firebase/app";
 import { firebase_app } from "../config";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 

@@ -1,44 +1,78 @@
-'use client'
+"use client";
 import React from "react";
-import './signin.css'
+import "./signin.css";
 import signIn from "../../firebase/auth/signin";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
+import EmailInput from "@/src/components/interest-form/emailInput";
+import"../../css/style.css"
 
 function Page() {
-    const [email, setEmail] = React.useState('')
-    const [password, setPassword] = React.useState('')
-    const router = useRouter()
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const router = useRouter();
+  const [errorMessage, setErrorMessage] = React.useState<any>();
 
-    const handleForm = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
+  const handleForm = async () => {
+    const { result, error } = await signIn({ email, password });
 
-        const { result, error } = await signIn({email, password});
+    if (error) {
+      // TODO: setup error handling. error.code will give string like: 'auth/errorCode'. The part after auth/ (ie. errorCode) can be used to index authErrors in firebase/utils to get a user facing description
 
-        if (error) {
-            return console.log(error)
-        }
-
-        // else successful
-        console.log(result)
-        return router.push("/")
+      return console.log(error);
     }
-    return (<div className="wrapper">
-        <div className="form-wrapper">
-            <h1 className="mt-60 mb-30">Sign in</h1>
-            <form onSubmit={handleForm} className="form">
-                <label htmlFor="email">
-                    <p>Email</p>
-                    <input className='input-text' onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="example@mail.com" />
-                </label>
-                <label htmlFor="password">
-                    <p>Password</p>
-                    <input className='input-text' onChange={(e) => setPassword(e.target.value)} required type="password" name="password" id="password" placeholder="password" />
-                </label>
-                <button className="submit-button" type="submit">Sign in</button>
-            </form>
-        </div>
 
-    </div>);
+    // else successful
+    console.log(result);
+    return router.push("/");
+  };
+
+  return (
+    <div className='flex h-screen w-screen justify-center'>
+      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
+        <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
+          <div className='flex justify-center  text-white pb-2 text-4xl font-thin mb-10 text-shadow'>
+            Sign In
+          </div>
+          <EmailInput
+            title='Email'
+            email={email}
+            setEmail={setEmail}
+            placeholder='your@example.com'
+          />
+
+          <div className='mt-10'>
+            <label
+              htmlFor='password'
+              className='block mb-2 text-xl font-thin text-gray-900 dark:text-gray-300'
+            >
+              Password
+            </label>
+            <input
+              type='text'
+              id='wordInput'
+              className='bg-gray-50 border-b border-gray-300 text-gray-900 text-sm font-thin  block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  bg-transparent focus:ring-0 focus:outline-none'
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder='******'
+            />
+          </div>
+
+          <button
+            className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-10'
+            onClick={handleForm}
+          >
+            Sign In
+          </button>
+
+            {/* TODO: Style this, fix error/warning */}
+          <div className="flex justify-center  text-white pb-2 text-sm font-thin mb-10 text-shadow">
+          <a className="mx-1 underline" href="/signup">Don't have an account? Click here to sign up!</a>
+          </div>
+
+          {errorMessage && <div>{errorMessage}</div>}
+        </div>
+      </main>
+    </div>
+  );
 }
 
 export default Page;

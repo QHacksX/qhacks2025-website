@@ -1,43 +1,72 @@
-'use client'
+"use client";
 import React from "react";
-import './signup.css'
 import signUp from "../../firebase/auth/signup";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
+import EmailInput from "@/src/components/interest-form/emailInput";
+import "../../css/style.css";
+import { authErrors } from "@/src/firebase/utils";
 
 function Page() {
-    const [email, setEmail] = React.useState('')
-    const [password, setPassword] = React.useState('')
-    const router = useRouter()
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [errorMessage, setErrorMessage] = React.useState<any>();
+  const router = useRouter();
 
-    const handleForm = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
+  const handleForm = async () => {
+    const { result, error } = await signUp({ email, password });
 
-        const { result, error } = await signUp({email, password});
-
-        if (error) {
-            return console.log(error)
-        }
-
-        // else successful
-        console.log(result)
-        return router.push("/signin")
+    if (error) {
+        // TODO: setup error handling. error.code will give string like: 'auth/errorCode'. The part after auth/ (ie. errorCode) can be used to index authErrors in firebase/utils to get a user facing description
+      return console.log(error);
     }
-    return (<div className="wrapper">
-        <div className="form-wrapper">
-            <h1 className="mt-60 mb-30">Sign up</h1>
-            <form onSubmit={handleForm} className="form">
-                <label className="input-text" htmlFor="email">
-                    <p>Email</p>
-                    <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="example@mail.com" />
-                </label>
-                <label className='input-text'htmlFor="password">
-                    <p>Password</p>
-                    <input onChange={(e) => setPassword(e.target.value)} required type="password" name="password" id="password" placeholder="password" />
-                </label>
-                <button className='submit-button' type="submit">Sign up</button>
-            </form>
+
+    // else successful
+    console.log(result);
+    return router.push("/signin");
+  };
+
+  return (
+    <div className='flex h-screen w-screen justify-center'>
+      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
+        <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
+          <div className='flex justify-center  text-white pb-2 text-4xl font-thin mb-10 text-shadow'>
+            Sign Up
+          </div>
+          <EmailInput
+            title='Email'
+            email={email}
+            setEmail={setEmail}
+            placeholder='your@example.com'
+          />
+
+          <div className='mt-10'>
+            <label
+              htmlFor='password'
+              className='block mb-2 text-xl font-thin text-gray-900 dark:text-gray-300'
+            >
+              Password
+            </label>
+            <input
+              type='text'
+              id='wordInput'
+              className='bg-gray-50 border-b border-gray-300 text-gray-900 text-sm font-thin  block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  bg-transparent focus:ring-0 focus:outline-none'
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder='******'
+            />
+          </div>
+
+          <button
+            className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-10'
+            onClick={handleForm}
+          >
+            Sign Up
+          </button>
+
+          {errorMessage && <div>{errorMessage}</div>}
         </div>
-    </div>);
+      </main>
+    </div>
+  );
 }
 
 export default Page;
