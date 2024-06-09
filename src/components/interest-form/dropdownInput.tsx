@@ -5,7 +5,6 @@ import {
   dropdownOptions,
 } from "@/src/data/dropdown-options/options";
 import "../../css/style.css";
-import "primeicons/primeicons.css";
 
 /**
  * Dropdown component for a given DropdownType.
