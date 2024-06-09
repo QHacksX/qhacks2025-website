@@ -1,5 +1,6 @@
 "use client";
 
+import { Checkbox, CheckboxChangeEvent } from "primereact/checkbox";
 import DropdownInput from "@/src/components/interest-form/dropdownInput";
 import EmailInput from "@/src/components/interest-form/emailInput";
 import FormHeader from "@/src/components/interest-form/header";
@@ -11,7 +12,7 @@ import {
   ShirtSize,
   updateUserData,
 } from "@/src/firebase/userData";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import "../../css/style.css";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
@@ -54,6 +55,11 @@ function Page(props: any) {
     major: "",
   });
 
+  // MLH Checkboxes
+  const [checkedMLHCode, setCheckedMLHCode] = useState(false);
+  const [checkedMLHPrivacy, setCheckedMLHPrivacy] = useState(false);
+  const [checkedMLHSendEmails, setCheckedMLHSendEmails] = useState(false);
+
   useEffect(() => {
     console.log("item value:" + JSON.stringify(props?.item));
     console.log("data value:" + JSON.stringify(data));
@@ -63,7 +69,7 @@ function Page(props: any) {
   }, [props.item, data]);
 
   const next = () => {
-    if (step < 7) {
+    if (step < 8) {
       setStep((prev) => prev + 1);
     }
   };
@@ -74,6 +80,13 @@ function Page(props: any) {
     }
   };
 
+  const handleCheckboxChange = (e: any, checkboxSetter: Dispatch<SetStateAction<boolean>>) => {
+    if (e.target.checked === undefined || e.target.checked === false) {
+      checkboxSetter(false);
+    } else {
+      checkboxSetter(true);
+    }
+  }
   // TODO: Validation of data is required
   const save = () => {
     let formattedIsUnderrepresented;
@@ -122,6 +135,9 @@ function Page(props: any) {
       highestEducationCompleted: highestEdu.level,
       shirtSize: shirtSize.shirtSize,
       studyMajor: fieldOfStudy,
+      acceptMLHCodeOfConduct: checkedMLHCode,
+      acceptMLHPrivacyPolicy: checkedMLHPrivacy,
+      acceptMLHEmails: checkedMLHSendEmails
     };
     console.log(inputtedData);
     updateUserData({ userData: inputtedData });
@@ -137,19 +153,19 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Mandatory Inputs' subheader='Subheader' />
                   <WordInput
-                    title='First Name'
+                    title='First Name*'
                     input={firstName}
                     setInput={setFirstName}
                     placeholder='First Name'
                   />
                   <WordInput
-                    title='Last Name'
+                    title='Last Name*'
                     input={lastName}
                     setInput={setLastName}
                     placeholder='Last Name'
                   />
                   <DropdownInput
-                    title={"Age"}
+                    title={"Age*"}
                     type={DropdownTypes.age}
                     value={age}
                     setValue={setAge}
@@ -159,13 +175,13 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Mandatory Inputs' subheader='Subheader' />
                   <PhoneInput
-                    title='Phone Number'
+                    title='Phone Number*'
                     phoneNumber={phoneNumber}
                     setPhoneNumber={setPhoneNumber}
                     placeholder='(###) ###-###'
                   />
                   <EmailInput
-                    title='Email'
+                    title='Email*'
                     email={email}
                     setEmail={setEmail}
                     placeholder='your@example.com'
@@ -175,19 +191,19 @@ function Page(props: any) {
                 <>
                   <FormHeader title='Mandatory Inputs' subheader='Subheader' />
                   <DropdownInput
-                    title={"School"}
+                    title={"School*"}
                     type={DropdownTypes.school}
                     value={school}
                     setValue={setSchool}
                   />
                   <DropdownInput
-                    title={"Level Of Study"}
+                    title={"Level Of Study*"}
                     type={DropdownTypes.levelOfStudy}
                     value={levelOfStudy}
                     setValue={setLevelOfStudy}
                   />
                   <DropdownInput
-                    title={"Country"}
+                    title={"Country*"}
                     type={DropdownTypes.country}
                     value={country}
                     setValue={setCountry}
@@ -251,7 +267,7 @@ function Page(props: any) {
                     setValue={setOrigInputEthnicity}
                   />
                   {origInputEthnicity.ethnicity ===
-                  "Prefer to self-describe" ? (
+                    "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Ethnicity'
                       input={ethnicity}
@@ -266,7 +282,7 @@ function Page(props: any) {
                     setValue={setOrigInputSexuality}
                   />
                   {origInputSexuality.sexuality ===
-                  "Prefer to self-describe" ? (
+                    "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Sexual Identity'
                       input={sexuality}
@@ -305,10 +321,75 @@ function Page(props: any) {
                     setValue={setShirtSize}
                   />
                 </>
+              ) : step === 8 ? (
+                // TODO: Style the checkboxes properly
+                <div>
+                  <FormHeader title='Major League Hacking Partnership Fields' subheader='Mandatory fields marked with an asterisk (*)' />
+                  <div className="flex align-items-center justify-content">
+                    <input
+                      type="checkbox"
+                      onChange={(e) => setCheckedMLHCode(e.target.checked)}
+                      checked={checkedMLHCode}
+                      className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                    />  
+                    <label htmlFor="mlh-codeofconduct">
+                      <p className="indent-1">
+                        I have read and agree to the {' '}
+                        <a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                          MLH Code of Conduct.
+                        </a>
+                        *
+                      </p>
+                    </label>
+                  </div>
+                  <div className="flex align-items-center">
+                    <input
+                      type="checkbox"
+                      onChange={(e) => setCheckedMLHPrivacy(e.target.checked)}
+                      checked={checkedMLHPrivacy}
+                      className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                    />
+                    <label>
+                      <p className="indent-1">
+                        I authorize you to share my application/registration information with Major League Hacking for event administration, 
+                        ranking, and MLH administration in-line with the {' '}
+                        <a href="https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md"
+                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                          MLH Privacy Policy.
+                        </a>
+                        {' '} I further agree to the terms of both the {' '}
+                        <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
+                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                            MLH Contest Terms and Conditions
+                        </a>
+                        {' '} and the {' '}
+                        <a href="https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md"
+                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                          MLH Privacy Policy.
+                        </a>
+                        *
+                      </p>
+                    </label>
+                  </div>
+                  <div className="flex align-items-center">
+                    <input
+                      type="checkbox"
+                      onChange={(e) => setCheckedMLHSendEmails(e.target.checked)}
+                      checked={checkedMLHSendEmails}
+                      className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                    />
+                    <label>
+                      <p className="indent-1">
+                        I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.
+                      </p>
+                    </label>
+                  </div>
+                </div>
               ) : null}
             </div>
             <div className='flex justify-between items-center'>
-              {step > 1 && step < 7 ? (
+              {step > 1 && step <= 8 ? (
                 <button
                   className='text-blue-700 border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => prev()}
@@ -318,14 +399,14 @@ function Page(props: any) {
               ) : (
                 <div></div>
               )}
-              {step < 7 ? (
+              {step < 8 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => next()}
                 >
                   Next
                 </button>
-              ) : step === 7 ? (
+              ) : step === 8 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => save()}
@@ -335,7 +416,7 @@ function Page(props: any) {
               ) : null}
             </div>
             <progress
-              value={step / 7}
+              value={step / 8}
               className='mt-20 h-1 w-full border-none rounded-lg [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-[#ffffff54] [&::-webkit-progress-value]:bg-white'
             />
           </div>

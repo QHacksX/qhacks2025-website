@@ -32,6 +32,9 @@ export type InterestFormData = {
   highestEducationCompleted?: string;
   shirtSize?: ShirtSize;
   studyMajor?: string;
+  acceptMLHCodeOfConduct: boolean;
+  acceptMLHPrivacyPolicy: boolean;
+  acceptMLHEmails: boolean;
 };
 
 export async function getUserData({}: {}) {
