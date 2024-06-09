@@ -27,6 +27,8 @@
 
 .text-shadow{text-shadow: #ffff00 1px 0 10px;animation: text-animate 60s linear infinite
 }
+.text-shadow-big{text-shadow: #ffff00 1px 0 100px;animation: text-animate-big 10s linear infinite
+}
 
 @keyframes text-animate {
 	0% {
@@ -49,6 +51,31 @@
     }
     100% {
 		text-shadow: #ffff00 1px 0 30px
+	}
+}
+
+
+@keyframes text-animate-big {
+	0% {
+		text-shadow: #ffff00 1px 5px 10px
+	}
+    30% {
+		text-shadow: #ffff00 1px 5px 10px
+	}
+	33% {
+		text-shadow: #ff0000 1px 5px 10px
+	}
+    63% {
+		text-shadow: #ff0000 1px 5px 10px
+	}
+	66% {
+		text-shadow: #0000ff 1px 5px 10px
+    }
+    97% {
+		text-shadow: #0000ff 1px 5px 10px
+    }
+    100% {
+		text-shadow: #ffff00 1px 5px 10px
 	}
 }
 
