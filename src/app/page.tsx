@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
+import Footer from "../components/shared/footer";
 import "@/src/css/style.css";
 
 import useDetectScroll, {
@@ -43,6 +44,8 @@ export default function Home() {
           <BsChevronDoubleUp size={100} />
         </a>
       </div>
+
+      <Footer />
     </main>
   );
 }

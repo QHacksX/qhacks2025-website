@@ -1,6 +1,5 @@
 "use client";
 
-import { Checkbox, CheckboxChangeEvent } from "primereact/checkbox";
 import DropdownInput from "@/src/components/interest-form/dropdownInput";
 import EmailInput from "@/src/components/interest-form/emailInput";
 import FormHeader from "@/src/components/interest-form/header";
@@ -13,7 +12,7 @@ import {
   ShirtSize,
   updateUserData,
 } from "@/src/firebase/userData";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../css/style.css";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
