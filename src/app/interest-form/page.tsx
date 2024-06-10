@@ -6,6 +6,7 @@ import EmailInput from "@/src/components/interest-form/emailInput";
 import FormHeader from "@/src/components/interest-form/header";
 import PhoneInput from "@/src/components/interest-form/phoneInput";
 import WordInput from "@/src/components/interest-form/wordInput";
+import { schema } from "./validate";
 import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import {
   InterestFormData,
@@ -22,43 +23,35 @@ function Page(props: any) {
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState({ age: -1 });
+  const [age, setAge] = useState(-1);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
-  const [school, setSchool] = useState({ school: "" });
-  const [levelOfStudy, setLevelOfStudy] = useState({ level: "" });
-  const [country, setCountry] = useState({ country: "" });
-  const [dietaryRestriction, setDietaryRestriction] = useState({
-    restriction: "",
-  });
-  const [isUnderrepresented, setIsUnderrepresented] = useState({
-    category: "",
-  });
+  const [school, setSchool] = useState("");
+  const [levelOfStudy, setLevelOfStudy] = useState("");
+  const [country, setCountry] = useState("");
+  const [dietaryRestriction, setDietaryRestriction] = useState("");
+  const [isUnderrepresented, setIsUnderrepresented] = useState("");
   const [gender, setGender] = useState("");
   const [pronoun, setPronoun] = useState("");
   const [ethnicity, setEthnicity] = useState("");
   const [sexuality, setSexuality] = useState("");
-  const [highestEdu, setHighestEdu] = useState({ level: "" });
-  const [shirtSize, setShirtSize] = useState({ shirtSize: ShirtSize.na });
+  const [highestEdu, setHighestEdu] = useState("");
+  const [shirtSize, setShirtSize] = useState(ShirtSize.na);
   const [fieldOfStudy, setFieldOfStudy] = useState("");
 
   // If "Other" in the original dropdown, allows user to input custom value
-  const [origInputGender, setOrigInputGender] = useState({ gender: "" });
-  const [origInputPronoun, setOrigInputPronoun] = useState({ pronoun: "" });
-  const [origInputEthnicity, setOrigInputEthnicity] = useState({
-    ethnicity: "",
-  });
-  const [origInputSexuality, setOrigInputSexuality] = useState({
-    sexuality: "",
-  });
-  const [origInputFieldOfStudy, setOrigInputFieldOfStudy] = useState({
-    major: "",
-  });
+  const [origInputGender, setOrigInputGender] = useState("");
+  const [origInputPronoun, setOrigInputPronoun] = useState("");
+  const [origInputEthnicity, setOrigInputEthnicity] = useState("");
+  const [origInputSexuality, setOrigInputSexuality] = useState("");
+  const [origInputFieldOfStudy, setOrigInputFieldOfStudy] = useState("");
 
   // MLH Checkboxes
   const [checkedMLHCode, setCheckedMLHCode] = useState(false);
   const [checkedMLHPrivacy, setCheckedMLHPrivacy] = useState(false);
   const [checkedMLHSendEmails, setCheckedMLHSendEmails] = useState(false);
+
+  const [errors, setErrors] = useState([])
 
   useEffect(() => {
     console.log("item value:" + JSON.stringify(props?.item));
@@ -75,65 +68,95 @@ function Page(props: any) {
   };
 
   const prev = () => {
+    setErrors([])
+
     if (step > 1) {
       setStep((prev) => prev - 1);
     }
   };
 
-  const handleCheckboxChange = (e: any, checkboxSetter: Dispatch<SetStateAction<boolean>>) => {
-    if (e.target.checked === undefined || e.target.checked === false) {
-      checkboxSetter(false);
-    } else {
-      checkboxSetter(true);
+  async function validateInputs() {
+    let inputs;
+    if (step === 1) {
+      inputs = {
+        firstName: firstName,
+        lastName: lastName,
+        age: age
+      }
+    } else if (step === 2) {
+      inputs = {
+        phoneNumber: phoneNumber,
+        email: email
+      }
+    } else if (step === 3) {
+      inputs = {
+        school: school,
+        levelOfStudy: levelOfStudy,
+        country: country
+      }
     }
+
+    let validForm = await schema[step - 1].isValid(inputs)
+    console.log(validForm)
+    try {
+      if (validForm) {
+        next()
+      } else {
+        await schema[step - 1].validate(inputs, { abortEarly: false })
+      }
+    } catch (err: any) {
+      setErrors(err.errors)
+    }
+    
   }
+
   // TODO: Validation of data is required
   const save = () => {
     let formattedIsUnderrepresented;
 
-    if (isUnderrepresented.category === "Yes") {
+    if (isUnderrepresented === "Yes") {
       formattedIsUnderrepresented = true;
-    } else if (isUnderrepresented.category === "No") {
+    } else if (isUnderrepresented === "No") {
       formattedIsUnderrepresented = false;
     }
 
-    if (origInputGender.gender !== "Prefer to self-describe") {
-      setGender(origInputGender.gender);
+    if (origInputGender !== "Prefer to self-describe") {
+      setGender(origInputGender);
     }
 
-    if (origInputPronoun.pronoun !== "Prefer to self-describe") {
-      setPronoun(origInputPronoun.pronoun);
+    if (origInputPronoun !== "Prefer to self-describe") {
+      setPronoun(origInputPronoun);
     }
 
-    if (origInputEthnicity.ethnicity !== "Prefer to self-describe") {
-      setEthnicity(origInputEthnicity.ethnicity);
+    if (origInputEthnicity !== "Prefer to self-describe") {
+      setEthnicity(origInputEthnicity);
     }
 
-    if (origInputSexuality.sexuality !== "Prefer to self-describe") {
-      setSexuality(origInputSexuality.sexuality);
+    if (origInputSexuality !== "Prefer to self-describe") {
+      setSexuality(origInputSexuality);
     }
 
-    if (origInputFieldOfStudy.major !== "Other (please specify)") {
-      setFieldOfStudy(origInputFieldOfStudy.major);
+    if (origInputFieldOfStudy !== "Other (please specify)") {
+      setFieldOfStudy(origInputFieldOfStudy);
     }
 
     const inputtedData: InterestFormData = {
       firstName: firstName,
       lastName: lastName,
-      age: age.age,
+      age: age,
       phoneNumber: phoneNumber,
       email: email,
-      school: school.school,
-      levelOfStudy: levelOfStudy.level,
-      country: country.country,
-      dietaryRestrictions: dietaryRestriction.restriction,
+      school: school,
+      levelOfStudy: levelOfStudy,
+      country: country,
+      dietaryRestrictions: dietaryRestriction,
       underrepresented: formattedIsUnderrepresented,
       gender: gender,
       pronouns: pronoun,
       ethnicity: ethnicity,
       sexualIdentity: sexuality,
-      highestEducationCompleted: highestEdu.level,
-      shirtSize: shirtSize.shirtSize,
+      highestEducationCompleted: highestEdu,
+      shirtSize: shirtSize,
       studyMajor: fieldOfStudy,
       acceptMLHCodeOfConduct: checkedMLHCode,
       acceptMLHPrivacyPolicy: checkedMLHPrivacy,
@@ -151,75 +174,83 @@ function Page(props: any) {
             <div className='grid gap-6 mb-8'>
               {step === 1 ? (
                 <>
-                  <FormHeader title='Mandatory Inputs' subheader='Subheader' />
+                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are mandatory' />
                   <WordInput
                     title='First Name*'
                     input={firstName}
                     setInput={setFirstName}
                     placeholder='First Name'
                   />
+                  {errors?.[0] && <div>{errors?.[0]}</div>}
                   <WordInput
                     title='Last Name*'
                     input={lastName}
                     setInput={setLastName}
                     placeholder='Last Name'
                   />
+                  {errors?.[1] && <div>{errors?.[1]}</div>}
                   <DropdownInput
                     title={"Age*"}
                     type={DropdownTypes.age}
                     value={age}
                     setValue={setAge}
                   />
+                  {errors?.[2] && <div>{errors?.[2]}</div>}
                 </>
               ) : step === 2 ? (
                 <>
-                  <FormHeader title='Mandatory Inputs' subheader='Subheader' />
+                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are mandatory' />
                   <PhoneInput
                     title='Phone Number*'
                     phoneNumber={phoneNumber}
                     setPhoneNumber={setPhoneNumber}
                     placeholder='(###) ###-###'
                   />
+                  {errors?.[0] && <div>{errors?.[0]}</div>}
                   <EmailInput
                     title='Email*'
                     email={email}
                     setEmail={setEmail}
                     placeholder='your@example.com'
                   />
+                  {errors?.[1] && <div>{errors?.[1]}</div>}
                 </>
               ) : step === 3 ? (
                 <>
-                  <FormHeader title='Mandatory Inputs' subheader='Subheader' />
+                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are mandatory' />
                   <DropdownInput
                     title={"School*"}
                     type={DropdownTypes.school}
                     value={school}
                     setValue={setSchool}
                   />
+                  {errors?.[0] && <div>{errors?.[0]}</div>}
                   <DropdownInput
                     title={"Level Of Study*"}
                     type={DropdownTypes.levelOfStudy}
                     value={levelOfStudy}
                     setValue={setLevelOfStudy}
                   />
+                  {errors?.[1] && <div>{errors?.[1]}</div>}
                   <DropdownInput
                     title={"Country*"}
                     type={DropdownTypes.country}
                     value={country}
                     setValue={setCountry}
                   />
+                  {errors?.[2] && <div>{errors?.[2]}</div>}
                 </>
               ) : step === 4 ? (
                 <>
-                  <FormHeader title='Optional Inputs' subheader='Subheader' />
+                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
                   <DropdownInput
-                    title={"Dietary Restrictions"}
+                    title={"Dietary Restrictions (optional)"}
                     type={DropdownTypes.dietaryRestriction}
                     value={dietaryRestriction}
                     setValue={setDietaryRestriction}
                   />
                   <DropdownInput
-                    title={"Underrepresented"}
+                    title={"Underrepresented (optional)"}
                     type={DropdownTypes.isUnderrepresented}
                     value={isUnderrepresented}
                     setValue={setIsUnderrepresented}
@@ -227,14 +258,14 @@ function Page(props: any) {
                 </>
               ) : step === 5 ? (
                 <>
-                  <FormHeader title='Optional Inputs' subheader='Subheader' />
+                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
                   <DropdownInput
-                    title={"Gender"}
+                    title={"Gender (optional)"}
                     type={DropdownTypes.gender}
                     value={origInputGender}
                     setValue={setOrigInputGender}
                   />
-                  {origInputGender.gender === "Prefer to self-describe" ? (
+                  {origInputGender === "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Gender'
                       input={gender}
@@ -243,12 +274,12 @@ function Page(props: any) {
                     />
                   ) : null}
                   <DropdownInput
-                    title={"Pronouns"}
+                    title={"Pronouns (optional)"}
                     type={DropdownTypes.pronouns}
                     value={origInputPronoun}
                     setValue={setOrigInputPronoun}
                   />
-                  {origInputPronoun.pronoun === "Prefer to self-describe" ? (
+                  {origInputPronoun === "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Pronoun(s)'
                       input={pronoun}
@@ -259,14 +290,14 @@ function Page(props: any) {
                 </>
               ) : step === 6 ? (
                 <>
-                  <FormHeader title='Optional Inputs' subheader='Subheader' />
+                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
                   <DropdownInput
-                    title={"Ethnicity"}
+                    title={"Ethnicity (optional)"}
                     type={DropdownTypes.ethnicity}
                     value={origInputEthnicity}
                     setValue={setOrigInputEthnicity}
                   />
-                  {origInputEthnicity.ethnicity ===
+                  {origInputEthnicity ===
                     "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Ethnicity'
@@ -276,12 +307,12 @@ function Page(props: any) {
                     />
                   ) : null}
                   <DropdownInput
-                    title={"Sexuality"}
+                    title={"Sexuality (optional)"}
                     type={DropdownTypes.sexuality}
                     value={origInputSexuality}
                     setValue={setOrigInputSexuality}
                   />
-                  {origInputSexuality.sexuality ===
+                  {origInputSexuality ===
                     "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Sexual Identity'
@@ -293,20 +324,20 @@ function Page(props: any) {
                 </>
               ) : step === 7 ? (
                 <>
-                  <FormHeader title='Optional Inputs' subheader='Subheader' />
+                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
                   <DropdownInput
-                    title={"Highest Level Of Education"}
+                    title={"Highest Level Of Education (optional)"}
                     type={DropdownTypes.highestEdu}
                     value={highestEdu}
                     setValue={setHighestEdu}
                   />
                   <DropdownInput
-                    title={"Field Of Study"}
+                    title={"Field Of Study (optional)"}
                     type={DropdownTypes.fieldOfStudy}
                     value={origInputFieldOfStudy}
                     setValue={setOrigInputFieldOfStudy}
                   />
-                  {origInputFieldOfStudy.major === "Other (please specify)" ? (
+                  {origInputFieldOfStudy === "Other (please specify)" ? (
                     <WordInput
                       title='Self-Describe Your Major'
                       input={fieldOfStudy}
@@ -315,7 +346,7 @@ function Page(props: any) {
                     />
                   ) : null}
                   <DropdownInput
-                    title={"Shirt Size"}
+                    title={"Shirt Size (optional)"}
                     type={DropdownTypes.shirtSize}
                     value={shirtSize}
                     setValue={setShirtSize}
@@ -402,7 +433,7 @@ function Page(props: any) {
               {step < 8 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-                  onClick={() => next()}
+                  onClick={() => validateInputs()}
                 >
                   Next
                 </button>

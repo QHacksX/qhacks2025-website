@@ -45,7 +45,7 @@ export default function DropdownInput({
       </label>
       <Dropdown
         value={value}
-        onChange={(e) => setValue(e.value)}
+        onChange={(e) => setValue(e.target.value)}
         options={dropdownConfig?.options}
         optionLabel={dropdownConfig?.label}
         placeholder={dropdownConfig?.placeholder}
