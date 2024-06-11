@@ -3,7 +3,6 @@ import React from "react";
 import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
 import EmailInput from "@/src/components/interest-form/emailInput";
-import "../../css/style.css";
 import { authErrors } from "@/src/firebase/utils";
 
 function Page() {
@@ -22,7 +21,7 @@ function Page() {
 
     // else successful
     console.log(result);
-    return router.push("/signin");
+    return router.back();
   };
 
   return (

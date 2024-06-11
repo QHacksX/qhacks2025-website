@@ -1,12 +1,38 @@
 import React from "react";
 import Wave from "react-wavify";
 import Image from "next/image";
-import mlhTrustBadge from "../../../public/mlh-trust-badge-2025-gray.png"
+import mlhTrustBadge from "../../../public/mlh-trust-badge-2025-gray.png";
+import Link from "next/link";
+import signOutUser from "@/src/firebase/auth/signout";
+import MobileNav from "./mobileNav";
 
-const InvertedWaveBackground = () => {
+const InvertedWaveBackground = ({
+  isSignedIn,
+  screenWidth,
+}: {
+  isSignedIn: boolean;
+  screenWidth: number;
+}) => {
   return (
-    <div className="absolute top-0 h-screen w-full">
-      <Image src={mlhTrustBadge} alt='Major League Hacking Trust Badge' className='absolute z-20 md:w-32 md:right-20 w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)]'/>
+    <div className='absolute top-0 h-screen w-full'>
+      {screenWidth > 700 ? <Link
+        href={isSignedIn ? "/" : "/signin"}
+        onClick={() => {
+          if (isSignedIn) {
+            signOutUser();
+          }
+        }}
+      >
+        <p className='hover:text-[#ffd24d] absolute z-20 font-bold text-2xl px-10 py-2 rounded-xl text-center top-6 bg-[#132f4c] drop-shadow-[0_5px_10px_rgb(255,255,255)] w-60 mr-auto ml-auto left-0 right-0'>
+          {isSignedIn ? "Sign Out" : "Sign In"}
+        </p>
+      </Link> : MobileNav(isSignedIn)}
+     
+      <Image
+        src={mlhTrustBadge}
+        alt='Major League Hacking Trust Badge'
+        className='absolute z-20 md:w-32 md:right-20 w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)]'
+      />
 
       {/* Red Wave*/}
       <div

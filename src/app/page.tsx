@@ -1,26 +1,35 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import Footer from "../components/shared/footer";
 import InvertedWaveBackground from "../components/shared/header";
-import "@/src/css/style.css";
+
+import Styles from "@/src/css/style.module.css";
 
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
-import { firebase_app } from "../firebase/config";
-import { getAuth } from "firebase/auth";
-import { useRouter } from "next/navigation";
 
-const auth = getAuth(firebase_app);
+import { useRouter } from "next/navigation";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase/config";
 
 export default function Home() {
   const router = useRouter();
+  const screenWidth = window.innerWidth;
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  onAuthStateChanged(auth, () => {
+    if (auth.currentUser) {
+      setIsSignedIn(true);
+    } else {
+      setIsSignedIn(false);
+    }
+  });
 
   const { scrollDir } = useDetectScroll();
 
   const handleOnClick = () => {
-    const userId = auth.currentUser?.uid;
-    if (!userId) {
+    if (!isSignedIn) {
       router.push("/signin");
     } else {
       router.push("/interest-form");
@@ -35,10 +44,14 @@ export default function Home() {
     }
   }, [scrollDir]);
   return (
-    <main className='overflow-hidden'>
-      <InvertedWaveBackground />
+    <main className='overflow-hidden min-h-screen'>
+      {/* TODO: account for resizing screen */}
+      <InvertedWaveBackground
+        isSignedIn={isSignedIn}
+        screenWidth={screenWidth}
+      />
       <div className='h-screen flex justify-center items-center flex-col'>
-        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed text-shadow-big'>
+        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed '>
           Get Ready <p className='text-3xl'>FOR</p> QHacks 2025!
         </h1>
         <a
@@ -66,7 +79,11 @@ export default function Home() {
           <p className='text-xl py-5'>
             Interested in joining? Click the button below to pre-register!
           </p>
-          <button onClick={handleOnClick} className='mt-3 shadow-[0_0_20px_1px_rgb(255,255,255)] bg-blue-900 py-3 rounded-lg border border-[#ffd24d] hover:text-[#ff4040] font-bold'>
+          <button
+            onClick={handleOnClick}
+            className='mt-3 shadow-[0_0_20px_1px_rgb(255,255,255)] bg-blue-900 py-3 rounded-lg border border-[#ffd24d] hover:text-[#ff4040] font-bold'
+          >
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             I'm Interested!
           </button>
         </div>

@@ -4,7 +4,6 @@ import {
   DropdownTypes,
   dropdownOptions,
 } from "@/src/data/dropdown-options/options";
-import "../../css/style.css";
 import React from "react";
 
 /**
