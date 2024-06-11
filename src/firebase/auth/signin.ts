@@ -1,6 +1,5 @@
-import { auth, firebase_app } from "../config";
-import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
-
+import { auth } from "../config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default async function signIn({
   email,
@@ -10,7 +9,7 @@ export default async function signIn({
   password: string;
 }) {
   let result = null;
-  let error = null;
+  let error: { code?: string; message?: string } | unknown = {};
   try {
     result = await signInWithEmailAndPassword(auth, email, password);
   } catch (e) {

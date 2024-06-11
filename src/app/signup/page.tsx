@@ -4,6 +4,7 @@ import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
 import EmailInput from "@/src/components/interest-form/emailInput";
 import Styles from "@/src/css/style.module.css";
+import { getAuthErrorMessage } from "@/src/firebase/utils";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -15,13 +16,12 @@ function Page() {
     const { result, error } = await signUp({ email, password });
 
     if (error) {
-      // TODO: setup error handling. error.code will give string like: 'auth/errorCode'. The part after auth/ (ie. errorCode) can be used to index authErrors in firebase/utils to get a user facing description
-      return console.log(error);
+      setErrorMessage(getAuthErrorMessage(error.code));
+    } else {
+      // else successful
+      console.log(result);
+      return router.back();
     }
-
-    // else successful
-    console.log(result);
-    return router.back();
   };
 
   return (
@@ -63,7 +63,11 @@ function Page() {
             Sign Up
           </button>
 
-          {errorMessage && <div>{errorMessage}</div>}
+          {errorMessage && (
+            <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-3 mt-3 text-center dark:bg-red-500 dark:focus:ring-red-800'>
+              {errorMessage}
+            </p>
+          )}
         </div>
       </main>
     </div>
