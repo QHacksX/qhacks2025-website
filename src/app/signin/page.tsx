@@ -4,7 +4,6 @@ import "./signin.css";
 import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
 import EmailInput from "@/src/components/interest-form/emailInput";
-import"../../css/style.css"
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -23,7 +22,7 @@ function Page() {
 
     // else successful
     console.log(result);
-    return router.push("/");
+    return router.back()
   };
 
   return (
@@ -65,6 +64,7 @@ function Page() {
 
             {/* TODO: Style this, fix error/warning */}
           <div className="flex justify-center  text-white pb-2 text-sm font-thin mb-10 text-shadow">
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <a className="mx-1 underline" href="/signup">Don't have an account? Click here to sign up!</a>
           </div>
 

@@ -40,6 +40,7 @@ export default function Footer(){
           
           {/* SITE INFO */}
           <div className='flex justify-center items-center pb-2 text-xs xs:text-sm text-white'>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <p className='px-2 lg:px-[2%] text-center'>Queen's University</p>
             <p className='px-2 lg:px-[2%] text-center'>99 University Ave, Kingston ON</p>
             <p className='px-2 lg:px-[2%] text-center'>Copyright © 2024 QHACKS</p>

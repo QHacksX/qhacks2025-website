@@ -13,7 +13,6 @@ import {
   updateUserData,
 } from "@/src/firebase/userData";
 import { useEffect, useState } from "react";
-import "../../css/style.css";
 import React from "react";
 import { IoIosClose } from "react-icons/io";
 import Link from "next/link";

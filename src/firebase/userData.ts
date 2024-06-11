@@ -1,8 +1,6 @@
-import { db, firebase_app } from "./config";
+import { auth, db, firebase_app } from "./config";
 import { getAuth } from "firebase/auth";
 import { doc, setDoc, collection, addDoc } from "firebase/firestore";
-
-const auth = getAuth(firebase_app);
 
 export enum ShirtSize {
   na = "not chosen",
