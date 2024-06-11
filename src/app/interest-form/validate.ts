@@ -16,5 +16,9 @@ export const schema = [
         school: yup.string().required("School is required"),
         levelOfStudy: yup.string().required("Level of study is required"),
         country: yup.string().required("Country of residence is required")
+    }),
+    yup.object().shape({
+        checkedMLHCode: yup.bool().oneOf([true], "Must accept MLH Code of Conduct"),
+        checkedMLHPrivacy: yup.bool().oneOf([true], "Must accept MLH Contest and Privacy Policies")
     })
 ]

@@ -17,7 +17,7 @@ import "../../css/style.css";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(7);
   const [data, setData] = useState();
 
   const [firstName, setFirstName] = useState("");
@@ -61,7 +61,7 @@ function Page(props: any) {
   }, [props.item, data]);
 
   const next = () => {
-    if (step < 8) {
+    if (step < 9) {
       setStep((prev) => prev + 1);
     }
   };
@@ -76,37 +76,55 @@ function Page(props: any) {
 
   async function validateInputs() {
     let inputs;
-    if (step === 1) {
-      inputs = {
-        firstName: firstName,
-        lastName: lastName,
-        age: age
-      }
-    } else if (step === 2) {
-      inputs = {
-        phoneNumber: phoneNumber,
-        email: email
-      }
-    } else if (step === 3) {
-      inputs = {
-        school: school,
-        levelOfStudy: levelOfStudy,
-        country: country
-      }
-    }
 
-    let validForm = await schema[step - 1].isValid(inputs)
-    console.log(validForm)
-    try {
-      if (validForm) {
-        next()
-      } else {
-        await schema[step - 1].validate(inputs, { abortEarly: false })
+    // Only validate on pages 1, 2, 3, 8 (see else-if for 8)
+    if (step < 4) {
+      if (step === 1) {
+        inputs = {
+          firstName: firstName,
+          lastName: lastName,
+          age: age === -1 ? null : age
+        }
+      } else if (step === 2) {
+        inputs = {
+          phoneNumber: phoneNumber,
+          email: email
+        }
+      } else if (step === 3) {
+        inputs = {
+          school: school,
+          levelOfStudy: levelOfStudy,
+          country: country
+        }
       }
-    } catch (err: any) {
-      setErrors(err.errors)
+
+      awaitValidation(inputs, step - 1);
+    } else if (step === 8) {
+      inputs = {
+        checkedMLHCode: checkedMLHCode,
+        checkedMLHPrivacy: checkedMLHPrivacy
+      }
+
+      // Index 3 since that is the last index in the validation schema
+      awaitValidation(inputs, 3);
+    } else if (step >= 4 && step < 8) {
+      // No need to validate
+      next()
     }
-    
+  }
+
+  async function awaitValidation(inputs: any, arrayIndex: number) {
+    let validForm = await schema[arrayIndex].isValid(inputs)
+      console.log(validForm)
+      try {
+        if (validForm) {
+          next()
+        } else {
+          await schema[arrayIndex].validate(inputs, { abortEarly: false })
+        }
+      } catch (err: any) {
+        setErrors(err.errors)
+      }
   }
 
   // TODO: Validation of data is required
@@ -372,6 +390,7 @@ function Page(props: any) {
                         *
                       </p>
                     </label>
+                    {errors?.[0] && <div>{errors?.[0]}</div>}
                   </div>
                   <div className="flex align-items-center">
                     <input
@@ -401,6 +420,7 @@ function Page(props: any) {
                         *
                       </p>
                     </label>
+                    {errors?.[1] && <div>{errors?.[1]}</div>}
                   </div>
                   <div className="flex align-items-center">
                     <input
@@ -416,10 +436,12 @@ function Page(props: any) {
                     </label>
                   </div>
                 </div>
+              ) : step === 9 ? (
+                <FormHeader title="Submit QHacks 2025 Interest Form" subheader="Press the finish button to submit, or press back to make changes" />
               ) : null}
             </div>
             <div className='flex justify-between items-center'>
-              {step > 1 && step <= 8 ? (
+              {step > 1 && step <= 9 ? (
                 <button
                   className='text-blue-700 border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => prev()}
@@ -429,14 +451,14 @@ function Page(props: any) {
               ) : (
                 <div></div>
               )}
-              {step < 8 ? (
+              {step < 9 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => validateInputs()}
                 >
                   Next
                 </button>
-              ) : step === 8 ? (
+              ) : step === 9 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => save()}
@@ -446,7 +468,7 @@ function Page(props: any) {
               ) : null}
             </div>
             <progress
-              value={step / 8}
+              value={step / 9}
               className='mt-20 h-1 w-full border-none rounded-lg [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-[#ffffff54] [&::-webkit-progress-value]:bg-white'
             />
           </div>

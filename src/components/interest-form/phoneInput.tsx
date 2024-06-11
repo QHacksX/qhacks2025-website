@@ -39,8 +39,8 @@ export default function PhoneInput({
       <input
         type='phone'
         id='phone'
-        pattern='([0-9]{3}) [0-9]{3}-[0-9]{4}'
         className='bg-gray-50 border-b border-gray-300 text-gray-900 text-sm font-thin  block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  bg-transparent focus:ring-0 focus:outline-none'        placeholder={placeholder}
+        value={phoneFormat(phoneNumber)}
         onChange={(e) => setPhoneNumber(e.target.value)}
       />
     </div>
