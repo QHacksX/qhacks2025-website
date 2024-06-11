@@ -20,20 +20,20 @@ import "./styles.css";
 import Styles from "@/src/css/style.module.css";
 import { error } from "console";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "@/src/firebase/config";
+// import { auth } from "@/src/firebase/config";
 import { useRouter } from "next/navigation";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
   const router = useRouter();
 
-  useEffect(() => {
-    if (auth.currentUser === null) {
-      router.push("signin");
-    }
-  }, [router]);
+  // useEffect(() => {
+  //   if (auth.currentUser === null) {
+  //     router.push("signin");
+  //   }
+  // }, [router]);
 
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(8);
   const [data, setData] = useState();
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -477,7 +477,7 @@ function Page(props: any) {
                     title='Major League Hacking Partnership Fields'
                     subheader='Mandatory fields marked with an asterisk (*)'
                   />
-                  <div className='flex align-items-center justify-content'>
+                  <div className='flex items-start justify-content pt-8'>
                     <input
                       type='checkbox'
                       onChange={(e) => setCheckedMLHCode(e.target.checked)}
@@ -500,7 +500,7 @@ function Page(props: any) {
 
                   {error1 !== "" ? showValidationError(error1) : null}
 
-                  <div className='flex align-items-center'>
+                  <div className='flex items-start justify-content pt-8'>
                     <input
                       type='checkbox'
                       onChange={(e) => setCheckedMLHPrivacy(e.target.checked)}
@@ -540,7 +540,7 @@ function Page(props: any) {
 
                   {error2 !== "" ? showValidationError(error2) : null}
 
-                  <div className='flex align-items-center'>
+                  <div className='flex items-start justify-content pt-8'>
                     <input
                       type='checkbox'
                       onChange={(e) =>
