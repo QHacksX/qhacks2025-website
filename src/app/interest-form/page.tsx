@@ -15,10 +15,12 @@ import {
 import { useEffect, useState } from "react";
 import "../../css/style.css";
 import React from "react";
+import { IoIosClose } from "react-icons/io";
+import Link from "next/link";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
-  const [step, setStep] = useState(7);
+  const [step, setStep] = useState(1);
   const [data, setData] = useState();
 
   const [firstName, setFirstName] = useState("");
@@ -114,48 +116,48 @@ function Page(props: any) {
         inputs = {
           firstName: firstName,
           lastName: lastName,
-          age: age === -1 ? null : age
-        }
+          age: age === -1 ? null : age,
+        };
       } else if (step === 2) {
         inputs = {
           phoneNumber: phoneNumber,
-          email: email
-        }
+          email: email,
+        };
       } else if (step === 3) {
         inputs = {
           school: school,
           levelOfStudy: levelOfStudy,
-          country: country
-        }
+          country: country,
+        };
       }
 
       awaitValidation(inputs, step - 1);
     } else if (step === 8) {
       inputs = {
         checkedMLHCode: checkedMLHCode,
-        checkedMLHPrivacy: checkedMLHPrivacy
-      }
+        checkedMLHPrivacy: checkedMLHPrivacy,
+      };
 
       // Index 3 since that is the last index in the validation schema
       awaitValidation(inputs, 3);
     } else if (step >= 4 && step < 8) {
       // No need to validate
-      next()
+      next();
     }
   }
 
   async function awaitValidation(inputs: any, arrayIndex: number) {
-    let validForm = await schema[arrayIndex].isValid(inputs)
-      console.log(validForm)
-      try {
-        if (validForm) {
-          next()
-        } else {
-          await schema[arrayIndex].validate(inputs, { abortEarly: false })
-        }
-      } catch (err: any) {
-        setErrors(err.errors)
+    let validForm = await schema[arrayIndex].isValid(inputs);
+    console.log(validForm);
+    try {
+      if (validForm) {
+        next();
+      } else {
+        await schema[arrayIndex].validate(inputs, { abortEarly: false });
       }
+    } catch (err: any) {
+      setErrors(err.errors);
+    }
   }
 
   // TODO: Validation of data is required
@@ -208,7 +210,7 @@ function Page(props: any) {
       studyMajor: fieldOfStudy,
       acceptMLHCodeOfConduct: checkedMLHCode,
       acceptMLHPrivacyPolicy: checkedMLHPrivacy,
-      acceptMLHEmails: checkedMLHSendEmails
+      acceptMLHEmails: checkedMLHSendEmails,
     };
     console.log(inputtedData);
     updateUserData({ userData: inputtedData });
@@ -216,13 +218,20 @@ function Page(props: any) {
 
   return (
     <div className='flex h-screen shadow'>
+      <Link href='/' className="p-5 absolute">
+        <IoIosClose size={50}/>
+      </Link>
+
       <div className='flex-1 h-full justify-center align-middle content-center'>
         <main className='p-4 pb-8  place-content-center flex justify-center w-full'>
           <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
             <div className='grid gap-6 mb-8'>
               {step === 1 ? (
                 <>
-                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are mandatory' />
+                  <FormHeader
+                    title='QHacks 2025 Interest Form'
+                    subheader='All inputs on this page are mandatory'
+                  />
                   <WordInput
                     title='First Name*'
                     input={firstName}
@@ -252,7 +261,10 @@ function Page(props: any) {
                 </>
               ) : step === 2 ? (
                 <>
-                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are mandatory' />
+                  <FormHeader
+                    title='QHacks 2025 Interest Form'
+                    subheader='All inputs on this page are mandatory'
+                  />
                   <PhoneInput
                     title='Phone Number*'
                     phoneNumber={phoneNumber}
@@ -273,7 +285,10 @@ function Page(props: any) {
                 </>
               ) : step === 3 ? (
                 <>
-                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are mandatory' />
+                  <FormHeader
+                    title='QHacks 2025 Interest Form'
+                    subheader='All inputs on this page are mandatory'
+                  />
                   <DropdownInput
                     title={"School*"}
                     type={DropdownTypes.school}
@@ -303,7 +318,10 @@ function Page(props: any) {
                 </>
               ) : step === 4 ? (
                 <>
-                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
+                  <FormHeader
+                    title='QHacks 2025 Interest Form'
+                    subheader='All inputs on this page are optional'
+                  />
                   <DropdownInput
                     title={"Dietary Restrictions (optional)"}
                     type={DropdownTypes.dietaryRestriction}
@@ -319,7 +337,10 @@ function Page(props: any) {
                 </>
               ) : step === 5 ? (
                 <>
-                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
+                  <FormHeader
+                    title='QHacks 2025 Interest Form'
+                    subheader='All inputs on this page are optional'
+                  />
                   <DropdownInput
                     title={"Gender (optional)"}
                     type={DropdownTypes.gender}
@@ -351,15 +372,17 @@ function Page(props: any) {
                 </>
               ) : step === 6 ? (
                 <>
-                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
+                  <FormHeader
+                    title='QHacks 2025 Interest Form'
+                    subheader='All inputs on this page are optional'
+                  />
                   <DropdownInput
                     title={"Ethnicity (optional)"}
                     type={DropdownTypes.ethnicity}
                     value={origInputEthnicity}
                     setValue={setOrigInputEthnicity}
                   />
-                  {origInputEthnicity ===
-                    "Prefer to self-describe" ? (
+                  {origInputEthnicity === "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Ethnicity'
                       input={ethnicity}
@@ -373,8 +396,7 @@ function Page(props: any) {
                     value={origInputSexuality}
                     setValue={setOrigInputSexuality}
                   />
-                  {origInputSexuality ===
-                    "Prefer to self-describe" ? (
+                  {origInputSexuality === "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Sexual Identity'
                       input={sexuality}
@@ -385,7 +407,10 @@ function Page(props: any) {
                 </>
               ) : step === 7 ? (
                 <>
-                  <FormHeader title='QHacks 2025 Interest Form' subheader='All inputs on this page are optional' />
+                  <FormHeader
+                    title='QHacks 2025 Interest Form'
+                    subheader='All inputs on this page are optional'
+                  />
                   <DropdownInput
                     title={"Highest Level Of Education (optional)"}
                     type={DropdownTypes.highestEdu}
@@ -416,19 +441,24 @@ function Page(props: any) {
               ) : step === 8 ? (
                 // TODO: Style the checkboxes properly
                 <div>
-                  <FormHeader title='Major League Hacking Partnership Fields' subheader='Mandatory fields marked with an asterisk (*)' />
-                  <div className="flex align-items-center justify-content">
+                  <FormHeader
+                    title='Major League Hacking Partnership Fields'
+                    subheader='Mandatory fields marked with an asterisk (*)'
+                  />
+                  <div className='flex align-items-center justify-content'>
                     <input
-                      type="checkbox"
+                      type='checkbox'
                       onChange={(e) => setCheckedMLHCode(e.target.checked)}
                       checked={checkedMLHCode}
-                      className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                    />  
-                    <label htmlFor="mlh-codeofconduct">
-                      <p className="indent-1">
-                        I have read and agree to the {' '}
-                        <a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
-                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                      className='shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
+                    />
+                    <label htmlFor='mlh-codeofconduct'>
+                      <p className='indent-1'>
+                        I have read and agree to the{" "}
+                        <a
+                          href='https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md'
+                          className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                        >
                           MLH Code of Conduct.
                         </a>
                         *
@@ -440,27 +470,35 @@ function Page(props: any) {
 
                   <div className="flex align-items-center">
                     <input
-                      type="checkbox"
+                      type='checkbox'
                       onChange={(e) => setCheckedMLHPrivacy(e.target.checked)}
                       checked={checkedMLHPrivacy}
-                      className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                      className='shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
                     <label>
-                      <p className="indent-1">
-                        I authorize you to share my application/registration information with Major League Hacking for event administration, 
-                        ranking, and MLH administration in-line with the {' '}
-                        <a href="https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md"
-                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                      <p className='indent-1'>
+                        I authorize you to share my application/registration
+                        information with Major League Hacking for event
+                        administration, ranking, and MLH administration in-line
+                        with the{" "}
+                        <a
+                          href='https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md'
+                          className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                        >
                           MLH Privacy Policy.
-                        </a>
-                        {' '} I further agree to the terms of both the {' '}
-                        <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
-                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
-                            MLH Contest Terms and Conditions
-                        </a>
-                        {' '} and the {' '}
-                        <a href="https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md"
-                          className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                        </a>{" "}
+                        I further agree to the terms of both the{" "}
+                        <a
+                          href='https://github.com/MLH/mlh-policies/blob/main/contest-terms.md'
+                          className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                        >
+                          MLH Contest Terms and Conditions
+                        </a>{" "}
+                        and the{" "}
+                        <a
+                          href='https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md'
+                          className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                        >
                           MLH Privacy Policy.
                         </a>
                         *
@@ -472,20 +510,27 @@ function Page(props: any) {
 
                   <div className="flex align-items-center">
                     <input
-                      type="checkbox"
-                      onChange={(e) => setCheckedMLHSendEmails(e.target.checked)}
+                      type='checkbox'
+                      onChange={(e) =>
+                        setCheckedMLHSendEmails(e.target.checked)
+                      }
                       checked={checkedMLHSendEmails}
-                      className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                      className='shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
                     <label>
-                      <p className="indent-1">
-                        I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.
+                      <p className='indent-1'>
+                        I authorize MLH to send me occasional emails about
+                        relevant events, career opportunities, and community
+                        announcements.
                       </p>
                     </label>
                   </div>
                 </div>
               ) : step === 9 ? (
-                <FormHeader title="Submit QHacks 2025 Interest Form" subheader="Press the finish button to submit, or press back to make changes" />
+                <FormHeader
+                  title='Submit QHacks 2025 Interest Form'
+                  subheader='Press the finish button to submit, or press back to make changes'
+                />
               ) : null}
             </div>
             <div className='flex justify-between items-center'>

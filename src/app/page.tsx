@@ -7,9 +7,25 @@ import "@/src/css/style.css";
 
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
+import { firebase_app } from "../firebase/config";
+import { getAuth } from "firebase/auth";
+import { useRouter } from "next/navigation";
+
+const auth = getAuth(firebase_app);
 
 export default function Home() {
+  const router = useRouter();
+
   const { scrollDir } = useDetectScroll();
+
+  const handleOnClick = () => {
+    const userId = auth.currentUser?.uid;
+    if (!userId) {
+      router.push("/signin");
+    } else {
+      router.push("/interest-form");
+    }
+  };
 
   useEffect(() => {
     if (scrollDir === Direction.Down)
@@ -43,6 +59,17 @@ export default function Home() {
         >
           <BsChevronDoubleUp size={100} />
         </a>
+        <div className='md:w-1/3 text-center flex justify-center flex-col px-3'>
+          <h1 className='text-center text-4xl font-bold leading-relaxed text-shadow-big '>
+            Come Join Us!
+          </h1>
+          <p className='text-xl py-5'>
+            Interested in joining? Click the button below to pre-register!
+          </p>
+          <button onClick={handleOnClick} className='mt-3 shadow-[0_0_20px_1px_rgb(255,255,255)] bg-blue-900 py-3 rounded-lg border border-[#ffd24d] hover:text-[#ff4040] font-bold'>
+            I'm Interested!
+          </button>
+        </div>
         <div className='justify-self-end w-full'>
           <Footer />
         </div>
