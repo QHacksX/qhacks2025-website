@@ -8,6 +8,7 @@ import useDetectScroll, {
   Axis,
   Direction,
 } from "@smakss/react-scroll-direction";
+import React from "react";
 
 export default function Home() {
   const { scrollDir } = useDetectScroll();
@@ -34,18 +35,19 @@ export default function Home() {
           <BsChevronDoubleDown size={100} className='justify-self-end' />
         </a>
       </div>
-      <div className='h-screen flex justify-center items-start'>
+      <div className='h-screen flex justify-between items-center w-screen flex-col'>
         <a
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className='top-10 relative'
+          className='top-10 relative justify-self-start'
         >
           <BsChevronDoubleUp size={100} />
         </a>
+        <div className="justify-self-end w-full">
+          <Footer />
+        </div>
       </div>
-
-      <Footer />
     </main>
   );
 }

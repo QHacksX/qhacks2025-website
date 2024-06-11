@@ -14,6 +14,7 @@ import {
 } from "@/src/firebase/userData";
 import { useEffect, useState } from "react";
 import "../../css/style.css";
+import React from "react";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
