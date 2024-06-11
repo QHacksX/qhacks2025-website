@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-const phoneRegex = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const phoneRegex = /^(\([0-9]{3}\)\s?|[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
 
 export enum ValidationErrors {
     FIRST_NAME_ERROR = "First Name is Required",

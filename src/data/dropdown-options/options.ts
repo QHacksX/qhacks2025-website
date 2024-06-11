@@ -67,6 +67,7 @@ const dietaryRestrictions = [
   { value: "Allergies" },
   { value: "Kosher" },
   { value: "Halal" },
+  { value: "None" },
 ];
 
 const underrepresented = [
