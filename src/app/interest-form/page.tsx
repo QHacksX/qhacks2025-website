@@ -33,7 +33,7 @@ function Page(props: any) {
     }
   }, [router]);
 
-  const [step, setStep] = useState(8);
+  const [step, setStep] = useState(1);
   const [data, setData] = useState();
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
