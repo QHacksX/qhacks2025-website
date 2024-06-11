@@ -1,13 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import Footer from "../components/shared/footer";
+import InvertedWaveBackground from "../components/shared/header";
 import "@/src/css/style.css";
 
-import useDetectScroll, {
-  Axis,
-  Direction,
-} from "@smakss/react-scroll-direction";
+import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
 
 export default function Home() {
@@ -22,6 +20,7 @@ export default function Home() {
   }, [scrollDir]);
   return (
     <main className='overflow-hidden'>
+      <InvertedWaveBackground />
       <div className='h-screen flex justify-center items-center flex-col'>
         <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed text-shadow-big'>
           Get Ready <p className='text-3xl'>FOR</p> QHacks 2025!
@@ -44,7 +43,7 @@ export default function Home() {
         >
           <BsChevronDoubleUp size={100} />
         </a>
-        <div className="justify-self-end w-full">
+        <div className='justify-self-end w-full'>
           <Footer />
         </div>
       </div>
