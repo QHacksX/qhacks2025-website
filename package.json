@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@smakss/react-scroll-direction": "^4.1.0",
+    "fast-csv": "^5.0.1",
     "firebase": "^10.12.2",
+    "firebase-admin": "^12.1.1",
     "framer-motion": "^11.2.10",
     "next": "14.2.3",
     "primereact": "^10.6.6",
