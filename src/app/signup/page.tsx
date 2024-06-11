@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import EmailInput from "@/src/components/interest-form/emailInput";
 import Styles from "@/src/css/style.module.css";
 import { getAuthErrorMessage } from "@/src/firebase/utils";
+import Link from "next/link";
+import { IoIosClose } from "react-icons/io";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -15,7 +17,7 @@ function Page() {
   const handleForm = async () => {
     const { result, error } = await signUp({ email, password });
 
-    if (error) {
+    if (error.code) {
       setErrorMessage(getAuthErrorMessage(error.code));
     } else {
       // else successful
@@ -26,6 +28,9 @@ function Page() {
 
   return (
     <div className='flex h-screen w-screen justify-center'>
+      <Link href='/' className='p-5 absolute left-0'>
+        <IoIosClose size={50} />
+      </Link>
       <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
         <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
           <div

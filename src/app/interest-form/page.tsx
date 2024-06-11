@@ -19,9 +19,20 @@ import Link from "next/link";
 import "./styles.css";
 import Styles from "@/src/css/style.module.css";
 import { error } from "console";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "@/src/firebase/config";
+import { useRouter } from "next/navigation";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (auth.currentUser === null) {
+      router.push("signin");
+    }
+  }, [router]);
+
   const [step, setStep] = useState(1);
   const [data, setData] = useState();
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
