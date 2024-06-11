@@ -81,22 +81,6 @@
 
 
 
-.p-dropdown-filter	{
-	background-color: gray;
-	color: '#ff0000';
-	border-top-right-radius: 20px;
-	border-top-left-radius: 20px;	padding: 10px;
-	padding-left: 30px;
-}
 
-
-.p-dropdown-items-wrapper{
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
-
-.p-dropdown-label{
-	padding-right: 20px;
-}
 
 

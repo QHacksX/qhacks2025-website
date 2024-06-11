@@ -22,7 +22,7 @@ export type InterestFormData = {
   levelOfStudy: string;
   country: string;
   dietaryRestrictions?: string;
-  underrepresented?: boolean;
+  underrepresented?: boolean | null;
   gender?: string;
   pronouns?: string;
   ethnicity?: string;
@@ -55,17 +55,13 @@ export async function updateUserData({
 }) {
   const userId = auth.currentUser?.uid;
   if (!userId) {
-    console.log("no id");
-    // TODO: Return {error, data}. If error, display error message on FE on sign up.
-    // Eg. {error: "User not found", data: undefined}
-    return;
+    return "User not found. Sign in and try again.";
   }
 
   try {
-    console.log(await setDoc(doc(db, "users", userId), userData));
-    console.log("success");
+    await setDoc(doc(db, "users", userId), userData);
   } catch (e) {
-    console.log("error");
     console.log(e);
+    return "Something went wrong. Please try again";
   }
 }

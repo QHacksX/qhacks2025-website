@@ -4,6 +4,7 @@ import "./signin.css";
 import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
 import EmailInput from "@/src/components/interest-form/emailInput";
+import Styles from "@/src/css/style.module.css";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -22,14 +23,16 @@ function Page() {
 
     // else successful
     console.log(result);
-    return router.back()
+    return router.back();
   };
 
   return (
     <div className='flex h-screen w-screen justify-center'>
       <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
         <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
-          <div className='flex justify-center  text-white pb-2 text-4xl font-thin mb-10 text-shadow'>
+          <div
+            className={`flex justify-center  text-white pb-2 text-4xl font-thin mb-10 ${Styles["text-shadow"]}`}
+          >
             Sign In
           </div>
           <EmailInput
@@ -62,10 +65,14 @@ function Page() {
             Sign In
           </button>
 
-            {/* TODO: Style this, fix error/warning */}
-          <div className="flex justify-center  text-white pb-2 text-sm font-thin mb-10 text-shadow">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <a className="mx-1 underline" href="/signup">Don't have an account? Click here to sign up!</a>
+          {/* TODO: Style this, fix error/warning */}
+          <div
+            className={`flex justify-center  text-white pb-2 text-sm font-thin mb-10 ${Styles["text-shadow"]}`}
+          >
+            <a className='mx-1 underline' href='/signup'>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              Don't have an account? Click here to sign up!
+            </a>
           </div>
 
           {errorMessage && <div>{errorMessage}</div>}

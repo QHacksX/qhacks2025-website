@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Styles from "@/src/css/style.module.css";
 
 export default function FormHeader({
   title,
@@ -8,7 +9,7 @@ export default function FormHeader({
   subheader: string;
 }) {
   return (
-    <div className=' text-shadow'>
+    <div className={`${Styles["text-shadow"]}`}>
       <div className='flex justify-center  text-white pb-2 text-4xl font-thin'>
         {title}
       </div>

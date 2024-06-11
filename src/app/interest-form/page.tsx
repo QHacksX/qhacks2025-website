@@ -16,11 +16,15 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { IoIosClose } from "react-icons/io";
 import Link from "next/link";
+import "./styles.css";
+import Styles from "@/src/css/style.module.css";
+import { error } from "console";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState();
+  const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -31,7 +35,7 @@ function Page(props: any) {
   const [levelOfStudy, setLevelOfStudy] = useState("");
   const [country, setCountry] = useState("");
   const [dietaryRestriction, setDietaryRestriction] = useState("");
-  const [isUnderrepresented, setIsUnderrepresented] = useState("");
+  const [isUnderrepresented, setIsUnderrepresented] = useState(null);
   const [gender, setGender] = useState("");
   const [pronoun, setPronoun] = useState("");
   const [ethnicity, setEthnicity] = useState("");
@@ -52,7 +56,7 @@ function Page(props: any) {
   const [checkedMLHPrivacy, setCheckedMLHPrivacy] = useState(false);
   const [checkedMLHSendEmails, setCheckedMLHSendEmails] = useState(false);
 
-  const [errors, setErrors] = useState([""])
+  const [errors, setErrors] = useState([""]);
   const [error1, setError1] = useState("");
   const [error2, setError2] = useState("");
   const [error3, setError3] = useState("");
@@ -62,35 +66,48 @@ function Page(props: any) {
     let secondError;
     let thirdError;
 
-    firstError = errors.includes(ValidationErrors.FIRST_NAME_ERROR) ? ValidationErrors.FIRST_NAME_ERROR : 
-                  errors.includes(ValidationErrors.PHONE_NUMBER_ERROR) ? ValidationErrors.PHONE_NUMBER_ERROR :
-                  errors.includes(ValidationErrors.SCHOOL_ERROR) ? ValidationErrors.COUNTRY_ERROR : 
-                  errors.includes(ValidationErrors.MLH_CODE_ERROR) ? ValidationErrors.MLH_CODE_ERROR : "";
+    firstError = errors.includes(ValidationErrors.FIRST_NAME_ERROR)
+      ? ValidationErrors.FIRST_NAME_ERROR
+      : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
+      ? ValidationErrors.PHONE_NUMBER_ERROR
+      : errors.includes(ValidationErrors.SCHOOL_ERROR)
+      ? ValidationErrors.COUNTRY_ERROR
+      : errors.includes(ValidationErrors.MLH_CODE_ERROR)
+      ? ValidationErrors.MLH_CODE_ERROR
+      : "";
 
-    secondError = errors.includes(ValidationErrors.LAST_NAME_ERROR) ? ValidationErrors.LAST_NAME_ERROR :
-                  errors.includes(ValidationErrors.EMAIL_ERROR) ? ValidationErrors.EMAIL_ERROR :
-                  errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR) ? ValidationErrors.LEVEL_OF_STUDY_ERROR : 
-                  errors.includes(ValidationErrors.MLH_PRIVACY_ERROR) ? ValidationErrors.MLH_PRIVACY_ERROR : "";
-                  
-    thirdError = errors.includes(ValidationErrors.AGE_ERROR) ? ValidationErrors.AGE_ERROR :
-                  errors.includes(ValidationErrors.COUNTRY_ERROR) ? ValidationErrors.COUNTRY_ERROR : "";
-    
+    secondError = errors.includes(ValidationErrors.LAST_NAME_ERROR)
+      ? ValidationErrors.LAST_NAME_ERROR
+      : errors.includes(ValidationErrors.EMAIL_ERROR)
+      ? ValidationErrors.EMAIL_ERROR
+      : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
+      ? ValidationErrors.LEVEL_OF_STUDY_ERROR
+      : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
+      ? ValidationErrors.MLH_PRIVACY_ERROR
+      : "";
+
+    thirdError = errors.includes(ValidationErrors.AGE_ERROR)
+      ? ValidationErrors.AGE_ERROR
+      : errors.includes(ValidationErrors.COUNTRY_ERROR)
+      ? ValidationErrors.COUNTRY_ERROR
+      : "";
+
     setError1(firstError);
     setError2(secondError);
     setError3(thirdError);
-  }, [errors])
+  }, [errors]);
 
   const showValidationError = (error: string) => {
     return (
       <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-red-500 dark:focus:ring-red-800'>
         {error}
       </p>
-    )
-  }
+    );
+  };
 
   const next = () => {
     // Remove any validation errors
-    setErrors([])
+    setErrors([]);
 
     if (step < 9) {
       setStep((prev) => prev + 1);
@@ -99,7 +116,7 @@ function Page(props: any) {
 
   const prev = () => {
     // Remove any validation errors
-    setErrors([])
+    setErrors([]);
 
     if (step > 1) {
       setStep((prev) => prev - 1);
@@ -161,7 +178,7 @@ function Page(props: any) {
 
   // TODO: Validation of data is required
   const save = () => {
-    let formattedIsUnderrepresented;
+    let formattedIsUnderrepresented = null;
 
     if (isUnderrepresented === "Yes") {
       formattedIsUnderrepresented = true;
@@ -212,13 +229,18 @@ function Page(props: any) {
       acceptMLHEmails: checkedMLHSendEmails,
     };
     console.log(inputtedData);
-    updateUserData({ userData: inputtedData });
+    updateUserData({ userData: inputtedData }).then((err) => {
+      if (err) {
+        setErrorMessage(err);
+      }
+      setStep(10);
+    });
   };
 
   return (
-    <div className='flex h-screen shadow'>
-      <Link href='/' className="p-5 absolute">
-        <IoIosClose size={50}/>
+    <div className={`flex h-screen ${Styles["shadow"]}`}>
+      <Link href='/' className='p-5 absolute'>
+        <IoIosClose size={50} />
       </Link>
 
       <div className='flex-1 h-full justify-center align-middle content-center'>
@@ -464,10 +486,10 @@ function Page(props: any) {
                       </p>
                     </label>
                   </div>
-                  
+
                   {error1 !== "" ? showValidationError(error1) : null}
 
-                  <div className="flex align-items-center">
+                  <div className='flex align-items-center'>
                     <input
                       type='checkbox'
                       onChange={(e) => setCheckedMLHPrivacy(e.target.checked)}
@@ -507,7 +529,7 @@ function Page(props: any) {
 
                   {error2 !== "" ? showValidationError(error2) : null}
 
-                  <div className="flex align-items-center">
+                  <div className='flex align-items-center'>
                     <input
                       type='checkbox'
                       onChange={(e) =>
@@ -559,10 +581,22 @@ function Page(props: any) {
                 </button>
               ) : null}
             </div>
-            <progress
-              value={step / 9}
-              className='mt-20 h-1 w-full border-none rounded-lg [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-[#ffffff54] [&::-webkit-progress-value]:bg-white'
-            />
+
+            {step === 10 ? (
+              <FormHeader
+                title={
+                  errorMessage
+                    ? errorMessage
+                    : "Your Response Has Been Recorded"
+                }
+                subheader=''
+              />
+            ) : (
+              <progress
+                value={step / 9}
+                className='mt-20 h-1 w-full border-none rounded-lg [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-[#ffffff54] [&::-webkit-progress-value]:bg-white'
+              />
+            )}
           </div>
         </main>
       </div>

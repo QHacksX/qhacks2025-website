@@ -3,7 +3,7 @@ import React from "react";
 import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
 import EmailInput from "@/src/components/interest-form/emailInput";
-import { authErrors } from "@/src/firebase/utils";
+import Styles from "@/src/css/style.module.css";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -15,7 +15,7 @@ function Page() {
     const { result, error } = await signUp({ email, password });
 
     if (error) {
-        // TODO: setup error handling. error.code will give string like: 'auth/errorCode'. The part after auth/ (ie. errorCode) can be used to index authErrors in firebase/utils to get a user facing description
+      // TODO: setup error handling. error.code will give string like: 'auth/errorCode'. The part after auth/ (ie. errorCode) can be used to index authErrors in firebase/utils to get a user facing description
       return console.log(error);
     }
 
@@ -28,7 +28,9 @@ function Page() {
     <div className='flex h-screen w-screen justify-center'>
       <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
         <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
-          <div className='flex justify-center  text-white pb-2 text-4xl font-thin mb-10 text-shadow'>
+          <div
+            className={`flex justify-center  text-white pb-2 text-4xl font-thin mb-10 ${Styles["text-shadow"]}`}
+          >
             Sign Up
           </div>
           <EmailInput
