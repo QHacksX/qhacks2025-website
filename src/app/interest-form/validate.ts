@@ -2,23 +2,36 @@ import * as yup from 'yup';
 
 const phoneRegex = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
+export enum ValidationErrors {
+    FIRST_NAME_ERROR = "First Name is Required",
+    LAST_NAME_ERROR = "Last Name is Required",
+    AGE_ERROR = "Age is required",
+    PHONE_NUMBER_ERROR = "A valid phone number is required",
+    EMAIL_ERROR = "Email is required",
+    SCHOOL_ERROR = "School is required",
+    LEVEL_OF_STUDY_ERROR = "Level of study is required",
+    COUNTRY_ERROR = "Country of residence is required",
+    MLH_CODE_ERROR = "Must accept MLH Code of Conduct",
+    MLH_PRIVACY_ERROR = "Must accept MLH Contest and Privacy Policies"
+}
+
 export const schema = [
     yup.object().shape({
-        firstName: yup.string().required("First Name is Required"),
-        lastName: yup.string().required("Last Name is Required"),
-        age: yup.number().required("Age is required")
+        firstName: yup.string().required(ValidationErrors.FIRST_NAME_ERROR),
+        lastName: yup.string().required(ValidationErrors.LAST_NAME_ERROR),
+        age: yup.number().required(ValidationErrors.AGE_ERROR)
     }),
     yup.object().shape({
-        phoneNumber: yup.string().matches(phoneRegex, "A valid phone number is required"),
-        email: yup.string().email().required("Email is required")
+        phoneNumber: yup.string().matches(phoneRegex, ValidationErrors.PHONE_NUMBER_ERROR),
+        email: yup.string().email().required(ValidationErrors.EMAIL_ERROR)
     }),
     yup.object().shape({
-        school: yup.string().required("School is required"),
-        levelOfStudy: yup.string().required("Level of study is required"),
-        country: yup.string().required("Country of residence is required")
+        school: yup.string().required(ValidationErrors.SCHOOL_ERROR),
+        levelOfStudy: yup.string().required(ValidationErrors.LEVEL_OF_STUDY_ERROR),
+        country: yup.string().required(ValidationErrors.COUNTRY_ERROR)
     }),
     yup.object().shape({
-        checkedMLHCode: yup.bool().oneOf([true], "Must accept MLH Code of Conduct"),
-        checkedMLHPrivacy: yup.bool().oneOf([true], "Must accept MLH Contest and Privacy Policies")
+        checkedMLHCode: yup.bool().oneOf([true], ValidationErrors.MLH_CODE_ERROR),
+        checkedMLHPrivacy: yup.bool().oneOf([true], ValidationErrors.MLH_PRIVACY_ERROR)
     })
 ]

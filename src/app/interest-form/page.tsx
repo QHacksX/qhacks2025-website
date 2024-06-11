@@ -5,7 +5,7 @@ import EmailInput from "@/src/components/interest-form/emailInput";
 import FormHeader from "@/src/components/interest-form/header";
 import PhoneInput from "@/src/components/interest-form/phoneInput";
 import WordInput from "@/src/components/interest-form/wordInput";
-import { schema } from "./validate";
+import { ValidationErrors, schema } from "./validate";
 import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import {
   InterestFormData,
@@ -51,23 +51,53 @@ function Page(props: any) {
   const [checkedMLHPrivacy, setCheckedMLHPrivacy] = useState(false);
   const [checkedMLHSendEmails, setCheckedMLHSendEmails] = useState(false);
 
-  const [errors, setErrors] = useState([])
+  const [errors, setErrors] = useState([""])
+  const [error1, setError1] = useState("");
+  const [error2, setError2] = useState("");
+  const [error3, setError3] = useState("");
 
   useEffect(() => {
-    console.log("item value:" + JSON.stringify(props?.item));
-    console.log("data value:" + JSON.stringify(data));
-    if (props?.item?.data) {
-      setData(() => ({ ...props.item.data }));
-    }
-  }, [props.item, data]);
+    let firstError;
+    let secondError;
+    let thirdError;
+
+    firstError = errors.includes(ValidationErrors.FIRST_NAME_ERROR) ? ValidationErrors.FIRST_NAME_ERROR : 
+                  errors.includes(ValidationErrors.PHONE_NUMBER_ERROR) ? ValidationErrors.PHONE_NUMBER_ERROR :
+                  errors.includes(ValidationErrors.SCHOOL_ERROR) ? ValidationErrors.COUNTRY_ERROR : 
+                  errors.includes(ValidationErrors.MLH_CODE_ERROR) ? ValidationErrors.MLH_CODE_ERROR : "";
+
+    secondError = errors.includes(ValidationErrors.LAST_NAME_ERROR) ? ValidationErrors.LAST_NAME_ERROR :
+                  errors.includes(ValidationErrors.EMAIL_ERROR) ? ValidationErrors.EMAIL_ERROR :
+                  errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR) ? ValidationErrors.LEVEL_OF_STUDY_ERROR : 
+                  errors.includes(ValidationErrors.MLH_PRIVACY_ERROR) ? ValidationErrors.MLH_PRIVACY_ERROR : "";
+                  
+    thirdError = errors.includes(ValidationErrors.AGE_ERROR) ? ValidationErrors.AGE_ERROR :
+                  errors.includes(ValidationErrors.COUNTRY_ERROR) ? ValidationErrors.COUNTRY_ERROR : "";
+    
+    setError1(firstError);
+    setError2(secondError);
+    setError3(thirdError);
+  }, [errors])
+
+  const showValidationError = (error: string) => {
+    return (
+      <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-red-500 dark:focus:ring-red-800'>
+        {error}
+      </p>
+    )
+  }
 
   const next = () => {
+    // Remove any validation errors
+    setErrors([])
+
     if (step < 9) {
       setStep((prev) => prev + 1);
     }
   };
 
   const prev = () => {
+    // Remove any validation errors
     setErrors([])
 
     if (step > 1) {
@@ -199,21 +229,26 @@ function Page(props: any) {
                     setInput={setFirstName}
                     placeholder='First Name'
                   />
-                  {errors?.[0] && <div>{errors?.[0]}</div>}
+
+                  {error1 !== "" ? showValidationError(error1) : null}
+
                   <WordInput
                     title='Last Name*'
                     input={lastName}
                     setInput={setLastName}
                     placeholder='Last Name'
                   />
-                  {errors?.[1] && <div>{errors?.[1]}</div>}
+
+                  {error2 !== "" ? showValidationError(error2) : null}
+
                   <DropdownInput
                     title={"Age*"}
                     type={DropdownTypes.age}
                     value={age}
                     setValue={setAge}
                   />
-                  {errors?.[2] && <div>{errors?.[2]}</div>}
+
+                  {error3 !== "" ? showValidationError(error3) : null}
                 </>
               ) : step === 2 ? (
                 <>
@@ -224,14 +259,17 @@ function Page(props: any) {
                     setPhoneNumber={setPhoneNumber}
                     placeholder='(###) ###-###'
                   />
-                  {errors?.[0] && <div>{errors?.[0]}</div>}
+
+                  {error1 !== "" ? showValidationError(error1) : null}
+
                   <EmailInput
                     title='Email*'
                     email={email}
                     setEmail={setEmail}
                     placeholder='your@example.com'
                   />
-                  {errors?.[1] && <div>{errors?.[1]}</div>}
+
+                  {error2 !== "" ? showValidationError(error2) : null}
                 </>
               ) : step === 3 ? (
                 <>
@@ -242,21 +280,26 @@ function Page(props: any) {
                     value={school}
                     setValue={setSchool}
                   />
-                  {errors?.[0] && <div>{errors?.[0]}</div>}
+
+                  {error1 !== "" ? showValidationError(error1) : null}
+
                   <DropdownInput
                     title={"Level Of Study*"}
                     type={DropdownTypes.levelOfStudy}
                     value={levelOfStudy}
                     setValue={setLevelOfStudy}
                   />
-                  {errors?.[1] && <div>{errors?.[1]}</div>}
+
+                  {error2 !== "" ? showValidationError(error2) : null}
+
                   <DropdownInput
                     title={"Country*"}
                     type={DropdownTypes.country}
                     value={country}
                     setValue={setCountry}
                   />
-                  {errors?.[2] && <div>{errors?.[2]}</div>}
+
+                  {error3 !== "" ? showValidationError(error3) : null}
                 </>
               ) : step === 4 ? (
                 <>
@@ -391,8 +434,10 @@ function Page(props: any) {
                         *
                       </p>
                     </label>
-                    {errors?.[0] && <div>{errors?.[0]}</div>}
                   </div>
+                  
+                  {error1 !== "" ? showValidationError(error1) : null}
+
                   <div className="flex align-items-center">
                     <input
                       type="checkbox"
@@ -421,8 +466,10 @@ function Page(props: any) {
                         *
                       </p>
                     </label>
-                    {errors?.[1] && <div>{errors?.[1]}</div>}
                   </div>
+
+                  {error2 !== "" ? showValidationError(error2) : null}
+
                   <div className="flex align-items-center">
                     <input
                       type="checkbox"
@@ -444,7 +491,7 @@ function Page(props: any) {
             <div className='flex justify-between items-center'>
               {step > 1 && step <= 9 ? (
                 <button
-                  className='text-blue-700 border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  className='text-white border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => prev()}
                 >
                   Back
