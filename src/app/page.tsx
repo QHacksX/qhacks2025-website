@@ -13,12 +13,11 @@ import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/config";
 
-
 export default function Home() {
   const router = useRouter();
   const [screenWidth, setScreenWidth] = useState(0);
 
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -35,11 +34,7 @@ export default function Home() {
   const { scrollDir } = useDetectScroll();
 
   const handleOnClick = () => {
-    if (!isSignedIn) {
-      router.push("/signin");
-    } else {
-      router.push("/interest-form");
-    }
+    router.push("/interest-form");
   };
 
   useEffect(() => {

@@ -1,10 +1,14 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import "./signin.css";
 import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
 import EmailInput from "@/src/components/interest-form/emailInput";
 import Styles from "@/src/css/style.module.css";
+import { getAuthErrorMessage } from "@/src/firebase/utils";
+import { auth } from "@/src/firebase/config";
+import Link from "next/link";
+import { IoIosClose } from "react-icons/io";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -12,22 +16,29 @@ function Page() {
   const router = useRouter();
   const [errorMessage, setErrorMessage] = React.useState<any>();
 
+  useEffect(() => {
+    if (auth.currentUser) {
+      router.back();
+    }
+  }, [router]);
+
   const handleForm = async () => {
     const { result, error } = await signIn({ email, password });
 
-    if (error) {
-      // TODO: setup error handling. error.code will give string like: 'auth/errorCode'. The part after auth/ (ie. errorCode) can be used to index authErrors in firebase/utils to get a user facing description
-
-      return console.log(error);
+    if (error.code) {
+      setErrorMessage(getAuthErrorMessage(error.code));
+    } else {
+      // else successful
+      console.log(result);
+      return router.back();
     }
-
-    // else successful
-    console.log(result);
-    return router.back();
   };
 
   return (
     <div className='flex h-screen w-screen justify-center'>
+      <Link href='/' className='p-5 absolute left-0'>
+        <IoIosClose size={50} />
+      </Link>
       <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
         <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
           <div
@@ -75,7 +86,11 @@ function Page() {
             </a>
           </div>
 
-          {errorMessage && <div>{errorMessage}</div>}
+          {errorMessage && (
+            <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-3 mt-3 text-center dark:bg-red-500 dark:focus:ring-red-800'>
+              {errorMessage}
+            </p>
+          )}
         </div>
       </main>
     </div>
