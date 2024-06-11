@@ -32,9 +32,9 @@ export default function Footer(){
           <div className='
             flex justify-center items-center text-white pb-2 py-4 md:py-2 text-xs xs:text-sm'>
             <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://qhacks.io/'>QHacks 2023</motion.a>
-            <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://ghw.mlh.io/'>Local Hack Day</motion.a>
-            <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://medium.com/@qhacks'>QHacks Blog</motion.a>
-            <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://www.youtube.com/watch?v=a3Z7zEc7AXQ'>Hack Day Tips</motion.a>
+            {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://ghw.mlh.io/'>Local Hack Day</motion.a> */}
+            {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://medium.com/@qhacks'>QHacks Blog</motion.a> */}
+            {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://www.youtube.com/watch?v=a3Z7zEc7AXQ'>Hack Day Tips</motion.a> */}
             <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH Code of Conduct</motion.a>
           </div>
           
@@ -42,7 +42,7 @@ export default function Footer(){
           <div className='flex justify-center items-center pb-2 text-xs xs:text-sm text-white'>
             <p className='px-2 lg:px-[2%] text-center'>Queen's University</p>
             <p className='px-2 lg:px-[2%] text-center'>99 University Ave, Kingston ON</p>
-            <p className='px-2 lg:px-[2%] text-center'>Copyright © 2023 QHACKS</p>
+            <p className='px-2 lg:px-[2%] text-center'>Copyright © 2024 QHACKS</p>
           </div>
         </footer>
     );
