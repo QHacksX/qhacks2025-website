@@ -17,6 +17,10 @@ function Page() {
   const [errorMessage, setErrorMessage] = React.useState<any>();
 
   useEffect(() => {
+    router.prefetch("/");
+  }, [router]);
+
+  useEffect(() => {
     if (auth.currentUser) {
       router.back();
     }
@@ -25,12 +29,10 @@ function Page() {
   const handleForm = async () => {
     const { result, error } = await signIn({ email, password });
 
-    if (error.code) {
-      setErrorMessage(getAuthErrorMessage(error.code));
+    if (error) {
+      setErrorMessage(getAuthErrorMessage(error));
     } else {
-      // else successful
-      console.log(result);
-      return router.back();
+      router.back();
     }
   };
 

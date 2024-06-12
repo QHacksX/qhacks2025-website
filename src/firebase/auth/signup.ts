@@ -10,11 +10,15 @@ export default async function signUp({
   password: string;
 }) {
   let result = null;
-  let error: { code?: string; message?: string } | unknown = {};
+  let error: string | undefined;
   try {
     result = await createUserWithEmailAndPassword(auth, email, password);
   } catch (e) {
-    error = e;
+    if (e instanceof Object) {
+      if ("code" in e) {
+        error = e.code as string;
+      }
+    }
   }
 
   return { result, error };

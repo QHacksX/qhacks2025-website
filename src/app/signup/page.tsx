@@ -17,13 +17,10 @@ function Page() {
   const handleForm = async () => {
     const { result, error } = await signUp({ email, password });
 
-    if (error.code) {
-      console.log(error);
-      setErrorMessage(getAuthErrorMessage(error.code));
+    if (error) {
+      setErrorMessage(getAuthErrorMessage(error));
     } else {
-      // else successful
-      console.log(result);
-      return router.back();
+      return window.location.reload();
     }
   };
 

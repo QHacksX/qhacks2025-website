@@ -9,19 +9,17 @@ import Styles from "@/src/css/style.module.css";
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/config";
 
 export default function Home() {
+  const searchParams = useSearchParams();
+
   const router = useRouter();
   const [screenWidth, setScreenWidth] = useState(0);
 
   const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
-
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-  }, []);
 
   onAuthStateChanged(auth, () => {
     if (auth.currentUser) {
@@ -30,6 +28,23 @@ export default function Home() {
       setIsSignedIn(false);
     }
   });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const updateWidth = () => {
+        setScreenWidth(window.innerWidth);
+      };
+
+      updateWidth();
+
+      window.addEventListener("resize", updateWidth);
+
+      // Cleanup event listener on unmount
+      return () => {
+        window.removeEventListener("resize", updateWidth);
+      };
+    }
+  }, []);
 
   const { scrollDir } = useDetectScroll();
 
@@ -44,14 +59,15 @@ export default function Home() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [scrollDir]);
+
   return (
-    <main className='overflow-hidden min-h-screen'>
+    <main className='overflow-hidden'>
       {/* TODO: account for resizing screen */}
       <InvertedWaveBackground
         isSignedIn={isSignedIn}
         screenWidth={screenWidth}
       />
-      <div className='h-screen flex justify-center items-center flex-col'>
+      <div className='h-screen flex justify-center items-center w-screen flex-col'>
         <h1
           className={`md:w-1/3 text-center text-6xl font-bold leading-relaxed ${Styles["text-shadow-big"]}`}
         >

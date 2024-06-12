@@ -1,5 +1,6 @@
 import { auth } from "../config";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import type { FirebaseError } from "firebase-admin";
 
 export default async function signIn({
   email,
@@ -9,11 +10,15 @@ export default async function signIn({
   password: string;
 }) {
   let result = null;
-  let error: { code?: string; message?: string } | unknown = {};
+  let error: string | undefined;
   try {
     result = await signInWithEmailAndPassword(auth, email, password);
-  } catch (e) {
-    error = e;
+  } catch (e: unknown) {
+    if (e instanceof Object) {
+      if ("code" in e) {
+        error = e.code as string;
+      }
+    }
   }
 
   return { result, error };

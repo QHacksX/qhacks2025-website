@@ -9,13 +9,7 @@ import {
 import Link from "next/link";
 import signOutUser from "@/src/firebase/auth/signout";
 
-export default function MobileNav({
-  isSignedIn,
-  options,
-}: {
-  isSignedIn: boolean;
-  options: React.JSX.Element[];
-}) {
+export default function MobileNav({ isSignedIn }: { isSignedIn: boolean }) {
   const [isExpanded, setExpanded] = useState(false);
 
   return (
