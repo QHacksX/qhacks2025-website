@@ -2,6 +2,7 @@ import React from "react";
 import Wave from "react-wavify";
 import Image from "next/image";
 import mlhTrustBadge from "../../../public/mlh-trust-badge-2025-gray.png";
+import crown from "../../../public/crown.png";
 import Link from "next/link";
 import signOutUser from "@/src/firebase/auth/signout";
 import MobileNav from "./mobileNav";
@@ -37,6 +38,12 @@ const InvertedWaveBackground = ({
         alt='Major League Hacking Trust Badge'
         className='absolute z-20 md:w-32 md:right-20 w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20'
       />
+      <Image
+        color='transparent'
+        src={crown}
+        alt='Queens Crown'
+        className='absolute z-20 md:w-32  w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20 md:left-10 '
+      />
 
       {/* Red Wave*/}
       <div
@@ -59,7 +66,6 @@ const InvertedWaveBackground = ({
           }}
         />
       </div>
-
       {/* Gold Wave */}
       <div
         style={{

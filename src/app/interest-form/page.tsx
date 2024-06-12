@@ -249,7 +249,7 @@ function Page(props: any) {
   };
 
   return (
-    <div className={`flex h-screen ${Styles["shadow"]}`}>
+    <div className={`flex h-screen ${Styles["shadow"]} w-screen`}>
       <Link href='/' className='p-5 absolute'>
         <IoIosClose size={50} />
       </Link>
