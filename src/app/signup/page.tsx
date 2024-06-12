@@ -17,7 +17,8 @@ function Page() {
   const handleForm = async () => {
     const { result, error } = await signUp({ email, password });
 
-    if (error.code !== null) {
+    if (error.code) {
+      console.log(error);
       setErrorMessage(getAuthErrorMessage(error.code));
     } else {
       // else successful
