@@ -10,7 +10,7 @@ export default async function signUp({
   password: string;
 }) {
   let result = null;
-  let error = null;
+  let error: { code?: string; message?: string } | unknown = {};
   try {
     result = await createUserWithEmailAndPassword(auth, email, password);
   } catch (e) {
