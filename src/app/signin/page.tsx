@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./signin.css";
 import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
@@ -9,16 +9,20 @@ import { getAuthErrorMessage } from "@/src/firebase/utils";
 import { auth } from "@/src/firebase/config";
 import Link from "next/link";
 import { IoIosClose } from "react-icons/io";
+import { BiHide } from "react-icons/bi";
+import { BiShowAlt } from "react-icons/bi";
+import { passwordReset } from "@/src/firebase/auth/passwordReset";
 
 function Page() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const router = useRouter();
   const [errorMessage, setErrorMessage] = React.useState<any>();
+  const [successMessage, setSuccessMessage] = React.useState<
+    string | undefined
+  >();
 
-  useEffect(() => {
-    router.prefetch("/");
-  }, [router]);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     if (auth.currentUser) {
@@ -28,12 +32,17 @@ function Page() {
 
   const handleForm = async () => {
     const { result, error } = await signIn({ email, password });
-
     if (error) {
       setErrorMessage(getAuthErrorMessage(error));
     } else {
       router.back();
     }
+  };
+
+  const handlePasswordReset = async () => {
+    const { result, error } = await passwordReset({ email });
+    setErrorMessage(error);
+    setSuccessMessage(result);
   };
 
   return (
@@ -62,13 +71,23 @@ function Page() {
             >
               Password
             </label>
-            <input
-              type='text'
-              id='wordInput'
-              className='bg-gray-50 border-b border-gray-300 text-gray-900 text-sm font-thin  block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  bg-transparent focus:ring-0 focus:outline-none'
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder='******'
-            />
+            <div className=''>
+              <input
+                type={showPassword ? "text" : "password"}
+                id='wordInput'
+                className='bg-gray-50 border-b border-gray-300 text-gray-900 text-sm font-thin w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  bg-transparent focus:ring-0 focus:outline-none'
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder='******'
+              />
+              <button
+                onClick={() => {
+                  setShowPassword(!showPassword);
+                }}
+                className='absolute'
+              >
+                {showPassword ? <BiHide size={30} /> : <BiShowAlt size={30} />}
+              </button>
+            </div>
           </div>
 
           <button
@@ -78,11 +97,17 @@ function Page() {
             Sign In
           </button>
 
-          {/* TODO: Style this, fix error/warning */}
+          <button
+            className='text-white font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center  dark:focus:ring-blue-800 mt-10 hover:text-[#ffd24d]'
+            onClick={handlePasswordReset}
+          >
+            Forgot Password
+          </button>
+
           <div
             className={`flex justify-center  text-white pb-2 text-sm font-thin mb-10 ${Styles["text-shadow"]}`}
           >
-            <a className='mx-1 underline' href='/signup'>
+            <a className='mx-1 underline mt-10 text-center' href='/signup'>
               {/* eslint-disable-next-line react/no-unescaped-entities */}
               Don't have an account? Click here to sign up!
             </a>
@@ -91,6 +116,11 @@ function Page() {
           {errorMessage && (
             <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-3 mt-3 text-center dark:bg-red-500 dark:focus:ring-red-800'>
               {errorMessage}
+            </p>
+          )}
+          {successMessage && (
+            <p className='text-white bg-green-600 font-medium rounded-lg text-sm sm:w-auto px-5 py-3 mt-3 text-center  dark:focus:ring-green-800'>
+              {successMessage}
             </p>
           )}
         </div>

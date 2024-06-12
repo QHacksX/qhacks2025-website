@@ -7,11 +7,15 @@ import Styles from "@/src/css/style.module.css";
 import { getAuthErrorMessage } from "@/src/firebase/utils";
 import Link from "next/link";
 import { IoIosClose } from "react-icons/io";
+import { BiHide } from "react-icons/bi";
+import { BiShowAlt } from "react-icons/bi";
 
 function Page() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState<any>();
+  const [showPassword, setShowPassword] = React.useState(false);
+
   const router = useRouter();
 
   const handleForm = async () => {
@@ -20,7 +24,7 @@ function Page() {
     if (error) {
       setErrorMessage(getAuthErrorMessage(error));
     } else {
-      return window.location.reload();
+      router.back();
     }
   };
 
@@ -50,13 +54,23 @@ function Page() {
             >
               Password
             </label>
-            <input
-              type='text'
-              id='wordInput'
-              className='bg-gray-50 border-b border-gray-300 text-gray-900 text-sm font-thin  block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  bg-transparent focus:ring-0 focus:outline-none'
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder='******'
-            />
+            <div className=''>
+              <input
+                type={showPassword ? "text" : "password"}
+                id='wordInput'
+                className='bg-gray-50 border-b border-gray-300 text-gray-900 text-sm font-thin w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  bg-transparent focus:ring-0 focus:outline-none'
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder='******'
+              />
+              <button
+                onClick={() => {
+                  setShowPassword(!showPassword);
+                }}
+                className='absolute'
+              >
+                {showPassword ? <BiHide size={30} /> : <BiShowAlt size={30} />}
+              </button>
+            </div>
           </div>
 
           <button
