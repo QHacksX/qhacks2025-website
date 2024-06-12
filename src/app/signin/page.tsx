@@ -25,7 +25,7 @@ function Page() {
   const handleForm = async () => {
     const { result, error } = await signIn({ email, password });
 
-    if (error.code) {
+    if (error.code !== null) {
       setErrorMessage(getAuthErrorMessage(error.code));
     } else {
       // else successful
