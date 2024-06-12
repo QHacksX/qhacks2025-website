@@ -16,6 +16,7 @@ export default function Home() {
   const router = useRouter();
 
   const [screenWidth, setScreenWidth] = useState(0);
+  const [screenHeight, setScreenHeight] = useState(0);
 
   const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
 
@@ -31,6 +32,7 @@ export default function Home() {
     if (typeof window !== "undefined") {
       const updateWidth = () => {
         setScreenWidth(window.innerWidth);
+        setScreenHeight(window.innerHeight);
       };
 
       updateWidth();
@@ -48,11 +50,11 @@ export default function Home() {
 
   useEffect(() => {
     if (scrollDir === Direction.Down)
-      window.scrollTo({ top: 1000, behavior: "smooth" });
+      window.scrollTo({ top: screenHeight, behavior: "smooth" });
     if (scrollDir === Direction.Up) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [scrollDir]);
+  }, [scrollDir, screenHeight]);
 
   return (
     <main className='overflow-hidden'>
@@ -67,7 +69,7 @@ export default function Home() {
         </h1>
         <a
           onClick={() => {
-            window.scrollTo({ top: 1000, behavior: "smooth" });
+            window.scrollTo({ top: screenHeight, behavior: "smooth" });
           }}
           className='bottom-10 absolute'
         >
