@@ -54,6 +54,7 @@ export default function DropdownInput({
         itemTemplate={itemTemplate}
         filterPlaceholder='Search'
         emptyFilterMessage={()=><></>}
+        resetFilterOnHide={true}
       />
     </div>
   );
