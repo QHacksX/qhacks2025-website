@@ -73,7 +73,7 @@ export default function Home() {
         isSignedIn={isSignedIn}
         screenWidth={screenWidth}
       />
-      <div className='h-screen flex justify-center items-center w-screen flex-col'>
+      <div className='h-screen flex justify-center items-center w-screen flex-col '>
         <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed text-shadow-big'>
           Get Ready <p className='text-3xl'>FOR</p> QHacks 2025!
         </h1>
@@ -91,7 +91,7 @@ export default function Home() {
       </div>
       <div className='h-screen flex justify-between items-center w-screen flex-col select-none'>
         <div className='h-screen w-screen absolute z-10'>
-          <ManyDonutScene />
+          <ManyDonutScene mobileView={screenWidth <= 600}/>
         </div>
 
         <a

@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='font-thin'>
+    <html lang='en' className='font-thin overflow-x-hidden'>
       <body className={inter.className}>
         {children}
         <RouteChangeListener />
