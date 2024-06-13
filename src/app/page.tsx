@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import Footer from "../components/shared/footer";
 import InvertedWaveBackground from "../components/shared/header";
+import dynamic from 'next/dynamic';
 
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
@@ -11,6 +12,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/config";
 import Link from "next/link";
+const DonutScene = dynamic(() => import('../components/shared/3d-models/donut'), { ssr: false });
 
 export default function Home() {
   const router = useRouter();
@@ -67,6 +69,9 @@ export default function Home() {
         <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed text-shadow-big'>
           Get Ready <p className='text-3xl'>FOR</p> QHacks 2025!
         </h1>
+        <div className="h-screen w-screen absolute -z-20">
+          <DonutScene x={0} y={0} radius={2} color="white" />
+        </div>
         <a
           onClick={() => {
             window.scrollTo({ top: screenHeight, behavior: "smooth" });
@@ -77,15 +82,18 @@ export default function Home() {
         </a>
       </div>
       <div className='h-screen flex justify-between items-center w-screen flex-col'>
+        <div className="h-screen w-screen absolute z-10">
+          <DonutScene x={0} y={0} radius={2} color="white" />
+        </div>
         <a
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className='top-10 relative justify-self-start'
+          className='top-10 relative justify-self-start z-20'
         >
           <BsChevronDoubleUp size={100} />
         </a>
-        <div className='md:w-1/3 text-center flex justify-center flex-col px-3'>
+        <div className='md:w-1/3 text-center flex justify-center flex-col px-3 z-20'>
           <h1 className='text-center text-4xl font-bold leading-relaxed text-shadow-big'>
             Come Join Us!
           </h1>
@@ -100,7 +108,7 @@ export default function Home() {
             I'm Interested!
           </Link>
         </div>
-        <div className='justify-self-end w-full'>
+        <div className='justify-self-end w-full z-10'>
           <Footer />
         </div>
       </div>
