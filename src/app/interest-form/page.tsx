@@ -477,14 +477,14 @@ function Page(props: any) {
                     title='Major League Hacking Partnership Fields'
                     subheader='Mandatory fields marked with an asterisk (*)'
                   />
-                  <div className='flex items-start pt-8'>
+                  <div className='flex justify-start items-start pt-8'>
                     <input
                       type='checkbox'
                       onChange={(e) => setCheckedMLHCode(e.target.checked)}
                       checked={checkedMLHCode}
-                      className='shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
+                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
-                    <label htmlFor='mlh-codeofconduct'>
+                    <label htmlFor='mlh-codeofconduct' className="w-full">
                       <p className='indent-1'>
                         I have read and agree to the{" "}
                         <a
@@ -500,14 +500,14 @@ function Page(props: any) {
 
                   {error1 !== "" ? showValidationError(error1) : null}
 
-                  <div className='flex items-start pt-8'>
+                  <div className='flex justify-start items-start pt-8'>
                     <input
                       type='checkbox'
                       onChange={(e) => setCheckedMLHPrivacy(e.target.checked)}
                       checked={checkedMLHPrivacy}
-                      className='shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
+                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
-                    <label>
+                    <label className="w-full">
                       <p className='indent-1'>
                         I authorize you to share my application/registration
                         information with Major League Hacking for event
@@ -540,16 +540,16 @@ function Page(props: any) {
 
                   {error2 !== "" ? showValidationError(error2) : null}
 
-                  <div className='flex items-start pt-8'>
+                  <div className='flex justify-start items-start pt-8'>
                     <input
                       type='checkbox'
                       onChange={(e) =>
                         setCheckedMLHSendEmails(e.target.checked)
                       }
                       checked={checkedMLHSendEmails}
-                      className='shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
+                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
-                    <label>
+                    <label className="w-full">
                       <p className='indent-1'>
                         I authorize MLH to send me occasional emails about
                         relevant events, career opportunities, and community
