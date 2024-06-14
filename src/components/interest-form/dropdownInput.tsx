@@ -39,7 +39,7 @@ export default function DropdownInput({
     <div>
       <label
         htmlFor='phone'
-        className='block mb-2 text-xl font-thin text-gray-900 dark:text-gray-300'
+        className='block mb-2 text-xl font-medium text-gray-900 dark:text-gray-300'
       >
         {title}
       </label>
@@ -49,7 +49,7 @@ export default function DropdownInput({
         options={dropdownConfig?.options}
         optionLabel={dropdownConfig?.label}
         placeholder={dropdownConfig?.placeholder}
-        className='w-min md:w-14rem text-lg font-thin text-gray-300 ml-5'
+        className='w-min md:w-14rem text-lg font-medium text-gray-300 ml-5'
         filter={type === DropdownTypes.age ? false : true}
         itemTemplate={itemTemplate}
         filterPlaceholder='Search'

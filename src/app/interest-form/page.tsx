@@ -485,7 +485,7 @@ function Page(props: any) {
                       className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
                     <label htmlFor='mlh-codeofconduct' className="w-full">
-                      <p className='indent-1'>
+                      <p className='indent-1 text-base font-medium'>
                         I have read and agree to the{" "}
                         <a
                           href='https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md'
@@ -508,7 +508,7 @@ function Page(props: any) {
                       className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
                     <label className="w-full">
-                      <p className='indent-1'>
+                      <p className='indent-1 text-base font-medium'>
                         I authorize you to share my application/registration
                         information with Major League Hacking for event
                         administration, ranking, and MLH administration in-line
@@ -550,7 +550,7 @@ function Page(props: any) {
                       className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
                     <label className="w-full">
-                      <p className='indent-1'>
+                      <p className='indent-1 text-base font-medium'>
                         I authorize MLH to send me occasional emails about
                         relevant events, career opportunities, and community
                         announcements.

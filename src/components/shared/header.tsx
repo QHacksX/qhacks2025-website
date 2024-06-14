@@ -33,17 +33,20 @@ const InvertedWaveBackground = ({
         MobileNav({ isSignedIn: isSignedIn })
       )}
 
-      <Image
-        src={mlhTrustBadge}
+      <img
+        src={"/mlh-trust-badge-2025-gray.png"}
         alt='Major League Hacking Trust Badge'
-        className='absolute z-20 md:w-32 md:right-20 w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20'
+        className='absolute z-20 w-128 h-224 md:w-32 md:right-20 w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20'
       />
-      <Image
-        color='transparent'
-        src={crown}
-        alt='Queens Crown'
-        className='absolute z-20 md:w-32  w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20 md:left-10 '
-      />
+
+      {screenWidth > 768 ? (
+        <img
+          color='transparent'
+          src={"/crown.png"}
+          alt='Queens Crown'
+          className='absolute z-20 w-128 h-111 md:w-32  w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20 md:left-10 '
+        />
+      ): null}
 
       {/* Red Wave*/}
       <div

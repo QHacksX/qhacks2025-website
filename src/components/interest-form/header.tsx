@@ -10,10 +10,10 @@ export default function FormHeader({
 }) {
   return (
     <div className={`${Styles["text-shadow"]}`}>
-      <div className='flex justify-center  text-white pb-2 text-4xl font-thin'>
+      <div className='flex justify-center  text-white pb-2 text-4xl font-normal'>
         {title}
       </div>
-      <div className='flex justify-center font-thin text-md text-gray-500'>
+      <div className='flex justify-center font-normal text-lg text-gray-500'>
         {subheader}
       </div>
     </div>
