@@ -25,9 +25,9 @@ const InvertedWaveBackground = ({
             }
           }}
         >
-          <p className='hover:text-[#ffd24d] absolute z-20 font-bold text-2xl px-10 py-2 rounded-xl text-center top-6 bg-[#132f4c] drop-shadow-[0_5px_10px_rgb(255,255,255)] w-60 mr-auto ml-auto left-0 right-0'>
+          {/* <p className='hover:text-[#ffd24d] absolute z-20 font-bold text-2xl px-10 py-2 rounded-xl text-center top-6 bg-[#132f4c] drop-shadow-[0_5px_10px_rgb(255,255,255)] w-60 mr-auto ml-auto left-0 right-0'>
             {isSignedIn ? "Sign Out" : "Sign In"}
-          </p>
+          </p> */}
         </Link>
       ) : (
         MobileNav({ isSignedIn: isSignedIn })
@@ -35,16 +35,16 @@ const InvertedWaveBackground = ({
 
       <img
         src={"/mlh-trust-badge-2025-gray.png"}
-        alt='Major League Hacking Trust Badge'
-        className='absolute z-20 w-128 h-224 md:w-32 md:right-20 w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20'
+        alt='Major League Hacking Trust Badge' /* drop-shadow-[0_5px_10px_rgb(255,255,255)] */
+        className='absolute z-20 w-128 h-224 md:w-32 md:right-20 w-28 right-5 pb-20'
       />
 
       {screenWidth > 768 ? (
         <img
           color='transparent'
           src={"/crown.png"}
-          alt='Queens Crown'
-          className='absolute z-20 w-128 h-111 md:w-32  w-28 right-5  drop-shadow-[0_5px_10px_rgb(255,255,255)] pb-20 md:left-10 '
+          alt='Queens Crown' /* drop-shadow-[0_5px_10px_rgb(255,255,255)] */
+          className='absolute z-20 w-128 h-111 md:w-32  w-28 right-5  pb-20 md:left-10 '
         />
       ): null}
 
@@ -64,7 +64,7 @@ const InvertedWaveBackground = ({
           options={{
             height: 40,
             amplitude: 21,
-            speed: 0.15,
+            speed: 0.12,
             points: 5,
           }}
         />
@@ -85,7 +85,7 @@ const InvertedWaveBackground = ({
           options={{
             height: 40,
             amplitude: 20,
-            speed: 0.12,
+            speed: 0.08,
             points: 5,
           }}
         />
@@ -106,7 +106,7 @@ const InvertedWaveBackground = ({
           options={{
             height: 40,
             amplitude: 20,
-            speed: 0.12,
+            speed: 0.08,
             points: 5,
           }}
         />
