@@ -17,18 +17,19 @@ const InvertedWaveBackground = ({
   return (
     <div className='absolute top-0 h-screen w-full'>
       {screenWidth > 700 ? (
-        <Link
-          href={isSignedIn ? "/" : "/signin"}
-          onClick={() => {
-            if (isSignedIn) {
-              signOutUser();
-            }
-          }}
-        >
-          {/* <p className='hover:text-[#ffd24d] absolute z-20 font-bold text-2xl px-10 py-2 rounded-xl text-center top-6 bg-[#132f4c] drop-shadow-[0_5px_10px_rgb(255,255,255)] w-60 mr-auto ml-auto left-0 right-0'>
-            {isSignedIn ? "Sign Out" : "Sign In"}
-          </p> */}
-        </Link>
+        // <Link
+        //   href={isSignedIn ? "/" : "/signin"}
+        //   onClick={() => {
+        //     if (isSignedIn) {
+        //       signOutUser();
+        //     }
+        //   }}
+        // >
+        //   <p className='hover:text-[#ffd24d] absolute z-20 font-bold text-2xl px-10 py-2 rounded-xl text-center top-6 bg-[#132f4c] drop-shadow-[0_5px_10px_rgb(255,255,255)] w-60 mr-auto ml-auto left-0 right-0'>
+        //     {isSignedIn ? "Sign Out" : "Sign In"}
+        //   </p>
+        // </Link>
+        <></>
       ) : (
         MobileNav({ isSignedIn: isSignedIn })
       )}
