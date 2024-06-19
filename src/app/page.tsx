@@ -73,12 +73,13 @@ export default function Home() {
         isSignedIn={isSignedIn}
         screenWidth={screenWidth}
       />
+      {/* text-shadow-big */}
       <div className='h-screen flex justify-center items-center w-screen flex-col '>
-        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed text-shadow-big'>
-          Get Ready <p className='text-3xl'>FOR</p> QHacks 2025!
+        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'> 
+          Get Ready <p className='text-3xl'>for</p> <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-orange-800 via-brand-orange-500 to-tricolor-bright-red animate-gradient-xy">QHacks 2025</span>
         </h1>
         <div className='h-screen w-screen absolute -z-20'>
-          <DonutScene x={0} y={0} radius={2.5} color='white' />
+          <DonutScene x={0} y={0} radius={3} color='white' />
         </div>
         <a
           onClick={() => {
@@ -103,15 +104,15 @@ export default function Home() {
           <BsChevronDoubleUp size={100} />
         </a>
         <div className='md:w-1/3 text-center flex justify-center flex-col px-3 z-20'>
-          <h1 className='text-center text-4xl font-bold leading-relaxed text-shadow-big'>
+          <h1 className='text-center text-4xl font-bold leading-relaxed bg-clip-text text-transparent bg-gradient-to-r from-brand-orange-800 via-tricolor-yellow to-tricolor-bright-red animate-gradient-x'>
             Come Join Us!
           </h1>
-          <p className='text-xl py-5'>
+          <p className='text-xl py-5 font-light'>
             Interested in joining? Click the button below to pre-register!
           </p>
           <Link
             href='/interest-form'
-            className='mt-3 shadow-[0_0_20px_1px_rgb(255,255,255)] bg-blue-900 py-3 rounded-lg border border-[#ffd24d] hover:text-[#ff4040] font-bold'
+            className='mt-3 shadow-[0_0_20px_1px_rgb(255,255,255)] bg-blue-900 py-3 rounded-lg border border-[#ffd24d] font-light hover:font-semibold'
           >
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             I'm Interested!
