@@ -20,8 +20,8 @@ export function RotatingTorus({
 
   useFrame(() => {
     if (torusRef.current) {
-      torusRef.current.rotation.x += 0.01;
-      torusRef.current.rotation.y += 0.01;
+      torusRef.current.rotation.x += 0.0075;
+      torusRef.current.rotation.y += 0.0075;
     }
   });
 
