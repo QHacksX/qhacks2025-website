@@ -2,7 +2,7 @@ import React from "react";
 import Wave from "react-wavify";
 import Image from "next/image";
 import mlhTrustBadge from "../../../public/mlh-trust-badge-2025-gray.png";
-import crown from "../../../public/crown.png";
+import crown from "../../../public/crown2.png";
 import Link from "next/link";
 import signOutUser from "@/src/firebase/auth/signout";
 import MobileNav from "./mobileNav";
@@ -42,74 +42,79 @@ const InvertedWaveBackground = ({
       {screenWidth > 768 ? (
         <img
           color='transparent'
-          src={"/crown.png"}
+          src={"/crown2.png"}
           alt='Queens Crown' /* drop-shadow-[0_5px_10px_rgb(255,255,255)] */
           className='absolute z-20 w-128 h-111 md:w-32  w-28 right-5  pb-20 md:left-10 '
         />
       ): null}
 
-      {/* Red Wave*/}
-      <div
-        style={{
-          position: "absolute",
+      <div style={{
+          display: "flex",
           width: "100%",
-          height: "50%",
+          height: "100%",
           overflow: "hidden",
         }}
       >
-        <Wave
-          fill='#ff4040'
-          paused={false}
-          style={{ width: "100%", height: "40%", transform: "scaleY(-1)" }}
-          options={{
-            height: 40,
-            amplitude: 21,
-            speed: 0.12,
-            points: 5,
+        {/* Red Wave */}
+        <div
+          style={{
+            flex: 1,
+            height: "100%",
+            overflow: "hidden",
           }}
-        />
-      </div>
-      {/* Gold Wave */}
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "50%",
-          overflow: "hidden",
-        }}
-      >
-        <Wave
-          fill='#ffd24d'
-          paused={false}
-          style={{ width: "100%", height: "28%", transform: "scaleY(-1)" }}
-          options={{
-            height: 40,
-            amplitude: 20,
-            speed: 0.08,
-            points: 5,
+        >
+          <Wave
+            fill='#ff4040'
+            paused={false}
+            style={{ width: "100%", height: "14%", transform: "scaleY(-1)" }}
+            options={{
+              height: 40,
+              amplitude: 21,
+              speed: 0.12,
+              points: 5,
+            }}
+          />
+        </div>
+        {/* Gold Wave */}
+        <div
+          style={{
+            flex: 1,
+            height: "100%",
+            overflow: "hidden",
           }}
-        />
-      </div>
-      {/* Red Wave */}
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "50%",
-          overflow: "hidden",
-        }}
-      >
-        <Wave
-          fill='#4040ff'
-          paused={false}
-          style={{ width: "100%", height: "20%", transform: "scaleY(-1)" }}
-          options={{
-            height: 40,
-            amplitude: 20,
-            speed: 0.08,
-            points: 5,
+        >
+          <Wave
+            fill='#ffd24d'
+            paused={false}
+            style={{ width: "100%", height: "20%", transform: "scaleY(-1)" }}
+            options={{
+              height: 40,
+              amplitude: 20,
+              speed: 0.08,
+              points: 5,
+            }}
+          />
+        </div>
+        {/* Blue Wave */}
+        <div
+          style={{
+            flex: 1,
+            height: "100%",
+            overflow: "hidden",
           }}
-        />
+        >
+          <Wave
+            fill='#4040ff'
+            paused={false}
+            style={{ width: "100%", height: "14%", transform: "scaleY(-1)" }}
+            options={{
+              height: 40,
+              amplitude: 20,
+              speed: 0.08,
+              points: 5,
+            }}
+          />
+        </div>
       </div>
     </div>
   );
