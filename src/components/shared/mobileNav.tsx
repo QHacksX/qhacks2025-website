@@ -50,7 +50,7 @@ export default function MobileNav({ isSignedIn }: { isSignedIn: boolean }) {
           >
             <motion.div>
               <motion.span className='block mx-4 py-2'>
-                <Link
+                {/* <Link
                   href={isSignedIn ? "/" : "/signin"}
                   onClick={() => {
                     if (isSignedIn) {
@@ -61,7 +61,7 @@ export default function MobileNav({ isSignedIn }: { isSignedIn: boolean }) {
                   <p className='hover:text-[#ffd24d]  font-bold text-2xl  drop-shadow-[0_1px_10px_rgb(255,255,255)] '>
                     {isSignedIn ? "Sign Out" : "Sign In"}
                   </p>
-                </Link>
+                </Link> */}
               </motion.span>
             </motion.div>
           </motion.div>
