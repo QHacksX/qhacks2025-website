@@ -19,8 +19,8 @@ export default function ManyDonuts({ mobileView }: { mobileView: boolean }) {
         ) : (
           <>
             <RotatingTorus x={-4.5} y={2} radius={0.75} color='#ffd24d' />
-            <RotatingTorus x={5} y={2} radius={2} color='#4040ff' />
-            <RotatingTorus x={-5} y={-2} radius={1.4} color='#ff4040' />
+            <RotatingTorus x={5} y={2} radius={2} color='#ff4040' />
+            <RotatingTorus x={-5} y={-2} radius={1.4} color='#4040ff' />
           </>
         )}
 
