@@ -31,11 +31,11 @@ export default function Footer(){
           {/* LINKS */}
           <div className='
             flex justify-center items-center text-white pb-2 py-4 md:py-2 text-base xs:text-sm relative z-20'>
-            <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center font-light' href='https://qhacks.io/'>QHacks 2024</motion.a>
+            <motion.a whileHover={{fontWeight:'bold'}} className='px-5 md:px-[3%] text-center font-light' href='https://qhacks.io/'>QHacks 2024</motion.a>
             {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://ghw.mlh.io/'>Local Hack Day</motion.a> */}
             {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://medium.com/@qhacks'>QHacks Blog</motion.a> */}
             {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://www.youtube.com/watch?v=a3Z7zEc7AXQ'>Hack Day Tips</motion.a> */}
-            <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center font-light' href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH Code of Conduct</motion.a>
+            <motion.a whileHover={{fontWeight:'bold'}} className='px-5 md:px-[3%] text-center font-light' href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH Code of Conduct</motion.a>
           </div>
           
           {/* SITE INFO */}
