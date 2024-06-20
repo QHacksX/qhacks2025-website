@@ -1,7 +1,6 @@
-import firebase_app from "../config";
-import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
-
-const auth = getAuth(firebase_app);
+import { auth } from "../config";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import type { FirebaseError } from "firebase-admin";
 
 export default async function signIn({
   email,
@@ -10,12 +9,16 @@ export default async function signIn({
   email: string;
   password: string;
 }) {
-  let result = null,
-    error = null;
+  let result = null;
+  let error: string | undefined;
   try {
     result = await signInWithEmailAndPassword(auth, email, password);
-  } catch (e) {
-    error = e;
+  } catch (e: unknown) {
+    if (e instanceof Object) {
+      if ("code" in e) {
+        error = e.code as string;
+      }
+    }
   }
 
   return { result, error };

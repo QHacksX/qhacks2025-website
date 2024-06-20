@@ -1,7 +1,6 @@
-import firebase_app from "../config";
+import { FirebaseError } from "firebase/app";
+import { auth, firebase_app } from "../config";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-
-const auth = getAuth(firebase_app);
 
 export default async function signUp({
   email,
@@ -10,12 +9,16 @@ export default async function signUp({
   email: string;
   password: string;
 }) {
-  let result = null,
-    error = null;
+  let result = null;
+  let error: string | undefined;
   try {
     result = await createUserWithEmailAndPassword(auth, email, password);
   } catch (e) {
-    error = e;
+    if (e instanceof Object) {
+      if ("code" in e) {
+        error = e.code as string;
+      }
+    }
   }
 
   return { result, error };
