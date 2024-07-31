@@ -108,6 +108,36 @@ function Page(props: any) {
     setError3(thirdError);
   }, [errors]);
 
+  useEffect(() => {
+    let formattedIsUnderrepresented = null;
+
+    if (isUnderrepresented === "Yes") {
+      formattedIsUnderrepresented = true;
+    } else if (isUnderrepresented === "No") {
+      formattedIsUnderrepresented = false;
+    }
+
+    if (origInputGender !== "Prefer to self-describe") {
+      setGender(origInputGender);
+    }
+
+    if (origInputPronoun !== "Prefer to self-describe") {
+      setPronoun(origInputPronoun);
+    }
+
+    if (origInputEthnicity !== "Prefer to self-describe") {
+      setEthnicity(origInputEthnicity);
+    }
+
+    if (origInputSexuality !== "Prefer to self-describe") {
+      setSexuality(origInputSexuality);
+    }
+
+    if (origInputFieldOfStudy !== "Other (please specify)") {
+      setFieldOfStudy(origInputFieldOfStudy);
+    }
+  }, [isUnderrepresented, origInputGender, origInputPronoun, origInputEthnicity, origInputSexuality, origInputFieldOfStudy])
+
   const showValidationError = (error: string) => {
     return (
       <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-red-500 dark:focus:ring-red-800'>
@@ -189,34 +219,6 @@ function Page(props: any) {
 
   // TODO: Validation of data is required
   const save = () => {
-    let formattedIsUnderrepresented = null;
-
-    if (isUnderrepresented === "Yes") {
-      formattedIsUnderrepresented = true;
-    } else if (isUnderrepresented === "No") {
-      formattedIsUnderrepresented = false;
-    }
-
-    if (origInputGender !== "Prefer to self-describe") {
-      setGender(origInputGender);
-    }
-
-    if (origInputPronoun !== "Prefer to self-describe") {
-      setPronoun(origInputPronoun);
-    }
-
-    if (origInputEthnicity !== "Prefer to self-describe") {
-      setEthnicity(origInputEthnicity);
-    }
-
-    if (origInputSexuality !== "Prefer to self-describe") {
-      setSexuality(origInputSexuality);
-    }
-
-    if (origInputFieldOfStudy !== "Other (please specify)") {
-      setFieldOfStudy(origInputFieldOfStudy);
-    }
-
     const inputtedData: InterestFormData = {
       firstName: firstName,
       lastName: lastName,
@@ -227,7 +229,7 @@ function Page(props: any) {
       levelOfStudy: levelOfStudy,
       country: country,
       dietaryRestrictions: dietaryRestriction,
-      underrepresented: formattedIsUnderrepresented,
+      underrepresented: isUnderrepresented,
       gender: gender,
       pronouns: pronoun,
       ethnicity: ethnicity,
@@ -352,7 +354,7 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Interest Form'
-                    subheader='All inputs on this page are optional'
+                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
                     title={"Dietary Restrictions (optional)"}
@@ -371,7 +373,7 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Interest Form'
-                    subheader='All inputs on this page are optional'
+                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
                     title={"Gender (optional)"}
@@ -406,7 +408,7 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Interest Form'
-                    subheader='All inputs on this page are optional'
+                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
                     title={"Ethnicity (optional)"}
@@ -441,7 +443,7 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Interest Form'
-                    subheader='All inputs on this page are optional'
+                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
                     title={"Highest Level Of Education (optional)"}
