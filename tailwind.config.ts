@@ -13,6 +13,59 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        'brand-orange-900': '#F76A1E',
+        'brand-orange-800': '#F7841F',
+        'brand-orange-700': '#F69C25',
+        'brand-orange-600': '#F7A627',
+        'brand-orange-500': '#F7B32B',
+        'brand-light-blue': '#3BA7FF',
+        'brand-dark-blue': '#000AFF',
+        'brand-light-red': '#CA3333',
+        'brand-dark-red': '#9C2220',
+        'tricolor-dark-blue': '#022B76',
+        'tricolor-light-blue': '#032B76',
+        'tricolor-dark-red': '#CB372D',
+        'tricolor-bright-red': '#EE4036',
+        'tricolor-yellow': '#E2A022'
+      },
+      'animation': {
+        'gradient-x': 'gradient-x 5s ease infinite',
+        'gradient-y':'gradient-y 5s ease infinite',
+        'gradient-xy':'gradient-xy 5s ease infinite',
+      },
+      'keyframes': {
+        'gradient-y': {
+          '0%, 100%': {
+            'background-size':'400% 400%',
+            'background-position': 'center top'
+          },
+          '50%': {
+            'background-size':'200% 200%',
+            'background-position': 'center center'
+          }
+        },
+        'gradient-x': {
+            '0%, 100%': {
+              'background-size':'200% 200%',
+              'background-position': 'left center'
+            },
+            '50%': {
+              'background-size':'200% 200%',
+              'background-position': 'right center'
+            }
+        },
+        'gradient-xy': {
+            '0%, 100%': {
+              'background-size':'400% 400%',
+              'background-position': 'left center'
+            },
+            '50%': {
+              'background-size':'200% 200%',
+              'background-position': 'right center'
+            }
+        }
+      }
     },
   },
   plugins: [],
