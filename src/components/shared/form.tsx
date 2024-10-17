@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { useState, ChangeEvent, FormEvent } from 'react';
 
 interface FormData {
