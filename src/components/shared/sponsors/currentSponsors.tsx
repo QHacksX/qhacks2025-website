@@ -3,12 +3,9 @@ import "../../../css/SponsorBubble.css"
 import SponsorBubble from "./sponsorBubble";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
+import { prevSponsors } from "@/src/data/sponsors/previous_sponsors";
 
 export default function CurrentSponsors() {
-    const sponsors = [
-        "/crown2.png"
-    ]
-
     let [ref, { width }] = useMeasure();
     const xTranslation = useMotionValue(0);
 
@@ -42,7 +39,7 @@ export default function CurrentSponsors() {
             </div>
 
             <motion.div ref={ref} style={{x: xTranslation}}>
-                {[...sponsors].map((sponsor) => (
+                {[...prevSponsors].map((sponsor) => (
                     <SponsorBubble sponsor={sponsor} />
                 ))}
             </motion.div>

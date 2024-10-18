@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SponsorBubble from "./sponsorBubble";
+import { prevSponsors } from "@/src/data/sponsors/previous_sponsors";
 
 export default function PastSponsors() {
     let orbitDuration = 30;
@@ -27,7 +28,7 @@ export default function PastSponsors() {
                     ease: 'linear',
                 }}
             >
-                {[...sponsors].map((sponsor) => (
+                {[...prevSponsors].map((sponsor) => (
                     <SponsorBubble sponsor={sponsor} />
                 ))}
             </motion.div>
