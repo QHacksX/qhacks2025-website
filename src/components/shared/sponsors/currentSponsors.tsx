@@ -3,21 +3,19 @@ import "../../../css/SponsorBubble.css"
 import SponsorBubble from "./sponsorBubble";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
-import { prevSponsors } from "@/src/data/sponsors/previous_sponsors";
+import { currentSponsors } from "@/src/data/sponsors/sponsors_lists";
 
 export default function CurrentSponsors() {
     let [ref, { width }] = useMeasure();
     const xTranslation = useMotionValue(0);
 
-    const SPONORS_LENGTH_PLACEHOLDER = 1
-
     useEffect(() => {
         let controls;
-        let finalPosition = -width / 2 - SPONORS_LENGTH_PLACEHOLDER; // remember to change this to amount of sponsors
+        let finalPosition = -width / 4 - currentSponsors.length; // remember to change this to amount of sponsors
 
         controls = animate(xTranslation, [0, finalPosition], {
             ease: "linear",
-            duration: 25,
+            duration: currentSponsors.length * 4,
             repeat: Infinity,
             repeatType: "loop",
             repeatDelay: 0
@@ -38,9 +36,9 @@ export default function CurrentSponsors() {
                 </h1>
             </div>
 
-            <motion.div ref={ref} style={{x: xTranslation}}>
-                {[...prevSponsors].map((sponsor) => (
-                    <SponsorBubble sponsor={sponsor} />
+            <motion.div className="left-0 flex gap-4" ref={ref} style={{x: xTranslation}}>
+                {[...currentSponsors, ...currentSponsors, ...currentSponsors, ...currentSponsors].map((sponsor, id) => (
+                    <SponsorBubble sponsor={sponsor} key={id} />
                 ))}
             </motion.div>
         </div>
