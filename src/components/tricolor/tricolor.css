@@ -1,0 +1,229 @@
+.wrapper{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* height: 20rem; */
+    /* border-width: 8px; */
+}
+
+.tricolor-content-container{
+    padding:0 0.5rem;
+    display: flex;
+    width: 70vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border-width: 8px; */
+    /* gap: 20px; */
+
+}
+
+.tricolor-content{
+    width: 24rem;
+    padding: 0 0.5rem;
+    /* text-align: center; */
+    /* border-width: 8px; */
+
+}
+
+h1{
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 1rem; 
+}
+
+.tricolor-container{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 30%;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* border-width: 1px; */
+
+}
+
+#tricolor{
+    height: 6rem;
+    width: 6rem;
+    /* background-color: red; */
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    transition: all 0.15s ease-in-out
+}
+
+.tri-1:hover, .tri-3:hover{
+    transform: scale(1.2);
+}
+.tri-1{
+    background-color: #ef4444;
+}
+
+.tri-2{
+    background-color: #eab308;
+    transform: translate(-1rem, -3.5rem);
+}
+.tricolor-container .tri-2{
+    height: 6rem;
+    width: 6rem;
+}
+.tri-2:hover{
+    transform: translate(-1rem,-3rem) scale(1.2);
+}
+.tri-3{
+    background-color: #3b82f6;
+    transform: translateY(0.5rem);
+    z-index: 1;
+
+}
+
+
+.tri-4{
+    background-color: #ef4444;
+    transform: translate(-1rem, -3rem);
+}
+.tri-4:hover{
+    transform: translate(-1rem, -3rem) scale(1.2);
+    z-index: 1;
+}
+.tri-5{
+    background-color: #3b82f6;
+    transform: translate(0,3rem);
+    /* z-index: 1; */
+}
+.tri-5:hover{
+    transform: translate(0,3rem) scale(1.2);
+}
+
+
+@media only screen and ((min-width: 800px) and (max-width: 1000px)) {
+ .wrapper{
+    height: 70%;
+    /* text-align: center */
+ }
+ .tricolor-content-container{
+    width: 70%;
+    /* flex-direction: column; */
+ }
+ .tricolor-content{
+    width: 100%;
+    /* border: 1px solid red; */
+ }
+ .tricolor-container{
+    width: 65%;
+ }
+ 
+}
+@media only screen and ((min-width: 700px) and (max-width: 800px)) {
+
+ .tricolor-container{
+    width: 80%;
+ }
+ 
+}
+@media only screen and ((min-width: 1200px) and (max-width: 1500px)){
+    .tricolor-container{
+        width: 40%;
+    }
+    .tricolor-content-container{
+        width: 70%;
+     }
+}
+@media only screen and ((min-width: 1000px) and (max-width: 1200px)) {
+ .wrapper{
+    height: 70%;
+    /* text-align: center */
+ }
+ .tricolor-content-container{
+    width: 70%;
+    /* flex-direction: column; */
+ }
+ .tricolor-content{
+    width: 100%;
+    /* border: 1px solid red; */
+ }
+ .tricolor-container{
+    width: 55%;
+ }
+ 
+}
+@media only screen and ((min-width: 500px) and (max-width: 700px)) {
+ .wrapper{
+    height: 70%;
+    /* text-align: center */
+ }
+ .tricolor-content-container{
+    width: 70%;
+    /* flex-direction: column; */
+ }
+ .tricolor-content{
+    width: 100%;
+    /* border: 1px solid red; */
+ }
+ .tricolor-container{
+    width: 100%;
+ }
+ 
+}
+@media only screen and ((min-width: 300px) and (max-width: 400px)) {
+.tricolor-content-container{
+        width: 100%;
+}
+    /* #tricolor{
+        height: 6rem;
+        width: 6rem;
+    } */
+    .tricolor-container{
+        width: 100%;
+     }
+ 
+}
+@media only screen and ((min-width:400px) and (max-width: 500px)) {
+    .wrapper{
+        height: 70%;
+        /* text-align: center */
+     }
+     .tricolor-content-container{
+        width: 100%;
+        /* flex-direction: column; */
+     }
+     .tricolor-content{
+        width: 100%;
+        /* border: 1px solid red; */
+     }
+     .tricolor-container{
+        width: 100%;
+     }
+}
+
+@media only screen and (max-width: 360px) {
+    #tricolor:not(.tri-2){
+        height: 4.9rem;
+        width: 4.9rem;
+    }
+    .tricolor-container p{
+        font-size: 1rem;
+    }
+    .tri-5{
+        z-index: 1;
+    }
+    .tricolor-content-container{
+        width: 100%;
+        /* flex-direction: column; */
+     }
+     .tricolor-content{
+        width: 100%;
+        /* border: 1px solid red; */
+     }
+     .tricolor-container{
+        width: 100%;
+     }
+    
+}
+
