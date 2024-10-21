@@ -7,36 +7,36 @@ export const faqs = [
   {
     question: "What if I don't have a team?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "No problem! We will have team formation events before the hackathon. You can also find teammates on our Discord server, which will be released after applications have closed. ",
   },
   {
     question: "What is a hackathon?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "A hackathon is a 36-hour event where students come together to build a project from scratch. It's a great opportunity to learn new skills, meet new people, and win prizes!",
   },
   {
     question: "When do hacker applications come out?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "Hacker applications will be released late October. Follow us on social media to stay updated!",
   },
   {
     question: "Who can attend QHacks?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "QHacks is open to all undergraduate students from any university or college.",
   },
   {
     question: "What is this years hackathon theme?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "This year hackathon theme will be announced closer towards the event. Follow us on social medias to stay updated.  ",
   },
   {
     question: "How much does it cost to attend QHacks?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "QHacks is open to all undergraduate students from any university or college. ",
   },
   {
     question: "How many people can I have on a team?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "Teams can be formed with groups of 1-4. ",
   },
 ];
