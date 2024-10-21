@@ -2,15 +2,17 @@
 import { useEffect, useState } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import Footer from "../components/shared/footer";
-import InvertedWaveBackground from "../components/shared/header";
+// import InvertedWaveBackground from "../components/shared/header";
+import NavBar from '@/src/components/navbar/nav';
 import dynamic from "next/dynamic";
+import TriColor from "../components/tricolor/tricolor";
 
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
-import React from "react";
 
-import { useRouter, useSearchParams } from "next/navigation";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase/config";
+import { useRouter } from "next/navigation";
+// useSearchParams
+// import { onAuthStateChanged } from "firebase/auth";
+// import { auth } from "../firebase/config";
 import Link from "next/link";
 const DonutScene = dynamic(
   () => import("../components/shared/3d-models/donut"),
@@ -28,15 +30,14 @@ export default function Home() {
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
 
-  const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
-
-  onAuthStateChanged(auth, () => {
-    if (auth.currentUser) {
-      setIsSignedIn(true);
-    } else {
-      setIsSignedIn(false);
-    }
-  });
+  // const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
+  // onAuthStateChanged(auth, () => {
+  //   if (auth.currentUser) {
+  //     setIsSignedIn(true);
+  //   } else {
+  //     setIsSignedIn(false);
+  //   }
+  // });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -68,11 +69,12 @@ export default function Home() {
 
   return (
     <main className='overflow-hidden'>
+      <NavBar/>
       {/* TODO: account for resizing screen */}
-      <InvertedWaveBackground
+      {/* <InvertedWaveBackground
         isSignedIn={isSignedIn}
         screenWidth={screenWidth}
-      />
+      /> */}
       {/* text-shadow-big */}
       <div className='h-screen flex justify-center items-center w-screen flex-col '>
         <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'> 
@@ -90,8 +92,9 @@ export default function Home() {
           <BsChevronDoubleDown size={100} className='justify-self-end' />
         </a>
       </div>
+      <TriColor />
       <div className='h-screen flex justify-between items-center w-screen flex-col select-none'>
-        <div className='h-screen w-screen absolute z-10'>
+        <div className='h-screen w-screen absolute z-0'>
           <ManyDonutScene mobileView={screenWidth <= 600}/>
         </div>
 

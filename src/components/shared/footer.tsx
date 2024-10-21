@@ -1,8 +1,6 @@
 "use client";
-import { Inter } from 'next/font/google';
-import { useState } from 'react';
 import { motion } from "framer-motion";
-import React from 'react';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
