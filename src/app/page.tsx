@@ -8,6 +8,8 @@ import dynamic from "next/dynamic";
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
 
+import PastSpeakers from '../components/shared/pastSpeakers';
+
 import { useRouter, useSearchParams } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/config";
@@ -117,6 +119,9 @@ export default function Home() {
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             I'm Interested!
           </Link>
+        </div>
+        <div>
+          <PastSpeakers />
         </div>
         <div className='justify-self-end w-full'>
           <Footer />
