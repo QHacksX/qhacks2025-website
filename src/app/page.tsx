@@ -1,17 +1,16 @@
 "use client";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import Footer from "../components/shared/footer";
 import InvertedWaveBackground from "../components/shared/header";
-import dynamic from "next/dynamic";
 
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
-import React from "react";
 
-import { useRouter, useSearchParams } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase/config";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { auth } from "../firebase/config";
 const DonutScene = dynamic(
   () => import("../components/shared/3d-models/donut"),
   { ssr: false }
