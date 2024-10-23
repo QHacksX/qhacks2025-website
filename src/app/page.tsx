@@ -9,6 +9,7 @@ import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
 
 import PastSpeakers from '../components/shared/pastSpeakers';
+import GrowYourNetwork from '../components/shared/growYourNetwork';
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
@@ -119,6 +120,9 @@ export default function Home() {
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             I'm Interested!
           </Link>
+        </div>
+        <div>
+          <GrowYourNetwork />
         </div>
         <div>
           <PastSpeakers />
