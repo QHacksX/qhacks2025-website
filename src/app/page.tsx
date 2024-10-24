@@ -28,25 +28,28 @@ export default function Home() {
 
   return (
     <main className='overflow-hidden relative'>
-      <NavBar />
-      <div className='h-screen flex justify-center items-center w-screen flex-col '>
-        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'>
-          Get Ready <p className='text-3xl'>for</p> <span>QHacks 2025</span>
-        </h1>
-      </div>
-      <div className='flex justify-between items-center w-screen flex-col select-none'>
-        <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
-          <TriColor />
-          <div className='pt-20'>
-            <GrowYourNetwork />
+      <div className="radial-gradient-background">
+        <NavBar />
+        <div className='h-screen flex justify-center items-center w-screen flex-col '>
+          <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'>
+            Get Ready <p className='text-3xl'>for</p> <span>QHacks 2025</span>
+          </h1>
+        </div>
+
+        <div className='flex justify-between items-center w-screen flex-col select-none'>
+          <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
+            <TriColor />
+            <div className='pt-20'>
+              <GrowYourNetwork />
+            </div>
+            <PastSpeakers />
           </div>
-          <PastSpeakers />
         </div>
-        <div>
-          <Faq />
-        </div>
-        <Footer />
       </div>
+
+      <Faq />
+
+      <Footer />
     </main>
   );
 }
