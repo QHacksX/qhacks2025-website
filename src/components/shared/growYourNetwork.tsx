@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 
 const GrowYourNetwork: React.FC = () => {
     return (
-        <section className='text-white py-10'>
+        <section className='text-white p-10'>
             <div className='container mx-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                     <div>

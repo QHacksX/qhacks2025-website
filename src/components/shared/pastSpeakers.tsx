@@ -9,7 +9,7 @@ const speakers = [
 
 const PastSpeakers: React.FC = () => {
     return (
-      <section className="bg-black text-white py-10">
+      <section className="bg-transparent text-white p-10">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">
             Past <span className="text-red-600">Speakers</span>
