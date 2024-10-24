@@ -10,5 +10,17 @@
   .faq-content.open {
     max-height: 100px;
     opacity: 1;
+  }
+
+  .cloud{
+    transition: all 1s ease-in-out;
+  }
+  .show {
+    opacity: 1;  
+  }
+
+  .hide{
+    opacity: 0.5;
 
   }
+
