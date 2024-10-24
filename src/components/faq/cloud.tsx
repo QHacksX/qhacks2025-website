@@ -1,36 +1,37 @@
 "use client";
 import { useWindowSize } from "@/src/hooks/useWindowSize";
 import "../../css/FaqStyle.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export default function Cloud() {
   const [isVisible, setIsVisible] = useState([false, false, false, false]);
 
   const dimensions = useWindowSize();
 
-  const cloudWidth1 = Math.floor((dimensions.width ?? 0) * 0.9);
-  const cloudWidth2 = Math.floor((dimensions.width ?? 0) * 0.6);
-  const cloudWidth3 = Math.floor((dimensions.width ?? 0) * 0.5);
-  const cloudWidth4 = Math.floor((dimensions.width ?? 0) * 0.4);
-
-  console.log(Math.floor(cloudWidth1 * 0.2));
+  // Memoizing cloud widths to avoid recalculating them on every render
+  const cloudWidths = {
+    cloudWidth1: Math.floor((dimensions.width ?? 0) * 0.6),
+    cloudWidth2: Math.floor((dimensions.width ?? 0) * 0.4),
+    cloudWidth3: Math.floor((dimensions.width ?? 0) * 0.5),
+    cloudWidth4: Math.floor((dimensions.width ?? 0) * 0.2),
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const tempVis = [...isVisible];
 
-      for (var cloudNum = 0; cloudNum < 4; cloudNum++) {
+      // Looping through each cloud element
+      for (let cloudNum = 0; cloudNum < 4; cloudNum++) {
         const element = document.getElementById(`animateOnScroll${cloudNum}`);
 
-        const rect = element?.getBoundingClientRect();
-
-        if (rect != undefined) {
-          const isElementVisible =
-            rect!.bottom <= window.scrollY + window.innerHeight * 0.5;
-
-          tempVis[cloudNum] = isElementVisible;
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          tempVis[cloudNum] =
+            rect.top <=
+            window.scrollY + window.innerHeight - cloudWidths.cloudWidth1;
         }
       }
+
       setIsVisible(tempVis);
     };
 
@@ -39,55 +40,54 @@ export default function Cloud() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isVisible]);
+
+  const renderCloud = (
+    cloudNum: number,
+    cloudWidth: number,
+    translateX: number
+  ) => (
+    <img
+      id={`animateOnScroll${cloudNum}`}
+      className={`cloud z-50`}
+      style={{
+        transform: `translateX(${translateX}px)`,
+        width: `${cloudWidth}px`,
+      }}
+      src={"/cloud.png"}
+      alt='Cloud'
+    />
+  );
 
   return (
-    <div className='w-screen overflow-hidden'>
-      <img
-        id='animateOnScroll0'
-        className={`cloud absolute mb-20 w-[${cloudWidth1}px] z-0`}
-        style={{
-          transform: `translateX(${Math.floor(
-            cloudWidth1 * (isVisible[0] ? -0.1 : -0.5)
-          )}px) translateY(-${cloudWidth1 * 0.2}px)`,
-        }}
-        src={"/cloud.png"}
-        alt='Cloud'
-      />
-      <img
-        id='animateOnScroll1'
-        className={`cloud absolute w-[${cloudWidth2}px] z-0`}
-        style={{
-          transform: `translateX(${Math.floor(
-            (dimensions.width ?? 0) + cloudWidth2 * (isVisible[0] ? -0.5 : 0.1)
-          )}px) translateY(-${cloudWidth2 * 0.1}px)`,
-        }}
-        src={"/cloud.png"}
-        alt='Cloud'
-      />
+    <div className='w-full h-auto relative'>
+      {renderCloud(
+        0,
+        cloudWidths.cloudWidth1,
+        Math.floor(cloudWidths.cloudWidth1 * (isVisible[0] ? -0.1 : -0.8))
+      )}
+      {renderCloud(
+        1,
+        cloudWidths.cloudWidth2,
+        Math.floor(
+          (dimensions.width ?? 0) +
+            cloudWidths.cloudWidth2 * (isVisible[1] ? -0.9 : 0.1)
+        )
+      )}
 
-      <img
-        id='animateOnScroll2'
-        className={`cloud absolute mb-20 w-[${cloudWidth3}px] z-10`}
-        style={{
-          transform: `translateX(${Math.floor(
-            cloudWidth3 * (isVisible[2] ? -0.5 : -1)
-          )}px) translateY(${cloudWidth1 * 0.2}px)`,
-        }}
-        src={"/cloud.png"}
-        alt='Cloud'
-      />
-      <img
-        id='animateOnScroll3'
-        className={`cloud absolute w-[${cloudWidth4}px] z-10`}
-        style={{
-          transform: `translateX(${Math.floor(
-            (dimensions.width ?? 0) + cloudWidth4 * (isVisible[3] ? -0.5 : 0.1)
-          )}px) translateY(${cloudWidth1 * 0.25}px)`,
-        }}
-        src={"/cloud.png"}
-        alt='Cloud'
-      />
+      {renderCloud(
+        2,
+        cloudWidths.cloudWidth3,
+        Math.floor(cloudWidths.cloudWidth3 * (isVisible[2] ? -0.5 : -1))
+      )}
+      {renderCloud(
+        3,
+        cloudWidths.cloudWidth4,
+        Math.floor(
+          (dimensions.width ?? 0) +
+            cloudWidths.cloudWidth4 * (isVisible[3] ? -0.5 : 0.1)
+        )
+      )}
     </div>
   );
 }

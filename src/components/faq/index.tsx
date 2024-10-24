@@ -15,11 +15,13 @@ export default function Faq() {
   return (
     <div className=' text-black w-screen flex flex-col bg-brand-light-blue'>
       <div className='pt-10 bg-gradient-to-b from-black to-brand-light-blue w-full h-64' />
+      <div className="absolute">
 
       <Cloud />
 
-      <div className='bg-transparent w-full items-center justify-center flex flex-col pt-96'>
-        <h1 className='align-center font-extrabold text-7xl py-12 z-20'>
+      </div>
+      <div className='bg-transparent w-full items-center justify-center flex flex-col '>
+        <h1 className='align-center font-extrabold text-7xl py-12 z-20 md:pt-72'>
           FAQ's
         </h1>
         <Dropdown />
