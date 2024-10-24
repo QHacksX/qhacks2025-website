@@ -19,7 +19,7 @@ const GrowYourNetwork: React.FC = () => {
                             Showcase To <span className='text-red-600'>Experts</span>
                         </h2>
                         <p className='mt-4 text-lg leading-relaex'>
-                            This year, we're bringing together a diverse group of mentors, speakers, sponsors and other industry professionals, Chat one-on-one, learn about current tech trends and opportunities
+                            This year, we&#39;re bringing together a diverse group of mentors, speakers, sponsors and other industry professionals, Chat one-on-one, learn about current tech trends and opportunities
                         </p>
                     </div>
                 </div>
