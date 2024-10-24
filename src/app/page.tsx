@@ -12,6 +12,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { auth } from "../firebase/config";
+import Faq from "../components/faq";
 const DonutScene = dynamic(
   () => import("../components/shared/3d-models/donut"),
   { ssr: false }
@@ -56,15 +57,15 @@ export default function Home() {
     }
   }, []);
 
-  const { scrollDir } = useDetectScroll();
+  // const { scrollDir } = useDetectScroll();
 
-  useEffect(() => {
-    if (scrollDir === Direction.Down)
-      window.scrollTo({ top: screenHeight, behavior: "smooth" });
-    if (scrollDir === Direction.Up) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [scrollDir, screenHeight]);
+  // useEffect(() => {
+  //   if (scrollDir === Direction.Down)
+  //     window.scrollTo({ top: screenHeight, behavior: "smooth" });
+  //   if (scrollDir === Direction.Up) {
+  //     window.scrollTo({ top: 0, behavior: "smooth" });
+  //   }
+  // }, [scrollDir, screenHeight]);
 
   return (
     <main className='overflow-hidden'>
@@ -75,8 +76,11 @@ export default function Home() {
       />
       {/* text-shadow-big */}
       <div className='h-screen flex justify-center items-center w-screen flex-col '>
-        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'> 
-          Get Ready <p className='text-3xl'>for</p> <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-orange-800 via-brand-orange-500 to-tricolor-bright-red animate-gradient-xy">QHacks 2025</span>
+        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'>
+          Get Ready <p className='text-3xl'>for</p>{" "}
+          <span className='bg-clip-text text-transparent bg-gradient-to-r from-brand-orange-800 via-brand-orange-500 to-tricolor-bright-red animate-gradient-xy'>
+            QHacks 2025
+          </span>
         </h1>
         <div className='h-screen w-screen absolute -z-20'>
           <DonutScene x={0} y={0} radius={3} color='white' />
@@ -90,11 +94,7 @@ export default function Home() {
           <BsChevronDoubleDown size={100} className='justify-self-end' />
         </a>
       </div>
-      <div className='h-screen flex justify-between items-center w-screen flex-col select-none'>
-        <div className='h-screen w-screen absolute z-10'>
-          <ManyDonutScene mobileView={screenWidth <= 600}/>
-        </div>
-
+      <div className='flex justify-between items-center w-screen flex-col select-none'>
         <a
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -118,8 +118,8 @@ export default function Home() {
             I'm Interested!
           </Link>
         </div>
-        <div className='justify-self-end w-full'>
-          <Footer />
+        <div>
+          <Faq />
         </div>
       </div>
     </main>
