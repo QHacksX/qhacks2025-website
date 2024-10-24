@@ -1,15 +1,10 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
-import Footer from "../components/shared/footer";
-import InvertedWaveBackground from "../components/shared/header";
 
-import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
-import React from "react";
+import Footer from "../components/shared/footer";
 
 import { onAuthStateChanged } from "firebase/auth";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { auth } from "../firebase/config";
 import Faq from "../components/faq";
@@ -59,7 +54,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='overflow-hidden'>
+    <main className='overflow-hidden relative'>
       <NavBar />
       {/* text-shadow-big */}
       <div className='h-screen flex justify-center items-center w-screen flex-col '>
@@ -90,6 +85,7 @@ export default function Home() {
         <div>
           <Faq />
         </div>
+        <Footer />
       </div>
     </main>
   );
