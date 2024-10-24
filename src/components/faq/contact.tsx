@@ -1,6 +1,6 @@
 export const ContactForm = () => {
   return (
-    <div className='max-w-lg mx-auto bg-transparent p-6 w-1/2 pt-16'>
+    <div className='mx-auto bg-transparent p-6 sm:w-1/2 w-3/4 pt-16 z-20'>
       <h2 className='text-2xl font-bold text-center mb-6'>
         More Questions?
         <br /> Send us a Message!

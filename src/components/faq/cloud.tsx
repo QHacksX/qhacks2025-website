@@ -26,7 +26,7 @@ export default function Cloud() {
 
         if (rect != undefined) {
           const isElementVisible =
-            rect!.bottom <= window.scrollY + window.innerHeight - 1300;
+            rect!.bottom <= window.scrollY + window.innerHeight * 0.5;
 
           tempVis[cloudNum] = isElementVisible;
         }
@@ -42,7 +42,7 @@ export default function Cloud() {
   }, []);
 
   return (
-    <div className='w-screen'>
+    <div className='w-screen overflow-hidden'>
       <img
         id='animateOnScroll0'
         className={`cloud absolute mb-20 w-[${cloudWidth1}px] z-0`}
@@ -72,7 +72,7 @@ export default function Cloud() {
         style={{
           transform: `translateX(${Math.floor(
             cloudWidth3 * (isVisible[2] ? -0.5 : -1)
-          )}px) translateY(${cloudWidth1*0.2}px)`,
+          )}px) translateY(${cloudWidth1 * 0.2}px)`,
         }}
         src={"/cloud.png"}
         alt='Cloud'

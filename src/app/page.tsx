@@ -13,6 +13,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { auth } from "../firebase/config";
 import Faq from "../components/faq";
+import NavBar from "../components/navbar/nav";
 const DonutScene = dynamic(
   () => import("../components/shared/3d-models/donut"),
   { ssr: false }
@@ -57,23 +58,9 @@ export default function Home() {
     }
   }, []);
 
-  // const { scrollDir } = useDetectScroll();
-
-  // useEffect(() => {
-  //   if (scrollDir === Direction.Down)
-  //     window.scrollTo({ top: screenHeight, behavior: "smooth" });
-  //   if (scrollDir === Direction.Up) {
-  //     window.scrollTo({ top: 0, behavior: "smooth" });
-  //   }
-  // }, [scrollDir, screenHeight]);
-
   return (
     <main className='overflow-hidden'>
-      {/* TODO: account for resizing screen */}
-      <InvertedWaveBackground
-        isSignedIn={isSignedIn}
-        screenWidth={screenWidth}
-      />
+      <NavBar />
       {/* text-shadow-big */}
       <div className='h-screen flex justify-center items-center w-screen flex-col '>
         <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'>
@@ -90,9 +77,7 @@ export default function Home() {
             window.scrollTo({ top: screenHeight, behavior: "smooth" });
           }}
           className='bottom-10 absolute'
-        >
-          <BsChevronDoubleDown size={100} className='justify-self-end' />
-        </a>
+        ></a>
       </div>
       <div className='flex justify-between items-center w-screen flex-col select-none'>
         <a
@@ -100,24 +85,8 @@ export default function Home() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className='top-10 relative justify-self-start z-20'
-        >
-          <BsChevronDoubleUp size={100} />
-        </a>
-        <div className='md:w-1/3 text-center flex justify-center flex-col px-3 z-20'>
-          <h1 className='text-center text-4xl font-bold leading-relaxed bg-clip-text text-transparent bg-gradient-to-r from-brand-orange-800 via-tricolor-yellow to-tricolor-bright-red animate-gradient-x'>
-            Come Join Us!
-          </h1>
-          <p className='text-xl py-5 font-light'>
-            Interested in joining? Click the button below to pre-register!
-          </p>
-          <Link
-            href='/interest-form'
-            className='mt-3 shadow-[0_0_20px_1px_rgb(255,255,255)] bg-blue-900 py-3 rounded-lg border border-[#ffd24d] font-light hover:font-semibold'
-          >
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            I'm Interested!
-          </Link>
-        </div>
+        ></a>
+
         <div>
           <Faq />
         </div>
