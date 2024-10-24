@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: "Will QHACKS 2024 be in-person or virtual?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vehicula sem, nec volutpat quam. Pellentesque magna purus, sagittis non elit eget, congue rutrum tellus. Nullam fermentum rutrum felis, a ultrices erat volutpat sed. ",
+      "QHacks will be fully in-person this year! QHacks will be hosted on campus, at Queen's University, Kingston, ON!",
   },
   {
     question: "What if I don't have a team?",
