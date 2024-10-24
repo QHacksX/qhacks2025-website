@@ -1,6 +1,5 @@
 import React from 'react';
 import { Inter } from 'next/font/google'
-import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 const GrowYourNetwork: React.FC = () => {
     return (
