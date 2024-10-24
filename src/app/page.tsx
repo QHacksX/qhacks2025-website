@@ -6,6 +6,7 @@ import Footer from "../components/shared/footer";
 import InvertedWaveBackground from "../components/shared/header";
 
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
+import React from "react";
 
 import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
