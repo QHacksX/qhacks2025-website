@@ -2,7 +2,7 @@ import React from "react";
 
 const GrowYourNetwork: React.FC = () => {
   return (
-    <section className='text-white p-10 flex md:justify-between justify-center items-center text-center md:text-left min-h-[70vh] pb-20'>
+    <section className='text-white p-10 flex md:justify-between justify-center items-center text-center md:text-left min-h-[70vh] pb-20 bg-transparent'>
       <div className='container mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-20'>
           <div>

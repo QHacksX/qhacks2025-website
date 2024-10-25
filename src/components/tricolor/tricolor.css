@@ -96,6 +96,8 @@ h1{
 
  .tricolor-container{
     width: 95%;
+    justify-content: space-around;
+
  }
 
  .tricolor-content{
@@ -105,7 +107,7 @@ h1{
  }
 
  .text-overlay{
-    bottom: 10%;
+    bottom: 20%;
  }
 
  

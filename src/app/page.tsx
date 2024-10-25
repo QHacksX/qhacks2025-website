@@ -143,12 +143,17 @@ export default function Home() {
             <TriColor />
           </div>
 
-          <div className='pt-20 relative justify-center flex flex-col items-center w-screen'>
+          <div className='pt-20 relative justify-center flex flex-col items-center w-screen h-auto'>
             <PartneringCard />
 
-            <div className='absolute inset-0 z-20'>
+            <div className='absolute inset-0 z-10'>
               <DonutScene x={-8} y={1} radius={2} color='white' />
             </div>
+
+            <div className='absolute inset-0' style={{ zIndex: 100 }}>
+              <DonutScene x={5} y={-3} radius={3} color='white' />
+            </div>
+
             <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
               <GrowYourNetwork />
               <PastSpeakers />
