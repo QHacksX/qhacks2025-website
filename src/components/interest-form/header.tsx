@@ -13,7 +13,7 @@ export default function FormHeader({
       <div className='flex justify-center  text-white pb-2 text-4xl font-normal'>
         {title}
       </div>
-      <div className='flex justify-center font-normal text-lg text-gray-500'>
+      <div className='flex justify-center text-center font-normal text-lg text-gray-500'>
         {subheader}
       </div>
     </div>

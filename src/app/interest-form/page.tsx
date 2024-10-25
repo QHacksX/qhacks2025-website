@@ -49,6 +49,10 @@ function Page(props: any) {
   const [travellingFromCity, setTravellingFromCity] = useState("");
   const [needsBussingFrom, setNeedsBussingFrom] = useState("");
 
+  const [githubProfile, setGithubProfile] = useState("");
+  const [linkedinProfile, setLinkedinProfile] = useState("");
+  const [personalWebsite, setPersonalWebsite] = useState("");
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState(-1);
@@ -166,7 +170,7 @@ function Page(props: any) {
     // Remove any validation errors
     setErrors([]);
 
-    if (step < 12) {
+    if (step < 13) {
       setStep((prev) => prev + 1);
     }
   };
@@ -184,23 +188,11 @@ function Page(props: any) {
     let inputs;
 
     // No need to validate
-    if ((step >= 6 && step < 11)) {
+    if ((step >= 6 && step < 12)) {
       console.log("HERE")
 
       next();
-    } else if (step < 7) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
-      if (step === 4) {
-        inputs = {
-          applicationQuestion1: applicationQuestion1,
-          applicationQuestion2: applicationQuestion2
-        }
-      }
-      if (step === 5) {
-        inputs = {
-          travellingFromCity: travellingFromCity,
-          needsBussingFrom: needsBussingFrom
-        }
-      }
+    } else if (step < 6) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
       if (step === 1) {
         inputs = {
           firstName: firstName,
@@ -218,10 +210,20 @@ function Page(props: any) {
           levelOfStudy: levelOfStudy,
           country: country,
         };
+      } else if (step === 4) {
+        inputs = {
+          applicationQuestion1: applicationQuestion1,
+          applicationQuestion2: applicationQuestion2
+        }
+      } else if (step === 5) {
+        inputs = {
+          travellingFromCity: travellingFromCity,
+          needsBussingFrom: needsBussingFrom
+        }
       }
 
       awaitValidation(inputs, step - 1);
-    } else if (step === 11) {
+    } else if (step === 12) {
       inputs = {
         checkedMLHCode: checkedMLHCode,
         checkedMLHPrivacy: checkedMLHPrivacy,
@@ -234,7 +236,6 @@ function Page(props: any) {
 
   async function awaitValidation(inputs: any, arrayIndex: number) {
     let validForm = await schema[arrayIndex].isValid(inputs);
-    console.log(validForm);
     try {
       if (validForm) {
         next();
@@ -407,7 +408,6 @@ function Page(props: any) {
                     placeholder="" />
 
                   {error1 !== "" ? showValidationError(error1) : null}
-
                 </>
               ) : step === 5 ? (
                 <>
@@ -436,7 +436,29 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
-                    subheader='Let us know if you have team! Enter the name of your teammate(s) below. EACH INDIVIDUAL TEAMMATE MUST APPLY TO BE ACCEPTED. Maximum of 4 people per team (including the applicant). Teams can be changed at any point until the hackathon weekend.'
+                    subheader='These questions are NON mandatory. Upload all profiles you have available.'
+                  />
+                  <WordInput
+                    title="Upload your GitHub profile (link) here if you have one."
+                    input={githubProfile}
+                    setInput={setGithubProfile}
+                    placeholder="https://github.com/{example-username}" />
+                  <WordInput
+                    title="Upload your Linkedin profile (link) here if you have one."
+                    input={linkedinProfile}
+                    setInput={setLinkedinProfile}
+                    placeholder="https://www.linkedin.com/in/{example-username}/" />
+                  <WordInput
+                    title="Upload your personal website (link) here if you have one."
+                    input={personalWebsite}
+                    setInput={setPersonalWebsite}
+                    placeholder="https://{your-website-domain}" />
+                </>
+              ) : step === 7 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='Let us know if you have team! Enter the name of your teammate(s) below. EACH INDIVIDUAL TEAMMATE MUST APPLY. Maximum of 4 people per team (including the applicant). Teams can be changed at any point until the hackathon weekend.'
                   />
                   <WordInput
                     title="Teammate 1"
@@ -454,7 +476,7 @@ function Page(props: any) {
                     setInput={setTeammate3}
                     placeholder="First Name, Last Name" />
                 </>
-              ) : step === 7 ? (
+              ) : step === 8 ? (
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
@@ -473,7 +495,7 @@ function Page(props: any) {
                     setValue={setIsUnderrepresented}
                   />
                 </>
-              ) : step === 8 ? (
+              ) : step === 9 ? (
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
@@ -508,7 +530,7 @@ function Page(props: any) {
                     />
                   ) : null}
                 </>
-              ) : step === 9 ? (
+              ) : step === 10 ? (
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
@@ -543,7 +565,7 @@ function Page(props: any) {
                     />
                   ) : null}
                 </>
-              ) : step === 10 ? (
+              ) : step === 11 ? (
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
@@ -576,8 +598,7 @@ function Page(props: any) {
                     setValue={setShirtSize}
                   />
                 </>
-              ) : step === 11 ? (
-                // TODO: Style the checkboxes properly
+              ) : step === 12 ? (
                 <div>
                   <FormHeader
                     title='Major League Hacking Partnership Fields'
@@ -664,7 +685,7 @@ function Page(props: any) {
                     </label>
                   </div>
                 </div>
-              ) : step === 12 ? (
+              ) : step === 13 ? (
                 <FormHeader
                   title='Submit QHacks 2025 Application Form'
                   subheader='Press the finish button to submit, or press back to make changes'
@@ -672,7 +693,7 @@ function Page(props: any) {
               ) : null}
             </div>
             <div className='flex justify-between items-center'>
-              {step > 1 && step <= 12 ? (
+              {step > 1 && step <= 13 ? (
                 <button
                   className='text-white border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => prev()}
@@ -682,14 +703,14 @@ function Page(props: any) {
               ) : (
                 <div></div>
               )}
-              {step < 12 ? (
+              {step < 13 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => validateInputs()}
                 >
                   Next
                 </button>
-              ) : step === 12 ? (
+              ) : step === 13 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => save()}
@@ -710,7 +731,7 @@ function Page(props: any) {
               />
             ) : (
               <progress
-                value={step / 12}
+                value={step / 13}
                 className='mt-20 h-1 w-full border-none rounded-lg [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-[#ffffff54] [&::-webkit-progress-value]:bg-white'
               />
             )}
