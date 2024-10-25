@@ -39,6 +39,11 @@
   }
 }
 
+.radial-gradient-background {
+  background: radial-gradient(ellipse at center, rgba(138, 138, 138, 0.291) 20%, transparent 80%);
+  background-color: black; 
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

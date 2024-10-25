@@ -10,7 +10,7 @@ const GrowYourNetwork: React.FC = () => {
               Grow Your <span className='gradient-title'>Network</span>
             </h2>
             <p className='mt-4 text-lg '>
-              With hundreds of talented, ambitous, and like-minded individuals
+              With hundreds of talented, ambitious, and like-minded individuals
               all in one place, QHacks is the perfect playground for any tech
               enthusiast! Over the weekend, immerse yourself in the community,
               meet new people and talk shop with other students and companies.

@@ -31,9 +31,20 @@ export default function Home() {
     }
   });
 
+  const DonutScene = dynamic(
+    () => import("../components/shared/3d-models/donut"),
+    { ssr: false }
+  );
+  const ManyDonutScene = dynamic(
+    () => import("../components/shared/3d-models/manyDonuts"),
+    { ssr: false }
+  );
+
   return (
     <main className='overflow-hidden relative'>
-      <div className='h-screen flex flex-col justify-center items-center w-screen pt-24'>
+      <div className='radial-gradient-background'>
+        <NavBar />
+
         <div className='absolute inset-0 -z-20'>
           <DonutScene x={4} y={2.5} radius={0.5} color='white' />
         </div>
@@ -119,8 +130,11 @@ export default function Home() {
         <div>
           <Faq />
         </div>
-        <Footer />
       </div>
+
+      <Faq />
+
+      <Footer />
     </main>
   );
 }
