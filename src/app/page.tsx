@@ -20,6 +20,8 @@ import PastSpeakers from "../components/shared/pastSpeakers";
 import PartneringCard from "../components/partnershipCard";
 import Waves from "../components/waves";
 import signOutUser from "../firebase/auth/signout";
+import CurrentSponsors from "../components/shared/sponsors/currentSponsors";
+import PastSponsors from "../components/shared/sponsors/pastSponsors";
 
 export default function Home() {
   const router = useRouter();
@@ -82,7 +84,7 @@ export default function Home() {
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={()=>router.push('/application-form')}
+            onClick={() => router.push("/application-form")}
           >
             Register Here
           </motion.button>
@@ -154,6 +156,18 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        className='flex flex-col justify-around h-[100vh] relative'
+        id='sponsors'
+      >
+        <div className='bg-gradient-to-r from-black to-transparent w-[30%] h-full absolute left-0 z-40' />
+        <div className='bg-gradient-to-r from-transparent to-black w-[30%] h-full absolute right-0 z-40' />
+
+        <CurrentSponsors />
+
+        <PastSponsors />
       </div>
 
       <Faq />
