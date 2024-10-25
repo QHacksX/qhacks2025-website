@@ -21,7 +21,7 @@ const TriColor = () => {
             <div className='tricolor' id='tri-1'>
               <img src='./ducks/red.svg' />
               <div className='text-overlay'>
-                <p className='font-bold text-sm sm:text-xl'>500+</p>
+                <p className='font-bold text-sm sm:text-lg'>500+</p>
                 <p className='font-bold text-sm sm:text-lg'>Hackers</p>
               </div>
             </div>
@@ -29,7 +29,7 @@ const TriColor = () => {
             <div className='tricolor' id='tri-2'>
               <img src='./ducks/blue.svg' />
               <div className='text-overlay'>
-                <p className='font-bold text-sm sm:text-xl'>75+</p>
+                <p className='font-bold text-sm sm:text-lg'>75+</p>
                 <p className='font-bold text-sm sm:text-lg'>Projects</p>
               </div>
             </div>
@@ -37,7 +37,7 @@ const TriColor = () => {
             <div className='tricolor' id='tri-3'>
               <img src='./ducks/red.svg' />
               <div className='text-overlay'>
-                <p className='font-bold text-sm sm:text-xl'>25+</p>
+                <p className='font-bold text-sm sm:text-lg'>25+</p>
                 <p className='font-bold text-sm sm:text-lg'>Mentors</p>
               </div>
             </div>
@@ -47,7 +47,7 @@ const TriColor = () => {
             <div className='tricolor' id='tri-4'>
               <img src='./ducks/gold.svg' />
               <div className='text-overlay'>
-                <p className='font-bold text-md sm:text-xl'>1000+</p>
+                <p className='font-bold text-md sm:text-lg'>1000+</p>
                 <p className='font-bold text-md sm:text-lg'>Applicants</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ const TriColor = () => {
             <div className='tricolor' id='tri-5'>
               <img src='./ducks/blue.svg' />
               <div className='text-overlay'>
-                <p className='font-bold text-md sm:text-xl'>25+</p>
+                <p className='font-bold text-md sm:text-lg'>25+</p>
                 <p className='font-bold text-md sm:text-lg'>School</p>
               </div>
             </div>

@@ -13,10 +13,12 @@ import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
 import { auth } from "../firebase/config";
 import Faq from "../components/faq";
-import NavBar from "../components/navbar/nav";
+import NavBar from "../components/shared/navbar/nav";
 import TriColor from "../components/tricolor/tricolor";
 import GrowYourNetwork from "../components/shared/growYourNetwork";
 import PastSpeakers from "../components/shared/pastSpeakers";
+import PartneringCard from "../components/partnershipCard";
+import Waves from "../components/waves";
 
 export default function Home() {
   const router = useRouter();
@@ -38,9 +40,11 @@ export default function Home() {
 
   return (
     <main className='overflow-hidden relative'>
-      <div className='radial-gradient-background pb-28'>
+      <NavBar />
+
+      <div className='radial-gradient-background pb-28' id='home'>
         <div className='h-screen flex flex-col justify-center items-center w-screen pt-40 '>
-          <NavBar />
+          <Waves />
 
           <div className='z-0'>
             <div className='absolute inset-0'>
@@ -94,7 +98,7 @@ export default function Home() {
           <div className='flex items-center justify-center space-x-6 mt-4 z-20'>
             <Link href=''>
               <img
-                src={"/tiktok_logo.svg"}
+                src={"/socials/tiktok_logo.svg"}
                 alt='Tiktok'
                 width={40}
                 height={40}
@@ -103,7 +107,7 @@ export default function Home() {
             </Link>
             <Link href='https://www.instagram.com/qhacksx/'>
               <img
-                src={"/ig_logo.svg"}
+                src={"/socials/ig_logo.svg"}
                 alt='Instagram'
                 width={40}
                 height={40}
@@ -112,7 +116,7 @@ export default function Home() {
             </Link>
             <Link href='https://www.facebook.com/QHacks/'>
               <img
-                src={"/facebook_logo.svg"}
+                src={"/socials/facebook_logo.svg"}
                 alt='Facebook'
                 width={40}
                 height={40}
@@ -122,9 +126,11 @@ export default function Home() {
           </div>
         </div>
         <div className='flex justify-center items-center w-screen flex-col select-none'>
-          <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
+          <div className='w-[90%] md:w-[80%] lg:w-[70%]' id='about'>
             <TriColor />
           </div>
+
+          <PartneringCard />
 
           <div className='pt-20 relative justify-center flex flex-col items-center w-screen'>
             <div className='absolute inset-0 z-20'>

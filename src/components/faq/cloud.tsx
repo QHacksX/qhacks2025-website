@@ -28,7 +28,7 @@ export default function Cloud() {
           const rect = element.getBoundingClientRect();
           tempVis[cloudNum] =
             rect.top <=
-            window.scrollY + window.innerHeight - cloudWidths.cloudWidth1;
+            window.scrollY + window.innerHeight;
         }
       }
 
