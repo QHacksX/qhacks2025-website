@@ -90,7 +90,7 @@ export async function getInterestFormData() {
     
     return; // just return undefined otherwise
   } catch (e) {
-    console.log(e);
+    return;
   }
 }
 

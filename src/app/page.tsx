@@ -111,7 +111,7 @@ export default function Home() {
             Interested in joining? Click the button below to pre-register!
           </p>
           <Link
-            href='/interest-form'
+            href='/application-form'
             className='mt-3 shadow-[0_0_20px_1px_rgb(255,255,255)] bg-blue-900 py-3 rounded-lg border border-[#ffd24d] font-light hover:font-semibold'
           >
             {/* eslint-disable-next-line react/no-unescaped-entities */}

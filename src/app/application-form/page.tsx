@@ -1,10 +1,10 @@
 "use client";
 
-import DropdownInput from "@/src/components/interest-form/dropdownInput";
-import EmailInput from "@/src/components/interest-form/emailInput";
-import FormHeader from "@/src/components/interest-form/header";
-import PhoneInput from "@/src/components/interest-form/phoneInput";
-import WordInput from "@/src/components/interest-form/wordInput";
+import DropdownInput from "@/src/components/application-form/dropdownInput";
+import EmailInput from "@/src/components/application-form/emailInput";
+import FormHeader from "@/src/components/application-form/header";
+import PhoneInput from "@/src/components/application-form/phoneInput";
+import WordInput from "@/src/components/application-form/wordInput";
 import { ValidationErrors, schema } from "./validate";
 import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import {
@@ -24,7 +24,7 @@ import { error } from "console";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/src/firebase/config";
 import { useRouter } from "next/navigation";
-import ParagraphInput from "@/src/components/interest-form/paragraphInput";
+import ParagraphInput from "@/src/components/application-form/paragraphInput";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
