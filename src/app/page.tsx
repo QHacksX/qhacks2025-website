@@ -71,10 +71,10 @@ export default function Home() {
     <main className='overflow-hidden'>
       <div className='h-screen flex justify-center items-center w-screen flex-col pt-24 '>
         {/* this is the old navbar, its just there */}
-      <InvertedWaveBackground
+      {/* <InvertedWaveBackground
         isSignedIn={isSignedIn}
         screenWidth={screenWidth}
-      />
+      /> */}
   
         <div className='h-screen w-screen absolute -z-20'>
           <DonutScene x={4} y={2.5} radius={1/2} color='white' />
@@ -150,9 +150,9 @@ export default function Home() {
       <Testimonial/>
       </div> */}
       <div className='h-screen flex justify-between items-center w-screen flex-col select-none'>
-        <div className='h-screen w-screen absolute z-10'>
+        {/* <div className='h-screen w-screen absolute z-10'>
           <ManyDonutScene mobileView={screenWidth <= 600}/>
-        </div> 
+        </div>  */}
 
         <a
           onClick={() => {
