@@ -11,14 +11,19 @@ const Testimonials = () => {
         {testimonials.map((hacker, index) => (
           <div
             key={index}
-            className='bg-brand-card-bg p-6 rounded-3xl text-center flex flex-col justify-center items-center'
+            className='bg-brand-card-bg p-6 rounded-3xl text-center flex flex-col justify-between items-center'
           >
-            <img src={`./testimonials/${index + 1}.svg`} className="pb-5"/>
-
             <p className='text-lg mb-4'>"{hacker.testimonial}"</p>
-            <span className='text-gray-400'>
-              - {hacker.name}, {hacker.year}
-            </span>
+
+            <div className='flex flex-col justify-center items-center'>
+              <img
+                src={`./testimonials/${index + 1}.svg`}
+                className='pb-1 w-[40%]'
+              />
+              <span className='text-gray-400'>
+                {hacker.name}, {hacker.year}
+              </span>
+            </div>
           </div>
         ))}
       </div>
