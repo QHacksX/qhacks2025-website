@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <main className='overflow-hidden relative'>
-      <div className='radial-gradient-background'>
+      <div className='radial-gradient-background pb-28'>
         <div className='h-screen flex flex-col justify-center items-center w-screen pt-40 '>
           <NavBar />
 
@@ -60,8 +60,6 @@ export default function Home() {
           <img
             src={"/qhacks_crown.svg"}
             alt='Queens Crown'
-            // width={200}
-            // height={100}
             className='w-1/2 md:w-1/3 lg:w-1/4 h-auto min-w-[150px]'
           />
           <h1 className='text-center text-4xl md:text-5xl lg:text-7xl font-extrabold font-montserrat leading-relaxed mt-2 md:mt-4'>
@@ -124,7 +122,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex justify-center items-center w-screen flex-col select-none'>
-          <div className='w-[90%] md:w-[80%]'>
+          <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
             <TriColor />
           </div>
 
@@ -132,10 +130,10 @@ export default function Home() {
             <div className='absolute inset-0 z-20'>
               <DonutScene x={-8} y={1} radius={2} color='white' />
             </div>
-            <div className='w-[90%] md:w-[80%]'>
+            <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
               <GrowYourNetwork />
-
               <PastSpeakers />
+              <Testimonial />
             </div>
           </div>
         </div>

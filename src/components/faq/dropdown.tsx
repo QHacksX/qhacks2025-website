@@ -1,7 +1,7 @@
 "use client";
 
 import "../../css/FaqStyle.css";
-import { faqs } from "@/src/data/faqs";
+import { faqs } from "@/src/data";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";

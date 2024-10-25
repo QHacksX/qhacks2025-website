@@ -10,8 +10,6 @@
 }
 
 
-
-
 @layer components {
   .gradient-title {
     @apply text-3xl md:text-title-size md:leading-snug font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-tricolor-bright-red via-brand-orange-800 to-tricolor-bright-red animate-gradient-xy;

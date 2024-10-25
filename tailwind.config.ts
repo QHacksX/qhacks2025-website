@@ -34,6 +34,7 @@ const config: Config = {
         "tricolor-dark-red": "#CB372D",
         "tricolor-bright-red": "#EE4036",
         "tricolor-yellow": "#E2A022",
+        "brand-card-bg": "#353535",
       },
       "animation": {
         "gradient-x": "gradient-x 5s ease infinite",
