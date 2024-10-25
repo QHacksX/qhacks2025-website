@@ -189,8 +189,7 @@ function Page(props: any) {
 
     // No need to validate
     if ((step >= 6 && step < 12)) {
-      console.log("HERE")
-
+      
       next();
     } else if (step < 6) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
       if (step === 1) {
@@ -247,7 +246,6 @@ function Page(props: any) {
     }
   }
 
-  // TODO: Validation of data is required
   const save = () => {
     const inputtedData: ApplicationFormData = {
       firstName: firstName,
@@ -280,7 +278,6 @@ function Page(props: any) {
       acceptMLHPrivacyPolicy: checkedMLHPrivacy,
       acceptMLHEmails: checkedMLHSendEmails,
     };
-    console.log(inputtedData);
     updateUserData({ userData: inputtedData }).then((err) => {
       if (err) {
         setErrorMessage(err);
