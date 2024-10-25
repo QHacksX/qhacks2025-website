@@ -4,14 +4,16 @@ import { useEffect, useState } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import Footer from "../components/shared/footer";
 import InvertedWaveBackground from "../components/shared/header";
-
+import {motion} from 'framer-motion';
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
-
+import Testimonial from "../components/hacker-testimonials/Testimonial";
+import { useRouter, useSearchParams } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { auth } from "../firebase/config";
+import Image from "next/image"; // Importing Image component
+
 const DonutScene = dynamic(
   () => import("../components/shared/3d-models/donut"),
   { ssr: false }
@@ -49,7 +51,6 @@ export default function Home() {
 
       window.addEventListener("resize", updateWidth);
 
-      // Cleanup event listener on unmount
       return () => {
         window.removeEventListener("resize", updateWidth);
       };
@@ -68,32 +69,90 @@ export default function Home() {
 
   return (
     <main className='overflow-hidden'>
-      {/* TODO: account for resizing screen */}
+      <div className='h-screen flex justify-center items-center w-screen flex-col pt-24 '>
+        {/* this is the old navbar, its just there */}
       <InvertedWaveBackground
         isSignedIn={isSignedIn}
         screenWidth={screenWidth}
       />
-      {/* text-shadow-big */}
-      <div className='h-screen flex justify-center items-center w-screen flex-col '>
-        <h1 className='md:w-1/3 text-center text-6xl font-bold leading-relaxed'> 
-          Get Ready <p className='text-3xl'>for</p> <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-orange-800 via-brand-orange-500 to-tricolor-bright-red animate-gradient-xy">QHacks 2025</span>
-        </h1>
+  
         <div className='h-screen w-screen absolute -z-20'>
-          <DonutScene x={0} y={0} radius={3} color='white' />
+          <DonutScene x={4} y={2.5} radius={1/2} color='white' />
         </div>
-        <a
-          onClick={() => {
-            window.scrollTo({ top: screenHeight, behavior: "smooth" });
-          }}
-          className='bottom-10 absolute'
+        <div className='h-screen w-screen absolute -z-20'>
+          <DonutScene x={-4} y={2} radius={1} color='white' />
+        </div>
+        <div className='h-screen w-screen absolute -z-20'>
+          <DonutScene x={-4} y={-1.25} radius={0.75} color='white' />
+        </div>
+        <div className='h-screen w-screen absolute -z-20'>
+          <DonutScene x={4} y={-0.75} radius={1.15} color='white' />
+        </div>
+
+        <Image
+          src={"/qhacks_crown.svg"}
+          alt='Queens Crown'
+          width={200}
+          height={100}
+          className='"flex-auto w-1/3 h-1/4 absolute top-20'
+        />
+        <h1 className='md:w-1/3 text-center text-7xl font-extrabold font-montserrat leading-relaxed mt-4'> 
+          QHACKS
+        </h1>
+        <p className='md:w-1/5 text-center text-xl'/>
+          Get ready to innovate and make a difference! Join QHacks, the ultimate hackathon experience.
+          <p className="font-bold text-[#E2A022] pt-5">
+            In-person![add dates]
+          </p>
+         
+        <motion.button
+          className="w-1/5 p-2 mt-4 font-bold text-xl text-white bg-red-500 rounded-full"
+          whileHover={{ scale: 1.1 }} 
+          transition={{ type: "spring", stiffness: 300 }}
         >
-          <BsChevronDoubleDown size={100} className='justify-self-end' />
-        </a>
+          Register Here
+        </motion.button>
+        <p className='md:w-1/5 text-center text-lg mt-2 '>
+          Already have an account? <a href="/signin" className="text-blue-500 hover:text-blue-700">Log in</a>
+        </p>
+
+        <div className="flex items-center justify-center space-x-6 mt-4">
+          <Link href="">
+          <Image
+            src={"/tiktok_logo.svg"}
+            alt='Tiktok'
+            width={50}
+            height={50}
+          />
+          </Link>
+          <Link href="https://www.instagram.com/qhacksx/">
+          <Image
+            src={"/ig_logo.svg"}
+            alt='Instagram'
+            width={50}
+            height={50} 
+          />
+          </Link>
+          <Link href="https://www.facebook.com/QHacks/">
+          <Image
+            src={"/facebook_logo.svg"}
+            alt='Facebook'
+            width={50} 
+            height={50}
+          />
+          </Link>
+        </div>
+        
       </div>
+      {/* Hacker testimonial, uncomment to test it. I removed the click to scroll functionality as figma doesnt clearly state its requirement */}
+      
+      {/* <div className="h-screen flex justify-center items-center w-screen flex-col pt-24">
+      <Testimonial/>
+      </div> */}
       <div className='h-screen flex justify-between items-center w-screen flex-col select-none'>
         <div className='h-screen w-screen absolute z-10'>
           <ManyDonutScene mobileView={screenWidth <= 600}/>
-        </div>
+        </div> 
 
         <a
           onClick={() => {
