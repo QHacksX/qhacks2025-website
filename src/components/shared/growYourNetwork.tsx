@@ -4,10 +4,12 @@ const GrowYourNetwork: React.FC = () => {
   return (
     <section className='text-white p-10 flex md:justify-between justify-center text-center md:text-left'>
       <div className='container mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-20'>
           <div>
             <h2 className='title'>
-              Grow Your <span className='gradient-title'>Network</span>
+              Grow Your
+              <br />
+              <span className='gradient-title'>Network</span>
             </h2>
             <p className='mt-4 text-lg '>
               With hundreds of talented, ambitious, and like-minded individuals
@@ -18,7 +20,7 @@ const GrowYourNetwork: React.FC = () => {
           </div>
           <div>
             <h2 className='title'>
-              Showcase To <span className='gradient-title'>Experts</span>
+              Showcase To<br/> <span className='gradient-title'>Experts</span>
             </h2>
             <p className='mt-4 text-lg '>
               This year, we&#39;re bringing together a diverse group of mentors,

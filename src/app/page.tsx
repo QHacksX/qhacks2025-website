@@ -35,10 +35,6 @@ export default function Home() {
     () => import("../components/shared/3d-models/donut"),
     { ssr: false }
   );
-  const ManyDonutScene = dynamic(
-    () => import("../components/shared/3d-models/manyDonuts"),
-    { ssr: false }
-  );
 
   return (
     <main className='overflow-hidden relative'>
@@ -127,13 +123,20 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className='flex justify-between items-center w-screen flex-col select-none'>
-          <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
+        <div className='flex justify-center items-center w-screen flex-col select-none'>
+          <div className='w-[90%] md:w-[80%]'>
             <TriColor />
-            <div className='pt-20'>
-              <GrowYourNetwork />
+          </div>
+
+          <div className='pt-20 relative justify-center flex flex-col items-center w-screen'>
+            <div className='absolute inset-0 z-20'>
+              <DonutScene x={-8} y={1} radius={2} color='white' />
             </div>
-            <PastSpeakers />
+            <div className='w-[90%] md:w-[80%]'>
+              <GrowYourNetwork />
+
+              <PastSpeakers />
+            </div>
           </div>
         </div>
       </div>

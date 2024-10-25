@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
 @layer components {
   .gradient-title {
     @apply text-3xl md:text-title-size md:leading-snug font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-tricolor-bright-red via-brand-orange-800 to-tricolor-bright-red animate-gradient-xy;
@@ -9,15 +19,10 @@
   .title{
     @apply text-3xl md:text-title-size font-extrabold md:leading-snug;
   }
+  *{
+    @apply font-montserrat
+  }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-.font-montserrat {
-  font-family: 'Montserrat', sans-serif;
-}
-
-
 
 
 
