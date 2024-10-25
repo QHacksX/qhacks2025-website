@@ -3,8 +3,8 @@ const TriColor = () =>{
     return (
         <div className="wrapper">
             <div className="tricolor-content-container">
-                <div className="tricolor-content">
-                    <h1>Join Us!</h1>
+                <div className="tricolor-content ">
+                    <h1 className='title'>Join Us!</h1>
                     <p className="mb-2">Join over 500 hackers, speakers and mentors
                         to create, learn and share your ideas. Attend our workshops
                         and hacker challenges and meet industry professionals.

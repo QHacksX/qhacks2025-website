@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontSize: {
+        'title-size': '3.5rem', 
+      },
       colors: {
         'brand-orange-900': '#F76A1E',
         'brand-orange-800': '#F7841F',

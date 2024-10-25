@@ -14,21 +14,12 @@ import Link from "next/link";
 import { auth } from "../firebase/config";
 import Faq from "../components/faq";
 import NavBar from "../components/navbar/nav";
-const DonutScene = dynamic(
-  () => import("../components/shared/3d-models/donut"),
-  { ssr: false }
-);
-
-const ManyDonutScene = dynamic(
-  () => import("../components/shared/3d-models/manyDonuts"),
-  { ssr: false }
-);
+import TriColor from "../components/tricolor/tricolor";
+import GrowYourNetwork from "../components/shared/growYourNetwork";
+import PastSpeakers from "../components/shared/pastSpeakers";
 
 export default function Home() {
   const router = useRouter();
-
-  const [screenWidth, setScreenWidth] = useState(0);
-  const [screenHeight, setScreenHeight] = useState(0);
 
   const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
 
@@ -39,23 +30,6 @@ export default function Home() {
       setIsSignedIn(false);
     }
   });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const updateWidth = () => {
-        setScreenWidth(window.innerWidth);
-        setScreenHeight(window.innerHeight);
-      };
-
-      updateWidth();
-
-      window.addEventListener("resize", updateWidth);
-
-      return () => {
-        window.removeEventListener("resize", updateWidth);
-      };
-    }
-  }, []);
 
   return (
     <main className='overflow-hidden relative'>
@@ -135,13 +109,13 @@ export default function Home() {
         </div>
       </div>
       <div className='flex justify-between items-center w-screen flex-col select-none'>
-        <a
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className='top-10 relative justify-self-start z-20'
-        ></a>
-
+        <div className='w-[90%] md:w-[80%] lg:w-[70%]'>
+          <TriColor />
+          <div className='pt-20'>
+            <GrowYourNetwork />
+          </div>
+          <PastSpeakers />
+        </div>
         <div>
           <Faq />
         </div>

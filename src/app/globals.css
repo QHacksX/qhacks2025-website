@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .gradient-title {
+    @apply text-3xl md:text-title-size md:leading-snug font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-tricolor-bright-red via-brand-orange-800 to-tricolor-bright-red animate-gradient-xy;
+  }
+  .title{
+    @apply text-3xl md:text-title-size font-extrabold md:leading-snug;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .font-montserrat {
@@ -45,92 +54,3 @@ body {
     text-wrap: balance;
   }
 }
-
-
-.shadow{box-shadow: inset 20px 20px 40px #ffff00, inset -20px -20px 40px #ff0000;animation: animate 60s linear infinite;
-}
-
-@keyframes animate {
-	0% {
-		box-shadow: inset 0 0 20px #ffff00
-	}
-    30% {
-		box-shadow: inset 0 0 20px #ffff00
-	}
-	33% {
-		box-shadow: inset 0 0 20px #ff0000
-	}
-    63% {
-		box-shadow: inset 0 0 20px #ff0000
-	}
-	66% {
-		box-shadow: inset 0 0 20px #0000ff
-    }
-    97% {
-		box-shadow: inset 0 0 20px #0000ff
-    }
-    100% {
-		box-shadow: inset 0 0 20px #ffff00
-	}
-}
-
-.text-shadow{text-shadow: #ffff00 1px 0 10px;animation: text-animate 60s linear infinite
-}
-.text-shadow-big{text-shadow: #ffff00 1px 0 100px;animation: text-animate-big 10s linear infinite
-}
-
-@keyframes text-animate {
-	0% {
-		text-shadow: #ffff00 1px 0 30px
-	}
-    30% {
-		text-shadow: #ffff00 1px 0 30px
-	}
-	33% {
-		text-shadow: #ff0000 1px 0 30px
-	}
-    63% {
-		text-shadow: #ff0000 1px 0 30px
-	}
-	66% {
-		text-shadow: #0000ff 1px 0 30px
-    }
-    97% {
-		text-shadow: #0000ff 1px 0 30px
-    }
-    100% {
-		text-shadow: #ffff00 1px 0 30px
-	}
-}
-
-
-@keyframes text-animate-big {
-	0% {
-		text-shadow: #ffff00 1px 5px 10px
-	}
-    30% {
-		text-shadow: #ffff00 1px 5px 10px
-	}
-	33% {
-		text-shadow: #ff0000 1px 5px 10px
-	}
-    63% {
-		text-shadow: #ff0000 1px 5px 10px
-	}
-	66% {
-		text-shadow: #0000ff 1px 5px 10px
-    }
-    97% {
-		text-shadow: #0000ff 1px 5px 10px
-    }
-    100% {
-		text-shadow: #ffff00 1px 5px 10px
-	}
-}
-
-
-
-
-
-
-
