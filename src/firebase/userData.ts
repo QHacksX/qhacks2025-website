@@ -1,6 +1,6 @@
 import { auth, db, firebase_app } from "./config";
 import { getAuth } from "firebase/auth";
-import { doc, setDoc, collection, addDoc } from "firebase/firestore";
+import { doc, setDoc, collection, addDoc, getDoc } from "firebase/firestore";
 
 export enum ShirtSize {
   na = "not chosen",
@@ -75,15 +75,34 @@ export async function getUserData({}: {}) {
   }
 }
 
+export async function getInterestFormData() {
+  const userId = auth.currentUser?.uid;
+  if (!userId) {
+    return;
+  }
+
+  try {
+    const fetchedCollectionDoc = await getDoc(doc(db, "users", userId));
+    if (fetchedCollectionDoc.exists()) {
+      const interestFormData = fetchedCollectionDoc.data() as InterestFormData;
+      return interestFormData;
+    } 
+    
+    return; // just return undefined otherwise
+  } catch (e) {
+    return;
+  }
+}
+
 /**
- * Updates or inserts a document for the user in the 'users' collection.
+ * Updates or inserts a document for the user in the 'qhacks_application' collection.
  * @param userData - the data to store in the user's document
  * @returns
  */
 export async function updateUserData({
   userData,
 }: {
-  userData: InterestFormData;
+  userData: ApplicationFormData;
 }) {
   const userId = auth.currentUser?.uid;
   if (!userId) {
@@ -91,9 +110,8 @@ export async function updateUserData({
   }
 
   try {
-    await setDoc(doc(db, "users", userId), userData);
+    await setDoc(doc(db, "qhacks_application", userId), userData);
   } catch (e) {
-    console.log(e);
     return "Something went wrong. Please try again";
   }
 }

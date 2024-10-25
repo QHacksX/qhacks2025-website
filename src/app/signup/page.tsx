@@ -2,7 +2,7 @@
 import React from "react";
 import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
-import EmailInput from "@/src/components/interest-form/emailInput";
+import EmailInput from "@/src/components/application-form/emailInput";
 import Styles from "@/src/css/style.module.css";
 import { getAuthErrorMessage } from "@/src/firebase/utils";
 import Link from "next/link";

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./signin.css";
 import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
-import EmailInput from "@/src/components/interest-form/emailInput";
+import EmailInput from "@/src/components/application-form/emailInput";
 import Styles from "@/src/css/style.module.css";
 import { getAuthErrorMessage } from "@/src/firebase/utils";
 import { auth } from "@/src/firebase/config";

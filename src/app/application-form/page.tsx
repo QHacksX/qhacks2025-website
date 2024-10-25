@@ -1,14 +1,15 @@
 "use client";
 
-import DropdownInput from "@/src/components/interest-form/dropdownInput";
-import EmailInput from "@/src/components/interest-form/emailInput";
-import FormHeader from "@/src/components/interest-form/header";
-import PhoneInput from "@/src/components/interest-form/phoneInput";
-import WordInput from "@/src/components/interest-form/wordInput";
+import DropdownInput from "@/src/components/application-form/dropdownInput";
+import EmailInput from "@/src/components/application-form/emailInput";
+import FormHeader from "@/src/components/application-form/header";
+import PhoneInput from "@/src/components/application-form/phoneInput";
+import WordInput from "@/src/components/application-form/wordInput";
 import { ValidationErrors, schema } from "./validate";
 import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import {
   ApplicationFormData,
+  getInterestFormData,
   InterestFormData,
   ShirtSize,
   updateUserData,
@@ -23,7 +24,7 @@ import { error } from "console";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/src/firebase/config";
 import { useRouter } from "next/navigation";
-import ParagraphInput from "@/src/components/interest-form/paragraphInput";
+import ParagraphInput from "@/src/components/application-form/paragraphInput";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
@@ -32,6 +33,8 @@ function Page(props: any) {
   useEffect(() => {
     if (auth.currentUser === null) {
       router.push("signin");
+    } else if (auth.currentUser) {
+      populateInterestFormResponses()
     }
   }, [router]);
 
@@ -189,7 +192,6 @@ function Page(props: any) {
 
     // No need to validate
     if ((step >= 6 && step < 12)) {
-      console.log("HERE")
 
       next();
     } else if (step < 6) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
@@ -247,7 +249,39 @@ function Page(props: any) {
     }
   }
 
-  // TODO: Validation of data is required
+  // For anyone who made an interest form response, pre-populate their responses here so they don't have to do it again
+  async function populateInterestFormResponses() {
+    let fetchedResponses: InterestFormData;
+    const interestFormData: InterestFormData | undefined = await getInterestFormData();
+
+    if (interestFormData) {
+      fetchedResponses = interestFormData;
+
+      // Mandatory inputs
+      setFirstName(fetchedResponses.firstName);
+      setLastName(fetchedResponses.lastName);
+      setAge(fetchedResponses.age);
+      setPhoneNumber(fetchedResponses.phoneNumber);
+      setEmail(fetchedResponses.email);
+      setSchool(fetchedResponses.school);
+      setLevelOfStudy(fetchedResponses.levelOfStudy);
+      setCountry(fetchedResponses.country);
+
+      // Non mandatory inputs 
+      // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
+      setDietaryRestriction(fetchedResponses.dietaryRestrictions ? fetchedResponses.dietaryRestrictions : "");
+      setGender(fetchedResponses.gender ? fetchedResponses.gender : "");
+      setPronoun(fetchedResponses.pronouns ? fetchedResponses.pronouns : "");
+      setEthnicity(fetchedResponses.ethnicity ? fetchedResponses.ethnicity : "");
+      setSexuality(fetchedResponses.sexualIdentity ? fetchedResponses.sexualIdentity : "");
+      setHighestEdu(fetchedResponses.highestEducationCompleted ? fetchedResponses.highestEducationCompleted : "");
+      setShirtSize(fetchedResponses.shirtSize ? fetchedResponses.shirtSize : ShirtSize.na);
+      setFieldOfStudy(fetchedResponses.studyMajor ? fetchedResponses.studyMajor : "");
+
+      // Skipping MLH checkboxes to make sure they confirm again
+    }
+  }
+
   const save = () => {
     const inputtedData: ApplicationFormData = {
       firstName: firstName,
@@ -280,7 +314,6 @@ function Page(props: any) {
       acceptMLHPrivacyPolicy: checkedMLHPrivacy,
       acceptMLHEmails: checkedMLHSendEmails,
     };
-    console.log(inputtedData);
     updateUserData({ userData: inputtedData }).then((err) => {
       if (err) {
         setErrorMessage(err);
