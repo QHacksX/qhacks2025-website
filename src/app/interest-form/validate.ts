@@ -3,6 +3,8 @@ import * as yup from 'yup';
 const phoneRegex = /^(\([0-9]{3}\)\s?|[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
 
 export enum ValidationErrors {
+    APPLICATION_QUESTION_ERROR = "A response is required for both fields",
+    CITY_ERROR = "A response is required for both fields",
     FIRST_NAME_ERROR = "First Name is Required",
     LAST_NAME_ERROR = "Last Name is Required",
     AGE_ERROR = "Age is required",
@@ -16,6 +18,14 @@ export enum ValidationErrors {
 }
 
 export const schema = [
+    yup.object().shape({
+        applicationQuestion1: yup.string().required(ValidationErrors.APPLICATION_QUESTION_ERROR),
+        applicationQuestion2: yup.string().required(ValidationErrors.APPLICATION_QUESTION_ERROR)
+    }),
+    yup.object().shape({
+        travellingFromCity: yup.string().required(ValidationErrors.CITY_ERROR),
+        needsBussingFrom: yup.string().required(ValidationErrors.CITY_ERROR)
+    }),
     yup.object().shape({
         firstName: yup.string().required(ValidationErrors.FIRST_NAME_ERROR),
         lastName: yup.string().required(ValidationErrors.LAST_NAME_ERROR),
