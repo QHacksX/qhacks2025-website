@@ -19,6 +19,7 @@ import GrowYourNetwork from "../components/shared/growYourNetwork";
 import PastSpeakers from "../components/shared/pastSpeakers";
 import PartneringCard from "../components/partnershipCard";
 import Waves from "../components/waves";
+import signOutUser from "../firebase/auth/signout";
 
 export default function Home() {
   const router = useRouter();
@@ -81,19 +82,29 @@ export default function Home() {
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
+            onClick={()=>router.push('/application-form')}
           >
             Register Here
           </motion.button>
 
-          <p className='md:w-1/2 lg:w-1/4 text-center text-lg mt-2 z-20'>
-            Already have an account?{" "}
-            <a
-              href='/signin'
-              className='text-blue-500 hover:text-blue-700 z-20'
+          {isSignedIn ? (
+            <p
+              className='text-blue-500 hover:text-blue-700 z-20 mt-2 z-20 hover:cursor-pointer'
+              onClick={() => signOutUser()}
             >
-              Log in
-            </a>
-          </p>
+              Log out
+            </p>
+          ) : (
+            <p className='md:w-1/2 lg:w-1/4 text-center text-lg mt-2 z-20'>
+              Already have an account?{" "}
+              <a
+                href='/signin'
+                className='text-blue-500 hover:text-blue-700 z-20'
+              >
+                Log in
+              </a>
+            </p>
+          )}
 
           <div className='flex items-center justify-center space-x-6 mt-4 z-20'>
             <Link href=''>
