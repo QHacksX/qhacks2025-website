@@ -4,7 +4,7 @@ import "../../css/FaqStyle.css";
 import { faqs } from "@/src/data/faqs";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons"; 
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Dropdown() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -13,7 +13,7 @@ export default function Dropdown() {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-3/5'>
+    <div className='grid grid-cols-2 md:gap-4 gap-1 md:w-3/5 w-4/5 z-20'>
       {faqs.map((faq, index) => (
         <div key={index} className='p-4'>
           <button
