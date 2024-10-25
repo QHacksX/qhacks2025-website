@@ -9,6 +9,7 @@ import { ValidationErrors, schema } from "./validate";
 import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import {
   ApplicationFormData,
+  getInterestFormData,
   InterestFormData,
   ShirtSize,
   updateUserData,
@@ -32,6 +33,8 @@ function Page(props: any) {
   useEffect(() => {
     if (auth.currentUser === null) {
       router.push("signin");
+    } else if (auth.currentUser) {
+      populateInterestFormResponses()
     }
   }, [router]);
 
@@ -189,7 +192,7 @@ function Page(props: any) {
 
     // No need to validate
     if ((step >= 6 && step < 12)) {
-      
+
       next();
     } else if (step < 6) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
       if (step === 1) {
@@ -243,6 +246,39 @@ function Page(props: any) {
       }
     } catch (err: any) {
       setErrors(err.errors);
+    }
+  }
+
+  // For anyone who made an interest form response, pre-populate their responses here so they don't have to do it again
+  async function populateInterestFormResponses() {
+    let fetchedResponses: InterestFormData;
+    const interestFormData: InterestFormData | undefined = await getInterestFormData();
+
+    if (interestFormData) {
+      fetchedResponses = interestFormData;
+
+      // Mandatory inputs
+      setFirstName(fetchedResponses.firstName);
+      setLastName(fetchedResponses.lastName);
+      setAge(fetchedResponses.age);
+      setPhoneNumber(fetchedResponses.phoneNumber);
+      setEmail(fetchedResponses.email);
+      setSchool(fetchedResponses.school);
+      setLevelOfStudy(fetchedResponses.levelOfStudy);
+      setCountry(fetchedResponses.country);
+
+      // Non mandatory inputs 
+      // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
+      setDietaryRestriction(fetchedResponses.dietaryRestrictions ? fetchedResponses.dietaryRestrictions : "");
+      setGender(fetchedResponses.gender ? fetchedResponses.gender : "");
+      setPronoun(fetchedResponses.pronouns ? fetchedResponses.pronouns : "");
+      setEthnicity(fetchedResponses.ethnicity ? fetchedResponses.ethnicity : "");
+      setSexuality(fetchedResponses.sexualIdentity ? fetchedResponses.sexualIdentity : "");
+      setHighestEdu(fetchedResponses.highestEducationCompleted ? fetchedResponses.highestEducationCompleted : "");
+      setShirtSize(fetchedResponses.shirtSize ? fetchedResponses.shirtSize : ShirtSize.na);
+      setFieldOfStudy(fetchedResponses.studyMajor ? fetchedResponses.studyMajor : "");
+
+      // Skipping MLH checkboxes to make sure they confirm again
     }
   }
 
