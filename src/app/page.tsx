@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import Footer from "../components/shared/footer";
 import InvertedWaveBackground from "../components/shared/header";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
 import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
 import React from "react";
 import Testimonial from "../components/hacker-testimonials/Testimonial";
@@ -57,106 +57,88 @@ export default function Home() {
     }
   }, []);
 
-  const { scrollDir } = useDetectScroll();
-
-  useEffect(() => {
-    if (scrollDir === Direction.Down)
-      window.scrollTo({ top: screenHeight, behavior: "smooth" });
-    if (scrollDir === Direction.Up) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [scrollDir, screenHeight]);
-
   return (
     <main className='overflow-hidden'>
       <div className='h-screen flex flex-col justify-center items-center w-screen pt-24'>
-  {/* this is the old navbar, it's just there */}
-  {/* <InvertedWaveBackground isSignedIn={isSignedIn} screenWidth={screenWidth} /> */}
+        <div className='absolute inset-0 -z-20'>
+          <DonutScene x={4} y={2.5} radius={0.5} color='white' />
+        </div>
+        <div className='absolute inset-0 -z-20'>
+          <DonutScene x={-4} y={2} radius={1} color='white' />
+        </div>
+        <div className='absolute inset-0 -z-20'>
+          <DonutScene x={-4} y={-1.25} radius={0.75} color='white' />
+        </div>
+        <div className='absolute inset-0 -z-20'>
+          <DonutScene x={4} y={-0.75} radius={1.15} color='white' />
+        </div>
 
-  <div className='absolute inset-0 -z-20'>
-    <DonutScene x={4} y={2.5} radius={0.5} color='white' />
-  </div>
-  <div className='absolute inset-0 -z-20'>
-    <DonutScene x={-4} y={2} radius={1} color='white' />
-  </div>
-  <div className='absolute inset-0 -z-20'>
-    <DonutScene x={-4} y={-1.25} radius={0.75} color='white' />
-  </div>
-  <div className='absolute inset-0 -z-20'>
-    <DonutScene x={4} y={-0.75} radius={1.15} color='white' />
-  </div>
+        <img
+          src={"/qhacks_crown.svg"}
+          alt='Queens Crown'
+          width={200}
+          height={100}
+          className='w-1/2 md:w-1/3 lg:w-1/4 h-auto absolute top-24 md:top-20 min-w-[150px]'
+        />
+        <h1 className='text-center text-4xl md:text-5xl lg:text-7xl font-extrabold font-montserrat leading-relaxed mt-2 md:mt-4'>
+          QHACKS
+        </h1>
+        <p className='md:w-3/5 lg:w-1/3 text-center text-xl mt-4'>
+          Get ready to innovate and make a difference! Join QHacks, the ultimate
+          hackathon experience.
+        </p>
+        <p className='font-bold text-[#E2A022] pt-5'>In-person! [add dates]</p>
 
-  <Image
-    src={"/qhacks_crown.svg"}
-    alt='Queens Crown'
-    width={200}
-    height={100}
-    className='w-1/2 md:w-1/3 lg:w-1/4 h-auto absolute top-24 md:top-20 min-w-[150px]'
-  />
-  <h1 className='text-center text-4xl md:text-5xl lg:text-7xl font-extrabold font-montserrat leading-relaxed mt-2 md:mt-4'>
-    QHACKS
-  </h1>
-  <p className='md:w-3/5 lg:w-1/3 text-center text-xl mt-4'>
-    Get ready to innovate and make a difference! Join QHacks, the ultimate hackathon experience.
-  </p>
-  <p className="font-bold text-[#E2A022] pt-5">
-    In-person! [add dates]
-  </p>
+        <motion.button
+          className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full'
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          Register Here
+        </motion.button>
 
-  <motion.button
-    className="w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full"
-    whileHover={{ scale: 1.1 }}
-    transition={{ type: "spring", stiffness: 300 }}
-  >
-    Register Here
-  </motion.button>
+        <p className='md:w-1/2 lg:w-1/4 text-center text-lg mt-2'>
+          Already have an account?{" "}
+          <a href='/signin' className='text-blue-500 hover:text-blue-700'>
+            Log in
+          </a>
+        </p>
 
-  <p className='md:w-1/2 lg:w-1/4 text-center text-lg mt-2'>
-    Already have an account? <a href="/signin" className="text-blue-500 hover:text-blue-700">Log in</a>
-  </p>
-
-  <div className="flex items-center justify-center space-x-6 mt-4">
-    <Link href="">
-      <Image
-        src={"/tiktok_logo.svg"}
-        alt='Tiktok'
-        width={40}
-        height={40}
-        className="w-10 h-10"
-      />
-    </Link>
-    <Link href="https://www.instagram.com/qhacksx/">
-      <Image
-        src={"/ig_logo.svg"}
-        alt='Instagram'
-        width={40}
-        height={40}
-        className="w-10 h-10"
-      />
-    </Link>
-    <Link href="https://www.facebook.com/QHacks/">
-      <Image
-        src={"/facebook_logo.svg"}
-        alt='Facebook'
-        width={40}
-        height={40}
-        className="w-10 h-10"
-      />
-    </Link>
-  </div>
-</div>
-
+        <div className='flex items-center justify-center space-x-6 mt-4'>
+          <Link href=''>
+            <img
+              src={"/tiktok_logo.svg"}
+              alt='Tiktok'
+              width={40}
+              height={40}
+              className='w-10 h-10'
+            />
+          </Link>
+          <Link href='https://www.instagram.com/qhacksx/'>
+            <img
+              src={"/ig_logo.svg"}
+              alt='Instagram'
+              width={40}
+              height={40}
+              className='w-10 h-10'
+            />
+          </Link>
+          <Link href='https://www.facebook.com/QHacks/'>
+            <img
+              src={"/facebook_logo.svg"}
+              alt='Facebook'
+              width={40}
+              height={40}
+              className='w-10 h-10'
+            />
+          </Link>
+        </div>
+      </div>
 
 
-      {/* Hacker testimonial, uncomment to test it. I removed the click to scroll functionality as figma doesnt clearly state its requirement */}
-      
-      {/* <div className="h-screen flex justify-center items-center w-screen flex-col pt-24">
-      <Testimonial/>
-      </div> */}
+
       <div className='h-screen flex justify-between items-center w-screen flex-col select-none'>
-        {/* <div className='h-screen w-screen absolute z-10'>
-          <ManyDonutScene mobileView={screenWidth <= 600}/>
-        </div>  */}
+
 
         <a
           onClick={() => {
