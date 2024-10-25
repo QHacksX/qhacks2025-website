@@ -12,8 +12,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
 import { auth } from "../firebase/config";
-import Image from "next/image"; // Importing Image component
-
+import Faq from "../components/faq";
 const DonutScene = dynamic(
   () => import("../components/shared/3d-models/donut"),
   { ssr: false }
@@ -134,12 +133,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
-
-
-      <div className='h-screen flex justify-between items-center w-screen flex-col select-none'>
-
-
+      <div className='flex justify-between items-center w-screen flex-col select-none'>
         <a
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -163,8 +157,8 @@ export default function Home() {
             I'm Interested!
           </Link>
         </div>
-        <div className='justify-self-end w-full'>
-          <Footer />
+        <div>
+          <Faq />
         </div>
       </div>
     </main>
