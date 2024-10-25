@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
+
 import Footer from "../components/shared/footer";
 import InvertedWaveBackground from "../components/shared/header";
 import { motion } from "framer-motion";
@@ -58,7 +58,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='overflow-hidden'>
+    <main className='overflow-hidden relative'>
       <div className='h-screen flex flex-col justify-center items-center w-screen pt-24'>
         <div className='absolute inset-0 -z-20'>
           <DonutScene x={4} y={2.5} radius={0.5} color='white' />
@@ -145,6 +145,7 @@ export default function Home() {
         <div>
           <Faq />
         </div>
+        <Footer />
       </div>
     </main>
   );
