@@ -19,14 +19,6 @@ export enum ValidationErrors {
 
 export const schema = [
     yup.object().shape({
-        applicationQuestion1: yup.string().required(ValidationErrors.APPLICATION_QUESTION_ERROR),
-        applicationQuestion2: yup.string().required(ValidationErrors.APPLICATION_QUESTION_ERROR)
-    }),
-    yup.object().shape({
-        travellingFromCity: yup.string().required(ValidationErrors.CITY_ERROR),
-        needsBussingFrom: yup.string().required(ValidationErrors.CITY_ERROR)
-    }),
-    yup.object().shape({
         firstName: yup.string().required(ValidationErrors.FIRST_NAME_ERROR),
         lastName: yup.string().required(ValidationErrors.LAST_NAME_ERROR),
         age: yup.number().required(ValidationErrors.AGE_ERROR)
@@ -39,6 +31,14 @@ export const schema = [
         school: yup.string().required(ValidationErrors.SCHOOL_ERROR),
         levelOfStudy: yup.string().required(ValidationErrors.LEVEL_OF_STUDY_ERROR),
         country: yup.string().required(ValidationErrors.COUNTRY_ERROR)
+    }),
+    yup.object().shape({
+        applicationQuestion1: yup.string().required(ValidationErrors.APPLICATION_QUESTION_ERROR),
+        applicationQuestion2: yup.string().required(ValidationErrors.APPLICATION_QUESTION_ERROR)
+    }),
+    yup.object().shape({
+        travellingFromCity: yup.string().required(ValidationErrors.CITY_ERROR),
+        needsBussingFrom: yup.string().required(ValidationErrors.CITY_ERROR)
     }),
     yup.object().shape({
         checkedMLHCode: yup.bool().oneOf([true], ValidationErrors.MLH_CODE_ERROR),

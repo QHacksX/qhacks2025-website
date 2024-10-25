@@ -184,35 +184,35 @@ function Page(props: any) {
     let inputs;
 
     // No need to validate
-    if (step === 1 || (step >= 7 && step < 11)) {
+    if ((step >= 6 && step < 11)) {
       console.log("HERE")
 
       next();
     } else if (step < 7) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
-      if (step === 2) {
+      if (step === 4) {
         inputs = {
           applicationQuestion1: applicationQuestion1,
           applicationQuestion2: applicationQuestion2
         }
       }
-      if (step === 3) {
+      if (step === 5) {
         inputs = {
           travellingFromCity: travellingFromCity,
           needsBussingFrom: needsBussingFrom
         }
       }
-      if (step === 4) {
+      if (step === 1) {
         inputs = {
           firstName: firstName,
           lastName: lastName,
           age: age === -1 ? null : age,
         };
-      } else if (step === 5) {
+      } else if (step === 2) {
         inputs = {
           phoneNumber: phoneNumber,
           email: email,
         };
-      } else if (step === 6) {
+      } else if (step === 3) {
         inputs = {
           school: school,
           levelOfStudy: levelOfStudy,
@@ -220,7 +220,7 @@ function Page(props: any) {
         };
       }
 
-      awaitValidation(inputs, step - 2);
+      awaitValidation(inputs, step - 1);
     } else if (step === 11) {
       inputs = {
         checkedMLHCode: checkedMLHCode,
@@ -302,72 +302,6 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
-                    subheader='Let us know if you have team! Enter the name of your teammate(s) below. EACH INDIVIDUAL TEAMMATE MUST APPLY TO BE ACCEPTED. Maximum of 4 people per team (including the applicant). Teams can be changed at any point until the hackathon weekend.'
-                  />
-                  <WordInput
-                    title="Teammate 1"
-                    input={teammate1}
-                    setInput={setTeammate1}
-                    placeholder="First Name, Last Name" />
-                  <WordInput
-                    title="Teammate 2"
-                    input={teammate2}
-                    setInput={setTeammate2}
-                    placeholder="First Name, Last Name" />
-                  <WordInput
-                    title="Teammate 3"
-                    input={teammate3}
-                    setInput={setTeammate3}
-                    placeholder="First Name, Last Name" />
-                </>
-              ) : step === 2 ? (
-                <>
-                  <FormHeader
-                    title='QHacks 2025 Application Form'
-                    subheader='These questions are mandatory. Resize the input fields if you need more space.'
-                  />
-                  <ParagraphInput
-                    title="Why do you want to participate in QHacks? (Please limit your response to less than 300 words.)*"
-                    input={applicationQuestion1}
-                    setInput={setApplicationQuestion1}
-                    placeholder="" />
-
-                  <ParagraphInput
-                    title="Please tell us about a project that you would like to build at QHacks! (Please limit your response to less than 200 words.)*"
-                    input={applicationQuestion2}
-                    setInput={setApplicationQuestion2}
-                    placeholder="" />
-
-                  {error1 !== "" ? showValidationError(error1) : null}
-
-                </>
-              ) : step === 3 ? (
-                <>
-                  <FormHeader
-                    title='QHacks 2025 Application Form'
-                    subheader='All inputs on this page are mandatory'
-                  />
-                  <DropdownInput
-                    title={"Will you be travelling from any of these cities?*"}
-                    type={DropdownTypes.travelOptions}
-                    value={travellingFromCity}
-                    setValue={setTravellingFromCity}
-                  />
-
-                  <DropdownInput
-                    title={"Will you need bussing from any of these cities?*"}
-                    type={DropdownTypes.travelOptions}
-                    value={needsBussingFrom}
-                    setValue={setNeedsBussingFrom}
-                  />
-
-                  {error1 !== "" ? showValidationError(error1) : null}
-
-                </>
-              ) : step === 4 ? (
-                <>
-                  <FormHeader
-                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are mandatory'
                   />
                   <WordInput
@@ -397,7 +331,7 @@ function Page(props: any) {
 
                   {error3 !== "" ? showValidationError(error3) : null}
                 </>
-              ) : step === 5 ? (
+              ) : step === 2 ? (
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
@@ -421,7 +355,7 @@ function Page(props: any) {
 
                   {error2 !== "" ? showValidationError(error2) : null}
                 </>
-              ) : step === 6 ? (
+              ) : step === 3 ? (
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
@@ -453,6 +387,72 @@ function Page(props: any) {
                   />
 
                   {error3 !== "" ? showValidationError(error3) : null}
+                </>
+              ) : step === 4 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='These questions are mandatory. Resize the input fields if you need more space.'
+                  />
+                  <ParagraphInput
+                    title="Why do you want to participate in QHacks? (Please limit your response to less than 300 words.)*"
+                    input={applicationQuestion1}
+                    setInput={setApplicationQuestion1}
+                    placeholder="" />
+
+                  <ParagraphInput
+                    title="Please tell us about a project that you would like to build at QHacks! (Please limit your response to less than 200 words.)*"
+                    input={applicationQuestion2}
+                    setInput={setApplicationQuestion2}
+                    placeholder="" />
+
+                  {error1 !== "" ? showValidationError(error1) : null}
+
+                </>
+              ) : step === 5 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='All inputs on this page are mandatory'
+                  />
+                  <DropdownInput
+                    title={"Will you be travelling from any of these cities?*"}
+                    type={DropdownTypes.travelOptions}
+                    value={travellingFromCity}
+                    setValue={setTravellingFromCity}
+                  />
+
+                  <DropdownInput
+                    title={"Will you need bussing from any of these cities?*"}
+                    type={DropdownTypes.travelOptions}
+                    value={needsBussingFrom}
+                    setValue={setNeedsBussingFrom}
+                  />
+
+                  {error1 !== "" ? showValidationError(error1) : null}
+
+                </>
+              ) : step === 6 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='Let us know if you have team! Enter the name of your teammate(s) below. EACH INDIVIDUAL TEAMMATE MUST APPLY TO BE ACCEPTED. Maximum of 4 people per team (including the applicant). Teams can be changed at any point until the hackathon weekend.'
+                  />
+                  <WordInput
+                    title="Teammate 1"
+                    input={teammate1}
+                    setInput={setTeammate1}
+                    placeholder="First Name, Last Name" />
+                  <WordInput
+                    title="Teammate 2"
+                    input={teammate2}
+                    setInput={setTeammate2}
+                    placeholder="First Name, Last Name" />
+                  <WordInput
+                    title="Teammate 3"
+                    input={teammate3}
+                    setInput={setTeammate3}
+                    placeholder="First Name, Last Name" />
                 </>
               ) : step === 7 ? (
                 <>
