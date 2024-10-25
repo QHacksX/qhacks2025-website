@@ -12,6 +12,38 @@ export enum ShirtSize {
   xxLarge = "xxl",
 }
 
+export type ApplicationFormData = {
+  firstName: string;
+  lastName: string;
+
+  teammate1: string;
+  teammate2: string;
+  teammate3: string;
+  applicationQuestion1: string;
+  applicationQuestion2: string;
+  travellingFromCity: string;
+  needsBussingFrom: string;
+
+  age: number;
+  phoneNumber: string;
+  email: string;
+  school: string;
+  levelOfStudy: string;
+  country: string;
+  dietaryRestrictions?: string;
+  underrepresented?: boolean | null;
+  gender?: string;
+  pronouns?: string;
+  ethnicity?: string;
+  sexualIdentity?: string;
+  highestEducationCompleted?: string;
+  shirtSize?: ShirtSize;
+  studyMajor?: string;
+  acceptMLHCodeOfConduct: boolean;
+  acceptMLHPrivacyPolicy: boolean;
+  acceptMLHEmails: boolean;
+}
+
 export type InterestFormData = {
   firstName: string;
   lastName: string;

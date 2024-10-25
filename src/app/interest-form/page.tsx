@@ -8,6 +8,7 @@ import WordInput from "@/src/components/interest-form/wordInput";
 import { ValidationErrors, schema } from "./validate";
 import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import {
+  ApplicationFormData,
   InterestFormData,
   ShirtSize,
   updateUserData,
@@ -22,6 +23,7 @@ import { error } from "console";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/src/firebase/config";
 import { useRouter } from "next/navigation";
+import ParagraphInput from "@/src/components/interest-form/paragraphInput";
 
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
@@ -36,6 +38,20 @@ function Page(props: any) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState();
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
+
+  const [teammate1, setTeammate1] = useState("");
+  const [teammate2, setTeammate2] = useState("");
+  const [teammate3, setTeammate3] = useState("");
+
+  const [applicationQuestion1, setApplicationQuestion1] = useState("")
+  const [applicationQuestion2, setApplicationQuestion2] = useState("")
+
+  const [travellingFromCity, setTravellingFromCity] = useState("");
+  const [needsBussingFrom, setNeedsBussingFrom] = useState("");
+
+  const [githubProfile, setGithubProfile] = useState("");
+  const [linkedinProfile, setLinkedinProfile] = useState("");
+  const [personalWebsite, setPersonalWebsite] = useState("");
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -77,31 +93,35 @@ function Page(props: any) {
     let secondError;
     let thirdError;
 
-    firstError = errors.includes(ValidationErrors.FIRST_NAME_ERROR)
-      ? ValidationErrors.FIRST_NAME_ERROR
-      : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
-      ? ValidationErrors.PHONE_NUMBER_ERROR
-      : errors.includes(ValidationErrors.SCHOOL_ERROR)
-      ? ValidationErrors.COUNTRY_ERROR
-      : errors.includes(ValidationErrors.MLH_CODE_ERROR)
-      ? ValidationErrors.MLH_CODE_ERROR
-      : "";
+    firstError = errors.includes(ValidationErrors.CITY_ERROR)
+      ? ValidationErrors.CITY_ERROR
+      : errors.includes(ValidationErrors.APPLICATION_QUESTION_ERROR)
+        ? ValidationErrors.APPLICATION_QUESTION_ERROR
+        : errors.includes(ValidationErrors.FIRST_NAME_ERROR)
+          ? ValidationErrors.FIRST_NAME_ERROR
+          : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
+            ? ValidationErrors.PHONE_NUMBER_ERROR
+            : errors.includes(ValidationErrors.SCHOOL_ERROR)
+              ? ValidationErrors.COUNTRY_ERROR
+              : errors.includes(ValidationErrors.MLH_CODE_ERROR)
+                ? ValidationErrors.MLH_CODE_ERROR
+                : "";
 
     secondError = errors.includes(ValidationErrors.LAST_NAME_ERROR)
       ? ValidationErrors.LAST_NAME_ERROR
       : errors.includes(ValidationErrors.EMAIL_ERROR)
-      ? ValidationErrors.EMAIL_ERROR
-      : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
-      ? ValidationErrors.LEVEL_OF_STUDY_ERROR
-      : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
-      ? ValidationErrors.MLH_PRIVACY_ERROR
-      : "";
+        ? ValidationErrors.EMAIL_ERROR
+        : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
+          ? ValidationErrors.LEVEL_OF_STUDY_ERROR
+          : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
+            ? ValidationErrors.MLH_PRIVACY_ERROR
+            : "";
 
     thirdError = errors.includes(ValidationErrors.AGE_ERROR)
       ? ValidationErrors.AGE_ERROR
       : errors.includes(ValidationErrors.COUNTRY_ERROR)
-      ? ValidationErrors.COUNTRY_ERROR
-      : "";
+        ? ValidationErrors.COUNTRY_ERROR
+        : "";
 
     setError1(firstError);
     setError2(secondError);
@@ -150,7 +170,7 @@ function Page(props: any) {
     // Remove any validation errors
     setErrors([]);
 
-    if (step < 9) {
+    if (step < 13) {
       setStep((prev) => prev + 1);
     }
   };
@@ -167,8 +187,12 @@ function Page(props: any) {
   async function validateInputs() {
     let inputs;
 
-    // Only validate on pages 1, 2, 3, 8 (see else-if for 8)
-    if (step < 4) {
+    // No need to validate
+    if ((step >= 6 && step < 12)) {
+      console.log("HERE")
+
+      next();
+    } else if (step < 6) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
       if (step === 1) {
         inputs = {
           firstName: firstName,
@@ -186,26 +210,32 @@ function Page(props: any) {
           levelOfStudy: levelOfStudy,
           country: country,
         };
+      } else if (step === 4) {
+        inputs = {
+          applicationQuestion1: applicationQuestion1,
+          applicationQuestion2: applicationQuestion2
+        }
+      } else if (step === 5) {
+        inputs = {
+          travellingFromCity: travellingFromCity,
+          needsBussingFrom: needsBussingFrom
+        }
       }
 
       awaitValidation(inputs, step - 1);
-    } else if (step === 8) {
+    } else if (step === 12) {
       inputs = {
         checkedMLHCode: checkedMLHCode,
         checkedMLHPrivacy: checkedMLHPrivacy,
       };
 
-      // Index 3 since that is the last index in the validation schema
-      awaitValidation(inputs, 3);
-    } else if (step >= 4 && step < 8) {
-      // No need to validate
-      next();
+      // Index 5 since that is the last index in the validation schema
+      awaitValidation(inputs, 5);
     }
   }
 
   async function awaitValidation(inputs: any, arrayIndex: number) {
     let validForm = await schema[arrayIndex].isValid(inputs);
-    console.log(validForm);
     try {
       if (validForm) {
         next();
@@ -219,9 +249,18 @@ function Page(props: any) {
 
   // TODO: Validation of data is required
   const save = () => {
-    const inputtedData: InterestFormData = {
+    const inputtedData: ApplicationFormData = {
       firstName: firstName,
       lastName: lastName,
+
+      teammate1: teammate1,
+      teammate2: teammate2,
+      teammate3: teammate3,
+      applicationQuestion1: applicationQuestion1,
+      applicationQuestion2: applicationQuestion2,
+      travellingFromCity: travellingFromCity,
+      needsBussingFrom: needsBussingFrom,
+
       age: age,
       phoneNumber: phoneNumber,
       email: email,
@@ -246,7 +285,7 @@ function Page(props: any) {
       if (err) {
         setErrorMessage(err);
       }
-      setStep(10);
+      setStep(13);
     });
   };
 
@@ -263,7 +302,7 @@ function Page(props: any) {
               {step === 1 ? (
                 <>
                   <FormHeader
-                    title='QHacks 2025 Interest Form'
+                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are mandatory'
                   />
                   <WordInput
@@ -296,7 +335,7 @@ function Page(props: any) {
               ) : step === 2 ? (
                 <>
                   <FormHeader
-                    title='QHacks 2025 Interest Form'
+                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are mandatory'
                   />
                   <PhoneInput
@@ -320,7 +359,7 @@ function Page(props: any) {
               ) : step === 3 ? (
                 <>
                   <FormHeader
-                    title='QHacks 2025 Interest Form'
+                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are mandatory'
                   />
                   <DropdownInput
@@ -353,7 +392,94 @@ function Page(props: any) {
               ) : step === 4 ? (
                 <>
                   <FormHeader
-                    title='QHacks 2025 Interest Form'
+                    title='QHacks 2025 Application Form'
+                    subheader='These questions are mandatory. Resize the input fields if you need more space.'
+                  />
+                  <ParagraphInput
+                    title="Why do you want to participate in QHacks? (Please limit your response to less than 300 words.)*"
+                    input={applicationQuestion1}
+                    setInput={setApplicationQuestion1}
+                    placeholder="" />
+
+                  <ParagraphInput
+                    title="Please tell us about a project that you would like to build at QHacks! (Please limit your response to less than 200 words.)*"
+                    input={applicationQuestion2}
+                    setInput={setApplicationQuestion2}
+                    placeholder="" />
+
+                  {error1 !== "" ? showValidationError(error1) : null}
+                </>
+              ) : step === 5 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='All inputs on this page are mandatory'
+                  />
+                  <DropdownInput
+                    title={"Will you be travelling from any of these cities?*"}
+                    type={DropdownTypes.travelOptions}
+                    value={travellingFromCity}
+                    setValue={setTravellingFromCity}
+                  />
+
+                  <DropdownInput
+                    title={"Will you need bussing from any of these cities?*"}
+                    type={DropdownTypes.travelOptions}
+                    value={needsBussingFrom}
+                    setValue={setNeedsBussingFrom}
+                  />
+
+                  {error1 !== "" ? showValidationError(error1) : null}
+
+                </>
+              ) : step === 6 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='These questions are NON mandatory. Upload all profiles you have available.'
+                  />
+                  <WordInput
+                    title="Upload your GitHub profile (link) here if you have one."
+                    input={githubProfile}
+                    setInput={setGithubProfile}
+                    placeholder="https://github.com/{example-username}" />
+                  <WordInput
+                    title="Upload your Linkedin profile (link) here if you have one."
+                    input={linkedinProfile}
+                    setInput={setLinkedinProfile}
+                    placeholder="https://www.linkedin.com/in/{example-username}/" />
+                  <WordInput
+                    title="Upload your personal website (link) here if you have one."
+                    input={personalWebsite}
+                    setInput={setPersonalWebsite}
+                    placeholder="https://{your-website-domain}" />
+                </>
+              ) : step === 7 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='Let us know if you have team! Enter the name of your teammate(s) below. EACH INDIVIDUAL TEAMMATE MUST APPLY. Maximum of 4 people per team (including the applicant). Teams can be changed at any point until the hackathon weekend.'
+                  />
+                  <WordInput
+                    title="Teammate 1"
+                    input={teammate1}
+                    setInput={setTeammate1}
+                    placeholder="First Name, Last Name" />
+                  <WordInput
+                    title="Teammate 2"
+                    input={teammate2}
+                    setInput={setTeammate2}
+                    placeholder="First Name, Last Name" />
+                  <WordInput
+                    title="Teammate 3"
+                    input={teammate3}
+                    setInput={setTeammate3}
+                    placeholder="First Name, Last Name" />
+                </>
+              ) : step === 8 ? (
+                <>
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
@@ -369,10 +495,10 @@ function Page(props: any) {
                     setValue={setIsUnderrepresented}
                   />
                 </>
-              ) : step === 5 ? (
+              ) : step === 9 ? (
                 <>
                   <FormHeader
-                    title='QHacks 2025 Interest Form'
+                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
@@ -404,10 +530,10 @@ function Page(props: any) {
                     />
                   ) : null}
                 </>
-              ) : step === 6 ? (
+              ) : step === 10 ? (
                 <>
                   <FormHeader
-                    title='QHacks 2025 Interest Form'
+                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
@@ -439,10 +565,10 @@ function Page(props: any) {
                     />
                   ) : null}
                 </>
-              ) : step === 7 ? (
+              ) : step === 11 ? (
                 <>
                   <FormHeader
-                    title='QHacks 2025 Interest Form'
+                    title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
                   <DropdownInput
@@ -472,8 +598,7 @@ function Page(props: any) {
                     setValue={setShirtSize}
                   />
                 </>
-              ) : step === 8 ? (
-                // TODO: Style the checkboxes properly
+              ) : step === 12 ? (
                 <div>
                   <FormHeader
                     title='Major League Hacking Partnership Fields'
@@ -560,15 +685,15 @@ function Page(props: any) {
                     </label>
                   </div>
                 </div>
-              ) : step === 9 ? (
+              ) : step === 13 ? (
                 <FormHeader
-                  title='Submit QHacks 2025 Interest Form'
+                  title='Submit QHacks 2025 Application Form'
                   subheader='Press the finish button to submit, or press back to make changes'
                 />
               ) : null}
             </div>
             <div className='flex justify-between items-center'>
-              {step > 1 && step <= 9 ? (
+              {step > 1 && step <= 13 ? (
                 <button
                   className='text-white border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => prev()}
@@ -578,14 +703,14 @@ function Page(props: any) {
               ) : (
                 <div></div>
               )}
-              {step < 9 ? (
+              {step < 13 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => validateInputs()}
                 >
                   Next
                 </button>
-              ) : step === 9 ? (
+              ) : step === 13 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => save()}
@@ -595,7 +720,7 @@ function Page(props: any) {
               ) : null}
             </div>
 
-            {step === 10 ? (
+            {step === 13 ? (
               <FormHeader
                 title={
                   errorMessage
@@ -606,7 +731,7 @@ function Page(props: any) {
               />
             ) : (
               <progress
-                value={step / 9}
+                value={step / 13}
                 className='mt-20 h-1 w-full border-none rounded-lg [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-[#ffffff54] [&::-webkit-progress-value]:bg-white'
               />
             )}
