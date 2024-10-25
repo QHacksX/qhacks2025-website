@@ -130,9 +130,9 @@ export default function Home() {
             <TriColor />
           </div>
 
-          <PartneringCard />
-
           <div className='pt-20 relative justify-center flex flex-col items-center w-screen'>
+            <PartneringCard />
+
             <div className='absolute inset-0 z-20'>
               <DonutScene x={-8} y={1} radius={2} color='white' />
             </div>
