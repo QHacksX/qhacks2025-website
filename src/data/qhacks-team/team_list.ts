@@ -12,7 +12,7 @@ export const qhacksTeam = [
         "name": "Joash Mathew",
         "role": "Co-Chair",
         "instagram": "https://www.instagram.com/j0ashm/",
-        "image": "",
+        "image": "/qhacks-team/JoashMathew.jpg",
         "color": "bg-yellow-300",
         "linkedin": "https://www.linkedin.com/in/j0ashm/",
         "github": "https://github.com/j0ashm"
@@ -21,7 +21,7 @@ export const qhacksTeam = [
         "name": "Steven Zhang",
         "role": "Co-Chair",
         "instagram": "https://www.instagram.com/steven._.z/",
-        "image": "",
+        "image": "/qhacks-team/StevenZhang.jpg",
         "color": "bg-blue-500",
         "linkedin": "https://www.linkedin.com/in/steventzhang/",
         "github": "https://github.com/StevenO7"
@@ -30,7 +30,7 @@ export const qhacksTeam = [
         "name": "Jonathan Wilson",
         "role": "Finance Director",
         "instagram": "https://www.instagram.com/jonathan_wilson14/",
-        "image": "",
+        "image": "/qhacks-team/JonathanWilson.JPG",
         "color": "bg-red-500",
         "linkedin": "https://www.linkedin.com/in/jonathan-wilson-70487621b/",
         "github": null
@@ -48,7 +48,7 @@ export const qhacksTeam = [
         "name": "Amanda Cao",
         "role": "Partnerships Officer",
         "instagram": "https://www.instagram.com/amandasmyz/",
-        "image": "",
+        "image": "/qhacks-team/AmandaCao.JPG",
         "color": "bg-blue-500",
         "linkedin": "https://www.linkedin.com/in/amanda-cao-b214a2290/",
         "github": "https://github.com/amandacao2"
@@ -57,7 +57,7 @@ export const qhacksTeam = [
         "name": "Meagan Liu",
         "role": "Partnerships Officer",
         "instagram": "https://www.instagram.com/meaganliu_/",
-        "image": "",
+        "image": "/qhacks-team/MeaganLiu.jpg",
         "color": "bg-red-500",
         "linkedin": "https://www.linkedin.com/in/meagan-liu",
         "github": "https://github.com/meaganliu"
@@ -66,7 +66,7 @@ export const qhacksTeam = [
         "name": "Edward Tanurkov",
         "role": "Technology Director",
         "instagram": "https://www.instagram.com/edster28/",
-        "image": "",
+        "image": "/qhacks-team/EdwardTanurkov.JPG",
         "color": "bg-yellow-300",
         "linkedin": "https://www.linkedin.com/in/edward-tanurkov",
         "github": "https://github.com/spy772"
@@ -75,7 +75,7 @@ export const qhacksTeam = [
         "name": "Daniel Wagner",
         "role": "Technology Director",
         "instagram": "https://www.instagram.com/daniel_wagner15/",
-        "image": "",
+        "image": "/qhacks-team/DanielWagner.JPEG",
         "color": "bg-blue-500",
         "linkedin": "https://www.linkedin.com/in/daniel-wagner15/",
         "github": "https://github.com/Wags15"
@@ -84,7 +84,7 @@ export const qhacksTeam = [
         "name": "Robbie Huang",
         "role": "Technology Officer",
         "instagram": "https://www.instagram.com/robbie_h2/",
-        "image": "",
+        "image": "/qhacks-team/RobbieHuang.jpeg",
         "color": "bg-red-500",
         "linkedin": "https://www.linkedin.com/in/robbie-huang-/",
         "github": null
@@ -93,7 +93,7 @@ export const qhacksTeam = [
         "name": "Adwait Srivastava",
         "role": "Technology Officer",
         "instagram": "https://www.instagram.com/sri_adwait/",
-        "image": "",
+        "image": "/qhacks-team/AdwaitSrivastava.jpg",
         "color": "bg-yellow-300",
         "linkedin": "https://www.linkedin.com/in/adwait-srivastava",
         "github": null
@@ -102,7 +102,7 @@ export const qhacksTeam = [
         "name": "Kosi Amobi-Oleka",
         "role": "Technology Officer",
         "instagram": "https://www.instagram.com/kosi359/",
-        "image": "",
+        "image": "/qhacks-team/KosiAmobi-Oleka.jpg",
         "color": "bg-blue-500",
         "linkedin": "https://www.linkedin.com/in/kosi-amobi-oleka-51557225a/",
         "github": "https://github.com/WebOps2"
@@ -111,7 +111,7 @@ export const qhacksTeam = [
         "name": "Nicholas Lykopoulos",
         "role": "Operations Director",
         "instagram": "https://www.instagram.com/nicholaslyko/",
-        "image": "",
+        "image": "/qhacks-team/NicholasLykopoulos.jpg",
         "color": "bg-red-500",
         "linkedin": "http://linkedin.com/in/nicholas-lykopoulos-13565423a",
         "github": null
@@ -120,7 +120,7 @@ export const qhacksTeam = [
         "name": "Suhaib Khan",
         "role": "Operations Officer",
         "instagram": "https://www.instagram.com/_suhaibskhan/",
-        "image": "",
+        "image": "/qhacks-team/SuhaibKhan.JPG",
         "color": "bg-yellow-300",
         "linkedin": "https://www.linkedin.com/in/suhaibsadequekhan/",
         "github": null
@@ -129,7 +129,7 @@ export const qhacksTeam = [
         "name": "Navya Bajwa",
         "role": "Operations Officer",
         "instagram": "https://www.instagram.com/navyabajwa/",
-        "image": "",
+        "image": "/qhacks-team/NavyaBajwa.JPG",
         "color": "bg-blue-500",
         "linkedin": "https://www.linkedin.com/in/navyabajwa",
         "github": null
@@ -138,7 +138,7 @@ export const qhacksTeam = [
         "name": "Dajung Yoon",
         "role": "Logistics Director",
         "instagram": "https://www.instagram.com/dajungyoon_24/",
-        "image": "",
+        "image": "/qhacks-team/DajungYoon.JPG",
         "color": "bg-red-500",
         "linkedin": null,
         "github": "https://github.com/DajungYoon"
@@ -147,7 +147,7 @@ export const qhacksTeam = [
         "name": "Andrew Terry",
         "role": "Logistics Director",
         "instagram": "https://www.instagram.com/mangothebirb/",
-        "image": "",
+        "image": "/qhacks-team/AndrewTerry.jpg",
         "color": "bg-yellow-300",
         "linkedin": "https://www.linkedin.com/in/andrew-terry-364ba2206/",
         "github": "https://github.com/MangoTheBirb"
@@ -156,7 +156,7 @@ export const qhacksTeam = [
         "name": "Kevin Chen",
         "role": "Logistics Officer",
         "instagram": "https://www.instagram.com/chenzkc1024/",
-        "image": "",
+        "image": "/qhacks-team/KevinChen.png",
         "color": "bg-blue-500",
         "linkedin": "https://www.linkedin.com/in/chenzkc/ ",
         "github": null
@@ -165,7 +165,7 @@ export const qhacksTeam = [
         "name": "Shyan Vilva",
         "role": "Logistics Officer",
         "instagram": "shyan_vilva",
-        "image": "",
+        "image": "/qhacks-team/ShyanVilva.jpg",
         "color": "bg-red-500",
         "linkedin": "https://www.linkedin.com/in/shyanvilva/",
         "github": null
@@ -174,7 +174,7 @@ export const qhacksTeam = [
         "name": "Ryan Tobia",
         "role": "Logistics Officer",
         "instagram": "https://www.instagram.com/ryantobia/",
-        "image": "",
+        "image": "/qhacks-team/RyanTobia.jpg",
         "color": "bg-yellow-300",
         "linkedin": null,
         "github": "https://github.com/RyanTobia"
@@ -192,7 +192,7 @@ export const qhacksTeam = [
         "name": "Grace Anyu Sun",
         "role": "Marketing Officer",
         "instagram": "https://www.instagram.com/sun._.grace/",
-        "image": "",
+        "image": "/qhacks-team/GraceSun.jpg",
         "color": "bg-red-500",
         "linkedin": "https://www.linkedin.com/in/isaacfungg/",
         "github": null
