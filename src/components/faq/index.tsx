@@ -6,22 +6,14 @@ import Cloud from "./cloud";
 import "../../css/FaqStyle.css";
 
 export default function Faq() {
-  const size = useWindowSize();
-
-  const bottomPadding = Math.floor(
-    size.height == undefined ? 800 : size.height * 0.55
-  );
-
   return (
     <div className=' text-black w-screen flex flex-col bg-brand-light-blue'>
       <div className='pt-10 bg-gradient-to-b from-black to-brand-light-blue w-full h-64' />
-      <div className="absolute">
-
-      <Cloud />
-
+      <div className='absolute'>
+        <Cloud />
       </div>
       <div className='bg-transparent w-full items-center justify-center flex flex-col '>
-        <h1 className='align-center font-extrabold text-7xl py-12 z-20 md:pt-72'>
+        <h1 className='align-center font-extrabold text-7xl py-12 z-20 md:pt-72' id="faq">
           FAQ's
         </h1>
         <Dropdown />

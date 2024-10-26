@@ -32,7 +32,7 @@ export default function Footer() {
       <img src='./crown2.png' width={100} className='mx-[10%] z-20 hidden md:block' />
 
       {/* SITE INFO */}
-      <div className='flex flex-col pb-2 text-base xs:text-sm text-white z-20 w-auto justify-center hidden md:flex'>
+      <div className='flex-col pb-2 text-base xs:text-sm text-white z-20 w-auto justify-center hidden md:flex'>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p className='font-light text-[0.5rem] md:text-sm'>Queen's University</p>
         <p className='font-light text-[0.5rem] md:text-sm'>99 University Ave, Kingston ON</p>

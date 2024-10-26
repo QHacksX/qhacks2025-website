@@ -1,14 +1,13 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 import Footer from "../components/shared/footer";
-import InvertedWaveBackground from "../components/shared/header";
 import { motion } from "framer-motion";
-import useDetectScroll, { Direction } from "@smakss/react-scroll-direction";
+
 import React from "react";
 import Testimonial from "../components/hacker-testimonials/Testimonial";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
 import { auth } from "../firebase/config";
@@ -22,9 +21,12 @@ import Waves from "../components/waves";
 import signOutUser from "../firebase/auth/signout";
 import CurrentSponsors from "../components/shared/sponsors/currentSponsors";
 import PastSponsors from "../components/shared/sponsors/pastSponsors";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 export default function Home() {
   const router = useRouter();
+
+  const size = useWindowSize();
 
   const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
 
@@ -49,20 +51,32 @@ export default function Home() {
         <div className='h-screen flex flex-col justify-center items-center w-screen pt-40 '>
           <Waves />
 
-          <div className='z-0'>
-            <div className='absolute inset-0'>
-              <DonutScene x={4} y={2.5} radius={0.5} color='white' />
+          {(size.width ?? 0) < 650 ? (
+            <div className='z-0'>
+              <div className='absolute inset-0'>
+                <DonutScene x={-1.5} y={2.5} radius={0.5} color='white' />
+              </div>
+              <div className='absolute inset-0'>
+                <DonutScene x={2} y={-2} radius={1} color='white' />
+              </div>
+         
             </div>
-            <div className='absolute inset-0'>
-              <DonutScene x={-4} y={2} radius={1} color='white' />
+          ) : (
+            <div className='z-0'>
+              <div className='absolute inset-0'>
+                <DonutScene x={4} y={2.5} radius={0.5} color='white' />
+              </div>
+              <div className='absolute inset-0'>
+                <DonutScene x={-4} y={2} radius={1} color='white' />
+              </div>
+              <div className='absolute inset-0'>
+                <DonutScene x={-4} y={-1.25} radius={0.75} color='white' />
+              </div>
+              <div className='absolute inset-0'>
+                <DonutScene x={4} y={-0.75} radius={1.15} color='white' />
+              </div>
             </div>
-            <div className='absolute inset-0'>
-              <DonutScene x={-4} y={-1.25} radius={0.75} color='white' />
-            </div>
-            <div className='absolute inset-0'>
-              <DonutScene x={4} y={-0.75} radius={1.15} color='white' />
-            </div>
-          </div>
+          )}
 
           <img
             src={"/qhacks_crown.svg"}
@@ -91,7 +105,7 @@ export default function Home() {
 
           {isSignedIn ? (
             <p
-              className='text-blue-500 hover:text-blue-700 z-20 mt-2 z-20 hover:cursor-pointer'
+              className='text-blue-500 hover:text-blue-700  mt-2 z-20 hover:cursor-pointer'
               onClick={() => signOutUser()}
             >
               Log out
@@ -147,7 +161,7 @@ export default function Home() {
           </div>
           <div className='pt-20 relative justify-center flex flex-col items-center w-screen h-auto'>
             <div className='absolute inset-0 z-10'>
-              <DonutScene x={-8} y={1} radius={2} color='white' />
+              <DonutScene x={(size.width ?? 0) < 650 ? -3 : -8} y={(size.width ?? 0) < 650 ? -1 : 1} radius={2} color='white' />
             </div>
 
             <div className='w-[90%] md:w-[80%] lg:w-[70%]'>

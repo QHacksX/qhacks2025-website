@@ -1,23 +1,34 @@
+import { motion } from "framer-motion";
+
 export const ContactForm = () => {
   return (
-    <div className='mx-auto bg-transparent p-6 sm:w-1/2 w-3/4 pt-16 z-20' id="contact">
-      <h2 className='text-2xl font-bold text-center mb-6'>
+    <div
+      className='mx-auto bg-transparent p-6 sm:w-1/2 w-3/4 pt-16 z-20 flex flex-col justify-center items-center'
+      id='contact'
+    >
+      <h2 className='font-bold text-center my-6 title '>
         More Questions?
-        <br /> Send us a Message!
       </h2>
-      <form className='flex flex-col items-center justify-center w-full'>
-        <InputField type='text' placeholder='Name' />
-        <InputField type='email' placeholder='Email' />
-        <InputField type='text' placeholder='Message' rows={5} />
-        <Button label='Send' />
-      </form>
+      <motion.a
+        className='w-3/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20 text-center'
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        href="mailto:hello@qhacks.io"
+      >
+        Send us a Message!
+      </motion.a>
     </div>
   );
 };
 
 const Button = ({ label }: { label: string }) => {
   return (
-    <button onClick={(e)=>{e.preventDefault()}} className='px-14 bg-brand-dark-red text-white py-1 rounded-xl font-bold hover:bg-red-600 transition duration-100'>
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+      }}
+      className='px-14 bg-brand-dark-red text-white py-1 rounded-xl font-bold hover:bg-red-600 transition duration-100'
+    >
       {label}
     </button>
   );

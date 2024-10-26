@@ -8,7 +8,6 @@ export default function Cloud() {
 
   const dimensions = useWindowSize();
 
-  // Memoizing cloud widths to avoid recalculating them on every render
   const cloudWidths = {
     cloudWidth1: Math.floor((dimensions.width ?? 0) * 0.6),
     cloudWidth2: Math.floor((dimensions.width ?? 0) * 0.4),
@@ -26,11 +25,11 @@ export default function Cloud() {
 
         if (element) {
           const rect = element.getBoundingClientRect();
-          tempVis[cloudNum] =
-            rect.top <=
-            window.scrollY + window.innerHeight;
+          tempVis[cloudNum] = rect.top <= (dimensions.height ?? 0) * 0.50;
         }
       }
+
+      console.log(window.scrollY);
 
       setIsVisible(tempVis);
     };

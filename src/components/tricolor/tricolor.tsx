@@ -47,7 +47,7 @@ const TriColor = () => {
             <div className='tricolor' id='tri-4'>
               <img src='./ducks/gold.svg' />
               <div className='text-overlay'>
-                <p className='font-bold text-sm text-lg'>1000+</p>
+                <p className='font-bold text-sm sm:text-lg'>1000+</p>
                 <p className='font-bold text-sm sm:text-lg'>Applicants</p>
               </div>
             </div>
