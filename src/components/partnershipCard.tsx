@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function PartneringCard() {
 
     return(
-        <div className="m-4 border-2 rounded-2xl w-72 md:w-96 2xl:w-[600px] h-44 2xl:h-60 p-2 md:p-4 flex flex-row items-center justify-center z-20">
+        <div className="m-4 border-2 rounded-2xl w-72 md:w-96 2xl:w-[600px] h-44 2xl:h-60 p-2 md:p-4 flex flex-row items-center justify-center z-40">
             <div className="2xl:px-3">
                 <img
                     className="2xl:w-44 2xl:h-44"

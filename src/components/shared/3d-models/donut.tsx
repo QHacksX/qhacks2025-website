@@ -51,7 +51,7 @@ export default function Donut({
   color: string;
 }) {
   return (
-    <div style={{ height: "100vh", backgroundColor: "transparent" }}>
+    <div style={{ height: "100vh", backgroundColor: "transparent", overflow:"visible" }}>
       <Canvas className="-z-50">
         <ambientLight intensity={0.1} />
         <directionalLight color='red' position={[0, 0, 5]} />
