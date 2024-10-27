@@ -1,0 +1,26 @@
+/* TODO: Fix the animation */
+
+.faq-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .faq-content.open {
+    max-height: 100px;
+    opacity: 1;
+  }
+
+  .cloud{
+    transition: all 1s ease-in-out;
+  }
+  .show {
+    opacity: 1;  
+  }
+
+  .hide{
+    opacity: 0.5;
+
+  }
+

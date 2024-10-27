@@ -20,14 +20,13 @@ export function RotatingTorus({
 
   useFrame(() => {
     if (torusRef.current) {
-      torusRef.current.rotation.x += 0.0075;
-      torusRef.current.rotation.y += 0.0075;
+      torusRef.current.rotation.z += 0.0075;
     }
   });
 
   return (
     <mesh position={[x, y, 0]} ref={torusRef}>
-      <torusGeometry args={[radius, radius / 4, 15, 35]} />
+      <torusGeometry args={[radius, radius / 5, 15, 35]} />
       {/* <circleGeometry args={[20, 20]}/> */}
       <meshBasicMaterial
         color={color}
@@ -52,8 +51,8 @@ export default function Donut({
   color: string;
 }) {
   return (
-    <div style={{ height: "100vh", backgroundColor: "transparent" }}>
-      <Canvas>
+    <div style={{ height: "100vh", backgroundColor: "transparent", overflow:"visible" }}>
+      <Canvas className="-z-50">
         <ambientLight intensity={0.1} />
         <directionalLight color='red' position={[0, 0, 5]} />
         <RotatingTorus x={x} y={y} radius={radius} color={color} />

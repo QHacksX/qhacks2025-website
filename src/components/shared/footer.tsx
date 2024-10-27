@@ -1,51 +1,43 @@
 "use client";
-import { Inter } from 'next/font/google';
-import { useState } from 'react';
+import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
-import React from 'react';
+import React from "react";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
-export default function Footer(){
+export default function Footer() {
+  return (
+    <footer className='md:absolute bottom-0 h-auto w-full flex flex-row justify-center radial-gradient-background md:bg-transparent'>
+      {/* LINKS */}
+      <div
+        className='
+            flex flex-row md:flex-col text-white text-base xs:text-sm relative z-20 md:w-auto justify-around md:justify-between my-5 w-full'
+      >
+        <motion.a
+          whileHover={{ fontWeight: "bold" }}
+          className='font-light text-xs md:text-sm'
+          href='https://2024.qhacks.io/'
+        >
+          QHacks 2024
+        </motion.a>
+        <motion.a
+          whileHover={{ fontWeight: "bold" }}
+          className='font-light pr-4 hover:pr-0 text-xs md:text-sm'
+          href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'
+        >
+          MLH Code of Conduct
+        </motion.a>
+      </div>
 
-    return(
-        <footer className='pb-8 pt-20 bg-gradient-to-b from-black to-blue-900'>
-          <div className='flex justify-center items-center py-5'>
-            <a className='px-[3%] text-4xl ' href='https://www.instagram.com/qhacks24/'>
-              <motion.i whileHover={{scale:1.2}} className="fab fa-instagram text-white"></motion.i>
-            </a>
-            <a className='px-[3%] text-4xl ' href='https://twitter.com/QHacks23'>
-              <motion.i whileHover={{scale:1.2}} className="fab fa-twitter text-white"></motion.i>
-            </a>
-            <a className='px-[3%] text-4xl ' href='mailto:hello@qhacks.io'>
-              <motion.i whileHover={{scale:1.2}} className="far fa-envelope text-white"></motion.i>
-            </a>
-            <a className='px-[3%] text-4xl ' href='https://www.facebook.com/QHacks/'>
-              <motion.i whileHover={{scale:1.2}} className="fab fa-facebook text-white"></motion.i>
-            </a>
-            <a className='px-[3%] text-4xl ' href='https://www.linkedin.com/company/qhacks/'>
-              <motion.i whileHover={{scale:1.2}} className="fab fa-linkedin text-white"></motion.i>
-            </a>
-          </div>
+      <img src='./crown2.png' width={100} className='mx-[10%] z-20 hidden md:block' />
 
-          {/* LINKS */}
-          <div className='
-            flex justify-center items-center text-white pb-2 py-4 md:py-2 text-base xs:text-sm relative z-20'>
-            <motion.a whileHover={{fontWeight:'bold'}} className='px-5 md:px-[3%] text-center font-light' href='https://2024.qhacks.io/'>QHacks 2024</motion.a>
-            {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://ghw.mlh.io/'>Local Hack Day</motion.a> */}
-            {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://medium.com/@qhacks'>QHacks Blog</motion.a> */}
-            {/* <motion.a whileHover={{fontWeight:'bold'}} className=' md:px-[3%] text-center' href='https://www.youtube.com/watch?v=a3Z7zEc7AXQ'>Hack Day Tips</motion.a> */}
-            <motion.a whileHover={{fontWeight:'bold'}} className='px-5 md:px-[3%] text-center font-light' href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH Code of Conduct</motion.a>
-          </div>
-          
-          {/* SITE INFO */}
-          <div className='flex justify-center items-center pb-2 text-base xs:text-sm text-white'>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <p className='px-2 lg:px-[2%] text-center font-light'>Queen's University</p>
-            <p className='px-2 lg:px-[2%] text-center font-light'>99 University Ave, Kingston ON</p>
-            <p className='px-2 lg:px-[2%] text-center font-light'>Copyright © 2025 QHacks</p>
-          </div>
-        </footer>
-    );
-
+      {/* SITE INFO */}
+      <div className='flex-col pb-2 text-base xs:text-sm text-white z-20 w-auto justify-center hidden md:flex'>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
+        <p className='font-light text-[0.5rem] md:text-sm'>Queen's University</p>
+        <p className='font-light text-[0.5rem] md:text-sm'>99 University Ave, Kingston ON</p>
+        <p className='font-light text-[0.5rem] md:text-sm'>Copyright © 2025 QHacks</p>
+      </div>
+    </footer>
+  );
 }

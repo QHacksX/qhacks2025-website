@@ -27,7 +27,7 @@ export default function CurrentSponsors() {
     return (
         <div className="pt-10 justify-center items-center w-screen flex flex-col">
             <div className="pb-10">
-                <h1 className="align-center text-white text-3xl md:text-5xl mb-2 md:mb-0 font-bold ">
+                <h1 className="align-center text-white text-3xl md:text-5xl mb-2 md:mb-0 font-bold text-center">
                     Honouring Our
                     <span className="text-transparent text-3xl md:text-5xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">
                         {" "}

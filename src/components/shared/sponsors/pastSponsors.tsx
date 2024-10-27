@@ -26,7 +26,7 @@ export default function PastSponsors() {
     return (
         <div className="relative pt-10 justify-center items-center w-screen flex flex-col">
             <div className="pb-10">
-                <h1 className="mb-3 text-white  mx-5 text-3xl md:text-5xl font-bold">
+                <h1 className="mb-3 text-white  mx-5 text-3xl md:text-5xl font-bold text-center">
                     Some of Our{" "}
                     <span className="text-transparent text-3xl md:text-5xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">
                         Previous Sponsors
