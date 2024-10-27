@@ -5,7 +5,7 @@ const TeamSection = () => {
     return (
         <div className="flex flex-row flex-wrap justify-center">
 			{qhacksTeam.map((member) => (
-                <TeamBubble teamMember={member} />
+                <TeamBubble teamMember={member} key={member.name} />
             ))}
 		</div>
     );

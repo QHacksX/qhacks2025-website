@@ -13,7 +13,7 @@ export type TeamMember = {
     color: string
 }
 
-const TeamBubble = ({ teamMember } : { teamMember: TeamMember }) => {
+const TeamBubble = ({ teamMember, key } : { teamMember: TeamMember, key: any }) => {
     return (
         <div className={`team-bubble bubble-${teamMember.color}`}>
                 <div className='team-bubble-img-container'>
