@@ -132,15 +132,6 @@ export default function Home() {
                 className='w-10 h-10'
               />
             </Link>
-            <Link href='https://www.instagram.com/qhacksx/'>
-              <img
-                src={"/socials/ig_logo.svg"}
-                alt='Instagram'
-                width={40}
-                height={40}
-                className='w-10 h-10'
-              />
-            </Link>
             <Link href='https://www.facebook.com/QHacks/'>
               <img
                 src={"/socials/facebook_logo.svg"}
@@ -150,6 +141,16 @@ export default function Home() {
                 className='w-10 h-10'
               />
             </Link>
+            <Link href='https://www.instagram.com/qhacksx/'>
+              <img
+                src={"/socials/ig_logo.svg"}
+                alt='Instagram'
+                width={40}
+                height={40}
+                className='w-10 h-10'
+              />
+            </Link>
+          
           </div>
         </div>
         <div className='flex justify-center items-center w-screen flex-col select-none'>
