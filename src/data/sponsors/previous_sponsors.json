@@ -56,7 +56,7 @@
         "tier": "previous"
     },
     "kingston": {
-        "name": "Kingston",
+        "name": "City Of Kingston",
         "logo": "/sponsors/Kingston.svg",
         "link": "https://innovation-challenge.cityofkingston.ca/",
         "colour": "bg-yellow-500",
@@ -126,7 +126,7 @@
         "tier": "kilo"
     },
     "dominoes": {
-        "name": "Dominoes",
+        "name": "Dominos",
         "logo": "/sponsors/Dominoes.svg",
         "link": "https://www.dominos.ca/",
         "colour": "bg-blue-500",
@@ -147,7 +147,7 @@
         "tier": "previous"
     },
     "ece": {
-        "name": "Queence Engineering",
+        "name": "Queens Engineering",
         "logo": "/sponsors/Engineering.svg",
         "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
         "colour": "bg-red-500",
