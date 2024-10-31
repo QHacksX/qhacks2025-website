@@ -3,7 +3,7 @@ export const qhacksTeam = [
         "name": "Ilyas Erdogan",
         "role": "Co-Chair",
         "instagram": "https://www.instagram.com/ilyas_egn/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-red-500",
         "linkedin": "https://www.linkedin.com/in/ilyas-erdogan/",
         "github": "https://github.com/Ilyas-Erdogan"
@@ -39,7 +39,7 @@ export const qhacksTeam = [
         "name": "Adam Raco",
         "role": "Partnerships Director",
         "instagram": "https://www.instagram.com/adam.raco/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-yellow-300",
         "linkedin": "https://www.linkedin.com/in/adam-raco/",
         "github": "https://github.com/TheBugAssassin"
@@ -183,7 +183,7 @@ export const qhacksTeam = [
         "name": "Ana Coelho",
         "role": "Marketing Director",
         "instagram": "https://www.instagram.com/anarcxo_/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-blue-500",
         "linkedin": null,
         "github": "https://github.com/aninha0836"
@@ -201,7 +201,7 @@ export const qhacksTeam = [
         "name": "Sue Oliveros Chahin",
         "role": "Marketing Officer",
         "instagram": "https://www.instagram.com/Sueidaoliveross/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-yellow-300",
         "linkedin": null,
         "github": null
@@ -210,7 +210,7 @@ export const qhacksTeam = [
         "name": "Isaac Fung",
         "role": "First-Year Rep.",
         "instagram": "https://www.instagram.com/isaacfungg_/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-blue-500",
         "linkedin": null,
         "github": null
@@ -219,7 +219,7 @@ export const qhacksTeam = [
         "name": "Elizabeth Bighiu",
         "role": "First-Year Rep.",
         "instagram": "https://www.instagram.com/elizabeth.bighiu/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-red-500",
         "linkedin": "www.linkedin.com/in/elizabethbighiu",
         "github": null
@@ -228,7 +228,7 @@ export const qhacksTeam = [
         "name": "Jasmine Qin",
         "role": "First-Year Rep.",
         "instagram": "https://www.instagram.com/jasm_qin/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-yellow-300",
         "linkedin": "https://www.linkedin.com/in/jasmine-qin-5a241820a/",
         "github": null
@@ -237,7 +237,7 @@ export const qhacksTeam = [
         "name": "Ela Aydiner",
         "role": "First-Year Rep.",
         "instagram": "https://www.instagram.com/ela_292/",
-        "image": "",
+        "image": "/qhacks-team/Placeholder.png",
         "color": "bg-blue-500",
         "linkedin": "www.linkedin.com/in/ela-aydiner-31247422b ",
         "github": "https://github.com/ela202"

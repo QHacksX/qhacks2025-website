@@ -8,7 +8,7 @@ export const currentSponsors = [
     },
     {
         "name": "Manulife Financial",
-        "logo": "/sponsors/ManuLife.svg",
+        "logo": "/sponsors/Manulife-WhiteBG.png",
         "link": "https://www.manulife.ca/careers.html",
         "colour": "bg-yellow-500",
         "tier": "mega"
