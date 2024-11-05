@@ -8,7 +8,7 @@ import "../../css/FaqStyle.css";
 export default function Faq() {
   return (
     <div className=' text-black w-screen flex flex-col bg-brand-light-blue'>
-      <div className='pt-10 bg-gradient-to-b from-black to-brand-light-blue w-full h-64' />
+      <div className='pt-10 bg-gradient-to-b from-black to-brand-light-blue w-full h-96' />
       <div className='absolute'>
         <Cloud />
       </div>
@@ -28,7 +28,7 @@ export default function Faq() {
 
       <div className='relative z-0'>
         <img
-          src={"/cloud-background.png"}
+          src={"/cloud-background.svg"}
           alt='Cloud Background'
           className='z-0 w-screen absolute right-0 left-0 bottom-0'
         />

@@ -53,7 +53,7 @@ export default function Cloud() {
         transform: `translateX(${translateX}px)`,
         width: `${cloudWidth}px`,
       }}
-      src={"/cloud.png"}
+      src={"/cloud.svg"}
       alt='Cloud'
     />
   );
