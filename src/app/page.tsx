@@ -168,11 +168,11 @@ export default function Home() {
               />
             </div>
 
-            <div className='w-[90%] md:w-[80%] lg:w-[70%] z-50'>
+            <div className='w-[90%] md:w-[80%] lg:w-[70%] z-40'>
               <GrowYourNetwork />
             </div>
             <PastSpeakers />
-            <div className='w-[90%] md:w-[80%] lg:w-[70%] z-50'>
+            <div className='w-[90%] md:w-[80%] lg:w-[70%] z-40'>
               <Testimonial />
             </div>
           </div>

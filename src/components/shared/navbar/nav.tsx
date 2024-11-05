@@ -4,7 +4,7 @@ import DesktopNav from './desktopNav';
 
 export default function Navbar(){
     return(
-        <div>
+        <div className='z-50'>
             <div className="md:hidden">
                 <MobileNav/>
             </div>
