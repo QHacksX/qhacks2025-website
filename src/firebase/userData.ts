@@ -22,7 +22,7 @@ export type ApplicationFormData = {
   applicationQuestion1: string;
   applicationQuestion2: string;
   travellingFromCity: string;
-  needsBussingFrom: string;
+  needsBussing: string;
 
   age: number;
   phoneNumber: string;

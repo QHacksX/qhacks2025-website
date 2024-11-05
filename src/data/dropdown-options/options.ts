@@ -8,6 +8,7 @@ import { label } from "framer-motion/client";
  */
 export enum DropdownTypes {
   travelOptions,
+  busNeeded,
   age,
   school,
   levelOfStudy,
@@ -36,6 +37,11 @@ const travelOptions = [
   { value: "Toronto" },
   { value: "No I will not" }
 ];
+
+const busNeeded = [
+  { value: "Yes" },
+  { value: "No" }
+]
 
 const ages = [
   { value: 16 },
@@ -190,6 +196,14 @@ export const dropdownOptions = new Map<DropdownTypes, DropdownConfig>([
       label: "value",
       placeholder: "---"
     }
+  ],
+  [
+    DropdownTypes.busNeeded,
+    {
+      options: busNeeded,
+      label: "value",
+      placeholder: "---"
+    },
   ],
   [
     DropdownTypes.age,

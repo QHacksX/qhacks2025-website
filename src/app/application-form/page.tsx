@@ -50,7 +50,7 @@ function Page(props: any) {
   const [applicationQuestion2, setApplicationQuestion2] = useState("")
 
   const [travellingFromCity, setTravellingFromCity] = useState("");
-  const [needsBussingFrom, setNeedsBussingFrom] = useState("");
+  const [needsBussing, setNeedsBussing] = useState("");
 
   const [githubProfile, setGithubProfile] = useState("");
   const [linkedinProfile, setLinkedinProfile] = useState("");
@@ -220,7 +220,7 @@ function Page(props: any) {
       } else if (step === 5) {
         inputs = {
           travellingFromCity: travellingFromCity,
-          needsBussingFrom: needsBussingFrom
+          needsBussing: needsBussing
         }
       }
 
@@ -251,6 +251,7 @@ function Page(props: any) {
 
   // For anyone who made an interest form response, pre-populate their responses here so they don't have to do it again
   async function populateInterestFormResponses() {
+    console.log("Fetching")
     let fetchedResponses: InterestFormData;
     const interestFormData: InterestFormData | undefined = await getInterestFormData();
 
@@ -293,7 +294,7 @@ function Page(props: any) {
       applicationQuestion1: applicationQuestion1,
       applicationQuestion2: applicationQuestion2,
       travellingFromCity: travellingFromCity,
-      needsBussingFrom: needsBussingFrom,
+      needsBussing: needsBussing,
 
       age: age,
       phoneNumber: phoneNumber,
@@ -456,10 +457,10 @@ function Page(props: any) {
                   />
 
                   <DropdownInput
-                    title={"Will you need bussing from any of these cities?*"}
-                    type={DropdownTypes.travelOptions}
-                    value={needsBussingFrom}
-                    setValue={setNeedsBussingFrom}
+                    title={"There will be bussing available both to and from Toronto for the event, will you need to use this bus?*"}
+                    type={DropdownTypes.busNeeded}
+                    value={needsBussing}
+                    setValue={setNeedsBussing}
                   />
 
                   {error1 !== "" ? showValidationError(error1) : null}

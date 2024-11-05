@@ -38,7 +38,7 @@ export const schema = [
     }),
     yup.object().shape({
         travellingFromCity: yup.string().required(ValidationErrors.CITY_ERROR),
-        needsBussingFrom: yup.string().required(ValidationErrors.CITY_ERROR)
+        needsBussing: yup.string().required(ValidationErrors.CITY_ERROR)
     }),
     yup.object().shape({
         checkedMLHCode: yup.bool().oneOf([true], ValidationErrors.MLH_CODE_ERROR),
