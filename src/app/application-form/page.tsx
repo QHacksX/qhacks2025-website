@@ -20,7 +20,7 @@ import { IoIosClose } from "react-icons/io";
 import Link from "next/link";
 import "./styles.css";
 import Styles from "@/src/css/style.module.css";
-import { error } from "console";
+import { count, error } from "console";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/src/firebase/config";
 import { useRouter } from "next/navigation";
@@ -260,7 +260,6 @@ function Page(props: any) {
 
   // For anyone who made an interest form response, pre-populate their responses here so they don't have to do it again
   async function populateInterestFormResponses() {
-    console.log("Fetching")
     let fetchedResponses: InterestFormData;
     const interestFormData: InterestFormData | undefined =
       await getInterestFormData();
@@ -280,30 +279,15 @@ function Page(props: any) {
 
       // Non mandatory inputs
       // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
-      setDietaryRestriction(
-        fetchedResponses.dietaryRestrictions
-          ? fetchedResponses.dietaryRestrictions
-          : ""
-      );
-      setGender(fetchedResponses.gender ? fetchedResponses.gender : "");
-      setPronoun(fetchedResponses.pronouns ? fetchedResponses.pronouns : "");
-      setEthnicity(
-        fetchedResponses.ethnicity ? fetchedResponses.ethnicity : ""
-      );
-      setSexuality(
-        fetchedResponses.sexualIdentity ? fetchedResponses.sexualIdentity : ""
-      );
-      setHighestEdu(
-        fetchedResponses.highestEducationCompleted
-          ? fetchedResponses.highestEducationCompleted
-          : ""
-      );
-      setShirtSize(
-        fetchedResponses.shirtSize ? fetchedResponses.shirtSize : ShirtSize.na
-      );
-      setFieldOfStudy(
-        fetchedResponses.studyMajor ? fetchedResponses.studyMajor : ""
-      );
+
+      setDietaryRestriction(fetchedResponses.dietaryRestrictions ?? "");
+      setOrigInputGender(fetchedResponses.gender ?? "");
+      setOrigInputPronoun(fetchedResponses.pronouns ?? "");
+      setOrigInputEthnicity(fetchedResponses.ethnicity ?? "");
+      setOrigInputSexuality(fetchedResponses.sexualIdentity ?? "");
+      setHighestEdu(fetchedResponses.highestEducationCompleted ?? "");
+      setShirtSize(fetchedResponses.shirtSize ?? ShirtSize.na);
+      setOrigInputFieldOfStudy(fetchedResponses.studyMajor ?? "");
 
       // Skipping MLH checkboxes to make sure they confirm again
     }
@@ -571,6 +555,7 @@ function Page(props: any) {
                     title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
+                  
                   <DropdownInput
                     title={"Gender (optional)"}
                     type={DropdownTypes.gender}

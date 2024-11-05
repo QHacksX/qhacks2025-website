@@ -22,6 +22,7 @@ import signOutUser from "../firebase/auth/signout";
 import CurrentSponsors from "../components/shared/sponsors/currentSponsors";
 import PastSponsors from "../components/shared/sponsors/pastSponsors";
 import { useWindowSize } from "../hooks/useWindowSize";
+import TeamSection from "../components/shared/qhacks-team/teamSection";
 
 export default function Home() {
   const router = useRouter();
@@ -189,6 +190,10 @@ export default function Home() {
         <CurrentSponsors />
 
         <PastSponsors />
+      </div>
+
+      <div className="pb-100">
+        <TeamSection />
       </div>
 
       <Faq />

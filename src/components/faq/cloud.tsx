@@ -29,8 +29,6 @@ export default function Cloud() {
         }
       }
 
-      console.log(window.scrollY);
-
       setIsVisible(tempVis);
     };
 
