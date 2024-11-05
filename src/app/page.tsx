@@ -192,9 +192,7 @@ export default function Home() {
         <PastSponsors />
       </div>
 
-      <div className="pb-100">
-        <TeamSection />
-      </div>
+      <TeamSection />
 
       <Faq />
 
