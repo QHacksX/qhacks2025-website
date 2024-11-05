@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import {  useState } from "react";
+import { useState } from "react";
 
 import Footer from "../components/shared/footer";
 import { motion } from "framer-motion";
@@ -59,7 +59,6 @@ export default function Home() {
               <div className='absolute inset-0'>
                 <DonutScene x={2} y={-2} radius={1} color='white' />
               </div>
-         
             </div>
           ) : (
             <div className='z-0'>
@@ -150,7 +149,6 @@ export default function Home() {
                 className='w-10 h-10'
               />
             </Link>
-          
           </div>
         </div>
         <div className='flex justify-center items-center w-screen flex-col select-none'>
@@ -162,7 +160,12 @@ export default function Home() {
           </div>
           <div className='pt-20 relative justify-center flex flex-col items-center w-screen h-auto'>
             <div className='absolute inset-0 z-10'>
-              <DonutScene x={(size.width ?? 0) < 650 ? -3 : -8} y={(size.width ?? 0) < 650 ? -1 : 1} radius={2} color='white' />
+              <DonutScene
+                x={(size.width ?? 0) < 650 ? -3 : -8}
+                y={(size.width ?? 0) < 650 ? -1 : 1}
+                radius={2}
+                color='white'
+              />
             </div>
 
             <div className='w-[90%] md:w-[80%] lg:w-[70%]'>

@@ -26,6 +26,8 @@ import { auth } from "@/src/firebase/config";
 import { useRouter } from "next/navigation";
 import ParagraphInput from "@/src/components/application-form/paragraphInput";
 
+import Waves from "@/src/components/waves";
+
 // TODO: Make an enum for the DropdownType (to not use strings)
 function Page(props: any) {
   const router = useRouter();
@@ -34,7 +36,7 @@ function Page(props: any) {
     if (auth.currentUser === null) {
       router.push("signin");
     } else if (auth.currentUser) {
-      populateInterestFormResponses()
+      populateInterestFormResponses();
     }
   }, [router]);
 
@@ -46,8 +48,8 @@ function Page(props: any) {
   const [teammate2, setTeammate2] = useState("");
   const [teammate3, setTeammate3] = useState("");
 
-  const [applicationQuestion1, setApplicationQuestion1] = useState("")
-  const [applicationQuestion2, setApplicationQuestion2] = useState("")
+  const [applicationQuestion1, setApplicationQuestion1] = useState("");
+  const [applicationQuestion2, setApplicationQuestion2] = useState("");
 
   const [travellingFromCity, setTravellingFromCity] = useState("");
   const [needsBussing, setNeedsBussing] = useState("");
@@ -99,32 +101,32 @@ function Page(props: any) {
     firstError = errors.includes(ValidationErrors.CITY_ERROR)
       ? ValidationErrors.CITY_ERROR
       : errors.includes(ValidationErrors.APPLICATION_QUESTION_ERROR)
-        ? ValidationErrors.APPLICATION_QUESTION_ERROR
-        : errors.includes(ValidationErrors.FIRST_NAME_ERROR)
-          ? ValidationErrors.FIRST_NAME_ERROR
-          : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
-            ? ValidationErrors.PHONE_NUMBER_ERROR
-            : errors.includes(ValidationErrors.SCHOOL_ERROR)
-              ? ValidationErrors.COUNTRY_ERROR
-              : errors.includes(ValidationErrors.MLH_CODE_ERROR)
-                ? ValidationErrors.MLH_CODE_ERROR
-                : "";
+      ? ValidationErrors.APPLICATION_QUESTION_ERROR
+      : errors.includes(ValidationErrors.FIRST_NAME_ERROR)
+      ? ValidationErrors.FIRST_NAME_ERROR
+      : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
+      ? ValidationErrors.PHONE_NUMBER_ERROR
+      : errors.includes(ValidationErrors.SCHOOL_ERROR)
+      ? ValidationErrors.COUNTRY_ERROR
+      : errors.includes(ValidationErrors.MLH_CODE_ERROR)
+      ? ValidationErrors.MLH_CODE_ERROR
+      : "";
 
     secondError = errors.includes(ValidationErrors.LAST_NAME_ERROR)
       ? ValidationErrors.LAST_NAME_ERROR
       : errors.includes(ValidationErrors.EMAIL_ERROR)
-        ? ValidationErrors.EMAIL_ERROR
-        : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
-          ? ValidationErrors.LEVEL_OF_STUDY_ERROR
-          : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
-            ? ValidationErrors.MLH_PRIVACY_ERROR
-            : "";
+      ? ValidationErrors.EMAIL_ERROR
+      : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
+      ? ValidationErrors.LEVEL_OF_STUDY_ERROR
+      : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
+      ? ValidationErrors.MLH_PRIVACY_ERROR
+      : "";
 
     thirdError = errors.includes(ValidationErrors.AGE_ERROR)
       ? ValidationErrors.AGE_ERROR
       : errors.includes(ValidationErrors.COUNTRY_ERROR)
-        ? ValidationErrors.COUNTRY_ERROR
-        : "";
+      ? ValidationErrors.COUNTRY_ERROR
+      : "";
 
     setError1(firstError);
     setError2(secondError);
@@ -159,7 +161,14 @@ function Page(props: any) {
     if (origInputFieldOfStudy !== "Other (please specify)") {
       setFieldOfStudy(origInputFieldOfStudy);
     }
-  }, [isUnderrepresented, origInputGender, origInputPronoun, origInputEthnicity, origInputSexuality, origInputFieldOfStudy])
+  }, [
+    isUnderrepresented,
+    origInputGender,
+    origInputPronoun,
+    origInputEthnicity,
+    origInputSexuality,
+    origInputFieldOfStudy,
+  ]);
 
   const showValidationError = (error: string) => {
     return (
@@ -191,10 +200,10 @@ function Page(props: any) {
     let inputs;
 
     // No need to validate
-    if ((step >= 6 && step < 12)) {
-
+    if (step >= 6 && step < 12) {
       next();
-    } else if (step < 6) { // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
+    } else if (step < 6) {
+      // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
       if (step === 1) {
         inputs = {
           firstName: firstName,
@@ -215,8 +224,8 @@ function Page(props: any) {
       } else if (step === 4) {
         inputs = {
           applicationQuestion1: applicationQuestion1,
-          applicationQuestion2: applicationQuestion2
-        }
+          applicationQuestion2: applicationQuestion2,
+        };
       } else if (step === 5) {
         inputs = {
           travellingFromCity: travellingFromCity,
@@ -253,7 +262,8 @@ function Page(props: any) {
   async function populateInterestFormResponses() {
     console.log("Fetching")
     let fetchedResponses: InterestFormData;
-    const interestFormData: InterestFormData | undefined = await getInterestFormData();
+    const interestFormData: InterestFormData | undefined =
+      await getInterestFormData();
 
     if (interestFormData) {
       fetchedResponses = interestFormData;
@@ -268,16 +278,32 @@ function Page(props: any) {
       setLevelOfStudy(fetchedResponses.levelOfStudy);
       setCountry(fetchedResponses.country);
 
-      // Non mandatory inputs 
+      // Non mandatory inputs
       // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
-      setDietaryRestriction(fetchedResponses.dietaryRestrictions ? fetchedResponses.dietaryRestrictions : "");
+      setDietaryRestriction(
+        fetchedResponses.dietaryRestrictions
+          ? fetchedResponses.dietaryRestrictions
+          : ""
+      );
       setGender(fetchedResponses.gender ? fetchedResponses.gender : "");
       setPronoun(fetchedResponses.pronouns ? fetchedResponses.pronouns : "");
-      setEthnicity(fetchedResponses.ethnicity ? fetchedResponses.ethnicity : "");
-      setSexuality(fetchedResponses.sexualIdentity ? fetchedResponses.sexualIdentity : "");
-      setHighestEdu(fetchedResponses.highestEducationCompleted ? fetchedResponses.highestEducationCompleted : "");
-      setShirtSize(fetchedResponses.shirtSize ? fetchedResponses.shirtSize : ShirtSize.na);
-      setFieldOfStudy(fetchedResponses.studyMajor ? fetchedResponses.studyMajor : "");
+      setEthnicity(
+        fetchedResponses.ethnicity ? fetchedResponses.ethnicity : ""
+      );
+      setSexuality(
+        fetchedResponses.sexualIdentity ? fetchedResponses.sexualIdentity : ""
+      );
+      setHighestEdu(
+        fetchedResponses.highestEducationCompleted
+          ? fetchedResponses.highestEducationCompleted
+          : ""
+      );
+      setShirtSize(
+        fetchedResponses.shirtSize ? fetchedResponses.shirtSize : ShirtSize.na
+      );
+      setFieldOfStudy(
+        fetchedResponses.studyMajor ? fetchedResponses.studyMajor : ""
+      );
 
       // Skipping MLH checkboxes to make sure they confirm again
     }
@@ -324,15 +350,18 @@ function Page(props: any) {
   };
 
   return (
-    <div className={`flex h-screen ${Styles["shadow"]} w-screen`}>
-      <Link href='/' className='p-5 absolute'>
+    <div className={`flex h-screen w-screen`}>
+      <Link href='/' className='p-5 absolute z-50'>
         <IoIosClose size={50} />
       </Link>
 
       <div className='flex-1 h-full w-full justify-center align-middle content-center'>
+        <div className='z-0'>
+          <Waves />
+        </div>
         <main className='p-4 pb-8  place-content-center flex justify-center w-full'>
-          <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
-            <div className='grid gap-6 mb-8'>
+          <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center z-50'>
+            <div className='grid gap-6 mb-8 z-50'>
               {step === 1 ? (
                 <>
                   <FormHeader
@@ -430,16 +459,18 @@ function Page(props: any) {
                     subheader='These questions are mandatory. Resize the input fields if you need more space.'
                   />
                   <ParagraphInput
-                    title="Why do you want to participate in QHacks? (Please limit your response to less than 300 words.)*"
+                    title='Why do you want to participate in QHacks? (Please limit your response to less than 300 words.)*'
                     input={applicationQuestion1}
                     setInput={setApplicationQuestion1}
-                    placeholder="" />
+                    placeholder=''
+                  />
 
                   <ParagraphInput
-                    title="Please tell us about a project that you would like to build at QHacks! (Please limit your response to less than 200 words.)*"
+                    title='Please tell us about a project that you would like to build at QHacks! (Please limit your response to less than 200 words.)*'
                     input={applicationQuestion2}
                     setInput={setApplicationQuestion2}
-                    placeholder="" />
+                    placeholder=''
+                  />
 
                   {error1 !== "" ? showValidationError(error1) : null}
                 </>
@@ -464,7 +495,6 @@ function Page(props: any) {
                   />
 
                   {error1 !== "" ? showValidationError(error1) : null}
-
                 </>
               ) : step === 6 ? (
                 <>
@@ -473,20 +503,23 @@ function Page(props: any) {
                     subheader='These questions are NON mandatory. Upload all profiles you have available.'
                   />
                   <WordInput
-                    title="Upload your GitHub profile (link) here if you have one."
+                    title='Upload your GitHub profile (link) here if you have one.'
                     input={githubProfile}
                     setInput={setGithubProfile}
-                    placeholder="https://github.com/{example-username}" />
+                    placeholder='https://github.com/{example-username}'
+                  />
                   <WordInput
-                    title="Upload your Linkedin profile (link) here if you have one."
+                    title='Upload your Linkedin profile (link) here if you have one.'
                     input={linkedinProfile}
                     setInput={setLinkedinProfile}
-                    placeholder="https://www.linkedin.com/in/{example-username}/" />
+                    placeholder='https://www.linkedin.com/in/{example-username}/'
+                  />
                   <WordInput
-                    title="Upload your personal website (link) here if you have one."
+                    title='Upload your personal website (link) here if you have one.'
                     input={personalWebsite}
                     setInput={setPersonalWebsite}
-                    placeholder="https://{your-website-domain}" />
+                    placeholder='https://{your-website-domain}'
+                  />
                 </>
               ) : step === 7 ? (
                 <>
@@ -495,20 +528,23 @@ function Page(props: any) {
                     subheader='Let us know if you have team! Enter the name of your teammate(s) below. EACH INDIVIDUAL TEAMMATE MUST APPLY. Maximum of 4 people per team (including the applicant). Teams can be changed at any point until the hackathon weekend.'
                   />
                   <WordInput
-                    title="Teammate 1"
+                    title='Teammate 1'
                     input={teammate1}
                     setInput={setTeammate1}
-                    placeholder="First Name, Last Name" />
+                    placeholder='First Name, Last Name'
+                  />
                   <WordInput
-                    title="Teammate 2"
+                    title='Teammate 2'
                     input={teammate2}
                     setInput={setTeammate2}
-                    placeholder="First Name, Last Name" />
+                    placeholder='First Name, Last Name'
+                  />
                   <WordInput
-                    title="Teammate 3"
+                    title='Teammate 3'
                     input={teammate3}
                     setInput={setTeammate3}
-                    placeholder="First Name, Last Name" />
+                    placeholder='First Name, Last Name'
+                  />
                 </>
               ) : step === 8 ? (
                 <>
@@ -645,7 +681,7 @@ function Page(props: any) {
                       checked={checkedMLHCode}
                       className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
-                    <label htmlFor='mlh-codeofconduct' className="w-full">
+                    <label htmlFor='mlh-codeofconduct' className='w-full'>
                       <p className='indent-1 text-base font-medium'>
                         I have read and agree to the{" "}
                         <a
@@ -668,7 +704,7 @@ function Page(props: any) {
                       checked={checkedMLHPrivacy}
                       className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
-                    <label className="w-full">
+                    <label className='w-full'>
                       <p className='indent-1 text-base font-medium'>
                         I authorize you to share my application/registration
                         information with Major League Hacking for event
@@ -710,7 +746,7 @@ function Page(props: any) {
                       checked={checkedMLHSendEmails}
                       className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
                     />
-                    <label className="w-full">
+                    <label className='w-full'>
                       <p className='indent-1 text-base font-medium'>
                         I authorize MLH to send me occasional emails about
                         relevant events, career opportunities, and community
