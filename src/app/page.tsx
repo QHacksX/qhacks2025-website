@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Footer from "../components/shared/footer";
 import { motion } from "framer-motion";
@@ -23,6 +23,10 @@ import CurrentSponsors from "../components/shared/sponsors/currentSponsors";
 import PastSponsors from "../components/shared/sponsors/pastSponsors";
 import { useWindowSize } from "../hooks/useWindowSize";
 import TeamSection from "../components/shared/qhacks-team/teamSection";
+import {
+  checkApplicationStatus,
+  getInterestFormData,
+} from "../firebase/userData";
 
 export default function Home() {
   const router = useRouter();
@@ -31,12 +35,20 @@ export default function Home() {
 
   const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
 
+  const [hasApplication, setHasApplication] = useState(false);
+
+  useEffect(() => {
+    console.log("here");
+    checkApplicationStatus().then((res) => setHasApplication(res ?? false));
+  }, []);
+
   onAuthStateChanged(auth, () => {
     if (auth.currentUser) {
       setIsSignedIn(true);
     } else {
       setIsSignedIn(false);
     }
+    checkApplicationStatus().then((res) => setHasApplication(res ?? false));
   });
 
   const DonutScene = dynamic(
@@ -98,9 +110,14 @@ export default function Home() {
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={() => router.push("/application-form")}
+            onClick={async () => {
+              const hasApplication = await getInterestFormData();
+              if (!hasApplication) {
+                router.push("/application-form");
+              }
+            }}
           >
-            Register Here
+            {hasApplication ? "Already Registered" : "Register Here"}
           </motion.button>
 
           {isSignedIn ? (

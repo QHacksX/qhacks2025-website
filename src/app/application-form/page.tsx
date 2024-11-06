@@ -229,8 +229,8 @@ function Page(props: any) {
       } else if (step === 5) {
         inputs = {
           travellingFromCity: travellingFromCity,
-          needsBussing: needsBussing
-        }
+          needsBussing: needsBussing,
+        };
       }
 
       awaitValidation(inputs, step - 1);
@@ -472,7 +472,9 @@ function Page(props: any) {
                   />
 
                   <DropdownInput
-                    title={"There will be bussing available both to and from Toronto for the event, will you need to use this bus?*"}
+                    title={
+                      "There will be bussing available both to and from Toronto for the event, will you need to use this bus?*"
+                    }
                     type={DropdownTypes.busNeeded}
                     value={needsBussing}
                     setValue={setNeedsBussing}
@@ -555,7 +557,7 @@ function Page(props: any) {
                     title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
                   />
-                  
+
                   <DropdownInput
                     title={"Gender (optional)"}
                     type={DropdownTypes.gender}
@@ -768,7 +770,10 @@ function Page(props: any) {
               ) : step === 13 ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-                  onClick={() => save()}
+                  onClick={() => {
+                    save();
+                    router.push("/");
+                  }}
                 >
                   Finish
                 </button>

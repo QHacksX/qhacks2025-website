@@ -1,6 +1,6 @@
-import { auth, db, firebase_app } from "./config";
-import { getAuth } from "firebase/auth";
-import { doc, setDoc, collection, addDoc, getDoc } from "firebase/firestore";
+import { auth, db } from "./config";
+
+import { doc, setDoc, getDoc } from "firebase/firestore";
 
 export enum ShirtSize {
   na = "not chosen",
@@ -42,7 +42,7 @@ export type ApplicationFormData = {
   acceptMLHCodeOfConduct: boolean;
   acceptMLHPrivacyPolicy: boolean;
   acceptMLHEmails: boolean;
-}
+};
 
 export type InterestFormData = {
   firstName: string;
@@ -78,6 +78,7 @@ export async function getUserData({}: {}) {
 export async function getInterestFormData() {
   const userId = auth.currentUser?.uid;
   if (!userId) {
+    console.log("No is");
     return;
   }
 
@@ -86,11 +87,28 @@ export async function getInterestFormData() {
     if (fetchedCollectionDoc.exists()) {
       const interestFormData = fetchedCollectionDoc.data() as InterestFormData;
       return interestFormData;
-    } 
-    
+    }
+
     return; // just return undefined otherwise
   } catch (e) {
     return;
+  }
+}
+
+export async function checkApplicationStatus() {
+  const userId = auth.currentUser?.uid;
+  if (!userId) {
+    return;
+  }
+
+  try {
+    const fetchedApplication = await getDoc(
+      doc(db, "qhacks_applications", userId)
+    );
+    console.log(fetchedApplication.exists());
+    return fetchedApplication.exists();
+  } catch (e) {
+    return false;
   }
 }
 
@@ -110,7 +128,7 @@ export async function updateUserData({
   }
 
   try {
-    await setDoc(doc(db, "qhacks_application", userId), userData);
+    await setDoc(doc(db, "qhacks_applications", userId), userData);
   } catch (e) {
     return "Something went wrong. Please try again";
   }
