@@ -38,7 +38,6 @@ export default function Home() {
   const [hasApplication, setHasApplication] = useState(false);
 
   useEffect(() => {
-    console.log("here");
     checkApplicationStatus().then((res) => setHasApplication(res ?? false));
   }, []);
 
@@ -111,7 +110,7 @@ export default function Home() {
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
             onClick={async () => {
-              const hasApplication = await getInterestFormData();
+              const hasApplication = await checkApplicationStatus();
               if (!hasApplication) {
                 router.push("/application-form");
               }

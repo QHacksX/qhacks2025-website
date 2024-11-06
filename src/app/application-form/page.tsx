@@ -42,6 +42,7 @@ function Page(props: any) {
 
   const [step, setStep] = useState(1);
   const [data, setData] = useState();
+  const [isFinished, setIsFinished] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
   const [teammate1, setTeammate1] = useState("");
@@ -328,7 +329,9 @@ function Page(props: any) {
     updateUserData({ userData: inputtedData }).then((err) => {
       if (err) {
         setErrorMessage(err);
-      }
+      } 
+      setIsFinished(true);
+
       setStep(13);
     });
   };
@@ -742,7 +745,7 @@ function Page(props: any) {
                     </label>
                   </div>
                 </div>
-              ) : step === 13 ? (
+              ) : step === 13 && !isFinished ? (
                 <FormHeader
                   title='Submit QHacks 2025 Application Form'
                   subheader='Press the finish button to submit, or press back to make changes'
@@ -750,7 +753,7 @@ function Page(props: any) {
               ) : null}
             </div>
             <div className='flex justify-between items-center'>
-              {step > 1 && step <= 13 ? (
+              {step > 1 && step <= 13 && !isFinished ? (
                 <button
                   className='text-white border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => prev()}
@@ -760,19 +763,19 @@ function Page(props: any) {
               ) : (
                 <div></div>
               )}
-              {step < 13 ? (
+              {step < 13 && !isFinished ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => validateInputs()}
                 >
                   Next
                 </button>
-              ) : step === 13 ? (
+              ) : step === 13 && !isFinished ? (
                 <button
                   className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   onClick={() => {
                     save();
-                    router.push("/");
+                    // router.push("/");
                   }}
                 >
                   Finish
@@ -780,15 +783,25 @@ function Page(props: any) {
               ) : null}
             </div>
 
-            {step === 13 ? (
-              <FormHeader
-                title={
-                  errorMessage
-                    ? errorMessage
-                    : "Your Response Has Been Recorded"
-                }
-                subheader=''
-              />
+            {step === 13 && isFinished? (
+              <div className="flex justify-center flex-col items-center align-middle">
+                <FormHeader
+                  title={
+                    errorMessage
+                      ? errorMessage
+                      : "Your Response Has Been Recorded"
+                  }
+                  subheader=''
+                />
+                <button
+                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-11'
+                  onClick={() => {
+                    router.push("/");
+                  }}
+                >
+                  Home
+                </button>
+              </div>
             ) : (
               <progress
                 value={step / 13}
