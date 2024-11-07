@@ -35,8 +35,6 @@ function Page() {
   }, [router]);
 
   const handleForm = async () => {
-    console.log(prevRoute);
-
     const { result, error } = await signIn({ email, password });
     if (error) {
       setErrorMessage(getAuthErrorMessage(error));
