@@ -8,7 +8,6 @@ export function RouteChangeListener() {
   const [prevPath, setPrevPath] = useState("/");
 
   useEffect(() => {
-    console.log(`Route changed to: ${pathname}`);
     if (pathname === "/") {
       if (prevPath !== "/") {
         window.location.reload();

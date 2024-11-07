@@ -78,7 +78,6 @@ export async function getUserData({}: {}) {
 export async function getInterestFormData() {
   const userId = auth.currentUser?.uid;
   if (!userId) {
-    console.log("No is");
     return;
   }
 
@@ -105,7 +104,6 @@ export async function checkApplicationStatus() {
     const fetchedApplication = await getDoc(
       doc(db, "qhacks_applications", userId)
     );
-    console.log(fetchedApplication.exists());
     return fetchedApplication.exists();
   } catch (e) {
     return false;

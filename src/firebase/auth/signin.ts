@@ -1,6 +1,5 @@
 import { auth } from "../config";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import type { FirebaseError } from "firebase-admin";
 
 export default async function signIn({
   email,
@@ -9,10 +8,17 @@ export default async function signIn({
   email: string;
   password: string;
 }) {
-  let result = null;
+  let result = "";
   let error: string | undefined;
   try {
-    result = await signInWithEmailAndPassword(auth, email, password);
+    const userCred = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCred.user;
+
+    if (user.emailVerified) {
+      result = "Login successful!";
+    } else {
+      error = "not-verified";
+    }
   } catch (e: unknown) {
     if (e instanceof Object) {
       if ("code" in e) {

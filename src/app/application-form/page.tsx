@@ -19,9 +19,6 @@ import React from "react";
 import { IoIosClose } from "react-icons/io";
 import Link from "next/link";
 import "./styles.css";
-import Styles from "@/src/css/style.module.css";
-import { count, error } from "console";
-import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/src/firebase/config";
 import { useRouter } from "next/navigation";
 import ParagraphInput from "@/src/components/application-form/paragraphInput";
@@ -34,7 +31,7 @@ function Page(props: any) {
 
   useEffect(() => {
     if (auth.currentUser === null) {
-      router.push("signin");
+      router.replace("signin");
     } else if (auth.currentUser) {
       populateInterestFormResponses();
     }

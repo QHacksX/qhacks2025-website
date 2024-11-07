@@ -25,7 +25,6 @@ export default function Waves() {
         </motion.div>
         <motion.div
           className='absolute w-[120%] top-0 h-full overflow-hidden'
-          object-fill
           initial={{ x: "0%" }}
           animate={{ x: "-18%" }}
           exit={{ x: "18%" }}
@@ -44,7 +43,6 @@ export default function Waves() {
         </motion.div>
         <motion.div
           className='absolute w-[120%] top-0 h-full overflow-hidden'
-          object-fill
           initial={{ x: "0%" }}
           animate={{ x: "18%" }}
           exit={{ x: "-18%" }}
@@ -63,7 +61,6 @@ export default function Waves() {
         </motion.div>
         <motion.div
           className='absolute w-[120%] top-0 h-full overflow-hidden'
-          object-fill
           initial={{ x: "0%" }}
           animate={{ x: "-18%" }}
           exit={{ x: "18%" }}
@@ -82,7 +79,6 @@ export default function Waves() {
         </motion.div>
         <motion.div
           className='absolute w-[120%] top-0 h-full overflow-hidden'
-          object-fill
           initial={{ x: "0%" }}
           animate={{ x: "18%" }}
           exit={{ x: "-18%" }}

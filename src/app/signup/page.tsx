@@ -9,12 +9,14 @@ import Link from "next/link";
 import { IoIosClose } from "react-icons/io";
 import { BiHide } from "react-icons/bi";
 import { BiShowAlt } from "react-icons/bi";
+import Waves from "@/src/components/waves";
 
 function Page() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState<any>();
   const [showPassword, setShowPassword] = React.useState(false);
+  const [successMessage, setSuccessMessage] = React.useState("");
 
   const router = useRouter();
 
@@ -24,16 +26,21 @@ function Page() {
     if (error) {
       setErrorMessage(getAuthErrorMessage(error));
     } else {
-      router.back();
+      setSuccessMessage(result);
     }
   };
 
   return (
     <div className='flex h-screen w-screen justify-center'>
-      <Link href='/' className='p-5 absolute left-0'>
+      <Link href='/' className='p-5 absolute left-0 z-50'>
         <IoIosClose size={50} />
       </Link>
-      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
+
+      <div className='w-screen absolute'>
+        <Waves />
+      </div>
+
+      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2 z-50 align-middle items-center'>
         <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
           <div
             className={`flex justify-center  text-white pb-2 text-4xl font-thin mb-10 ${Styles["text-shadow"]}`}
@@ -66,7 +73,7 @@ function Page() {
                 onClick={() => {
                   setShowPassword(!showPassword);
                 }}
-                className='absolute'
+                className='absolute m-auto'
               >
                 {showPassword ? <BiHide size={30} /> : <BiShowAlt size={30} />}
               </button>
@@ -83,6 +90,11 @@ function Page() {
           {errorMessage && (
             <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-3 mt-3 text-center dark:bg-red-500 dark:focus:ring-red-800'>
               {errorMessage}
+            </p>
+          )}
+          {successMessage && (
+            <p className='text-white bg-green-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-3 mt-3 text-center'>
+              {successMessage}
             </p>
           )}
         </div>

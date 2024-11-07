@@ -13,6 +13,7 @@ import { BiHide } from "react-icons/bi";
 import { BiShowAlt } from "react-icons/bi";
 import { passwordReset } from "@/src/firebase/auth/passwordReset";
 import Waves from "@/src/components/waves";
+import { usePreviousRoute } from "../context/RouteContext";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -25,6 +26,8 @@ function Page() {
 
   const [showPassword, setShowPassword] = useState(false);
 
+  const { prevRoute } = usePreviousRoute();
+
   useEffect(() => {
     if (auth.currentUser) {
       router.back();
@@ -32,11 +35,17 @@ function Page() {
   }, [router]);
 
   const handleForm = async () => {
+    console.log(prevRoute);
+
     const { result, error } = await signIn({ email, password });
     if (error) {
       setErrorMessage(getAuthErrorMessage(error));
     } else {
-      router.back();
+      if (prevRoute == "/application-form") {
+        router.push("/application-form");
+      } else {
+        router.push("/");
+      }
     }
   };
 

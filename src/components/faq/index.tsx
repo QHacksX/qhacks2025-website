@@ -8,12 +8,12 @@ import "../../css/FaqStyle.css";
 export default function Faq() {
   return (
     <div className=' text-black w-screen flex flex-col bg-brand-light-blue'>
-      <div className='pt-10 bg-gradient-to-b from-black to-brand-light-blue w-full h-96' />
+      <div className='pt-10 bg-gradient-to-b from-black to-brand-light-blue w-full h-96 md:h-[100vh]' />
       <div className='absolute'>
         <Cloud />
       </div>
       <div className='bg-transparent w-full items-center justify-center flex flex-col '>
-        <h1 className='align-center font-extrabold text-7xl py-12 z-20 md:pt-72' id="faq">
+        <h1 className='align-center font-extrabold text-7xl py-12 z-20 ' id="faq">
           FAQ's
         </h1>
         <Dropdown />

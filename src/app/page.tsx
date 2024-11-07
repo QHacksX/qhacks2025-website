@@ -22,11 +22,8 @@ import signOutUser from "../firebase/auth/signout";
 import CurrentSponsors from "../components/shared/sponsors/currentSponsors";
 import PastSponsors from "../components/shared/sponsors/pastSponsors";
 import { useWindowSize } from "../hooks/useWindowSize";
-import TeamSection from "../components/shared/qhacks-team/teamSection";
-import {
-  checkApplicationStatus,
-  getInterestFormData,
-} from "../firebase/userData";
+
+import { checkApplicationStatus } from "../firebase/userData";
 
 export default function Home() {
   const router = useRouter();
@@ -139,7 +136,7 @@ export default function Home() {
           )}
 
           <div className='flex items-center justify-center space-x-6 mt-4 z-20'>
-            <Link href=''>
+            <Link href='https://www.tiktok.com/@qhacksx' target='_blank'>
               <img
                 src={"/socials/tiktok_logo.svg"}
                 alt='Tiktok'
@@ -148,7 +145,7 @@ export default function Home() {
                 className='w-10 h-10'
               />
             </Link>
-            <Link href='https://www.facebook.com/QHacks/'>
+            {/* <Link href='https://www.facebook.com/QHacks/' target='_blank'>
               <img
                 src={"/socials/facebook_logo.svg"}
                 alt='Facebook'
@@ -156,8 +153,8 @@ export default function Home() {
                 height={40}
                 className='w-10 h-10'
               />
-            </Link>
-            <Link href='https://www.instagram.com/qhacksx/'>
+            </Link> */}
+            <Link href='https://www.instagram.com/qhacksx/' target='_blank'>
               <img
                 src={"/socials/ig_logo.svg"}
                 alt='Instagram'
@@ -208,7 +205,8 @@ export default function Home() {
         <PastSponsors />
       </div>
 
-      <TeamSection />
+      {/* TODO: Add back once headshots are done */}
+      {/* <TeamSection /> */}
 
       <Faq />
 
