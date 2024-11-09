@@ -9,6 +9,7 @@ import { ValidationErrors, schema } from "./validate";
 import { DropdownTypes } from "@/src/data/dropdown-options/options";
 import {
   ApplicationFormData,
+  checkOrFetchApplicationStatus,
   getInterestFormData,
   InterestFormData,
   ShirtSize,
@@ -33,7 +34,7 @@ function Page(props: any) {
     if (auth.currentUser === null) {
       router.replace("signin");
     } else if (auth.currentUser) {
-      populateInterestFormResponses();
+      prepopulateFormFields();
     }
   }, [router]);
 
@@ -99,32 +100,32 @@ function Page(props: any) {
     firstError = errors.includes(ValidationErrors.CITY_ERROR)
       ? ValidationErrors.CITY_ERROR
       : errors.includes(ValidationErrors.APPLICATION_QUESTION_ERROR)
-      ? ValidationErrors.APPLICATION_QUESTION_ERROR
-      : errors.includes(ValidationErrors.FIRST_NAME_ERROR)
-      ? ValidationErrors.FIRST_NAME_ERROR
-      : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
-      ? ValidationErrors.PHONE_NUMBER_ERROR
-      : errors.includes(ValidationErrors.SCHOOL_ERROR)
-      ? ValidationErrors.COUNTRY_ERROR
-      : errors.includes(ValidationErrors.MLH_CODE_ERROR)
-      ? ValidationErrors.MLH_CODE_ERROR
-      : "";
+        ? ValidationErrors.APPLICATION_QUESTION_ERROR
+        : errors.includes(ValidationErrors.FIRST_NAME_ERROR)
+          ? ValidationErrors.FIRST_NAME_ERROR
+          : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
+            ? ValidationErrors.PHONE_NUMBER_ERROR
+            : errors.includes(ValidationErrors.SCHOOL_ERROR)
+              ? ValidationErrors.COUNTRY_ERROR
+              : errors.includes(ValidationErrors.MLH_CODE_ERROR)
+                ? ValidationErrors.MLH_CODE_ERROR
+                : "";
 
     secondError = errors.includes(ValidationErrors.LAST_NAME_ERROR)
       ? ValidationErrors.LAST_NAME_ERROR
       : errors.includes(ValidationErrors.EMAIL_ERROR)
-      ? ValidationErrors.EMAIL_ERROR
-      : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
-      ? ValidationErrors.LEVEL_OF_STUDY_ERROR
-      : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
-      ? ValidationErrors.MLH_PRIVACY_ERROR
-      : "";
+        ? ValidationErrors.EMAIL_ERROR
+        : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
+          ? ValidationErrors.LEVEL_OF_STUDY_ERROR
+          : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
+            ? ValidationErrors.MLH_PRIVACY_ERROR
+            : "";
 
     thirdError = errors.includes(ValidationErrors.AGE_ERROR)
       ? ValidationErrors.AGE_ERROR
       : errors.includes(ValidationErrors.COUNTRY_ERROR)
-      ? ValidationErrors.COUNTRY_ERROR
-      : "";
+        ? ValidationErrors.COUNTRY_ERROR
+        : "";
 
     setError1(firstError);
     setError2(secondError);
@@ -257,38 +258,59 @@ function Page(props: any) {
   }
 
   // For anyone who made an interest form response, pre-populate their responses here so they don't have to do it again
-  async function populateInterestFormResponses() {
-    let fetchedResponses: InterestFormData;
-    const interestFormData: InterestFormData | undefined =
-      await getInterestFormData();
+  async function prepopulateFormFields() {
+    const applicationForm = await checkOrFetchApplicationStatus(true);
 
-    if (interestFormData) {
-      fetchedResponses = interestFormData;
+    // Means we successfully fetched a pre-existing application (not interest form)
+    if (applicationForm && typeof applicationForm !== 'boolean') {
+      setTeammate1(applicationForm.teammate1 ?? "")
+      setTeammate2(applicationForm.teammate2 ?? "")
+      setTeammate3(applicationForm.teammate3 ?? "")
 
-      // Mandatory inputs
-      setFirstName(fetchedResponses.firstName);
-      setLastName(fetchedResponses.lastName);
-      setAge(fetchedResponses.age);
-      setPhoneNumber(fetchedResponses.phoneNumber);
-      setEmail(fetchedResponses.email);
-      setSchool(fetchedResponses.school);
-      setLevelOfStudy(fetchedResponses.levelOfStudy);
-      setCountry(fetchedResponses.country);
+      setApplicationQuestion1(applicationForm.applicationQuestion1)
+      setApplicationQuestion2(applicationForm.applicationQuestion2)
 
-      // Non mandatory inputs
-      // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
+      setTravellingFromCity(applicationForm.travellingFromCity);
+      setNeedsBussing(applicationForm.needsBussing);
 
-      setDietaryRestriction(fetchedResponses.dietaryRestrictions ?? "");
-      setOrigInputGender(fetchedResponses.gender ?? "");
-      setOrigInputPronoun(fetchedResponses.pronouns ?? "");
-      setOrigInputEthnicity(fetchedResponses.ethnicity ?? "");
-      setOrigInputSexuality(fetchedResponses.sexualIdentity ?? "");
-      setHighestEdu(fetchedResponses.highestEducationCompleted ?? "");
-      setShirtSize(fetchedResponses.shirtSize ?? ShirtSize.na);
-      setOrigInputFieldOfStudy(fetchedResponses.studyMajor ?? "");
-
-      // Skipping MLH checkboxes to make sure they confirm again
+      setGithubProfile(applicationForm.githubProfile ?? "");
+      setLinkedinProfile(applicationForm.linkedinProfile ?? "");
+      setPersonalWebsite(applicationForm.personalWebsite ?? "");
+ 
+      setSharedFieldsForPrepopulation(applicationForm)
+    } else { // Otherwise, try to fetch an interest form for the user 
+      const interestFormData: InterestFormData | undefined =
+        await getInterestFormData();
+      if (interestFormData) {
+        setSharedFieldsForPrepopulation(interestFormData)
+      }
     }
+  }
+
+  function setSharedFieldsForPrepopulation(formData: InterestFormData | ApplicationFormData) {
+    // Mandatory inputs
+    setFirstName(formData.firstName);
+    setLastName(formData.lastName);
+    setAge(formData.age);
+    setPhoneNumber(formData.phoneNumber);
+    setEmail(formData.email);
+    setSchool(formData.school);
+    setLevelOfStudy(formData.levelOfStudy);
+    setCountry(formData.country);
+
+    // Non mandatory inputs
+    // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
+
+    setDietaryRestriction(formData.dietaryRestrictions ?? "");
+    setOrigInputGender(formData.gender ?? "");
+    setOrigInputPronoun(formData.pronouns ?? "");
+    setOrigInputEthnicity(formData.ethnicity ?? "");
+    setOrigInputSexuality(formData.sexualIdentity ?? "");
+    setHighestEdu(formData.highestEducationCompleted ?? "");
+    setShirtSize(formData.shirtSize ?? ShirtSize.na);
+    setOrigInputFieldOfStudy(formData.studyMajor ?? "");
+
+    // Skipping MLH checkboxes to make sure they confirm again
   }
 
   const save = () => {
@@ -326,7 +348,7 @@ function Page(props: any) {
     updateUserData({ userData: inputtedData }).then((err) => {
       if (err) {
         setErrorMessage(err);
-      } 
+      }
       setIsFinished(true);
 
       setStep(13);
@@ -780,7 +802,7 @@ function Page(props: any) {
               ) : null}
             </div>
 
-            {step === 13 && isFinished? (
+            {step === 13 && isFinished ? (
               <div className="flex justify-center flex-col items-center align-middle">
                 <FormHeader
                   title={

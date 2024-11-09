@@ -16,13 +16,16 @@ export type ApplicationFormData = {
   firstName: string;
   lastName: string;
 
-  teammate1: string;
-  teammate2: string;
-  teammate3: string;
+  teammate1?: string;
+  teammate2?: string;
+  teammate3?: string;
   applicationQuestion1: string;
   applicationQuestion2: string;
   travellingFromCity: string;
   needsBussing: string;
+  githubProfile?: string;
+  linkedinProfile?: string;
+  personalWebsite?: string;
 
   age: number;
   phoneNumber: string;
@@ -94,7 +97,7 @@ export async function getInterestFormData() {
   }
 }
 
-export async function checkApplicationStatus() {
+export async function checkOrFetchApplicationStatus(shouldFetch: boolean) {
   const userId = auth.currentUser?.uid;
   if (!userId) {
     return;
@@ -104,7 +107,12 @@ export async function checkApplicationStatus() {
     const fetchedApplication = await getDoc(
       doc(db, "qhacks_applications", userId)
     );
-    return fetchedApplication.exists();
+    if (shouldFetch && fetchedApplication.exists()) {
+      const applicationFormData = fetchedApplication.data() as ApplicationFormData;
+      return applicationFormData;
+    } else {
+      return fetchedApplication.exists();
+    }
   } catch (e) {
     return false;
   }

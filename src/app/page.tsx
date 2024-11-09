@@ -23,7 +23,8 @@ import CurrentSponsors from "../components/shared/sponsors/currentSponsors";
 import PastSponsors from "../components/shared/sponsors/pastSponsors";
 import { useWindowSize } from "../hooks/useWindowSize";
 
-import { checkApplicationStatus } from "../firebase/userData";
+import { checkOrFetchApplicationStatus } from "../firebase/userData";
+import { boolean } from "yup";
 
 export default function Home() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function Home() {
   const [hasApplication, setHasApplication] = useState(false);
 
   useEffect(() => {
-    checkApplicationStatus().then((res) => setHasApplication(res ?? false));
+    checkOrFetchApplicationStatus(false).then((res) => setHasApplication(res && typeof res === 'boolean' ? res : false));
   }, []);
 
   onAuthStateChanged(auth, () => {
@@ -44,7 +45,7 @@ export default function Home() {
     } else {
       setIsSignedIn(false);
     }
-    checkApplicationStatus().then((res) => setHasApplication(res ?? false));
+    checkOrFetchApplicationStatus(false).then((res) => setHasApplication(res && typeof res === 'boolean' ? res : false));
   });
 
   const DonutScene = dynamic(
@@ -106,14 +107,9 @@ export default function Home() {
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={async () => {
-              const hasApplication = await checkApplicationStatus();
-              if (!hasApplication) {
-                router.push("/application-form");
-              }
-            }}
+            onClick={() => router.push("/application-form")}
           >
-            {hasApplication ? "Already Registered" : "Register Here"}
+            {hasApplication ? "Update Application" : "Register Here"}
           </motion.button>
 
           {isSignedIn ? (
