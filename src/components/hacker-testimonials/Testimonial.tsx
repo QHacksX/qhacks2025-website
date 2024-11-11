@@ -18,12 +18,12 @@ const Testimonials = () => {
             <p className='text-lg mb-4'>"{hacker.testimonial}"</p>
 
             <div className='flex flex-col justify-center items-center'>
-              <img
+              {/* <img
                 src={`./testimonials/${index + 1}.svg`}
                 className='pb-1 w-[40%]'
-              />
+              /> */}
               <span className='text-gray-400'>
-                {hacker.name}, {hacker.year}
+                {hacker.name}, {hacker.project}, {hacker.year}
               </span>
             </div>
           </div>
@@ -48,13 +48,13 @@ const Testimonials = () => {
             >
               <p className='text-lg mb-4'>"{hacker.testimonial}"</p>
               <div className='flex flex-col justify-center items-center'>
-                <img
+                {/* <img
                   src={`./testimonials/${index + 1}.svg`}
                   className='pb-1 w-[10%]'
                   alt={`Testimonial from ${hacker.name}`}
-                />
+                /> */}
                 <span className='text-gray-400'>
-                  {hacker.name}, {hacker.year}
+                  {hacker.name}, {hacker.project}, {hacker.year}
                 </span>
               </div>
             </div>
