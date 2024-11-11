@@ -325,6 +325,9 @@ function Page(props: any) {
       applicationQuestion2: applicationQuestion2,
       travellingFromCity: travellingFromCity,
       needsBussing: needsBussing,
+      githubProfile: githubProfile,
+      linkedinProfile: linkedinProfile,
+      personalWebsite: personalWebsite,
 
       age: age,
       phoneNumber: phoneNumber,
