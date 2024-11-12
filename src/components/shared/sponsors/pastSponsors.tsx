@@ -5,44 +5,53 @@ import useMeasure from "react-use-measure";
 import { useEffect } from "react";
 
 export default function PastSponsors() {
-    let [ref, { width }] = useMeasure();
-    const xTranslation = useMotionValue(0);
+  let [ref, { width }] = useMeasure();
+  const xTranslation = useMotionValue(0);
 
-    useEffect(() => {
-        let controls;
-        let finalPosition = -width / 4 - highlightedPrevSponsors.length; // remember to change this to amount of sponsors
+  useEffect(() => {
+    let controls;
+    let finalPosition = -width / 4 - highlightedPrevSponsors.length; // remember to change this to amount of sponsors
 
-        controls = animate(xTranslation, [finalPosition, 0], {
-            ease: "linear",
-            duration: highlightedPrevSponsors.length * 4,
-            repeat: Infinity,
-            repeatType: "loop",
-            repeatDelay: 0
-        })
+    controls = animate(xTranslation, [finalPosition, 0], {
+      ease: "linear",
+      duration: highlightedPrevSponsors.length * 4,
+      repeat: Infinity,
+      repeatType: "loop",
+      repeatDelay: 0,
+    });
 
-        return controls.stop;
-    }, [xTranslation, width])
+    return controls.stop;
+  }, [xTranslation, width]);
 
-    return (
-        <div className="relative pt-10 justify-center items-center w-screen flex flex-col">
-            <div className="pb-10">
-                <h1 className="mb-3 text-white  mx-5 text-3xl md:text-5xl font-bold text-center">
-                    Some of Our{" "}
-                    <span className="text-transparent text-3xl md:text-5xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">
-                        Previous Sponsors
-                    </span>
-                </h1>
-            </div>
+  return (
+    <div className='relative pt-10 justify-center items-center w-screen flex flex-col'>
+      <div className='pb-10 z-40'>
+        <h1 className='mb-3 text-white  mx-5 text-3xl md:text-5xl font-bold text-center'>
+          Some of Our{" "}
+          <span className='text-transparent text-3xl md:text-5xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600'>
+            Previous Sponsors
+          </span>
+        </h1>
+      </div>
+      <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] h-full absolute left-0 z-20' />
+      <div className='bg-gradient-to-r from-transparent to-black  via-black/20 w-[10%] h-full absolute right-0 z-20' />
+      <motion.div
+        className='left-0 flex gap-4'
+        ref={ref}
+        style={{ x: xTranslation }}
+      >
+        {[
+          ...highlightedPrevSponsors,
+          ...highlightedPrevSponsors,
+          ...highlightedPrevSponsors,
+          ...highlightedPrevSponsors,
+        ].map((sponsor, id) => (
+          <SponsorBubble sponsor={sponsor} key={id} />
+        ))}
+      </motion.div>
+    </div>
 
-            <motion.div className="left-0 flex gap-4" ref={ref} style={{ x: xTranslation }}>
-                {[...highlightedPrevSponsors, ...highlightedPrevSponsors, ...highlightedPrevSponsors, ...highlightedPrevSponsors].map((sponsor, id) => (
-                    <SponsorBubble sponsor={sponsor} key={id} />
-                ))}
-            </motion.div>
-        </div>
-
-
-        /* Inner ring
+    /* Inner ring
         <motion.div className="absolute w-1/2 h-1/2 rounded-full"
             animate={{ rotate: 360 }}
             transition={{
@@ -86,5 +95,5 @@ export default function PastSponsors() {
                 <SponsorBubble sponsor={sponsor} key={i} />
             </motion.div>))}
         </motion.div> */
-    )
+  );
 }

@@ -36,7 +36,9 @@ export default function Home() {
   const [hasApplication, setHasApplication] = useState(false);
 
   useEffect(() => {
-    checkOrFetchApplicationStatus(false).then((res) => setHasApplication(res && typeof res === 'boolean' ? res : false));
+    checkOrFetchApplicationStatus(false).then((res) =>
+      setHasApplication(res && typeof res === "boolean" ? res : false)
+    );
   }, []);
 
   onAuthStateChanged(auth, () => {
@@ -45,7 +47,9 @@ export default function Home() {
     } else {
       setIsSignedIn(false);
     }
-    checkOrFetchApplicationStatus(false).then((res) => setHasApplication(res && typeof res === 'boolean' ? res : false));
+    checkOrFetchApplicationStatus(false).then((res) =>
+      setHasApplication(res && typeof res === "boolean" ? res : false)
+    );
   });
 
   const DonutScene = dynamic(
@@ -151,15 +155,6 @@ export default function Home() {
                 className='w-10 h-10'
               />
             </Link>
-            {/* <Link href='https://www.facebook.com/QHacks/' target='_blank'>
-              <img
-                src={"/socials/facebook_logo.svg"}
-                alt='Facebook'
-                width={40}
-                height={40}
-                className='w-10 h-10'
-              />
-            </Link> */}
             <Link href='https://www.instagram.com/qhacksx/' target='_blank'>
               <img
                 src={"/socials/ig_logo.svg"}
@@ -197,26 +192,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+        <div
+          className='flex flex-col justify-around h-[100vh] relative'
+          id='sponsors'
+        >
+          <CurrentSponsors />
 
-      <div
-        className='flex flex-col justify-around h-[100vh] relative'
-        id='sponsors'
-      >
-        <div className='bg-gradient-to-r from-black to-transparent w-[30%] h-full absolute left-0 z-40' />
-        <div className='bg-gradient-to-r from-transparent to-black w-[30%] h-full absolute right-0 z-40' />
+          <PastSponsors />
+        </div>
+        <Faq />
 
-        <CurrentSponsors />
-
-        <PastSponsors />
+        <Footer />
       </div>
 
       {/* TODO: Add back once headshots are done */}
       {/* <TeamSection /> */}
-
-      <Faq />
-
-      <Footer />
     </main>
   );
 }
