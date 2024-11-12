@@ -100,17 +100,27 @@ export default function Home() {
             ultimate hackathon experience.
           </p>
           <p className='font-bold text-[#E2A022] pt-5'>
-            In-person! [add dates]
+            In-person! January 24th-26th, 2025
           </p>
 
           <motion.button
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
+            // onClick={() => router.push("/application-form")}
+          >
+            Applications Open Soon!
+          </motion.button>
+
+          {/* USE THIS BUTTON FOR WHEN APPLICATIONS ARE READY TO BE ONLINE 
+          <motion.button
+            className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
             onClick={() => router.push("/application-form")}
           >
-            {hasApplication ? "Update Application" : "Register Here"}
-          </motion.button>
+            { hasApplication ? "Update Application" : "Register Here" }
+          </motion.button> */}
 
           {isSignedIn ? (
             <p
