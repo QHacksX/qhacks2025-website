@@ -36,8 +36,8 @@ export default function CurrentSponsors() {
         </h1>
       </div>
 
-      <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] h-[400px] absolute left-0 z-20' />
-      <div className='bg-gradient-to-r from-transparent to-black  via-black/20 w-[10%] h-[400px] absolute right-0 z-20' />
+      {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] md:h-[300px] h-[400px] absolute left-0 z-20' />
+      <div className='bg-gradient-to-r from-transparent to-black  via-black/20 w-[10%] md:h-[300px] h-[400px] absolute right-0 z-20' /> */}
       <motion.div
         className='left-0 flex gap-4'
         ref={ref}

@@ -33,8 +33,8 @@ export default function PastSponsors() {
           </span>
         </h1>
       </div>
-      <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] h-full absolute left-0 z-20' />
-      <div className='bg-gradient-to-r from-transparent to-black  via-black/20 w-[10%] h-full absolute right-0 z-20' />
+      {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] h-full absolute left-0 z-20' />
+      <div className='bg-gradient-to-r from-transparent to-black  via-black/20 w-[10%] h-full absolute right-0 z-20' /> */}
       <motion.div
         className='left-0 flex gap-4'
         ref={ref}
