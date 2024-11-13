@@ -42,7 +42,7 @@ export const currentSponsors = [
         "tier": "kilo"
     },
     {
-        "name": "Queence Engineering",
+        "name": "Queens Engineering",
         "logo": "/sponsors/Engineering.svg",
         "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
         "colour": "bg-yellow-500",
@@ -129,7 +129,7 @@ export const highlightedPrevSponsors = [
         "tier": "previous"
     },
     {
-        "name": "Dominoes",
+        "name": "Dominos",
         "logo": "/sponsors/Dominoes.svg",
         "link": "https://www.dominos.ca/",
         "colour": "bg-yellow-500",
@@ -342,7 +342,7 @@ export const fullPrevSponsors = [
         "tier": "previous"
     },
     {
-        "name": "Queence Engineering",
+        "name": "Queens Engineering",
         "logo": "/sponsors/Engineering.svg",
         "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
         "colour": "bg-yellow-500",
