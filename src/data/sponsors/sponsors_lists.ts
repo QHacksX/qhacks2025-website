@@ -62,6 +62,13 @@ export const currentSponsors = [
         "colour": "bg-yellow-500",
         "tier": "kilo"
     },
+    {
+        "name": "QT Group",
+        "logo": "/sponsors/QtGroup.png",
+        "link": "",
+        "colour": "bg-yellow-500",
+        "tier": "kilo"
+    }
 ]
 
 export const highlightedPrevSponsors = [
