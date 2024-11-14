@@ -1,10 +1,4 @@
-import React from "react";
 import Wave from "react-wavify";
-import Image from "next/image";
-import mlhTrustBadge from "../../../public/mlh-trust-badge-2025-gray.png";
-import crown from "../../../public/crown2.png";
-import Link from "next/link";
-import signOutUser from "@/src/firebase/auth/signout";
 import MobileNav from "./mobileNav";
 
 const InvertedWaveBackground = ({

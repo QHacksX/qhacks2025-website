@@ -1,11 +1,14 @@
 import { ShirtSize } from "@/src/firebase/userData";
 import { countryList } from "./countryList";
 import { schoolList } from "./schoolList";
+import { label } from "framer-motion/client";
 
 /**
  * The dropdown options we support
  */
 export enum DropdownTypes {
+  travelOptions,
+  busNeeded,
   age,
   school,
   levelOfStudy,
@@ -26,6 +29,19 @@ export type DropdownConfig = {
   label: string;
   placeholder: string;
 };
+
+const travelOptions = [
+  { value: "Waterloo" },
+  { value: "Hamilton" },
+  { value: "London" },
+  { value: "Toronto" },
+  { value: "No I will not" }
+];
+
+const busNeeded = [
+  { value: "Yes" },
+  { value: "No" }
+]
 
 const ages = [
   { value: 16 },
@@ -173,6 +189,22 @@ const fieldsOfStudy = [
  * Maps a dropdown type to the config needed to render its Dropdown component
  */
 export const dropdownOptions = new Map<DropdownTypes, DropdownConfig>([
+  [
+    DropdownTypes.travelOptions,
+    {
+      options: travelOptions,
+      label: "value",
+      placeholder: "---"
+    }
+  ],
+  [
+    DropdownTypes.busNeeded,
+    {
+      options: busNeeded,
+      label: "value",
+      placeholder: "---"
+    },
+  ],
   [
     DropdownTypes.age,
     {

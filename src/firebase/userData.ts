@@ -1,6 +1,6 @@
-import { auth, db, firebase_app } from "./config";
-import { getAuth } from "firebase/auth";
-import { doc, setDoc, collection, addDoc } from "firebase/firestore";
+import { auth, db } from "./config";
+
+import { doc, setDoc, getDoc } from "firebase/firestore";
 
 export enum ShirtSize {
   na = "not chosen",
@@ -11,6 +11,41 @@ export enum ShirtSize {
   xLarge = "xl",
   xxLarge = "xxl",
 }
+
+export type ApplicationFormData = {
+  firstName: string;
+  lastName: string;
+
+  teammate1?: string;
+  teammate2?: string;
+  teammate3?: string;
+  applicationQuestion1: string;
+  applicationQuestion2: string;
+  travellingFromCity: string;
+  needsBussing: string;
+  githubProfile?: string;
+  linkedinProfile?: string;
+  personalWebsite?: string;
+
+  age: number;
+  phoneNumber: string;
+  email: string;
+  school: string;
+  levelOfStudy: string;
+  country: string;
+  dietaryRestrictions?: string;
+  underrepresented?: boolean | null;
+  gender?: string;
+  pronouns?: string;
+  ethnicity?: string;
+  sexualIdentity?: string;
+  highestEducationCompleted?: string;
+  shirtSize?: ShirtSize;
+  studyMajor?: string;
+  acceptMLHCodeOfConduct: boolean;
+  acceptMLHPrivacyPolicy: boolean;
+  acceptMLHEmails: boolean;
+};
 
 export type InterestFormData = {
   firstName: string;
@@ -43,15 +78,55 @@ export async function getUserData({}: {}) {
   }
 }
 
+export async function getInterestFormData() {
+  const userId = auth.currentUser?.uid;
+  if (!userId) {
+    return;
+  }
+
+  try {
+    const fetchedCollectionDoc = await getDoc(doc(db, "users", userId));
+    if (fetchedCollectionDoc.exists()) {
+      const interestFormData = fetchedCollectionDoc.data() as InterestFormData;
+      return interestFormData;
+    }
+
+    return; // just return undefined otherwise
+  } catch (e) {
+    return;
+  }
+}
+
+export async function checkOrFetchApplicationStatus(shouldFetch: boolean) {
+  const userId = auth.currentUser?.uid;
+  if (!userId) {
+    return;
+  }
+
+  try {
+    const fetchedApplication = await getDoc(
+      doc(db, "qhacks_applications", userId)
+    );
+    if (shouldFetch && fetchedApplication.exists()) {
+      const applicationFormData = fetchedApplication.data() as ApplicationFormData;
+      return applicationFormData;
+    } else {
+      return fetchedApplication.exists();
+    }
+  } catch (e) {
+    return false;
+  }
+}
+
 /**
- * Updates or inserts a document for the user in the 'users' collection.
+ * Updates or inserts a document for the user in the 'qhacks_application' collection.
  * @param userData - the data to store in the user's document
  * @returns
  */
 export async function updateUserData({
   userData,
 }: {
-  userData: InterestFormData;
+  userData: ApplicationFormData;
 }) {
   const userId = auth.currentUser?.uid;
   if (!userId) {
@@ -59,9 +134,8 @@ export async function updateUserData({
   }
 
   try {
-    await setDoc(doc(db, "users", userId), userData);
+    await setDoc(doc(db, "qhacks_applications", userId), userData);
   } catch (e) {
-    console.log(e);
     return "Something went wrong. Please try again";
   }
 }

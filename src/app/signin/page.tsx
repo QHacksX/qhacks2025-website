@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./signin.css";
 import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
-import EmailInput from "@/src/components/interest-form/emailInput";
+import EmailInput from "@/src/components/application-form/emailInput";
 import Styles from "@/src/css/style.module.css";
 import { getAuthErrorMessage } from "@/src/firebase/utils";
 import { auth } from "@/src/firebase/config";
@@ -12,6 +12,8 @@ import { IoIosClose } from "react-icons/io";
 import { BiHide } from "react-icons/bi";
 import { BiShowAlt } from "react-icons/bi";
 import { passwordReset } from "@/src/firebase/auth/passwordReset";
+import Waves from "@/src/components/waves";
+import { usePreviousRoute } from "../context/RouteContext";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -24,6 +26,8 @@ function Page() {
 
   const [showPassword, setShowPassword] = useState(false);
 
+  const { prevRoute } = usePreviousRoute();
+
   useEffect(() => {
     if (auth.currentUser) {
       router.back();
@@ -35,7 +39,11 @@ function Page() {
     if (error) {
       setErrorMessage(getAuthErrorMessage(error));
     } else {
-      router.back();
+      if (prevRoute == "/application-form") {
+        router.push("/application-form");
+      } else {
+        router.push("/");
+      }
     }
   };
 
@@ -47,11 +55,16 @@ function Page() {
 
   return (
     <div className='flex h-screen w-screen justify-center'>
-      <Link href='/' className='p-5 absolute left-0'>
+      <Link href='/' className='p-5 absolute left-0 z-10'>
         <IoIosClose size={50} />
       </Link>
-      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2'>
-        <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
+
+      <div className='w-screen absolute'>
+        <Waves />
+      </div>
+
+      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2 h-screen align-middle items-center'>
+        <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center z-50'>
           <div
             className={`flex justify-center  text-white pb-2 text-4xl font-thin mb-10 ${Styles["text-shadow"]}`}
           >

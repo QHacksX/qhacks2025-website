@@ -1,6 +1,9 @@
-import { FirebaseError } from "firebase/app";
-import { auth, firebase_app } from "../config";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { auth } from "../config";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  sendEmailVerification,
+} from "firebase/auth";
 
 export default async function signUp({
   email,
@@ -9,10 +12,13 @@ export default async function signUp({
   email: string;
   password: string;
 }) {
-  let result = null;
+  let result = '';
   let error: string | undefined;
+
   try {
-    result = await createUserWithEmailAndPassword(auth, email, password);
+    const userCred = await createUserWithEmailAndPassword(auth, email, password);
+    await sendEmailVerification(userCred.user, {url: `${window.location.origin}/signin`});
+    result = "Verification email sent. Please check your inbox."
   } catch (e) {
     if (e instanceof Object) {
       if ("code" in e) {
