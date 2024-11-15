@@ -66,7 +66,7 @@ function Page(props: any) {
   const [levelOfStudy, setLevelOfStudy] = useState("");
   const [country, setCountry] = useState("");
   const [dietaryRestriction, setDietaryRestriction] = useState("");
-  const [isUnderrepresented, setIsUnderrepresented] = useState(null);
+  const [isUnderrepresented, setIsUnderrepresented] = useState<string | null>(null);
   const [gender, setGender] = useState("");
   const [pronoun, setPronoun] = useState("");
   const [ethnicity, setEthnicity] = useState("");
@@ -300,6 +300,11 @@ function Page(props: any) {
 
     // Non mandatory inputs
     // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
+    if (typeof formData.underrepresented === "boolean") {
+      setIsUnderrepresented(formData.underrepresented ? "Yes" : "No")
+    } else {
+      setIsUnderrepresented(formData.underrepresented ?? null)
+    }
 
     setDietaryRestriction(formData.dietaryRestrictions ?? "");
     setOrigInputGender(formData.gender ?? "");
