@@ -374,8 +374,8 @@ function Page(props: any) {
           <Waves />
         </div>
         <main className='p-4 pb-8  place-content-center flex justify-center w-full'>
-          <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center z-50'>
-            <div className='grid gap-6 mb-8 z-50'>
+          <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center z-40'>
+            <div className='grid gap-6 mb-8 z-40'>
               {step === 1 ? (
                 <>
                   <FormHeader
