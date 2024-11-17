@@ -30,7 +30,7 @@ const authErrorMessages: { [key: string]: string } = {
   "auth/missing-email": "An email address must be provided.",
   "auth/invalid-verification-code": "The verification code is invalid.",
   "auth/invalid-verification-id": "The verification ID is invalid.",
-  "not-verified": "Please verify your email before logging in"
+  "not-verified": "Please verify your email before logging in, a new verification email has been sent."
 };
 
 export function getAuthErrorMessage(errorCode: string): string {
