@@ -1,5 +1,5 @@
 import { auth } from "../config";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
 
 export default async function signIn({
   email,
@@ -18,6 +18,7 @@ export default async function signIn({
       result = "Login successful!";
     } else {
       error = "not-verified";
+      await sendEmailVerification(user, {url: `${window.location.origin}/signin`});
     }
   } catch (e: unknown) {
     if (e instanceof Object) {
