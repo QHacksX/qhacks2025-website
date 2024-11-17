@@ -52,7 +52,7 @@ export default function Donut({
 }) {
   return (
     <div style={{ height: "100vh", backgroundColor: "transparent", overflow:"visible" }}>
-      <Canvas className="-z-50">
+      <Canvas className="-z-50" gl={{preserveDrawingBuffer:true}}>
         <ambientLight intensity={0.1} />
         <directionalLight color='red' position={[0, 0, 5]} />
         <RotatingTorus x={x} y={y} radius={radius} color={color} />

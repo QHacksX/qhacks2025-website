@@ -8,7 +8,7 @@ import { RotatingTorus } from "./donut";
 export default function ManyDonuts({ mobileView }: { mobileView: boolean }) {
   return (
     <div style={{ height: "100vh", backgroundColor: "transparent" }} className="overflow-x-hidden	">
-      <Canvas>
+      <Canvas gl={{preserveDrawingBuffer:true}}>
         <ambientLight intensity={0.1} />
         <directionalLight color='red' position={[0, 0, 5]} />
         {mobileView ? (
