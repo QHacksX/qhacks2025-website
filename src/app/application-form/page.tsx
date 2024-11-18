@@ -6,7 +6,14 @@ import FormHeader from "@/src/components/application-form/header";
 import PhoneInput from "@/src/components/application-form/phoneInput";
 import WordInput from "@/src/components/application-form/wordInput";
 import { ValidationErrors, schema } from "./validate";
-import { DropdownTypes } from "@/src/data/dropdown-options/options";
+import {
+  DropdownTypes,
+  ethnicities,
+  fieldsOfStudy,
+  genders,
+  pronouns,
+  sexualities,
+} from "@/src/data/dropdown-options/options";
 import {
   ApplicationFormData,
   checkOrFetchApplicationStatus,
@@ -340,13 +347,77 @@ function Page(props: any) {
     }
 
     setDietaryRestriction(formData.dietaryRestrictions ?? "");
-    setOrigInputGender(formData.gender ?? "");
-    setOrigInputPronoun(formData.pronouns ?? "");
-    setOrigInputEthnicity(formData.ethnicity ?? "");
-    setOrigInputSexuality(formData.sexualIdentity ?? "");
+
+    if (formData.gender !== undefined && formData.gender !== "") {
+      const exists = genders.some((item) => item.value === formData.gender);
+      if (exists) {
+        setOrigInputGender(formData.gender);
+      } else {
+        setOrigInputGender("Prefer to self-describe");
+        setGender(formData.gender);
+      }
+    } else {
+      setOrigInputGender("");
+    }
+    if (formData.pronouns !== undefined && formData.pronouns !== "") {
+      const exists = pronouns.some((item) => item.value === formData.pronouns);
+      if (exists) {
+        setOrigInputPronoun(formData.pronouns);
+      } else {
+        setOrigInputPronoun("Prefer to self-describe");
+        setPronoun(formData.pronouns);
+      }
+    } else {
+      setOrigInputPronoun("");
+    }
+
+    if (formData.ethnicity !== undefined && formData.ethnicity !== "") {
+      const exists = ethnicities.some(
+        (item) => item.value === formData.ethnicity
+      );
+      if (exists) {
+        setOrigInputEthnicity(formData.ethnicity);
+      } else {
+        setOrigInputEthnicity("Prefer to self-describe");
+        setEthnicity(formData.ethnicity);
+      }
+    } else {
+      setOrigInputEthnicity("");
+    }
+
+    if (
+      formData.sexualIdentity !== undefined &&
+      formData.sexualIdentity !== ""
+    ) {
+      const exists = sexualities.some(
+        (item) => item.value === formData.sexualIdentity
+      );
+      if (exists) {
+        setOrigInputSexuality(formData.sexualIdentity);
+      } else {
+        setOrigInputSexuality("Prefer to self-describe");
+        setSexuality(formData.sexualIdentity);
+      }
+    } else {
+      setOrigInputSexuality("");
+    }
+
+    if (formData.studyMajor !== undefined && formData.studyMajor !== "") {
+      const exists = fieldsOfStudy.some(
+        (item) => item.value === formData.studyMajor
+      );
+      if (exists) {
+        setOrigInputFieldOfStudy(formData.studyMajor);
+      } else {
+        setOrigInputFieldOfStudy("Other (please specify)");
+        setFieldOfStudy(formData.studyMajor);
+      }
+    } else {
+      setOrigInputFieldOfStudy("");
+    }
+
     setHighestEdu(formData.highestEducationCompleted ?? "");
     setShirtSize(formData.shirtSize ?? ShirtSize.na);
-    setOrigInputFieldOfStudy(formData.studyMajor ?? "");
 
     // Skipping MLH checkboxes to make sure they confirm again
   }

@@ -24,36 +24,37 @@ import PastSponsors from "../components/shared/sponsors/pastSponsors";
 import { useWindowSize } from "../hooks/useWindowSize";
 
 import { checkOrFetchApplicationStatus } from "../firebase/userData";
-import { boolean } from "yup";
 
 export default function Home() {
   const router = useRouter();
 
   const size = useWindowSize();
 
-  const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null && auth.currentUser.emailVerified);
+  const [isSignedIn, setIsSignedIn] = useState(
+    auth.currentUser !== null && auth.currentUser.emailVerified
+  );
 
   const [hasApplication, setHasApplication] = useState(false);
 
-    useEffect(() => {
-      window.scroll({
-        top: 0, 
-        left: 0
-      })
-    }, [])
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+    });
+  }, []);
 
-    onAuthStateChanged(auth, () => {
-      if (auth.currentUser && auth.currentUser.emailVerified) {
-        setIsSignedIn(true);
-      } else {
-        setIsSignedIn(false);
-      }
-      checkOrFetchApplicationStatus(false).then((res) =>
-        // False flag does not retrieve the application, but can return null
-        // We check if res !== null and is of type boolean, then we setHasApplication(res)
-        // Otherwise, it is set to false (i.e. function returned null)
-        setHasApplication(res && typeof res === "boolean" ? res : false)
-      );
+  onAuthStateChanged(auth, () => {
+    if (auth.currentUser && auth.currentUser.emailVerified) {
+      setIsSignedIn(true);
+    } else {
+      setIsSignedIn(false);
+    }
+    checkOrFetchApplicationStatus(false).then((res) =>
+      // False flag does not retrieve the application, but can return null
+      // We check if res !== null and is of type boolean, then we setHasApplication(res)
+      // Otherwise, it is set to false (i.e. function returned null)
+      setHasApplication(res && typeof res === "boolean" ? res : false)
+    );
   });
 
   const DonutScene = dynamic(
@@ -126,7 +127,7 @@ export default function Home() {
             transition={{ type: "spring", stiffness: 300 }}
             onClick={() => router.push("/application-form")}
           >
-            { hasApplication ? "Update Application" : "Register Here" }
+            {hasApplication ? "Update Application" : "Register Here"}
           </motion.button>
 
           {isSignedIn ? (
