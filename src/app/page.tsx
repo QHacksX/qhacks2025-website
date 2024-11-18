@@ -35,7 +35,12 @@ export default function Home() {
 
   const [hasApplication, setHasApplication] = useState(false);
 
-
+    useEffect(() => {
+      window.scroll({
+        top: 0, 
+        left: 0
+      })
+    }, [])
 
     onAuthStateChanged(auth, () => {
       if (auth.currentUser) {
@@ -57,7 +62,9 @@ export default function Home() {
   );
 
   return (
-    <main className='overflow-hidden relative'>
+    <div>
+    <main className='relative'>
+      <div>
       <NavBar />
 
       <div className='radial-gradient-background pb-28' id='home'>
@@ -205,6 +212,8 @@ export default function Home() {
 
       {/* TODO: Add back once headshots are done */}
       {/* <TeamSection /> */}
+      </div>
     </main>
+    </div>
   );
 }
