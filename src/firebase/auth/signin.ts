@@ -18,7 +18,7 @@ export default async function signIn({
       result = "Login successful!";
     } else {
       error = "not-verified";
-      await sendEmailVerification(userCred.user, {url: `${window.location.origin}/signin`});
+      await sendEmailVerification(user, {url: `${window.location.origin}/signin`});
     }
   } catch (e: unknown) {
     if (e instanceof Object) {
