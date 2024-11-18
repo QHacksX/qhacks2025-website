@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='font-thin overflow-x: clip'>
+    <html lang='en' className='font-thin overflow-x-hidden'>
       <body className={openSans.className}>
         <RouteProvider>
           {children}

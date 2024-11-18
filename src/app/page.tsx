@@ -62,9 +62,7 @@ export default function Home() {
   );
 
   return (
-    <div>
-    <main className='relative'>
-      <div>
+    <main className='overflow-hidden relative'>
       <NavBar />
 
       <div className='radial-gradient-background pb-28' id='home'>
@@ -212,8 +210,6 @@ export default function Home() {
 
       {/* TODO: Add back once headshots are done */}
       {/* <TeamSection /> */}
-      </div>
     </main>
-    </div>
   );
 }
