@@ -31,7 +31,7 @@ export default function Home() {
 
   const size = useWindowSize();
 
-  const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null);
+  const [isSignedIn, setIsSignedIn] = useState(auth.currentUser !== null && auth.currentUser.emailVerified);
 
   const [hasApplication, setHasApplication] = useState(false);
 
@@ -43,7 +43,7 @@ export default function Home() {
     }, [])
 
     onAuthStateChanged(auth, () => {
-      if (auth.currentUser) {
+      if (auth.currentUser && auth.currentUser.emailVerified) {
         setIsSignedIn(true);
       } else {
         setIsSignedIn(false);

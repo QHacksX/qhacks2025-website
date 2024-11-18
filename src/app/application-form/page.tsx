@@ -31,7 +31,7 @@ function Page(props: any) {
   const router = useRouter();
 
   useEffect(() => {
-    if (auth.currentUser === null) {
+    if (auth.currentUser === null || !auth.currentUser?.emailVerified) {
       router.replace("signin");
     } else if (auth.currentUser) {
       prepopulateFormFields();

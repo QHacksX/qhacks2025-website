@@ -29,7 +29,7 @@ function Page() {
   const { prevRoute } = usePreviousRoute();
 
   useEffect(() => {
-    if (auth.currentUser) {
+    if (auth.currentUser && auth.currentUser.emailVerified) {
       router.back();
     }
   }, [router]);
