@@ -97,6 +97,13 @@ function Page(props: any) {
     let secondError;
     let thirdError;
 
+    // WAGS ADD CODE HERE
+    /*
+    BE SURE TO ADD THE ERRROS IN THE CORRECT SPOT
+    THEY ARE ALIGNED INT HE CORREC TORDER IN THE validate.ts FILE
+    (so dietaryRestricions/gender/fieldOfStudy is firstError, enthicity/pronouns/shirtSize is secondError)
+    */
+
     firstError = errors.includes(ValidationErrors.CITY_ERROR)
       ? ValidationErrors.CITY_ERROR
       : errors.includes(ValidationErrors.APPLICATION_QUESTION_ERROR)
@@ -233,6 +240,13 @@ function Page(props: any) {
       }
 
       awaitValidation(inputs, step - 1);
+
+      // WAGS: ADD CODE HERE
+      /*
+      CODE HERE CODE HERE CODE HERE: BASED ON STEP, SEND THE RIGHT INDEX TO AWAITVALIDATION (SECOND ARG)
+      MAKE SURE THAT YOU VALIDATE THE CORRECT INPUTS (IT MIGHT BE origInput____ or simply ____
+      check the actual questions way down there to make sure (and also whatever other code helps you understand)
+      */
     } else if (step === 12) {
       inputs = {
         checkedMLHCode: checkedMLHCode,
@@ -566,30 +580,38 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
-                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
+                    subheader='These questions are mandatory. The information provided in this section is collected solely for demographic purposes and will not influence the outcome of your application. This data may be shared with our sponsors in aggregate or anonymized form.'
                   />
                   <DropdownInput
-                    title={"Dietary Restrictions (optional)"}
+                    title={"Dietary Restrictions*"}
                     type={DropdownTypes.dietaryRestriction}
                     value={dietaryRestriction}
                     setValue={setDietaryRestriction}
                   />
                   <DropdownInput
-                    title={"Underrepresented (optional)"}
-                    type={DropdownTypes.isUnderrepresented}
-                    value={isUnderrepresented}
-                    setValue={setIsUnderrepresented}
+                    title={"Ethnicity*"}
+                    type={DropdownTypes.ethnicity}
+                    value={origInputEthnicity}
+                    setValue={setOrigInputEthnicity}
                   />
+                  {origInputEthnicity === "Prefer to self-describe" ? (
+                    <WordInput
+                      title='Self-Describe Your Ethnicity'
+                      input={ethnicity}
+                      setInput={setEthnicity}
+                      placeholder='Self-Describe Your Ethnicity'
+                    />
+                  ) : null}
                 </>
               ) : step === 9 ? (
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
-                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
+                    subheader='These questions are mandatory. The information provided in this section is collected solely for demographic purposes and will not influence the outcome of your application. This data may be shared with our sponsors in aggregate or anonymized form.'
                   />
 
                   <DropdownInput
-                    title={"Gender (optional)"}
+                    title={"Gender*"}
                     type={DropdownTypes.gender}
                     value={origInputGender}
                     setValue={setOrigInputGender}
@@ -603,7 +625,7 @@ function Page(props: any) {
                     />
                   ) : null}
                   <DropdownInput
-                    title={"Pronouns (optional)"}
+                    title={"Pronouns*"}
                     type={DropdownTypes.pronouns}
                     value={origInputPronoun}
                     setValue={setOrigInputPronoun}
@@ -621,22 +643,37 @@ function Page(props: any) {
                 <>
                   <FormHeader
                     title='QHacks 2025 Application Form'
-                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
+                    subheader='These questions are mandatory. The information provided in this section is collected solely for demographic purposes and will not influence the outcome of your application. This data may be shared with our sponsors in aggregate or anonymized form.'
                   />
+                  
                   <DropdownInput
-                    title={"Ethnicity (optional)"}
-                    type={DropdownTypes.ethnicity}
-                    value={origInputEthnicity}
-                    setValue={setOrigInputEthnicity}
+                    title={"Field Of Study*"}
+                    type={DropdownTypes.fieldOfStudy}
+                    value={origInputFieldOfStudy}
+                    setValue={setOrigInputFieldOfStudy}
                   />
-                  {origInputEthnicity === "Prefer to self-describe" ? (
+                  {origInputFieldOfStudy === "Other (please specify)" ? (
                     <WordInput
-                      title='Self-Describe Your Ethnicity'
-                      input={ethnicity}
-                      setInput={setEthnicity}
-                      placeholder='Self-Describe Your Ethnicity'
+                      title='Self-Describe Your Major'
+                      input={fieldOfStudy}
+                      setInput={setFieldOfStudy}
+                      placeholder='Self-Describe Your Major'
                     />
                   ) : null}
+                  <DropdownInput
+                    title={"Shirt Size*"}
+                    type={DropdownTypes.shirtSize}
+                    value={shirtSize}
+                    setValue={setShirtSize}
+                  />
+                </>
+              ) : step === 11 ? (
+                <>
+                
+                  <FormHeader
+                    title='QHacks 2025 Application Form'
+                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
+                  />
                   <DropdownInput
                     title={"Sexuality (optional)"}
                     type={DropdownTypes.sexuality}
@@ -651,12 +688,11 @@ function Page(props: any) {
                       placeholder='Self-Describe Your Sexual Identity'
                     />
                   ) : null}
-                </>
-              ) : step === 11 ? (
-                <>
-                  <FormHeader
-                    title='QHacks 2025 Application Form'
-                    subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
+                  <DropdownInput
+                    title={"Underrepresented (optional)"}
+                    type={DropdownTypes.isUnderrepresented}
+                    value={isUnderrepresented}
+                    setValue={setIsUnderrepresented}
                   />
                   <DropdownInput
                     title={"Highest Level Of Education (optional)"}
@@ -664,26 +700,8 @@ function Page(props: any) {
                     value={highestEdu}
                     setValue={setHighestEdu}
                   />
-                  <DropdownInput
-                    title={"Field Of Study (optional)"}
-                    type={DropdownTypes.fieldOfStudy}
-                    value={origInputFieldOfStudy}
-                    setValue={setOrigInputFieldOfStudy}
-                  />
-                  {origInputFieldOfStudy === "Other (please specify)" ? (
-                    <WordInput
-                      title='Self-Describe Your Major'
-                      input={fieldOfStudy}
-                      setInput={setFieldOfStudy}
-                      placeholder='Self-Describe Your Major'
-                    />
-                  ) : null}
-                  <DropdownInput
-                    title={"Shirt Size (optional)"}
-                    type={DropdownTypes.shirtSize}
-                    value={shirtSize}
-                    setValue={setShirtSize}
-                  />
+                  
+                  
                 </>
               ) : step === 12 ? (
                 <div>

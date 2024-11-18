@@ -13,6 +13,12 @@ export enum ValidationErrors {
     SCHOOL_ERROR = "School is required",
     LEVEL_OF_STUDY_ERROR = "Level of study is required",
     COUNTRY_ERROR = "Country of residence is required",
+    DIETARY_RESTRICTIONS_ERROR = "Dietary Restriction field is required; see disclaimer above",
+    GENDER_ERROR = "Gender field is required; see disclaimer above",
+    PRONOUNS_ERROR = "Pronouns field is required; see disclaimer above",
+    ETHNITCITY_ERROR = "Ethnicity field is required; see disclaimer above",
+    SHIRT_SIZE_ERROR = "Shirt size is required; see disclaimer above",
+    FIELD_OF_STUDY_ERROR = "Field of study is required; see disclaimer above",
     MLH_CODE_ERROR = "Must accept MLH Code of Conduct",
     MLH_PRIVACY_ERROR = "Must accept MLH Contest and Privacy Policies"
 }
@@ -39,6 +45,18 @@ export const schema = [
     yup.object().shape({
         travellingFromCity: yup.string().required(ValidationErrors.CITY_ERROR),
         needsBussing: yup.string().required(ValidationErrors.CITY_ERROR)
+    }),
+    yup.object().shape({
+        dietaryRestricion: yup.string().required(ValidationErrors.DIETARY_RESTRICTIONS_ERROR),
+        ethnicity: yup.string().required(ValidationErrors.ETHNITCITY_ERROR),
+    }),
+    yup.object().shape({
+        gender: yup.string().required(ValidationErrors.GENDER_ERROR),
+        pronouns: yup.string().required(ValidationErrors.PRONOUNS_ERROR)
+    }),
+    yup.object().shape({
+        fieldOfStudy: yup.string().required(ValidationErrors.FIELD_OF_STUDY_ERROR),
+        shirtSize: yup.string().required(ValidationErrors.SHIRT_SIZE_ERROR)
     }),
     yup.object().shape({
         checkedMLHCode: yup.bool().oneOf([true], ValidationErrors.MLH_CODE_ERROR),
