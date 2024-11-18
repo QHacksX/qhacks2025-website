@@ -35,11 +35,7 @@ export default function Home() {
 
   const [hasApplication, setHasApplication] = useState(false);
 
-  useEffect(() => {
-    checkOrFetchApplicationStatus(false).then((res) =>
-      setHasApplication(res && typeof res === "boolean" ? res : false)
-    );
-  }, []);
+
 
     onAuthStateChanged(auth, () => {
       if (auth.currentUser) {
