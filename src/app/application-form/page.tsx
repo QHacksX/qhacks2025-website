@@ -503,7 +503,7 @@ function Page(props: any) {
 
                   <DropdownInput
                     title={
-                      "There will be bussing available both to and from Toronto for the event, will you need to use this bus?*"
+                      "Bussing will be available both to and from Toronto for the event, will you need to use this bus? (First come first serve, RSVPs sent out close to the event)*"
                     }
                     type={DropdownTypes.busNeeded}
                     value={needsBussing}
