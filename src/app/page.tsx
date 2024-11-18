@@ -127,7 +127,7 @@ export default function Home() {
             transition={{ type: "spring", stiffness: 300 }}
             onClick={() => router.push("/application-form")}
           >
-            {hasApplication ? "Update Application" : "Register Here"}
+            {hasApplication ? "Update Application" : "Apply Here"}
           </motion.button>
 
           {isSignedIn ? (

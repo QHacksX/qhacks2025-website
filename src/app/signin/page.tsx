@@ -14,6 +14,7 @@ import { BiShowAlt } from "react-icons/bi";
 import { passwordReset } from "@/src/firebase/auth/passwordReset";
 import Waves from "@/src/components/waves";
 import { usePreviousRoute } from "../context/RouteContext";
+import FormHeader from "@/src/components/application-form/header";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -66,10 +67,16 @@ function Page() {
       <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2 h-screen align-middle items-center'>
         <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center z-50'>
           <div
-            className={`flex justify-center  text-white pb-2 text-4xl font-thin mb-10 ${Styles["text-shadow"]}`}
+            className={`flex justify-center text-white pb-2 mt-20 text-4xl font-thin ${Styles["text-shadow"]}`}
           >
             Sign In
           </div>
+            <div className={`flex justify-center text-center font-normal text-lg text-gray-500 mb-10  ${Styles["text-shadow"]}`}>
+              A QHacks account is required in order to apply for the event.
+            </div>
+
+
+
           <EmailInput
             title='Email'
             email={email}
