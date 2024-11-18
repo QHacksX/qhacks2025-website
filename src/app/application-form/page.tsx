@@ -66,7 +66,7 @@ function Page(props: any) {
   const [levelOfStudy, setLevelOfStudy] = useState("");
   const [country, setCountry] = useState("");
   const [dietaryRestriction, setDietaryRestriction] = useState("");
-  const [isUnderrepresented, setIsUnderrepresented] = useState(null);
+  const [isUnderrepresented, setIsUnderrepresented] = useState<string | null>(null);
   const [gender, setGender] = useState("");
   const [pronoun, setPronoun] = useState("");
   const [ethnicity, setEthnicity] = useState("");
@@ -300,6 +300,11 @@ function Page(props: any) {
 
     // Non mandatory inputs
     // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
+    if (typeof formData.underrepresented === "boolean") {
+      setIsUnderrepresented(formData.underrepresented ? "Yes" : "No")
+    } else {
+      setIsUnderrepresented(formData.underrepresented ?? null)
+    }
 
     setDietaryRestriction(formData.dietaryRestrictions ?? "");
     setOrigInputGender(formData.gender ?? "");
@@ -369,8 +374,8 @@ function Page(props: any) {
           <Waves />
         </div>
         <main className='p-4 pb-8  place-content-center flex justify-center w-full'>
-          <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center z-50'>
-            <div className='grid gap-6 mb-8 z-50'>
+          <div className='md:m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center z-40'>
+            <div className='grid gap-6 mb-8 z-40'>
               {step === 1 ? (
                 <>
                   <FormHeader

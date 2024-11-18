@@ -35,21 +35,25 @@ export default function Home() {
 
   const [hasApplication, setHasApplication] = useState(false);
 
-  useEffect(() => {
-    checkOrFetchApplicationStatus(false).then((res) =>
-      setHasApplication(res && typeof res === "boolean" ? res : false)
-    );
-  }, []);
+    useEffect(() => {
+      window.scroll({
+        top: 0, 
+        left: 0
+      })
+    }, [])
 
-  onAuthStateChanged(auth, () => {
-    if (auth.currentUser) {
-      setIsSignedIn(true);
-    } else {
-      setIsSignedIn(false);
-    }
-    checkOrFetchApplicationStatus(false).then((res) =>
-      setHasApplication(res && typeof res === "boolean" ? res : false)
-    );
+    onAuthStateChanged(auth, () => {
+      if (auth.currentUser) {
+        setIsSignedIn(true);
+      } else {
+        setIsSignedIn(false);
+      }
+      checkOrFetchApplicationStatus(false).then((res) =>
+        // False flag does not retrieve the application, but can return null
+        // We check if res !== null and is of type boolean, then we setHasApplication(res)
+        // Otherwise, it is set to false (i.e. function returned null)
+        setHasApplication(res && typeof res === "boolean" ? res : false)
+      );
   });
 
   const DonutScene = dynamic(
@@ -58,7 +62,9 @@ export default function Home() {
   );
 
   return (
-    <main className='overflow-hidden relative'>
+    <div>
+    <main className='relative'>
+      <div>
       <NavBar />
 
       <div className='radial-gradient-background pb-28' id='home'>
@@ -107,16 +113,15 @@ export default function Home() {
             In-person! January 24th-26th, 2025
           </p>
 
-          <motion.button
+          {/* <motion.button
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
             // onClick={() => router.push("/application-form")}
           >
             Applications Open Soon!
-          </motion.button>
+          </motion.button> */}
 
-          {/* USE THIS BUTTON FOR WHEN APPLICATIONS ARE READY TO BE ONLINE 
           <motion.button
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
@@ -124,7 +129,7 @@ export default function Home() {
             onClick={() => router.push("/application-form")}
           >
             { hasApplication ? "Update Application" : "Register Here" }
-          </motion.button> */}
+          </motion.button>
 
           {isSignedIn ? (
             <p
@@ -207,6 +212,8 @@ export default function Home() {
 
       {/* TODO: Add back once headshots are done */}
       {/* <TeamSection /> */}
+      </div>
     </main>
+    </div>
   );
 }

@@ -34,7 +34,7 @@ export type ApplicationFormData = {
   levelOfStudy: string;
   country: string;
   dietaryRestrictions?: string;
-  underrepresented?: boolean | null;
+  underrepresented?: boolean | string | null;
   gender?: string;
   pronouns?: string;
   ethnicity?: string;
@@ -57,7 +57,7 @@ export type InterestFormData = {
   levelOfStudy: string;
   country: string;
   dietaryRestrictions?: string;
-  underrepresented?: boolean | null;
+  underrepresented?: boolean | string | null;
   gender?: string;
   pronouns?: string;
   ethnicity?: string;
