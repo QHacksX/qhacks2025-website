@@ -66,7 +66,9 @@ function Page(props: any) {
   const [levelOfStudy, setLevelOfStudy] = useState("");
   const [country, setCountry] = useState("");
   const [dietaryRestriction, setDietaryRestriction] = useState("");
-  const [isUnderrepresented, setIsUnderrepresented] = useState<string | null>(null);
+  const [isUnderrepresented, setIsUnderrepresented] = useState<string | null>(
+    null
+  );
   const [gender, setGender] = useState("");
   const [pronoun, setPronoun] = useState("");
   const [ethnicity, setEthnicity] = useState("");
@@ -97,42 +99,47 @@ function Page(props: any) {
     let secondError;
     let thirdError;
 
-    // WAGS ADD CODE HERE
-    /*
-    BE SURE TO ADD THE ERRROS IN THE CORRECT SPOT
-    THEY ARE ALIGNED INT HE CORREC TORDER IN THE validate.ts FILE
-    (so dietaryRestricions/gender/fieldOfStudy is firstError, enthicity/pronouns/shirtSize is secondError)
-    */
-
     firstError = errors.includes(ValidationErrors.CITY_ERROR)
       ? ValidationErrors.CITY_ERROR
       : errors.includes(ValidationErrors.APPLICATION_QUESTION_ERROR)
-        ? ValidationErrors.APPLICATION_QUESTION_ERROR
-        : errors.includes(ValidationErrors.FIRST_NAME_ERROR)
-          ? ValidationErrors.FIRST_NAME_ERROR
-          : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
-            ? ValidationErrors.PHONE_NUMBER_ERROR
-            : errors.includes(ValidationErrors.SCHOOL_ERROR)
-              ? ValidationErrors.COUNTRY_ERROR
-              : errors.includes(ValidationErrors.MLH_CODE_ERROR)
-                ? ValidationErrors.MLH_CODE_ERROR
-                : "";
+      ? ValidationErrors.APPLICATION_QUESTION_ERROR
+      : errors.includes(ValidationErrors.FIRST_NAME_ERROR)
+      ? ValidationErrors.FIRST_NAME_ERROR
+      : errors.includes(ValidationErrors.PHONE_NUMBER_ERROR)
+      ? ValidationErrors.PHONE_NUMBER_ERROR
+      : errors.includes(ValidationErrors.SCHOOL_ERROR)
+      ? ValidationErrors.SCHOOL_ERROR
+      : errors.includes(ValidationErrors.DIETARY_RESTRICTIONS_ERROR)
+      ? ValidationErrors.DIETARY_RESTRICTIONS_ERROR
+      : errors.includes(ValidationErrors.GENDER_ERROR)
+      ? ValidationErrors.GENDER_ERROR
+      : errors.includes(ValidationErrors.FIELD_OF_STUDY_ERROR)
+      ? ValidationErrors.FIELD_OF_STUDY_ERROR
+      : errors.includes(ValidationErrors.MLH_CODE_ERROR)
+      ? ValidationErrors.MLH_CODE_ERROR
+      : "";
 
     secondError = errors.includes(ValidationErrors.LAST_NAME_ERROR)
       ? ValidationErrors.LAST_NAME_ERROR
       : errors.includes(ValidationErrors.EMAIL_ERROR)
-        ? ValidationErrors.EMAIL_ERROR
-        : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
-          ? ValidationErrors.LEVEL_OF_STUDY_ERROR
-          : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
-            ? ValidationErrors.MLH_PRIVACY_ERROR
-            : "";
+      ? ValidationErrors.EMAIL_ERROR
+      : errors.includes(ValidationErrors.LEVEL_OF_STUDY_ERROR)
+      ? ValidationErrors.LEVEL_OF_STUDY_ERROR
+      : errors.includes(ValidationErrors.PRONOUNS_ERROR)
+      ? ValidationErrors.PRONOUNS_ERROR
+      : errors.includes(ValidationErrors.ETHNICITY_ERROR)
+      ? ValidationErrors.ETHNICITY_ERROR
+      : errors.includes(ValidationErrors.SHIRT_SIZE_ERROR)
+      ? ValidationErrors.SHIRT_SIZE_ERROR
+      : errors.includes(ValidationErrors.MLH_PRIVACY_ERROR)
+      ? ValidationErrors.MLH_PRIVACY_ERROR
+      : "";
 
     thirdError = errors.includes(ValidationErrors.AGE_ERROR)
       ? ValidationErrors.AGE_ERROR
       : errors.includes(ValidationErrors.COUNTRY_ERROR)
-        ? ValidationErrors.COUNTRY_ERROR
-        : "";
+      ? ValidationErrors.COUNTRY_ERROR
+      : "";
 
     setError1(firstError);
     setError2(secondError);
@@ -205,10 +212,7 @@ function Page(props: any) {
   async function validateInputs() {
     let inputs;
 
-    // No need to validate
-    if (step >= 6 && step < 12) {
-      next();
-    } else if (step < 6) {
+    if (step < 6) {
       // Only validate on pages 2, 3, 4, 5, 6, 11 (see else-if for 11)
       if (step === 1) {
         inputs = {
@@ -240,21 +244,33 @@ function Page(props: any) {
       }
 
       awaitValidation(inputs, step - 1);
-
-      // WAGS: ADD CODE HERE
-      /*
-      CODE HERE CODE HERE CODE HERE: BASED ON STEP, SEND THE RIGHT INDEX TO AWAITVALIDATION (SECOND ARG)
-      MAKE SURE THAT YOU VALIDATE THE CORRECT INPUTS (IT MIGHT BE origInput____ or simply ____
-      check the actual questions way down there to make sure (and also whatever other code helps you understand)
-      */
+    } else if (step === 8) {
+      inputs = {
+        dietaryRestriction: dietaryRestriction,
+        ethnicity: ethnicity,
+      };
+      awaitValidation(inputs, 5);
+    } else if (step === 9) {
+      inputs = {
+        gender: gender,
+        pronouns: pronoun,
+      };
+      awaitValidation(inputs, 6);
+    } else if (step === 10) {
+      inputs = {
+        fieldOfStudy: fieldOfStudy,
+        shirtSize: shirtSize,
+      };
+      awaitValidation(inputs, 7);
     } else if (step === 12) {
       inputs = {
         checkedMLHCode: checkedMLHCode,
         checkedMLHPrivacy: checkedMLHPrivacy,
       };
 
-      // Index 5 since that is the last index in the validation schema
-      awaitValidation(inputs, 5);
+      awaitValidation(inputs, 8);
+    } else {
+      next();
     }
   }
 
@@ -276,13 +292,13 @@ function Page(props: any) {
     const applicationForm = await checkOrFetchApplicationStatus(true);
 
     // Means we successfully fetched a pre-existing application (not interest form)
-    if (applicationForm && typeof applicationForm !== 'boolean') {
-      setTeammate1(applicationForm.teammate1 ?? "")
-      setTeammate2(applicationForm.teammate2 ?? "")
-      setTeammate3(applicationForm.teammate3 ?? "")
+    if (applicationForm && typeof applicationForm !== "boolean") {
+      setTeammate1(applicationForm.teammate1 ?? "");
+      setTeammate2(applicationForm.teammate2 ?? "");
+      setTeammate3(applicationForm.teammate3 ?? "");
 
-      setApplicationQuestion1(applicationForm.applicationQuestion1)
-      setApplicationQuestion2(applicationForm.applicationQuestion2)
+      setApplicationQuestion1(applicationForm.applicationQuestion1);
+      setApplicationQuestion2(applicationForm.applicationQuestion2);
 
       setTravellingFromCity(applicationForm.travellingFromCity);
       setNeedsBussing(applicationForm.needsBussing);
@@ -290,18 +306,21 @@ function Page(props: any) {
       setGithubProfile(applicationForm.githubProfile ?? "");
       setLinkedinProfile(applicationForm.linkedinProfile ?? "");
       setPersonalWebsite(applicationForm.personalWebsite ?? "");
- 
-      setSharedFieldsForPrepopulation(applicationForm)
-    } else { // Otherwise, try to fetch an interest form for the user 
+
+      setSharedFieldsForPrepopulation(applicationForm);
+    } else {
+      // Otherwise, try to fetch an interest form for the user
       const interestFormData: InterestFormData | undefined =
         await getInterestFormData();
       if (interestFormData) {
-        setSharedFieldsForPrepopulation(interestFormData)
+        setSharedFieldsForPrepopulation(interestFormData);
       }
     }
   }
 
-  function setSharedFieldsForPrepopulation(formData: InterestFormData | ApplicationFormData) {
+  function setSharedFieldsForPrepopulation(
+    formData: InterestFormData | ApplicationFormData
+  ) {
     // Mandatory inputs
     setFirstName(formData.firstName);
     setLastName(formData.lastName);
@@ -315,9 +334,9 @@ function Page(props: any) {
     // Non mandatory inputs
     // Skipped "Underrepresented" because data didn't seem to save consistently (sometimes was string, sometimes was boolean)
     if (typeof formData.underrepresented === "boolean") {
-      setIsUnderrepresented(formData.underrepresented ? "Yes" : "No")
+      setIsUnderrepresented(formData.underrepresented ? "Yes" : "No");
     } else {
-      setIsUnderrepresented(formData.underrepresented ?? null)
+      setIsUnderrepresented(formData.underrepresented ?? null);
     }
 
     setDietaryRestriction(formData.dietaryRestrictions ?? "");
@@ -588,12 +607,16 @@ function Page(props: any) {
                     value={dietaryRestriction}
                     setValue={setDietaryRestriction}
                   />
+                  {error1 !== "" ? showValidationError(error1) : null}
+
                   <DropdownInput
                     title={"Ethnicity*"}
                     type={DropdownTypes.ethnicity}
                     value={origInputEthnicity}
                     setValue={setOrigInputEthnicity}
                   />
+                  {error2 !== "" ? showValidationError(error2) : null}
+
                   {origInputEthnicity === "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Ethnicity'
@@ -616,6 +639,7 @@ function Page(props: any) {
                     value={origInputGender}
                     setValue={setOrigInputGender}
                   />
+
                   {origInputGender === "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Gender'
@@ -624,12 +648,15 @@ function Page(props: any) {
                       placeholder='Self-Describe Your Gender'
                     />
                   ) : null}
+                  {error1 !== "" ? showValidationError(error1) : null}
+
                   <DropdownInput
                     title={"Pronouns*"}
                     type={DropdownTypes.pronouns}
                     value={origInputPronoun}
                     setValue={setOrigInputPronoun}
                   />
+
                   {origInputPronoun === "Prefer to self-describe" ? (
                     <WordInput
                       title='Self-Describe Your Pronoun(s)'
@@ -638,6 +665,7 @@ function Page(props: any) {
                       placeholder='Self-Describe Your Pronoun(s)'
                     />
                   ) : null}
+                  {error2 !== "" ? showValidationError(error2) : null}
                 </>
               ) : step === 10 ? (
                 <>
@@ -645,7 +673,7 @@ function Page(props: any) {
                     title='QHacks 2025 Application Form'
                     subheader='These questions are mandatory. The information provided in this section is collected solely for demographic purposes and will not influence the outcome of your application. This data may be shared with our sponsors in aggregate or anonymized form.'
                   />
-                  
+
                   <DropdownInput
                     title={"Field Of Study*"}
                     type={DropdownTypes.fieldOfStudy}
@@ -660,16 +688,18 @@ function Page(props: any) {
                       placeholder='Self-Describe Your Major'
                     />
                   ) : null}
+                  {error1 !== "" ? showValidationError(error1) : null}
+
                   <DropdownInput
                     title={"Shirt Size*"}
                     type={DropdownTypes.shirtSize}
                     value={shirtSize}
                     setValue={setShirtSize}
                   />
+                  {error2 !== "" ? showValidationError(error2) : null}
                 </>
               ) : step === 11 ? (
                 <>
-                
                   <FormHeader
                     title='QHacks 2025 Application Form'
                     subheader='All inputs on this page are optional and will NOT be used to accept attendees. However, please note that this info may be shared with our sponsors.'
@@ -700,8 +730,6 @@ function Page(props: any) {
                     value={highestEdu}
                     setValue={setHighestEdu}
                   />
-                  
-                  
                 </>
               ) : step === 12 ? (
                 <div>
@@ -829,7 +857,7 @@ function Page(props: any) {
             </div>
 
             {step === 13 && isFinished ? (
-              <div className="flex justify-center flex-col items-center align-middle">
+              <div className='flex justify-center flex-col items-center align-middle'>
                 <FormHeader
                   title={
                     errorMessage

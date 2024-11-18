@@ -3,7 +3,7 @@ import { auth, db } from "./config";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
 export enum ShirtSize {
-  na = "not chosen",
+  na = "",
   xSmall = "xs",
   small = "s",
   medium = "m",
