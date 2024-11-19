@@ -3,7 +3,7 @@ import { auth, db } from "./config";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
 export enum ShirtSize {
-  na = "not chosen",
+  na = "",
   xSmall = "xs",
   small = "s",
   medium = "m",
@@ -34,7 +34,7 @@ export type ApplicationFormData = {
   levelOfStudy: string;
   country: string;
   dietaryRestrictions?: string;
-  underrepresented?: boolean | null;
+  underrepresented?: boolean | string | null;
   gender?: string;
   pronouns?: string;
   ethnicity?: string;
@@ -57,7 +57,7 @@ export type InterestFormData = {
   levelOfStudy: string;
   country: string;
   dietaryRestrictions?: string;
-  underrepresented?: boolean | null;
+  underrepresented?: boolean | string | null;
   gender?: string;
   pronouns?: string;
   ethnicity?: string;

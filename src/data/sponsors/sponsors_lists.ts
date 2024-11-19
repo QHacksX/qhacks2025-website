@@ -21,7 +21,7 @@ export const currentSponsors = [
         "tier": "kilo"
     },
     {
-        "name": "Kingston",
+        "name": "City of Kingston",
         "logo": "/sponsors/Kingston.svg",
         "link": "https://innovation-challenge.cityofkingston.ca/",
         "colour": "bg-yellow-500",
@@ -63,7 +63,7 @@ export const currentSponsors = [
         "tier": "kilo"
     },
     {
-        "name": "QT Group",
+        "name": "Qt Group",
         "logo": "/sponsors/QtGroup.png",
         "link": "",
         "colour": "bg-yellow-500",

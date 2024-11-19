@@ -21,6 +21,10 @@ function Page() {
   const router = useRouter();
 
   const handleForm = async () => {
+    // Reset messages so that they don't show previous form submission messages
+    setErrorMessage("");
+    setSuccessMessage("");
+
     const { result, error } = await signUp({ email, password });
 
     if (error) {
@@ -32,7 +36,7 @@ function Page() {
 
   return (
     <div className='flex h-screen w-screen justify-center'>
-      <Link href='/' className='p-5 absolute left-0 z-50'>
+      <Link href='/' className='p-5 absolute left-0 z-10'>
         <IoIosClose size={50} />
       </Link>
 
@@ -40,13 +44,17 @@ function Page() {
         <Waves />
       </div>
 
-      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2 z-50 align-middle items-center'>
+      <main className='p-4 pb-8  place-content-center flex justify-center md:w-1/2 align-middle items-center'>
         <div className='m-10 p-10 w-full rounded-lg sm:p-8 grow justify-center'>
           <div
-            className={`flex justify-center  text-white pb-2 text-4xl font-thin mb-10 ${Styles["text-shadow"]}`}
+            className={`flex justify-center  text-white pb-2 text-4xl font-thin ${Styles["text-shadow"]}`}
           >
             Sign Up
           </div>
+          <div className={`flex justify-center text-center font-normal text-lg text-gray-500 mb-10  ${Styles["text-shadow"]}`}>
+              A QHacks account is required in order to apply for the event.
+            </div>
+
           <EmailInput
             title='Email'
             email={email}

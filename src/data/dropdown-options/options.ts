@@ -1,7 +1,6 @@
 import { ShirtSize } from "@/src/firebase/userData";
 import { countryList } from "./countryList";
 import { schoolList } from "./schoolList";
-import { label } from "framer-motion/client";
 
 /**
  * The dropdown options we support
@@ -92,7 +91,7 @@ const underrepresented = [
   { value: "Unsure" },
 ];
 
-const genders = [
+export const genders = [
   { value: "Man" },
   { value: "Woman" },
   { value: "Non-Binary" },
@@ -100,7 +99,7 @@ const genders = [
   { value: "Prefer Not to Answer" },
 ];
 
-const pronouns = [
+export const pronouns = [
   { value: "She/Her" },
   { value: "He/Him" },
   { value: "They/Them" },
@@ -110,7 +109,7 @@ const pronouns = [
   { value: "Prefer Not to Answer" }
 ];
 
-const ethnicities = [
+export const ethnicities = [
   { value: "Asian Indian" },
   { value: "Black or African" },
   { value: "Chinese" },
@@ -131,7 +130,7 @@ const ethnicities = [
   { value: "Prefer Not to Answer" },
 ];
 
-const sexualities = [
+export const sexualities = [
   { value: "Heterosexual or straight" },
   { value: "Gay or lesbian" },
   { value: "Bisexual" },
@@ -148,7 +147,7 @@ const shirtSizes = [
   { value: ShirtSize.xxLarge },
 ];
 
-const fieldsOfStudy = [
+export const fieldsOfStudy = [
   {
     value: "Computer science, computer engineering, or software engineering",
   },
