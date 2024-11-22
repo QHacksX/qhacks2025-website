@@ -45,14 +45,14 @@ export default function CurrentSponsors() {
         {/*For Peta Sponsors*/}
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 '>
           {petaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} />
+            <SponsorCard sponsor={sponsor} key={sponsor.name}/>
           ))}
         </div>
 
         {/*For Tera Sponsors*/}
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {teraSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} />
+            <SponsorCard sponsor={sponsor} key={sponsor.name}/>
           ))}
         </div>
 
@@ -62,7 +62,7 @@ export default function CurrentSponsors() {
         {/*For Mega Sponsors*/}
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {megaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} />
+            <SponsorCard sponsor={sponsor} key={sponsor.name}/>
           ))}
         </div>
       </div>
