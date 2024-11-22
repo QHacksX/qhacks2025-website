@@ -192,7 +192,7 @@ function Page(props: any) {
 
   const showValidationError = (error: string) => {
     return (
-      <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-red-500 dark:focus:ring-red-800'>
+      <p className='text-white bg-red-500 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center'>
         {error}
       </p>
     );
@@ -813,7 +813,7 @@ function Page(props: any) {
                       type='checkbox'
                       onChange={(e) => setCheckedMLHCode(e.target.checked)}
                       checked={checkedMLHCode}
-                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
+                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none'
                     />
                     <label htmlFor='mlh-codeofconduct' className='w-full'>
                       <p className='indent-1 text-base font-medium'>
@@ -836,7 +836,7 @@ function Page(props: any) {
                       type='checkbox'
                       onChange={(e) => setCheckedMLHPrivacy(e.target.checked)}
                       checked={checkedMLHPrivacy}
-                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
+                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none '
                     />
                     <label className='w-full'>
                       <p className='indent-1 text-base font-medium'>
@@ -878,7 +878,7 @@ function Page(props: any) {
                         setCheckedMLHSendEmails(e.target.checked)
                       }
                       checked={checkedMLHSendEmails}
-                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800'
+                      className='w-5 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none '
                     />
                     <label className='w-full'>
                       <p className='indent-1 text-base font-medium'>
@@ -899,7 +899,7 @@ function Page(props: any) {
             <div className='flex justify-between items-center'>
               {step > 1 && step <= 13 && !isFinished ? (
                 <button
-                  className='text-white border border-blue-700 hover:bg-blue-100 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center '
                   onClick={() => prev()}
                 >
                   Back
@@ -909,14 +909,14 @@ function Page(props: any) {
               )}
               {step < 13 && !isFinished ? (
                 <button
-                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center '
                   onClick={() => validateInputs()}
                 >
                   Next
                 </button>
               ) : step === 13 && !isFinished ? (
                 <button
-                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center'
                   onClick={() => {
                     save();
                     // router.push("/");
@@ -938,7 +938,7 @@ function Page(props: any) {
                   subheader=''
                 />
                 <button
-                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-11'
+                  className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center mt-11'
                   onClick={() => {
                     router.push("/");
                   }}

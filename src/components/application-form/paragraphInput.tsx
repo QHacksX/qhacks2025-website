@@ -16,7 +16,7 @@ export default function ParagraphInput({
     <div>
       <label
         htmlFor={input}
-        className='block mb-2 text-xl font-medium text-gray-900 dark:text-gray-300'
+        className='block mb-2 text-xl font-medium text-gray-300 '
       >
         {title}
       </label>
