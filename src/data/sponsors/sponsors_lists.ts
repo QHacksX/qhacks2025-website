@@ -63,6 +63,13 @@ export const currentSponsors: sponsorType[] = [
     "colour": "bg-yellow-500",
     "tier": "kilo",
   },
+  {
+    "name": "COMPSA",
+    "logo": "/sponsors/Compsa.png",
+    "link": "https://compsa.ca/",
+    "colour": "bg-yellow-500",
+    "tier": "kilo",
+  },
 ];
 
 export const highlightedPrevSponsors = [

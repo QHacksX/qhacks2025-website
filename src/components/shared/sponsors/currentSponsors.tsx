@@ -45,14 +45,14 @@ export default function CurrentSponsors() {
         {/*For Peta Sponsors*/}
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 '>
           {petaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name}/>
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
 
         {/*For Tera Sponsors*/}
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {teraSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name}/>
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
 
@@ -62,27 +62,25 @@ export default function CurrentSponsors() {
         {/*For Mega Sponsors*/}
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {megaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name}/>
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
       </div>
 
       {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] md:h-[300px] h-[400px] absolute left-0 z-20' />
       <div className='bg-gradient-to-r from-transparent to-black  via-black/20 w-[10%] md:h-[300px] h-[400px] absolute right-0 z-20' /> */}
-      <motion.div
+      {/* <motion.div
         className='left-0 flex gap-4'
         ref={ref}
         style={{ x: xTranslation }}
       >
-        {[
-          ...kiloSponsors,
-          ...kiloSponsors,
-          ...kiloSponsors,
-          ...kiloSponsors,
-        ].map((sponsor, id) => (
+
+      </motion.div> */}
+      <div className="left-0 flex gap-9">
+        {kiloSponsors.map((sponsor, id) => (
           <SponsorBubble sponsor={sponsor} key={id} />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
