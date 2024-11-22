@@ -197,7 +197,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className='flex flex-col justify-around h-[100vh] relative'
+          className='flex flex-col justify-around min-h-[100vh] relative'
           id='sponsors'
         >
           <CurrentSponsors />
