@@ -65,6 +65,12 @@ export default function CurrentSponsors() {
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
+
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+          {kiloSponsors.map((sponsor) => (
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
+          ))}
+        </div>
       </div>
 
       {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] md:h-[300px] h-[400px] absolute left-0 z-20' />
@@ -76,11 +82,6 @@ export default function CurrentSponsors() {
       >
 
       </motion.div> */}
-      <div className="left-0 flex gap-9">
-        {kiloSponsors.map((sponsor, id) => (
-          <SponsorBubble sponsor={sponsor} key={id} />
-        ))}
-      </div>
     </div>
   );
 }

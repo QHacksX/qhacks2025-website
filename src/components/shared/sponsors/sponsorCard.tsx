@@ -24,7 +24,7 @@ const SponsorCard = ({ sponsor }: { sponsor: sponsorType }) => {
     width = "md:w-[200px] md:h-[100px] w-[100px] h-[50px]";
     height = "h-20 xs:h-32";
   } else if (tier == "kilo") {
-    width = "w-32 xs:w-[150px]";
+    width = "md:w-[150px] md:h-[80px] w-[75px] h-[50px]";
     height = "h-20 xs:h-24";
   } else if (tier == "previous") {
     width = "w-32 xs:w-[150px]";
