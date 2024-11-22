@@ -5,11 +5,9 @@ export default function SponsorBubble({ sponsor }: { sponsor: Sponsor }) {
       <div className={`sponsor-bubble bubble-${sponsor.colour}`}>
         <div className='sponsor-bubble-img-container'>
           <img
-            width={112}
-            height={112}
             id='sponsor_logo'
             src={sponsor.logo}
-            className='rounded-full w-28 h-28 sponsor-bubble-img'
+            className='rounded-full md:w-28 md:h-28 w-10 h-10 sponsor-bubble-img'
           />
         </div>
 
@@ -17,7 +15,7 @@ export default function SponsorBubble({ sponsor }: { sponsor: Sponsor }) {
           <div className='sponsor-bubble-button-container' />
         </div>
       </div>
-      <div className='text-center text-l font-bold'>{sponsor.name}</div>
+      <div className='text-center text-l font-bold md:visible hidden'>{sponsor.name}</div>
     </div>
   );
 }

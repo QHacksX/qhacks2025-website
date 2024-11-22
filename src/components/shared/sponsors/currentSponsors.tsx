@@ -4,10 +4,16 @@ import SponsorBubble from "./sponsorBubble";
 import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 import { currentSponsors } from "@/src/data/sponsors/sponsors_lists";
+import SponsorCard from "./sponsorCard";
 
 export default function CurrentSponsors() {
   let [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(0);
+
+  const petaSponsors = currentSponsors.filter((items) => items.tier === "peta");
+  const teraSponsors = currentSponsors.filter((items) => items.tier === "tera");
+  const megaSponsors = currentSponsors.filter((items) => items.tier === "mega");
+  const kiloSponsors = currentSponsors.filter((item) => item.tier === "kilo");
 
   useEffect(() => {
     let controls;
@@ -35,23 +41,47 @@ export default function CurrentSponsors() {
           </span>
         </h1>
       </div>
+      <div className='pb-16'>
+        {/*For Peta Sponsors*/}
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 '>
+          {petaSponsors.map((sponsor) => (
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
+          ))}
+        </div>
+
+        {/*For Tera Sponsors*/}
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+          {teraSponsors.map((sponsor) => (
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
+          ))}
+        </div>
+
+        {/*Add Giga Sponsors here*/}
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'></div>
+
+        {/*For Mega Sponsors*/}
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+          {megaSponsors.map((sponsor) => (
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
+          ))}
+        </div>
+
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+          {kiloSponsors.map((sponsor) => (
+            <SponsorCard sponsor={sponsor} key={sponsor.name} />
+          ))}
+        </div>
+      </div>
 
       {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] md:h-[300px] h-[400px] absolute left-0 z-20' />
       <div className='bg-gradient-to-r from-transparent to-black  via-black/20 w-[10%] md:h-[300px] h-[400px] absolute right-0 z-20' /> */}
-      <motion.div
+      {/* <motion.div
         className='left-0 flex gap-4'
         ref={ref}
         style={{ x: xTranslation }}
       >
-        {[
-          ...currentSponsors,
-          ...currentSponsors,
-          ...currentSponsors,
-          ...currentSponsors,
-        ].map((sponsor, id) => (
-          <SponsorBubble sponsor={sponsor} key={id} />
-        ))}
-      </motion.div>
+
+      </motion.div> */}
     </div>
   );
 }

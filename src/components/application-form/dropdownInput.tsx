@@ -39,7 +39,7 @@ export default function DropdownInput({
     <div>
       <label
         htmlFor='phone'
-        className='block mb-2 text-xl font-medium text-gray-900 dark:text-gray-300'
+        className='block mb-2 text-xl font-medium text-gray-300 '
       >
         {title}
       </label>
