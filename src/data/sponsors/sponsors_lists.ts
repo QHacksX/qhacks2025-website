@@ -31,9 +31,16 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "Queens Engineering",
     "logo": "/sponsors/Engineering.svg",
-    "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
+    "link": "https://smithengineering.queensu.ca/",
     "colour": "border-red-600",
     "tier": "mega",
+  },
+  {
+    "name": "ECE",
+    "logo": "/sponsors/ECE.svg",
+    "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
+    "colour": "border-red-600",
+    "tier": "kilo",
   },
   {
     "name": "CPP",

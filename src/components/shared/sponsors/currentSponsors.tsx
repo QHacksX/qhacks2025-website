@@ -43,30 +43,43 @@ export default function CurrentSponsors() {
       </div>
       <div className='pb-16'>
         {/*For Peta Sponsors*/}
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 '>
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+            Peta Tier
+        </div>
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 mt-15'>
           {petaSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
 
         {/*For Tera Sponsors*/}
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+            Tera Tier
+        </div>
+        <div className='flex justify-center flex-row flex-wrap items-center w-full pt-50 pb-20'>
           {teraSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
 
         {/*Add Giga Sponsors here*/}
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'></div>
+        {/* <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'></div> */}
 
         {/*For Mega Sponsors*/}
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+            Mega Tier
+        </div>
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {megaSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
 
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+        {/*For Kilo Sponsors*/}
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+            Kilo Tier
+        </div>
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 pt-15 pb-20'>
           {kiloSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
