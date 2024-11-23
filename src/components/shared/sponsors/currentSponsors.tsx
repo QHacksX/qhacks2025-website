@@ -12,6 +12,7 @@ export default function CurrentSponsors() {
 
   const petaSponsors = currentSponsors.filter((items) => items.tier === "peta");
   const teraSponsors = currentSponsors.filter((items) => items.tier === "tera");
+  const gigaSponsors = currentSponsors.filter((items) => items.tier === "giga");
   const megaSponsors = currentSponsors.filter((items) => items.tier === "mega");
   const kiloSponsors = currentSponsors.filter((item) => item.tier === "kilo");
 
@@ -43,7 +44,9 @@ export default function CurrentSponsors() {
       </div>
       <div className='pb-16'>
         {/*For Peta Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+        {petaSponsors.length > 0 ? (
+          <>
+          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
             Peta Tier
         </div>
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
@@ -51,22 +54,43 @@ export default function CurrentSponsors() {
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
+          </>
+        ) : null}
+        
 
         {/*For Tera Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-            Tera Tier
+        {teraSponsors.length > 0 ? (
+          <>
+          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+          Tera Tier
+      </div>
+      <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+        {teraSponsors.map((sponsor) => (
+          <SponsorCard sponsor={sponsor} key={sponsor.name} />
+        ))}
+      </div>
+      </>
+        ) : null}
+
+        {/*Add Giga Sponsors here*/}
+        {gigaSponsors.length > 0 ? (
+          <>
+          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+            Giga Tier
         </div>
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {teraSponsors.map((sponsor) => (
+          {gigaSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
-
-        {/*Add Giga Sponsors here*/}
-        {/* <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'></div> */}
+          </>
+        ) : null}
+        
 
         {/*For Mega Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+        {megaSponsors.length > 0 ? (
+          <>
+          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
             Mega Tier
         </div>
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
@@ -74,9 +98,14 @@ export default function CurrentSponsors() {
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
+          </>
+        ) : null}
+        
 
         {/*For Kilo Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+        {kiloSponsors.length > 0 ? (
+          <>
+          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
             Kilo Tier
         </div>
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
@@ -84,6 +113,9 @@ export default function CurrentSponsors() {
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
+          </>
+        ) : null}
+        
       </div>
 
       {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] md:h-[300px] h-[400px] absolute left-0 z-20' />
