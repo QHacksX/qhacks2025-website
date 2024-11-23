@@ -9,7 +9,7 @@ export type sponsorType = {
 export const currentSponsors: sponsorType[] = [
   {
     "name": "National Bank of Canada",
-    "logo": "/sponsors/NationalBank.svg",
+    "logo": "/sponsors/NationalBankLogoNew.png",
     "link": "https://emplois.bnc.ca/fr_CA/careers",
     "colour": "border-red-600",
     "tier": "peta",
