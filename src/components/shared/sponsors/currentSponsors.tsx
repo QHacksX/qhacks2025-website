@@ -43,20 +43,20 @@ export default function CurrentSponsors() {
       </div>
       <div className='pb-16'>
         {/*For Peta Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
             Peta Tier
         </div>
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 mt-15'>
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {petaSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
         </div>
 
         {/*For Tera Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
             Tera Tier
         </div>
-        <div className='flex justify-center flex-row flex-wrap items-center w-full pt-50 pb-20'>
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {teraSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
@@ -66,7 +66,7 @@ export default function CurrentSponsors() {
         {/* <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'></div> */}
 
         {/*For Mega Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
             Mega Tier
         </div>
         <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
@@ -76,10 +76,10 @@ export default function CurrentSponsors() {
         </div>
 
         {/*For Kilo Sponsors*/}
-        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 py-15 my-15'>
+        <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
             Kilo Tier
         </div>
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 pt-15 pb-20'>
+        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
           {kiloSponsors.map((sponsor) => (
             <SponsorCard sponsor={sponsor} key={sponsor.name} />
           ))}
