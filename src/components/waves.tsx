@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Waves() {
   return (
-    <div className='hidden md:flex w-full'>
+    <div className='hidden md:flex w-full pointer-events-none'>
       <img
         src={"/mlh-trust-badge-2025-gray.png"}
         alt='Major League Hacking Trust Badge'
