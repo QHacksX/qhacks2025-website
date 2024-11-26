@@ -34,26 +34,12 @@ const travelOptions = [
   { value: "Hamilton" },
   { value: "London" },
   { value: "Toronto" },
-  { value: "No I will not" }
+  { value: "No I will not" },
 ];
 
-const busNeeded = [
-  { value: "Yes" },
-  { value: "No" }
-]
+const busNeeded = [{ value: "Yes" }, { value: "No" }];
 
-const ages = [
-  { value: 16 },
-  { value: 17 },
-  { value: 18 },
-  { value: 19 },
-  { value: 20 },
-  { value: 21 },
-  { value: 22 },
-  { value: 23 },
-  { value: 24 },
-  { value: 25 },
-];
+const ages = Array.from({ length: 99 - 16 + 1 }, (_, i) => ({ value: i + 16 }));
 
 const schools = schoolList;
 
@@ -106,7 +92,7 @@ export const pronouns = [
   { value: "She/They" },
   { value: "He/They" },
   { value: "Prefer to self-describe" },
-  { value: "Prefer Not to Answer" }
+  { value: "Prefer Not to Answer" },
 ];
 
 export const ethnicities = [
@@ -193,15 +179,15 @@ export const dropdownOptions = new Map<DropdownTypes, DropdownConfig>([
     {
       options: travelOptions,
       label: "value",
-      placeholder: "---"
-    }
+      placeholder: "---",
+    },
   ],
   [
     DropdownTypes.busNeeded,
     {
       options: busNeeded,
       label: "value",
-      placeholder: "---"
+      placeholder: "---",
     },
   ],
   [
