@@ -28,13 +28,14 @@ export const currentSponsors: sponsorType[] = [
     "scale": 1.25,
     "tier": "giga",
   },
-  {
-    "name": "CSE",
-    "logo": "/sponsors/CSE.svg",
-    "link": "https://www.cse-cst.gc.ca/en",
-    "scale": 1.25,
-    "tier": "giga",
-  },
+  // Doesn't seem like we have them this year
+  // {
+  //   "name": "CSE",
+  //   "logo": "/sponsors/CSE.svg",
+  //   "link": "https://www.cse-cst.gc.ca/en",
+  //   "scale": 1.25,
+  //   "tier": "giga",
+  // },
   {
     "name": "DDQIC",
     "logo": "/sponsors/DDQIC.svg",

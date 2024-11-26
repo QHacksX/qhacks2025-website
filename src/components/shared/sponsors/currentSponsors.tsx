@@ -46,7 +46,7 @@ export default function CurrentSponsors() {
         {petaSponsors.length > 0 ? (
           <>
             <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-              Peta Tier
+              Peta
             </div>
             <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
               {petaSponsors.map((sponsor, idx) => {
@@ -62,7 +62,7 @@ export default function CurrentSponsors() {
         {teraSponsors.length > 0 ? (
           <>
             <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-              Tera Tier
+              Tera
             </div>
             <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
               {teraSponsors.map((sponsor, idx) => (
@@ -80,7 +80,7 @@ export default function CurrentSponsors() {
         {gigaSponsors.length > 0 ? (
           <>
             <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-              Giga Tier
+              Giga
             </div>
             <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
               {gigaSponsors.map((sponsor, idx) => (
@@ -98,7 +98,7 @@ export default function CurrentSponsors() {
         {megaSponsors.length > 0 ? (
           <>
             <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-              Mega Tier
+              Mega
             </div>
             <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
               {megaSponsors.map((sponsor, idx) => (
@@ -116,7 +116,7 @@ export default function CurrentSponsors() {
         {kiloSponsors.length > 0 ? (
           <>
             <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-              Kilo Tier
+              Kilo
             </div>
             <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
               {kiloSponsors.map((sponsor, idx) => (
