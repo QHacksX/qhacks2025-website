@@ -38,9 +38,9 @@ export const currentSponsors: sponsorType[] = [
   // },
   {
     "name": "DDQIC",
-    "logo": "/sponsors/DDQIC.svg",
+    "logo": "/sponsors/DDQIC.png",
     "link": "https://www.queensu.ca/innovationcentre/",
-    "scale": 1.25,
+    "scale": 1.5,
     "tier": "giga",
   },
   // TODO: Add in when we get permission
