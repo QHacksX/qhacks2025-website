@@ -1,11 +1,19 @@
+"use client";
+
 import React from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { sponsorType } from "@/src/data/sponsors/sponsors_lists";
 
-const SponsorCard = ({ sponsor }: { sponsor: sponsorType }) => {
-  const { name, logo, link, scale, colour, tier } = sponsor;
-
+const SponsorCard = ({
+  sponsor,
+  idx,
+}: {
+  sponsor: sponsorType;
+  idx: number;
+}) => {
+  const { name, logo, link, scale, tier } = sponsor;
+  const borderColours = ["#EE4036", "#E2A022", "#022B76"];
 
   let height;
   let width;
@@ -31,15 +39,23 @@ const SponsorCard = ({ sponsor }: { sponsor: sponsorType }) => {
     height = "h-20 xs:h-24";
   }
 
+  const borderCol = borderColours[idx % 3];
+
   return (
     <motion.a
       href={link}
-      target="_null"
+      target='_null'
       // Remove the width and height props and replace them with the variables I created above
-      className={`justify-center overflow-hidden flex ${height} ${width} ${colour} xs:m-2 m-1 border-4 rounded-xl bg-white`}
+      className={`justify-center overflow-hidden flex ${height} ${width} xs:m-2 m-1 border-4 rounded-xl bg-white `}
       whileHover={{ scale: 1.1 }}
+      style={{ borderColor: borderCol }}
     >
-      <img src={logo} alt={`${name} logo`} className={`overflow-hidden rounded-xl ${scale}`} />
+      <img
+        src={logo}
+        alt={`${name} logo`}
+        className={`overflow-hidden rounded-xl`}
+        style={{ scale: scale }}
+      />
     </motion.a>
   );
 };

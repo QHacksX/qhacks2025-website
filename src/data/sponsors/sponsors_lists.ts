@@ -1,9 +1,8 @@
 export type sponsorType = {
   name: string;
   logo: string;
-  scale: string;
+  scale: number;
   link: string;
-  colour: string;
   tier: string;
 };
 
@@ -11,89 +10,103 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "National Bank of Canada",
     "logo": "/sponsors/NationalBankLogoNew.png",
-    "scale": "scale-125", 
     "link": "https://emplois.bnc.ca/fr_CA/careers",
-    "colour": "border-red-600",
+    "scale": 1.25,
     "tier": "peta",
   },
   {
     "name": "Qt Group",
     "logo": "/sponsors/QtGroup.png",
-    "scale": "scale-125", 
     "link": "https://www.qt.io/group",
-    "colour": "border-yellow-600",
+    "scale": 1.25,
     "tier": "tera",
   },
   {
     "name": "Manulife Financial",
     "logo": "/sponsors/Manulife-WhiteBG.png",
-    "scale": "scale-125", 
     "link": "https://www.manulife.ca/careers.html",
-    "colour": "border-indigo-600",
+    "scale": 1.25,
     "tier": "giga",
   },
   {
-    "name": "Queens Engineering",
-    "logo": "/sponsors/Engineering.svg",
-    "scale": "scale-125", 
-    "link": "https://smithengineering.queensu.ca/",
-    "colour": "border-red-600",
+    "name": "CSE",
+    "logo": "/sponsors/CSE.svg",
+    "link": "https://www.cse-cst.gc.ca/en",
+    "scale": 1.25,
     "tier": "giga",
   },
+  {
+    "name": "DDQIC",
+    "logo": "/sponsors/DDQIC.svg",
+    "link": "https://www.queensu.ca/innovationcentre/",
+    "scale": 1.25,
+    "tier": "giga",
+  },
+  // TODO: Add in when we get permission
+  // {
+  //   "name": "Queens Engineering",
+  //   "logo": "/sponsors/Engineering.svg",
+  //   "link": "https://smithengineering.queensu.ca/",
+  //   "scale": 1.25,
+  //   "colour": "border-red-600",
+  //   "tier": "giga",
+  // },
+
   {
     "name": "ECE",
     "logo": "/sponsors/ECE.svg",
-    "scale": "scale-125", 
     "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
-    "colour": "border-red-600",
-    "tier": "kilo",
+    "scale": 1.25,
+    "tier": "mega",
   },
   {
     "name": "CPP",
     "logo": "/sponsors/CPP.svg",
-    "scale": "scale-125", 
-    "link": "",
-    "colour": "yellow",
+    "link":
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp.html",
+    "scale": 1.25,
     "tier": "kilo",
   },
   {
     "name": "City of Kingston",
     "logo": "/sponsors/Kingston.svg",
-    "scale": "scale-125", 
     "link": "https://innovation-challenge.cityofkingston.ca/",
-    "colour": "bg-yellow-500",
+    "scale": 1.25,
     "tier": "kilo",
   },
   {
     "name": "Queens Computing",
     "logo": "/sponsors/Computing.svg",
-    "scale": "scale-125", 
     "link": "https://www.cs.queensu.ca/",
-    "colour": "bg-yellow-500",
+    "scale": 1.25,
     "tier": "kilo",
   },
   {
     "name": "Kingston Utilities",
     "logo": "/sponsors/KingstonUtilities.svg",
-    "scale": "scale-125", 
     "link": "https://utilitieskingston.com/",
-    "colour": "bg-yellow-500",
+    "scale": 1.25,
     "tier": "kilo",
   },
   {
     "name": "COMPSA",
     "logo": "/sponsors/Compsa.png",
-    "scale": "scale-125", 
     "link": "https://compsa.ca/",
-    "colour": "bg-yellow-500",
+    "scale": 1.25,
     "tier": "kilo",
   },
   {
-  "name": "Red Bull",
+    "name": "Red Bull",
     "logo": "/sponsors/Redbull.svg",
-    "scale": "scale-125", 
     "link": "https://jobs.redbull.com/ca-en",
-    "colour": "bg-yellow-500",
+    "scale": 1.25,
+    "tier": "kilo",
+  },
+  {
+    "name": "Guayaki Yerba Mate",
+    "logo": "/sponsors/guayaki.png",
+    "link": "https://guayaki.com/",
+    "scale": 1.25,
     "tier": "kilo",
   },
 ];
@@ -256,13 +269,7 @@ export const fullPrevSponsors = [
     "colour": "bg-yellow-500",
     "tier": "previous",
   },
-  {
-    "name": "DDQIC",
-    "logo": "/sponsors/DDQIC.svg",
-    "link": "",
-    "colour": "bg-yellow-500",
-    "tier": "kilo",
-  },
+
   {
     "name": "Gameloft",
     "logo": "/sponsors/gameloft.svg",
@@ -375,13 +382,7 @@ export const fullPrevSponsors = [
     "colour": "bg-yellow-500",
     "tier": "kilo",
   },
-  {
-    "name": "CSE",
-    "logo": "/sponsors/CSE.svg",
-    "link": "",
-    "colour": "bg-yellow-500",
-    "tier": "mega",
-  },
+
   {
     "name": "Queens Computing",
     "logo": "/sponsors/Computing.svg",

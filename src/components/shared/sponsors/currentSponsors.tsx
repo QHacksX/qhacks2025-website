@@ -1,8 +1,7 @@
 import useMeasure from "react-use-measure";
 import "../../../css/SponsorBubble.css";
-import SponsorBubble from "./sponsorBubble";
-import { animate, motion, useMotionValue } from "framer-motion";
-import { useEffect } from "react";
+import { animate, useMotionValue } from "framer-motion";
+import { useEffect, useState } from "react";
 import { currentSponsors } from "@/src/data/sponsors/sponsors_lists";
 import SponsorCard from "./sponsorCard";
 
@@ -46,76 +45,90 @@ export default function CurrentSponsors() {
         {/*For Peta Sponsors*/}
         {petaSponsors.length > 0 ? (
           <>
-          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-            Peta Tier
-        </div>
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {petaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Peta Tier
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {petaSponsors.map((sponsor, idx) => {
+                return (
+                  <SponsorCard sponsor={sponsor} key={sponsor.name} idx={idx} />
+                );
+              })}
+            </div>
           </>
         ) : null}
-        
 
         {/*For Tera Sponsors*/}
         {teraSponsors.length > 0 ? (
           <>
-          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-          Tera Tier
-      </div>
-      <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-        {teraSponsors.map((sponsor) => (
-          <SponsorCard sponsor={sponsor} key={sponsor.name} />
-        ))}
-      </div>
-      </>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Tera Tier
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {teraSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + petaSponsors.length}
+                />
+              ))}
+            </div>
+          </>
         ) : null}
 
         {/*Add Giga Sponsors here*/}
         {gigaSponsors.length > 0 ? (
           <>
-          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-            Giga Tier
-        </div>
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {gigaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Giga Tier
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {gigaSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + teraSponsors.length}
+                />
+              ))}
+            </div>
           </>
         ) : null}
-        
 
         {/*For Mega Sponsors*/}
         {megaSponsors.length > 0 ? (
           <>
-          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-            Mega Tier
-        </div>
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {megaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Mega Tier
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {megaSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + gigaSponsors.length}
+                />
+              ))}
+            </div>
           </>
         ) : null}
-        
 
         {/*For Kilo Sponsors*/}
         {kiloSponsors.length > 0 ? (
           <>
-          <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
-            Kilo Tier
-        </div>
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {kiloSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Kilo Tier
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {kiloSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + megaSponsors.length}
+                />
+              ))}
+            </div>
           </>
         ) : null}
-        
       </div>
 
       {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] md:h-[300px] h-[400px] absolute left-0 z-20' />
