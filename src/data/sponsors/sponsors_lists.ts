@@ -1,6 +1,7 @@
 export type sponsorType = {
   name: string;
   logo: string;
+  scale: string;
   link: string;
   colour: string;
   tier: string;
@@ -10,6 +11,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "National Bank of Canada",
     "logo": "/sponsors/NationalBankLogoNew.png",
+    "scale": "scale-125", 
     "link": "https://emplois.bnc.ca/fr_CA/careers",
     "colour": "border-red-600",
     "tier": "peta",
@@ -17,6 +19,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "Qt Group",
     "logo": "/sponsors/QtGroup.png",
+    "scale": "scale-125", 
     "link": "https://www.qt.io/group",
     "colour": "border-yellow-600",
     "tier": "tera",
@@ -24,6 +27,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "Manulife Financial",
     "logo": "/sponsors/Manulife-WhiteBG.png",
+    "scale": "scale-125", 
     "link": "https://www.manulife.ca/careers.html",
     "colour": "border-indigo-600",
     "tier": "giga",
@@ -31,6 +35,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "Queens Engineering",
     "logo": "/sponsors/Engineering.svg",
+    "scale": "scale-125", 
     "link": "https://smithengineering.queensu.ca/",
     "colour": "border-red-600",
     "tier": "giga",
@@ -38,6 +43,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "ECE",
     "logo": "/sponsors/ECE.svg",
+    "scale": "scale-125", 
     "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
     "colour": "border-red-600",
     "tier": "kilo",
@@ -45,6 +51,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "CPP",
     "logo": "/sponsors/CPP.svg",
+    "scale": "scale-125", 
     "link": "",
     "colour": "yellow",
     "tier": "kilo",
@@ -52,6 +59,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "City of Kingston",
     "logo": "/sponsors/Kingston.svg",
+    "scale": "scale-125", 
     "link": "https://innovation-challenge.cityofkingston.ca/",
     "colour": "bg-yellow-500",
     "tier": "kilo",
@@ -59,6 +67,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "Queens Computing",
     "logo": "/sponsors/Computing.svg",
+    "scale": "scale-125", 
     "link": "https://www.cs.queensu.ca/",
     "colour": "bg-yellow-500",
     "tier": "kilo",
@@ -66,6 +75,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "Kingston Utilities",
     "logo": "/sponsors/KingstonUtilities.svg",
+    "scale": "scale-125", 
     "link": "https://utilitieskingston.com/",
     "colour": "bg-yellow-500",
     "tier": "kilo",
@@ -73,6 +83,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "COMPSA",
     "logo": "/sponsors/Compsa.png",
+    "scale": "scale-125", 
     "link": "https://compsa.ca/",
     "colour": "bg-yellow-500",
     "tier": "kilo",
@@ -80,6 +91,7 @@ export const currentSponsors: sponsorType[] = [
   {
   "name": "Red Bull",
     "logo": "/sponsors/Redbull.svg",
+    "scale": "scale-125", 
     "link": "https://jobs.redbull.com/ca-en",
     "colour": "bg-yellow-500",
     "tier": "kilo",

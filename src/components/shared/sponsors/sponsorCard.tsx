@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { sponsorType } from "@/src/data/sponsors/sponsors_lists";
 
 const SponsorCard = ({ sponsor }: { sponsor: sponsorType }) => {
-  const { name, logo, link, colour, tier } = sponsor;
+  const { name, logo, link, scale, colour, tier } = sponsor;
 
 
   let height;
@@ -39,7 +39,7 @@ const SponsorCard = ({ sponsor }: { sponsor: sponsorType }) => {
       className={`justify-center overflow-hidden flex ${height} ${width} ${colour} xs:m-2 m-1 border-4 rounded-xl bg-white`}
       whileHover={{ scale: 1.1 }}
     >
-      <img src={logo} alt={`${name} logo`} className={`overflow-hidden rounded-xl scale-125`} />
+      <img src={logo} alt={`${name} logo`} className={`overflow-hidden rounded-xl ${scale}`} />
     </motion.a>
   );
 };
