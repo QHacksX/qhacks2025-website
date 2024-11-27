@@ -110,6 +110,20 @@ export const currentSponsors: sponsorType[] = [
     "scale": 1.25,
     "tier": "kilo",
   },
+  {
+    "name": "xyz",
+    "logo": "/sponsors/xyz.svg",
+    "link": "https://gen.xyz/",
+    "scale": 0.75,
+    "tier": "kilo",
+  },
+  {
+    "name": "Wolfram",
+    "logo": "/sponsors/Wolfram.png",
+    "link": "https://www.wolfram.com/index.en.html",
+    "scale": 0.9,
+    "tier": "kilo",
+  },
 ];
 
 export const highlightedPrevSponsors = [
