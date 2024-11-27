@@ -55,9 +55,9 @@ export const currentSponsors: sponsorType[] = [
 
   {
     "name": "ECE",
-    "logo": "/sponsors/ECE.svg",
+    "logo": "/sponsors/ECE.png",
     "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
-    "scale": 1.25,
+    "scale": 1,
     "tier": "mega",
   },
   {
@@ -72,19 +72,19 @@ export const currentSponsors: sponsorType[] = [
     "name": "City of Kingston",
     "logo": "/sponsors/Kingston.svg",
     "link": "https://innovation-challenge.cityofkingston.ca/",
-    "scale": 1.25,
+    "scale": 0.85,
     "tier": "kilo",
   },
   {
     "name": "Queens Computing",
-    "logo": "/sponsors/Computing.svg",
+    "logo": "/sponsors/Computing.png",
     "link": "https://www.cs.queensu.ca/",
-    "scale": 1.25,
+    "scale": 1,
     "tier": "kilo",
   },
   {
     "name": "Kingston Utilities",
-    "logo": "/sponsors/KingstonUtilities.svg",
+    "logo": "/sponsors/KingstonUtilities.png",
     "link": "https://utilitieskingston.com/",
     "scale": 1.25,
     "tier": "kilo",
