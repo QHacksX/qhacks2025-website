@@ -25,7 +25,7 @@ export const currentSponsors: sponsorType[] = [
     "name": "Manulife Financial",
     "logo": "/sponsors/Manulife-WhiteBG.png",
     "link": "https://www.manulife.ca/careers.html",
-    "scale": 1.25,
+    "scale": 1.75,
     "tier": "giga",
   },
   // Doesn't seem like we have them this year
@@ -43,16 +43,13 @@ export const currentSponsors: sponsorType[] = [
     "scale": 1.5,
     "tier": "giga",
   },
-  // TODO: Add in when we get permission
-  // {
-  //   "name": "Queens Engineering",
-  //   "logo": "/sponsors/Engineering.svg",
-  //   "link": "https://smithengineering.queensu.ca/",
-  //   "scale": 1.25,
-  //   "colour": "border-red-600",
-  //   "tier": "giga",
-  // },
-
+  {
+    "name": "Queens Engineering",
+    "logo": "/sponsors/Engineering.svg",
+    "link": "https://smithengineering.queensu.ca/",
+    "scale": 1.75,
+    "tier": "giga",
+  },
   {
     "name": "ECE",
     "logo": "/sponsors/ECE.png",
