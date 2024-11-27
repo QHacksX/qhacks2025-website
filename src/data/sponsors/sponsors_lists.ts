@@ -1,73 +1,124 @@
 export type sponsorType = {
   name: string;
   logo: string;
+  scale: number;
   link: string;
-  colour: string;
   tier: string;
 };
 
 export const currentSponsors: sponsorType[] = [
   {
     "name": "National Bank of Canada",
-    "logo": "/sponsors/NationalBank.svg",
+    "logo": "/sponsors/NationalBankLogoNew.png",
     "link": "https://emplois.bnc.ca/fr_CA/careers",
-    "colour": "border-red-600",
+    "scale": 1.25,
     "tier": "peta",
   },
   {
     "name": "Qt Group",
     "logo": "/sponsors/QtGroup.png",
     "link": "https://www.qt.io/group",
-    "colour": "border-yellow-600",
+    "scale": 1.25,
     "tier": "tera",
   },
   {
     "name": "Manulife Financial",
     "logo": "/sponsors/Manulife-WhiteBG.png",
     "link": "https://www.manulife.ca/careers.html",
-    "colour": "border-indigo-600",
-    "tier": "mega",
+    "scale": 1.75,
+    "tier": "giga",
+  },
+  // Doesn't seem like we have them this year
+  // {
+  //   "name": "CSE",
+  //   "logo": "/sponsors/CSE.svg",
+  //   "link": "https://www.cse-cst.gc.ca/en",
+  //   "scale": 1.25,
+  //   "tier": "giga",
+  // },
+  {
+    "name": "DDQIC",
+    "logo": "/sponsors/DDQIC.png",
+    "link": "https://www.queensu.ca/innovationcentre/",
+    "scale": 1.5,
+    "tier": "giga",
   },
   {
     "name": "Queens Engineering",
     "logo": "/sponsors/Engineering.svg",
+    "link": "https://smithengineering.queensu.ca/",
+    "scale": 1.75,
+    "tier": "giga",
+  },
+  {
+    "name": "ECE",
+    "logo": "/sponsors/ECE.png",
     "link": "https://www.ece.queensu.ca/about-us/employment-opportunities.html",
-    "colour": "border-red-600",
+    "scale": 1,
     "tier": "mega",
   },
   {
     "name": "CPP",
     "logo": "/sponsors/CPP.svg",
-    "link": "",
-    "colour": "yellow",
+    "link":
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp.html",
+    "scale": 1.25,
     "tier": "kilo",
   },
   {
     "name": "City of Kingston",
     "logo": "/sponsors/Kingston.svg",
     "link": "https://innovation-challenge.cityofkingston.ca/",
-    "colour": "bg-yellow-500",
+    "scale": 0.85,
     "tier": "kilo",
   },
   {
     "name": "Queens Computing",
-    "logo": "/sponsors/Computing.svg",
+    "logo": "/sponsors/Computing.png",
     "link": "https://www.cs.queensu.ca/",
-    "colour": "bg-yellow-500",
+    "scale": 1,
     "tier": "kilo",
   },
   {
     "name": "Kingston Utilities",
-    "logo": "/sponsors/KingstonUtilities.svg",
+    "logo": "/sponsors/KingstonUtilities.png",
     "link": "https://utilitieskingston.com/",
-    "colour": "bg-yellow-500",
+    "scale": 1.25,
     "tier": "kilo",
   },
   {
     "name": "COMPSA",
     "logo": "/sponsors/Compsa.png",
     "link": "https://compsa.ca/",
-    "colour": "bg-yellow-500",
+    "scale": 1.25,
+    "tier": "kilo",
+  },
+  {
+    "name": "Red Bull",
+    "logo": "/sponsors/Redbull.svg",
+    "link": "https://jobs.redbull.com/ca-en",
+    "scale": 1.25,
+    "tier": "kilo",
+  },
+  {
+    "name": "Guayaki Yerba Mate",
+    "logo": "/sponsors/guayaki.png",
+    "link": "https://guayaki.com/",
+    "scale": 1.25,
+    "tier": "kilo",
+  },
+  {
+    "name": "xyz",
+    "logo": "/sponsors/xyz.svg",
+    "link": "https://gen.xyz/",
+    "scale": 0.75,
+    "tier": "kilo",
+  },
+  {
+    "name": "Wolfram",
+    "logo": "/sponsors/Wolfram.png",
+    "link": "https://www.wolfram.com/index.en.html",
+    "scale": 0.9,
     "tier": "kilo",
   },
 ];
@@ -230,13 +281,7 @@ export const fullPrevSponsors = [
     "colour": "bg-yellow-500",
     "tier": "previous",
   },
-  {
-    "name": "DDQIC",
-    "logo": "/sponsors/DDQIC.svg",
-    "link": "",
-    "colour": "bg-yellow-500",
-    "tier": "kilo",
-  },
+
   {
     "name": "Gameloft",
     "logo": "/sponsors/gameloft.svg",
@@ -349,13 +394,7 @@ export const fullPrevSponsors = [
     "colour": "bg-yellow-500",
     "tier": "kilo",
   },
-  {
-    "name": "CSE",
-    "logo": "/sponsors/CSE.svg",
-    "link": "",
-    "colour": "bg-yellow-500",
-    "tier": "mega",
-  },
+
   {
     "name": "Queens Computing",
     "logo": "/sponsors/Computing.svg",

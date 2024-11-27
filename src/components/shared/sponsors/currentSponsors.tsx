@@ -1,8 +1,7 @@
 import useMeasure from "react-use-measure";
 import "../../../css/SponsorBubble.css";
-import SponsorBubble from "./sponsorBubble";
-import { animate, motion, useMotionValue } from "framer-motion";
-import { useEffect } from "react";
+import { animate, useMotionValue } from "framer-motion";
+import { useEffect, useState } from "react";
 import { currentSponsors } from "@/src/data/sponsors/sponsors_lists";
 import SponsorCard from "./sponsorCard";
 
@@ -12,6 +11,7 @@ export default function CurrentSponsors() {
 
   const petaSponsors = currentSponsors.filter((items) => items.tier === "peta");
   const teraSponsors = currentSponsors.filter((items) => items.tier === "tera");
+  const gigaSponsors = currentSponsors.filter((items) => items.tier === "giga");
   const megaSponsors = currentSponsors.filter((items) => items.tier === "mega");
   const kiloSponsors = currentSponsors.filter((item) => item.tier === "kilo");
 
@@ -43,34 +43,92 @@ export default function CurrentSponsors() {
       </div>
       <div className='pb-16'>
         {/*For Peta Sponsors*/}
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10 '>
-          {petaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+        {petaSponsors.length > 0 ? (
+          <>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Peta
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {petaSponsors.map((sponsor, idx) => {
+                return (
+                  <SponsorCard sponsor={sponsor} key={sponsor.name} idx={idx} />
+                );
+              })}
+            </div>
+          </>
+        ) : null}
 
         {/*For Tera Sponsors*/}
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {teraSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+        {teraSponsors.length > 0 ? (
+          <>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Tera
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {teraSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + petaSponsors.length}
+                />
+              ))}
+            </div>
+          </>
+        ) : null}
 
         {/*Add Giga Sponsors here*/}
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'></div>
+        {gigaSponsors.length > 0 ? (
+          <>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Giga
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {gigaSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + teraSponsors.length}
+                />
+              ))}
+            </div>
+          </>
+        ) : null}
 
         {/*For Mega Sponsors*/}
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {megaSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+        {megaSponsors.length > 0 ? (
+          <>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Mega
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {megaSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + gigaSponsors.length}
+                />
+              ))}
+            </div>
+          </>
+        ) : null}
 
-        <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
-          {kiloSponsors.map((sponsor) => (
-            <SponsorCard sponsor={sponsor} key={sponsor.name} />
-          ))}
-        </div>
+        {/*For Kilo Sponsors*/}
+        {kiloSponsors.length > 0 ? (
+          <>
+            <div className='text-transparent text-center font-bold text-2xl md:text-4xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 pt-6 pb-2'>
+              Kilo
+            </div>
+            <div className='flex justify-center flex-row flex-wrap items-center w-full px-10'>
+              {kiloSponsors.map((sponsor, idx) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  key={sponsor.name}
+                  idx={idx + megaSponsors.length}
+                />
+              ))}
+            </div>
+          </>
+        ) : null}
       </div>
 
       {/* <div className='bg-gradient-to-r from-black to-transparent via-black/20 w-[10%] md:h-[300px] h-[400px] absolute left-0 z-20' />
