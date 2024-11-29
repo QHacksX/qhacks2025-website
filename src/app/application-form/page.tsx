@@ -87,6 +87,7 @@ function Page(props: any) {
   // If "Other" in the original dropdown, allows user to input custom value
   const [origInputGender, setOrigInputGender] = useState("");
   const [origInputPronoun, setOrigInputPronoun] = useState("");
+  const [origInputDietaryRestrictions, setOrigInputDietaryRestrictions] = useState("");
   const [origInputEthnicity, setOrigInputEthnicity] = useState("");
   const [origInputSexuality, setOrigInputSexuality] = useState("");
   const [origInputFieldOfStudy, setOrigInputFieldOfStudy] = useState("");
@@ -170,6 +171,10 @@ function Page(props: any) {
       setPronoun(origInputPronoun);
     }
 
+    if (origInputDietaryRestrictions !== "Prefer to self-describe") {
+      setDietaryRestriction(origInputDietaryRestrictions);
+    }
+
     if (origInputEthnicity !== "Prefer to self-describe") {
       setEthnicity(origInputEthnicity);
     }
@@ -185,6 +190,7 @@ function Page(props: any) {
     isUnderrepresented,
     origInputGender,
     origInputPronoun,
+    origInputDietaryRestrictions,
     origInputEthnicity,
     origInputSexuality,
     origInputFieldOfStudy,
@@ -675,10 +681,19 @@ function Page(props: any) {
                   <DropdownInput
                     title={"Dietary Restrictions*"}
                     type={DropdownTypes.dietaryRestriction}
-                    value={dietaryRestriction}
-                    setValue={setDietaryRestriction}
+                    value={origInputDietaryRestrictions}
+                    setValue={setOrigInputDietaryRestrictions}
                   />
                   {error1 !== "" ? showValidationError(error1) : null}
+
+                  {origInputDietaryRestrictions === "Prefer to self-describe" ? (
+                      <WordInput
+                      title={"Self-Describe Your Dietary Restrictions"}
+                      input={dietaryRestriction}
+                      setInput={setDietaryRestriction}
+                      placeholder="Self-Describe Your Dietary Restrictions"
+                    />
+                  ) : null}
 
                   <DropdownInput
                     title={"Ethnicity*"}

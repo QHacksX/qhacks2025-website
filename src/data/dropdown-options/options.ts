@@ -68,6 +68,7 @@ const dietaryRestrictions = [
   { value: "Allergies" },
   { value: "Kosher" },
   { value: "Halal" },
+  { value: "Prefer to self-describe"},
   { value: "None" },
 ];
 
