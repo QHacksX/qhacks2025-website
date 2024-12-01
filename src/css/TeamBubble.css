@@ -88,6 +88,15 @@
     width: 100%;
 }
 
+.team-bubble-button-container:empty {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    padding: 7pt;
+}
+
 .team-bubble-button {
     width: 18px;
     height: 18px;
