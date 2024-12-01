@@ -2,7 +2,7 @@ export default function SponsorBubble({ sponsor }: { sponsor: Sponsor }) {
   return (
     <div className='grid justify-items-center'>
      
-      <div className={`sponsor-bubble bubble-${sponsor.colour}`}>
+      <div className={`sponsor-bubble`}>
         <div className='sponsor-bubble-img-container'>
           <img
             id='sponsor_logo'

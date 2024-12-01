@@ -21,8 +21,8 @@ const TeamBubble = ({ teamMember, key } : { teamMember: TeamMember, key: any }) 
                 </div>
 
                 <div className={`team-bubble-back`}>
-                        <div className='team-bubble-name'>{teamMember.name}</div>
-                        <div className='team-bubble-role'>{teamMember.role}</div>
+                        <div className='team-bubble-name font-bold'>{teamMember.name}</div>
+                        <div className='team-bubble-role font-bold'>{teamMember.role}</div>
                     <div className='team-bubble-button-container'>
                         {teamMember.linkedin ? (
                             <a href={teamMember.linkedin}><FontAwesomeIcon className='team-bubble-button' icon={faLinkedin} /></a>
