@@ -9,7 +9,6 @@ export type TeamMember = {
     image: string,
     linkedin?: string | null,
     github?: string | null,
-    instagram?: string | null,
     color: string
 }
 
@@ -21,29 +20,17 @@ const TeamBubble = ({ teamMember, key } : { teamMember: TeamMember, key: any }) 
                 </div>
 
                 <div className={`team-bubble-back`}>
-                        <div className='team-bubble-name'>{teamMember.name}</div>
-                        <div className='team-bubble-role'>{teamMember.role}</div>
+                        <div className='team-bubble-name font-bold'>{teamMember.name}</div>
+                        <div className='team-bubble-role font-bold'>{teamMember.role}</div>
                     <div className='team-bubble-button-container'>
-                        {/* <a href={linkedin}><FontAwesomeIcon className='team-bubble-button' icon={faLinkedin} /></a>
-                        <a href={instagram}><FontAwesomeIcon className='team-bubble-button' icon={faInstagram} /></a>
-                        <a href={github}><FontAwesomeIcon className='team-bubble-button' icon={faGithub} /></a> */}
-                        {teamMember.linkedin !== null ? (
-                        <a href={teamMember.linkedin}>
-                            <FontAwesomeIcon className='team-bubble-button' icon={faLinkedin} />
-                        </a>
-                        ) : null}
-
-                        {teamMember.instagram !== null ? (
-                        <a href={teamMember.instagram}>
-                            <FontAwesomeIcon className='team-bubble-button' icon={faInstagram} />
-                        </a>
-                        ) : null}
-
-                        {teamMember.github !== null ? (
-                        <a href={teamMember.github}>
-                            <FontAwesomeIcon className='team-bubble-button' icon={faGithub} />
-                        </a>
-                        ) : null}
+                        {teamMember.linkedin ? (
+                            <a href={teamMember.linkedin}><FontAwesomeIcon className='team-bubble-button' icon={faLinkedin} /></a>
+                        ) 
+                        : null}
+                        {teamMember.github ? (
+                            <a href={teamMember.github}><FontAwesomeIcon className='team-bubble-button' icon={faGithub} /></a>
+                        ) 
+                        : null}
                     </div>
                 </div>
             </div>

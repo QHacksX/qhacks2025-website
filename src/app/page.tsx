@@ -24,6 +24,7 @@ import PastSponsors from "../components/shared/sponsors/pastSponsors";
 import { useWindowSize } from "../hooks/useWindowSize";
 
 import { checkOrFetchApplicationStatus } from "../firebase/userData";
+import TeamSection from "../components/shared/qhacks-team/teamSection";
 
 export default function Home() {
   const router = useRouter();
@@ -203,14 +204,14 @@ export default function Home() {
           <CurrentSponsors />
 
           <PastSponsors />
+
+          <TeamSection />
+
         </div>
         <Faq />
 
         <Footer />
       </div>
-
-      {/* TODO: Add back once headshots are done */}
-      {/* <TeamSection /> */}
     </main>
   );
 }
