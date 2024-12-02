@@ -126,9 +126,9 @@ export default function Home() {
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={() => router.push("/application-form")}
+            onClick={()=>{}}
           >
-            {hasApplication ? "Update Application" : "Apply Here"}
+            {"Applications Closed"}
           </motion.button>
 
           {isSignedIn ? (
