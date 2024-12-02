@@ -38,6 +38,8 @@ function Page(props: any) {
   const router = useRouter();
 
   useEffect(() => {
+    // NOTE: applications closed. Will always route them back home
+    router.replace("/");
     if (auth.currentUser === null || !auth.currentUser?.emailVerified) {
       router.replace("signin");
     } else if (auth.currentUser) {
