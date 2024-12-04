@@ -58,6 +58,13 @@ export const currentSponsors: sponsorType[] = [
     "tier": "mega",
   },
   {
+    "name": "Office of the Principal and Vice-Chancellor",
+    "logo": "/sponsors/opvc.png",
+    "link": "https://www.queensu.ca/principal/",
+    "scale": 1,
+    "tier": "mega",
+  },
+  {
     "name": "CPP",
     "logo": "/sponsors/CPP.svg",
     "link":
