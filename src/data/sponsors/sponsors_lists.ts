@@ -101,13 +101,6 @@ export const currentSponsors: sponsorType[] = [
     "tier": "kilo",
   },
   {
-    "name": "Red Bull",
-    "logo": "/sponsors/Redbull.svg",
-    "link": "https://jobs.redbull.com/ca-en",
-    "scale": 1.25,
-    "tier": "kilo",
-  },
-  {
     "name": "Guayaki Yerba Mate",
     "logo": "/sponsors/guayaki.png",
     "link": "https://guayaki.com/",
