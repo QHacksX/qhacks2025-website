@@ -4,6 +4,7 @@ import { animate, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import { currentSponsors } from "@/src/data/sponsors/sponsors_lists";
 import SponsorCard from "./sponsorCard";
+import SponsorCarousel from "../../sponsorCarousel";
 
 export default function CurrentSponsors() {
   let [ref, { width }] = useMeasure();
@@ -41,6 +42,7 @@ export default function CurrentSponsors() {
           </span>
         </h1>
       </div>
+      <SponsorCarousel />
       <div className='pb-16'>
         {/*For Peta Sponsors*/}
         {petaSponsors.length > 0 ? (
