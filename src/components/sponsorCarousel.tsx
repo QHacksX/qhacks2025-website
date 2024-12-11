@@ -24,13 +24,12 @@ const SponsorCarousel = () => {
               className='sm:flex-wrap lg:flex  lg:justify-between items-center p-6 pb-10 h-full'
             >
               <div
-                className='rounded-3xl lg:w-[50%] lg:h-full' // Ensuring each slide is full-width
+                className='rounded-3xl lg:w-[50%] lg:h-full bg-white flex justify-center items-center overflow-hidden' // Ensuring each slide is full-width
               >
                 <img
                   src={logo}
                   alt={`${name} logo`}
-                  className={`overflow-hidden rounded-xl h-[300px] w-full`}
-
+                  className={`  max-h-[300px]`}
                 />
               </div>
               <div className='lg:w-[50%] lg:px-5 lg:py-0 py-3 flex flex-col justify-between lg:h-full '>

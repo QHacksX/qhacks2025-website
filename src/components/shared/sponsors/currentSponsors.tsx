@@ -42,7 +42,6 @@ export default function CurrentSponsors() {
           </span>
         </h1>
       </div>
-      <SponsorCarousel />
       <div className='pb-16'>
         {/*For Peta Sponsors*/}
         {petaSponsors.length > 0 ? (
@@ -142,6 +141,7 @@ export default function CurrentSponsors() {
       >
 
       </motion.div> */}
+      <SponsorCarousel />
     </div>
   );
 }
