@@ -4,6 +4,7 @@ import { animate, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import { currentSponsors } from "@/src/data/sponsors/sponsors_lists";
 import SponsorCard from "./sponsorCard";
+import SponsorCarousel from "../../sponsorCarousel";
 
 export default function CurrentSponsors() {
   let [ref, { width }] = useMeasure();
@@ -140,6 +141,7 @@ export default function CurrentSponsors() {
       >
 
       </motion.div> */}
+      <SponsorCarousel />
     </div>
   );
 }

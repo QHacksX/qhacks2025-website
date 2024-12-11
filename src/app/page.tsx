@@ -25,6 +25,7 @@ import { useWindowSize } from "../hooks/useWindowSize";
 
 import { checkOrFetchApplicationStatus } from "../firebase/userData";
 import TeamSection from "../components/shared/qhacks-team/teamSection";
+import SponsorCarousel from "../components/sponsorCarousel";
 
 export default function Home() {
   const router = useRouter();
@@ -126,7 +127,7 @@ export default function Home() {
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={()=>{}}
+            onClick={() => {}}
           >
             {"Applications Closed"}
           </motion.button>
@@ -171,6 +172,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
         <div className='flex justify-center items-center w-screen flex-col select-none'>
           <div className='w-[90%] md:w-[80%] lg:w-[70%]' id='about'>
             <TriColor />
@@ -206,7 +208,6 @@ export default function Home() {
           <PastSponsors />
 
           <TeamSection />
-
         </div>
         <Faq />
 
