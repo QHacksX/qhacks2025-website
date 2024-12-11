@@ -15,9 +15,9 @@ export type sponsorBlurb = {
 
 export const sponsorBlurbs: sponsorBlurb[] = [
   {
-    "name": "National Bank of Canada",
-    "logo": "/sponsors/NationalBankLogoNew.png",
-    "link": "https://emplois.bnc.ca/fr_CA/careers",
+    "name": "Manulife Financial",
+    "logo": "/sponsors/Manulife-WhiteBG.png",
+    "link": "https://www.manulife.ca/careers.html",
     "blurb":
       "Manulife is a leading global financial services institution dedicated to helping individuals and businesses achieve their financial goals through a variety of services, including insurance, wealth, and asset management. With a presence in numerous markets worldwide, we are committed to nurturing the next generation of talent. We offer co-op, internship, and new graduate programs for students across diverse fields such as actuarial science, technology, digital marketing, investment, Global Wealth and Asset Management (GWAM), accounting and finance, and more. Join us to gain valuable experience, develop your skills, and launch your career with a company that values innovation, growth, and excellence.",
   },

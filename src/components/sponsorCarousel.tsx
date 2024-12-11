@@ -29,7 +29,8 @@ const SponsorCarousel = () => {
                 <img
                   src={logo}
                   alt={`${name} logo`}
-                  className={`overflow-hidden rounded-xl`}
+                  className={`overflow-hidden rounded-xl h-[300px] w-full`}
+
                 />
               </div>
               <div className='lg:w-[50%] lg:px-5 lg:py-0 py-3 flex flex-col justify-between lg:h-full '>
