@@ -125,6 +125,13 @@ export const currentSponsors: sponsorType[] = [
     "tier": "kilo",
   },
   {
+    "name": "Fig Financial",
+    "logo": "/sponsors/fig.png",
+    "link": "https://fig.ca/en/",
+    "scale": 0.9,
+    "tier": "kilo",
+  },
+  {
     "name": "COMPSA",
     "logo": "/sponsors/Compsa.png",
     "link": "https://compsa.ca/",
@@ -149,13 +156,6 @@ export const currentSponsors: sponsorType[] = [
     "name": "Wolfram",
     "logo": "/sponsors/Wolfram.png",
     "link": "https://www.wolfram.com/index.en.html",
-    "scale": 0.9,
-    "tier": "kilo",
-  },
-  {
-    "name": "Fig Financial",
-    "logo": "/sponsors/fig.png",
-    "link": "https://fig.ca/en/",
     "scale": 0.9,
     "tier": "kilo",
   },
