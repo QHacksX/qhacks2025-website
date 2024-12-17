@@ -125,6 +125,13 @@ export const currentSponsors: sponsorType[] = [
     "tier": "kilo",
   },
   {
+    "name": "Fig Financial",
+    "logo": "/sponsors/fig.png",
+    "link": "https://fig.ca/en/",
+    "scale": 0.9,
+    "tier": "kilo",
+  },
+  {
     "name": "COMPSA",
     "logo": "/sponsors/Compsa.png",
     "link": "https://compsa.ca/",
