@@ -152,6 +152,13 @@ export const currentSponsors: sponsorType[] = [
     "scale": 0.9,
     "tier": "kilo",
   },
+  {
+    "name": "Fig Financial",
+    "logo": "/sponsors/fig.png",
+    "link": "https://fig.ca/en/",
+    "scale": 0.9,
+    "tier": "kilo",
+  },
 ];
 
 export const highlightedPrevSponsors = [
