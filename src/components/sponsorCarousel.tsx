@@ -29,7 +29,7 @@ const SponsorCarousel = () => {
                 <img src={logo} alt={`${name} logo`} className="p-6"/>
               </div>
               <div className='lg:w-[50%] lg:px-5 lg:py-0 py-3 flex flex-col justify-center lg:h-full '>
-                <p className='text-left'>{blurb}</p>
+                <p className='text-left whitespace-break-spaces'>{blurb}</p>
                 <a
                   href={link}
                   target='_null'
