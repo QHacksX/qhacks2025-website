@@ -165,6 +165,13 @@ export const currentSponsors: sponsorType[] = [
     "scale": 0.9,
     "tier": "kilo",
   },
+  {
+    "name": "Stand Out Stickers",
+    "logo": "/sponsors/StandOutStickers.svg",
+    "link": "https://hackp.ac/mlh-standoutstickers-hackathons",
+    "scale": 1.25,
+    "tier": "kilo",
+  },
 ];
 
 export const highlightedPrevSponsors = [
