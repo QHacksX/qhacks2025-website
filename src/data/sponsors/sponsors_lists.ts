@@ -15,6 +15,12 @@ export type sponsorBlurb = {
 
 export const sponsorBlurbs: sponsorBlurb[] = [
   {
+    "name": "National Bank of Canada",
+    "logo": "/sponsors/NationalBankLogoNew.png",
+    "link": "https://emplois.bnc.ca/fr_CA/careers",
+    "blurb": "With $462 billion in assets as at October 31, 2024, National Bank of Canada is one of Canada's six systemically important banks. The Bank has approximately 30,000 employees in knowledge-intensive positions and operates through three business segments in Canada: Personal and Commercial Banking, Wealth Management and Financial Markets. A fourth segment, U.S. Specialty Finance and International, complements the growth of its domestic operations. Its securities are listed on the Toronto Stock Exchange (TSX: NA). Follow the Bank's activities at nbc.ca or via social media.\n\nNational Bank Financial Markets offers a complete suite of products and services to corporations, institutional clients, and public-sector entities. The segment focuses on providing comprehensive advisory services and research or capital markets products and services to support clients and their growth. National Bank Financial Markets’ structure fosters agility and collaboration while encouraging creativity.",
+  },
+  {
     "name": "Manulife Financial",
     "logo": "/sponsors/Manulife-WhiteBG.png",
     "link": "https://www.manulife.ca/careers.html",
