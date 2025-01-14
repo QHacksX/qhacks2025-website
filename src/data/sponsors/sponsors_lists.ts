@@ -112,7 +112,7 @@ export const currentSponsors: sponsorType[] = [
   {
     "name": "City of Kingston",
     "logo": "/sponsors/Kingston.svg",
-    "link": "https://innovation-challenge.cityofkingston.ca/",
+    "link": "https://cityofkingston.ca/mic",
     "scale": 0.85,
     "tier": "kilo",
   },
