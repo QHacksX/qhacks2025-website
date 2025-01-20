@@ -4,11 +4,13 @@ export default function SponsorBubble({ sponsor }: { sponsor: Sponsor }) {
      
       <div className={`sponsor-bubble`}>
         <div className='sponsor-bubble-img-container'>
-          <img
-            id='sponsor_logo'
-            src={sponsor.logo}
-            className='rounded-full md:w-28 md:h-28 w-10 h-10 sponsor-bubble-img'
-          />
+          <a href={sponsor.link} target="_blank">
+            <img
+              id='sponsor_logo'
+              src={sponsor.logo}
+              className='rounded-full md:w-28 md:h-28 w-10 h-10 sponsor-bubble-img'
+            />
+          </a>
         </div>
 
         <div className={`sponsor-bubble-back`}>
