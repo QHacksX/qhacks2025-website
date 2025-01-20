@@ -25,6 +25,7 @@ import { useWindowSize } from "../hooks/useWindowSize";
 
 import { checkOrFetchApplicationStatus } from "../firebase/userData";
 import TeamSection from "../components/shared/qhacks-team/teamSection";
+import InKindSponsors from "../components/shared/sponsors/inKindSponsors";
 
 export default function Home() {
   const router = useRouter();
@@ -209,6 +210,8 @@ export default function Home() {
           <CurrentSponsors />
 
           <PastSponsors />
+
+          <InKindSponsors />
 
           <TeamSection />
         </div>

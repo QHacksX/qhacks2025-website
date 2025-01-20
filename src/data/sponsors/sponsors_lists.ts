@@ -282,6 +282,65 @@ export const highlightedPrevSponsors = [
   },
 ];
 
+export const inKindSponsors = [
+  {
+    "name": "Incogni",
+    "logo": "/sponsors/Incogni.png",
+    "link": "https://incogni.com/",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+  {
+    "name": "NordPass",
+    "logo": "/sponsors/NordPass.png",
+    "link": "https://nordpass.com/",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+  {
+    "name": "NordVPN",
+    "logo": "/sponsors/NordVPN.png",
+    "link": "https://nordvpn.com/hackathons",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+  {
+    "name": "Saily",
+    "logo": "/sponsors/Saily.png",
+    "link": "https://saily.com/",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+  {
+    "name": "Score Pizza",
+    "logo": "/sponsors/ScorePizza.png",
+    "link": "https://scorepizza.ca/",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+  {
+    "name": "Kingston Bouldering Cooperative",
+    "logo": "/sponsors/KBC.png",
+    "link": "https://kingstonboulderingcoop.com/",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+  {
+    "name": "Novel Idea",
+    "logo": "/sponsors/NovelIdea.png",
+    "link": "http://novelideabooks.ca/wp/",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+  {
+    "name": "Kingston Frontenacs",
+    "logo": "/sponsors/KingstonFrontenacs.png",
+    "link": "https://chl.ca/ohl-frontenacs/",
+    "colour": "bg-yellow-500",
+    "tier": "previous",
+  },
+]
+
 export const fullPrevSponsors = [
   {
     "name": "Assembly AI",
