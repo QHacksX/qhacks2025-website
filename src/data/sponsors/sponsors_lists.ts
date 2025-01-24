@@ -34,7 +34,7 @@ export const sponsorBlurbs: sponsorBlurb[] = [
     "link": "https://www.manulife.ca/careers.html",
     "blurb":
       "Manulife is a leading global financial services institution dedicated to helping individuals and businesses achieve their financial goals through a variety of services, including insurance, wealth, and asset management. With a presence in numerous markets worldwide, we are committed to nurturing the next generation of talent. We offer co-op, internship, and new graduate programs for students across diverse fields such as actuarial science, technology, digital marketing, investment, Global Wealth and Asset Management (GWAM), accounting and finance, and more. Join us to gain valuable experience, develop your skills, and launch your career with a company that values innovation, growth, and excellence.",
-  }
+  },
 ];
 
 export const currentSponsors: sponsorType[] = [
@@ -111,13 +111,6 @@ export const currentSponsors: sponsorType[] = [
     "tier": "kilo",
   },
   {
-    "name": "Accenture",
-    "logo": "/sponsors/accenture.png",
-    "link": "https://www.accenture.com/ca-en",
-    "scale": 1.2,
-    "tier": "kilo",
-  },
-  {
     "name": "City of Kingston",
     "logo": "/sponsors/Kingston.svg",
     "link": "https://cityofkingston.ca/mic",
@@ -164,13 +157,6 @@ export const currentSponsors: sponsorType[] = [
     "logo": "/sponsors/xyz.svg",
     "link": "https://gen.xyz/",
     "scale": 0.75,
-    "tier": "kilo",
-  },
-  {
-    "name": "Wolfram",
-    "logo": "/sponsors/Wolfram.png",
-    "link": "https://www.wolfram.com/index.en.html",
-    "scale": 0.9,
     "tier": "kilo",
   },
   {
@@ -354,7 +340,7 @@ export const inKindSponsors = [
     "colour": "bg-yellow-500",
     "tier": "previous",
   },
-]
+];
 
 export const fullPrevSponsors = [
   {
@@ -455,13 +441,6 @@ export const fullPrevSponsors = [
     "link": "https://ca.whoosh.com/",
     "colour": "bg-yellow-500",
     "tier": "previous",
-  },
-  {
-    "name": "Wolfram",
-    "logo": "/sponsors/Wolfram.svg",
-    "link": "https://www.wolfram.com/company/careers/opportunities/",
-    "colour": "bg-yellow-500",
-    "tier": "kilo",
   },
   {
     "name": "Amazon",
