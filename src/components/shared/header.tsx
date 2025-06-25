@@ -1,5 +1,5 @@
 import Wave from "react-wavify";
-import MobileNav from "./mobileNav";
+// import MobileNav from "./mobileNav";
 
 const InvertedWaveBackground = ({
   isSignedIn,
@@ -24,9 +24,7 @@ const InvertedWaveBackground = ({
         //   </p>
         // </Link>
         <></>
-      ) : (
-        MobileNav({ isSignedIn: isSignedIn })
-      )}
+      ) : null}
 
       <img
         src={"/mlh-trust-badge-2025-gray.png"}
