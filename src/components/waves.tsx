@@ -4,7 +4,7 @@ export default function Waves() {
   return (
     <div className='hidden md:flex w-full pointer-events-none'>
       <img
-        src={"/mlh-trust-badge-2025-gray.png"}
+        src={"/mlh-trust-badge-2026-blue.svg"}
         alt='Major League Hacking Trust Badge'
         className='absolute z-20 w-128 h-224 md:w-32 md:right-20 w-28 right-5 pb-20 drop-shadow-[0_5px_10px_rgb(255,255,255)] top-0'
       />

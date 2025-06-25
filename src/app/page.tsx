@@ -10,7 +10,7 @@ import Testimonial from "../components/hacker-testimonials/Testimonial";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
-import { auth } from "../firebase/config";
+// import { auth } from "../firebase/config";
 import Faq from "../components/faq";
 import NavBar from "../components/shared/navbar/nav";
 import TriColor from "../components/tricolor/tricolor";
@@ -18,12 +18,12 @@ import GrowYourNetwork from "../components/shared/growYourNetwork";
 import PastSpeakers from "../components/shared/pastSpeakers";
 import PartneringCard from "../components/partnershipCard";
 import Waves from "../components/waves";
-import signOutUser from "../firebase/auth/signout";
+// import signOutUser from "../firebase/auth/signout";
 import CurrentSponsors from "../components/shared/sponsors/currentSponsors";
 import PastSponsors from "../components/shared/sponsors/pastSponsors";
 import { useWindowSize } from "../hooks/useWindowSize";
 
-import { checkOrFetchApplicationStatus } from "../firebase/userData";
+// import { checkOrFetchApplicationStatus } from "../firebase/userData";
 import TeamSection from "../components/shared/qhacks-team/teamSection";
 import InKindSponsors from "../components/shared/sponsors/inKindSponsors";
 
@@ -32,9 +32,9 @@ export default function Home() {
 
   const size = useWindowSize();
 
-  const [isSignedIn, setIsSignedIn] = useState(
-    auth.currentUser !== null && auth.currentUser.emailVerified
-  );
+  // const [isSignedIn, setIsSignedIn] = useState(
+  //   auth.currentUser !== null && auth.currentUser.emailVerified
+  // );
 
   const [hasApplication, setHasApplication] = useState(false);
 
@@ -45,19 +45,19 @@ export default function Home() {
     });
   }, []);
 
-  onAuthStateChanged(auth, () => {
-    if (auth.currentUser && auth.currentUser.emailVerified) {
-      setIsSignedIn(true);
-    } else {
-      setIsSignedIn(false);
-    }
-    checkOrFetchApplicationStatus(false).then((res) =>
-      // False flag does not retrieve the application, but can return null
-      // We check if res !== null and is of type boolean, then we setHasApplication(res)
-      // Otherwise, it is set to false (i.e. function returned null)
-      setHasApplication(res && typeof res === "boolean" ? res : false)
-    );
-  });
+  // onAuthStateChanged(auth, () => {
+  //   if (auth.currentUser && auth.currentUser.emailVerified) {
+  //     setIsSignedIn(true);
+  //   } else {
+  //     setIsSignedIn(false);
+  //   }
+  //   checkOrFetchApplicationStatus(false).then((res) =>
+  //     // False flag does not retrieve the application, but can return null
+  //     // We check if res !== null and is of type boolean, then we setHasApplication(res)
+  //     // Otherwise, it is set to false (i.e. function returned null)
+  //     setHasApplication(res && typeof res === "boolean" ? res : false)
+  //   );
+  // });
 
   const DonutScene = dynamic(
     () => import("../components/shared/3d-models/donut"),
@@ -66,7 +66,7 @@ export default function Home() {
 
   return (
     <main className='overflow-hidden relative dark'>
-      <NavBar />
+      {/* <NavBar /> */}
 
       <div className='radial-gradient-background pb-28' id='home'>
         <div className='h-screen flex flex-col justify-center items-center w-screen pt-40 '>
@@ -111,19 +111,18 @@ export default function Home() {
             ultimate hackathon experience.
           </p>
           <p className='font-bold text-[#E2A022] pt-5'>
-            In-person! January 24th-26th, 2025
+            In-person! February 2026
           </p>
-
-          {/* <motion.button
+          <motion.button
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
-            // onClick={() => router.push("/application-form")}
+            onClick={() => window.open("https://form.jotform.com/251754574218058", "_blank")}
           >
-            Applications Open Soon!
-          </motion.button> */}
+            Stay in the Loop
+          </motion.button>
 
-          <motion.button
+          {/* <motion.button
             className='w-3/5 md:w-1/3 lg:w-1/5 p-3 mt-4 font-bold text-xl text-white bg-red-500 rounded-full z-20'
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -134,9 +133,9 @@ export default function Home() {
             }
           >
             {"Apply To Be A Volunteer!"}
-          </motion.button>
+          </motion.button> */}
 
-          {isSignedIn ? (
+          {/* {isSignedIn ? (
             <p
               className='text-blue-500 hover:text-blue-700  mt-2 z-20 hover:cursor-pointer'
               onClick={() => signOutUser()}
@@ -153,7 +152,7 @@ export default function Home() {
                 Log in
               </a>
             </p>
-          )}
+          )} */}
 
           <div className='flex items-center justify-center space-x-6 mt-4 z-20'>
             <Link href='https://www.tiktok.com/@qhacksx' target='_blank'>
@@ -177,7 +176,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex justify-center items-center w-screen flex-col select-none'>
+        {/* <div className='flex justify-center items-center w-screen flex-col select-none'>
           <div className='w-[90%] md:w-[80%] lg:w-[70%]' id='about'>
             <TriColor />
           </div>
@@ -202,8 +201,8 @@ export default function Home() {
               <Testimonial />
             </div>
           </div>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className='flex flex-col justify-around min-h-[100vh] relative'
           id='sponsors'
         >
@@ -214,8 +213,8 @@ export default function Home() {
           <InKindSponsors />
 
           <TeamSection />
-        </div>
-        <Faq />
+        </div> */}
+        {/* <Faq /> */}
 
         <Footer />
       </div>

@@ -16,10 +16,10 @@ export default function Footer() {
         <motion.a
           whileHover={{ fontWeight: "bold" }}
           className='font-bold text-xs md:text-sm '
-          href='https://2024.qhacks.io/'
+          href='https://qhacks.io/'
           target="_blank"
         >
-          QHacks 2024
+          QHacks 2026
         </motion.a>
         <motion.a
           whileHover={{ fontWeight: "bold" }}
